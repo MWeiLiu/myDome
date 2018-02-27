@@ -1,0 +1,6 @@
+git add *name
+git commit -m 'log'
+git remote add origin https://github.com/MWeiLiu/practiceDome.git
+git push -u origin master
+git status -s
+git log
