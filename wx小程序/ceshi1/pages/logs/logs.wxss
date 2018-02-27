@@ -1,0 +1,26 @@
+/** 公共wxss **/
+@import "../../utils/common/common.wxss";
+
+/** 纯文本 **/
+/** 段落wxss **/
+@import "../../utils/pureText/paragraph/paragraph.wxss";
+/** 两列wxss **/
+@import "../../utils/pureText/doubleColumn/doubleColumn.wxss";
+
+@import "../../utils/creativeText/creativeQuoteTwo/creativeQuoteTwo.wxss";
+@import "../../utils/creativeText/creativeTitTxtGroup/creativeTitTxtGroup.wxss";
+@import "../../utils/creativeText/creativeDeclareOne/creativeDeclareOne.wxss";
+@import "../../utils/creativeText/creativeDeclareTwo/creativeDeclareTwo.wxss";
+@import "../../utils/creativeText/creativeDeclareThre/creativeDeclareThre.wxss";
+@import "../../utils/creativeText/creativeError/creativeError.wxss";
+
+.box {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.box > view {
+    width:100%;
+    color: #333;
+}
+

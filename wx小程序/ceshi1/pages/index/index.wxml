@@ -1,0 +1,53 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+
+  <!-- 数据绑定 -->
+  <view>
+    <text>{{thisPrototype}}</text>
+  </view>
+
+  <!-- 列表渲染 -->
+  <!-- 使用 wx:for-item 可以指定数组当前元素的变量名，
+  使用 wx:for-index 可以指定数组当前下标的变量名： -->
+  <view wx:for="{{array}}" wx:key="*this">
+    <text>{{item}}</text>
+  </view>
+
+  <!-- 模板 -->
+  <template name="staffName">
+    <view>
+      FirstName: {{firstName}}, LastName: {{lastName}}
+    </view>
+  </template>
+  <template is="staffName" data="{{...staffA}}"></template>
+  <template is="staffName" data="{{...staffB}}"></template>
+  <template is="staffName" data="{{...staffC}}"></template>
+
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>
+
+
+<!-- 绑定事件<view bindtap="事件名"> WEBVIEW </view> -->
+
+<!-- 条件渲染 <view wx:if="{{view == 'WEBVIEW'}}"> WEBVIEW </view>
+              <view wx:elif="{{view == 'APP'}}"> APP </view>
+              <view wx:else="{{view == 'MINA'}}"> MINA </view>-->
+<!-- block 渲染包含多个节点的结构块 -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->

@@ -1,0 +1,6 @@
+<!-- 摘抄Atemplate -->
+<template name="creativeDeclareOne">
+    <view class="creativeDeclareOne textAlign_center">
+        <text class="contentTextStyle">典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字</text>
+    </view>
+</template>

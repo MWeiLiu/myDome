@@ -1,0 +1,43 @@
+//小程序配置
+{
+  "pages":[//设置页面路径
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+"window":{//设置默认页面的窗口表现：状态栏、导航条、标题、窗口背景颜色
+    "navigationBarBackgroundColor": "#fff",//导航栏16进制背景颜色
+    "navigationBarTextStyle":"black",//导航栏标题颜色，仅支持 black/white
+    "navigationBarTitleText": "WeChat",//导航栏标题内容
+    "navgationStyle": "custom",//导航栏样式，仅支持 default/custom
+    "backgroundColor":"#fff",//窗口背景颜色
+    "backgroundTextStyle":"light",//下拉背景字体、loading 图的样式，仅支持 dark/light
+    "enablePullDownRefresh":"false",//是否开启下拉刷新
+    "onReachBottomDistance":"50"//页面上拉触底事件触发时距页面底部距离，单位为px
+  },
+  "tabBar": {//设置底部tab的表现
+    "color": "#000",//tab上文字默认颜色
+    "selectedColor": "#333",//tab上文字选中时的颜色
+    "backgroundColor": "#ff00ff",//tab的背景颜色
+    "borderStyle": "black",//tabbar上边框的颜色， 仅支持 black/white
+    "position": "bottom",//可选值 bottom、top
+    "list": [{//tab列表。最少两个，最多5个
+      "pagePath": "pages/index/index",//页面路径，必须在 pages 中先定义
+      "text": "首页",//tab 上按钮文字
+      "iconPath": "",//图片路径，icon 大小限制为40kb，建议尺寸为 81px * 81px，当 postion 为 top 时，此参数无效，不支持网络图片
+      "selectedIconPath": ""//选中时的图片路径，icon 大小限制为40kb，建议尺寸为 81px * 81px ，当 postion 为 top 时，此参数无效
+    },{
+      "pagePath": "pages/logs/logs",
+      "text": "日志"
+    }]
+  },
+  "networkTimeout": {//设置网络超时时间
+    "request": 10000,//wx.request的超时时间，单位毫秒，默认为：60000
+    "connectSocket": 10000,//wx.connectSocket的超时时间，单位毫秒，默认为：60000
+    "uploadFile": 10000,//wx.uploadFile的超时时间，单位毫秒，默认为：60000
+    "downloadFile": 10000//wx.downloadFile的超时时间，单位毫秒，默认为：60000
+  },
+  "debug": true//设置是否开启debug模式
+}
+
+//app.json文件是用来对微信小程序进行全局配置，决定页面文件的路径、窗口表现】设置网络超时时间、设置多
+//tab等，

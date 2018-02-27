@@ -1,0 +1,8 @@
+<!-- 副标题template -->
+<template name="vicTitle">
+    <view class="vicTitle">
+        <view class="contentVicTitleStyle">
+            <text>典雅的文字</text>
+        </view>
+    </view>
+</template>

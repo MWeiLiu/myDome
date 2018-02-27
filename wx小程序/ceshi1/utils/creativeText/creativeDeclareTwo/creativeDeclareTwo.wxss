@@ -1,0 +1,7 @@
+
+.hr {
+    width: 20%;
+    height: 2px;
+    background: #333;
+    margin: 0 auto;
+}

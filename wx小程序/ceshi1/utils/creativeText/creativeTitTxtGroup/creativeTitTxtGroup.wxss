@@ -1,0 +1,16 @@
+
+.creativeTitTxtGroup {
+    position: relative;
+}
+
+.creativeBox {
+    width: 90%;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    margin-left: -45%;
+}
+
+.backImage {
+    width:100%;
+}

@@ -1,0 +1,10 @@
+{
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "Qcourse小课",
+    "navgationStyle": "custom",
+    "backgroundColor": "#fff",
+    "backgroundTextStyle":"light",
+    "enablePullDownRefresh": false,
+    "onReachBottomDistance":"50"
+  }

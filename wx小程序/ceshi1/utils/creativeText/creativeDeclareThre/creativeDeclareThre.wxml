@@ -1,0 +1,9 @@
+<!-- 摘抄Btemplate -->
+<template name="creativeDeclareThre">
+    <view class="creativeDeclareThre textAlign_left">
+        <view class="hr"></view>
+        <view class="creativeList">
+            <text class="contentTextStyle">典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字</text>
+        </view>
+    </view>
+</template>

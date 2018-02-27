@@ -1,0 +1,7 @@
+<!-- 摘抄Btemplate -->
+<template name="creativeDeclareTwo">
+    <view class="creativeDeclareTwo textAlign_center">
+        <view class="hr"></view>
+        <text class="contentTextStyle">典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字</text>
+    </view>
+</template>

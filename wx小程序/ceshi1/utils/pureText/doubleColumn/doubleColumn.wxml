@@ -1,0 +1,11 @@
+<!-- 两列template -->
+<template name="doubleColumn">
+    <view class="doubleColumn">
+        <view class="contentTextStyle">
+            <text>典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字</text>
+        </view>
+        <view class="contentTextStyle">
+            <text>典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字</text>
+        </view>
+    </view>
+</template>

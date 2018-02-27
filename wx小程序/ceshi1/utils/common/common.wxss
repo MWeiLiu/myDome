@@ -1,0 +1,70 @@
+
+/* 课程标题 */
+.titleStyle {
+    color: #333333;
+    font-size: 36px;
+    letter-spacing: 2.9px;
+    line-height: 50px;
+    font-weight: 600;
+}
+
+/* 课程副标题 */
+.vicTitleStyle {
+	color: #333333;
+    font-size: 20px;
+    letter-spacing: 1.9px;
+	line-height: 28px;
+	
+}
+
+/* 内容标题 */
+.contentTitleStyle {
+    color: #333333;
+	font-size: 20px;
+    letter-spacing: 1.9px;
+    line-height: 28px;
+    font-weight: 600;
+}
+
+/* 内容副标题 */
+.contentVicTitleStyle {
+    color: #333333;
+	font-size: 18px;
+    letter-spacing: 1.5px;
+    line-height: 24px;
+    font-weight: 600;
+}
+
+/* 文本 */
+.contentTextStyle {
+	color: #333333;
+	font-size: 16px;
+    letter-spacing: 1.2px;
+    line-height: 36px;
+}
+
+/* 作者名称 */
+.authorStyle {
+	font-size: 14px;
+    letter-spacing: 4px;
+}
+
+.textAlign_center {
+    text-align: center;
+}
+
+.textAlign_left {
+    text-align: left;
+}
+
+.userImage {
+    width: 80px;
+    height: 80px;
+}
+
+.boxsize {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+}

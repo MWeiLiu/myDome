@@ -1,0 +1,12 @@
+
+.creativeDeclareThre .hr {
+    width: 2px;
+    height: 54px;
+    background: #333;
+    float: left;
+    margin-top: 10px;
+}
+
+.creativeDeclareThre .creativeList {
+    margin-left: 10px;
+}

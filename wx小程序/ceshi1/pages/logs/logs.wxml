@@ -1,0 +1,39 @@
+<!--logs.wxml-->
+
+<!-- 纯文本template -->
+<import src="../../utils/pureText/paragraph/paragraph.wxml"/>
+<import src="../../utils/pureText/titleParagraph/titleParagraph.wxml"/>
+<import src="../../utils/pureText/vicTitleParagraph/vicTitleParagraph.wxml"/>
+<import src="../../utils/pureText/title/title.wxml"/>
+<import src="../../utils/pureText/vicTitle/vicTitle.wxml"/>
+<import src="../../utils/pureText/doubleColumn/doubleColumn.wxml"/>
+
+<!-- 创意文本template -->
+<import src="../../utils/creativeText/creativeQuoteOne/creativeQuoteOne.wxml"/>
+<import src="../../utils/creativeText/creativeQuoteTwo/creativeQuoteTwo.wxml"/>
+<import src="../../utils/creativeText/creativeTitTxtGroup/creativeTitTxtGroup.wxml"/>
+<import src="../../utils/creativeText/creativeDeclareOne/creativeDeclareOne.wxml"/>
+<import src="../../utils/creativeText/creativeDeclareTwo/creativeDeclareTwo.wxml"/>
+<import src="../../utils/creativeText/creativeDeclareThre/creativeDeclareThre.wxml"/>
+<import src="../../utils/creativeText/creativeError/creativeError.wxml"/>
+
+<!-- 序列template -->
+
+<view class="box">
+    <template is="paragraph"/>
+    <template is="titleParagraph"/>
+    <template is="vicTitleParagraph"/>
+    <template is="title"/>
+    <template is="vicTitle"/>
+    <template is="doubleColumn"/>
+
+    <template is="creativeQuoteOne"/>
+    <template is="creativeQuoteTwo"/>
+    <template is="creativeTitTxtGroup"/>
+    <template is="creativeDeclareOne"/>
+    <template is="creativeDeclareTwo"/>
+    <template is="creativeDeclareThre"/>
+    <template is="creativeError"/>
+    
+</view>
+

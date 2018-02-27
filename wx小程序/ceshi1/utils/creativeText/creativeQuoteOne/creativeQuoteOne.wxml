@@ -1,0 +1,11 @@
+<!-- 引言1template -->
+<template name="creativeQuoteOne">
+    <view class="creativeQuoteOne">
+        <view class="contentTextStyle textAlign_center">
+            <text>典雅的文字</text>
+        </view>
+        <view class="authorStyle textAlign_center">
+            <text>人名</text>
+        </view>
+    </view>
+</template>

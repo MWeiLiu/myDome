@@ -1,0 +1,13 @@
+<!-- 底图引言template -->
+<template name="creativeTitTxtGroup">
+    <view class="creativeTitTxtGroup">
+        <image class="backImage" src="https://www.qcourse.com/images/pictureBack1.0.png"></image>
+        <view class="creativeBox">
+            <view class="userImageBox authorStyle textAlign_center">
+                <image class="userImage" src="user-unlogin.png"></image>
+                <text>人名</text>
+            </view>
+            <text class="contentTextStyle textAlign_left">典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字</text>
+        </view>
+    </view>
+</template>

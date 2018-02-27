@@ -1,0 +1,13 @@
+{
+	"client": "./client",
+	"svr": "./server",
+	"miniprogramRoot": "./client",
+	"qcloudRoot": "./server",
+	"setting": {
+		"newFeature": true
+	},
+	"libVersion": "1.0.01",
+	"appid": "wx18512bfb5b5a12a7",
+	"projectname": "manicure",
+	"condition": {}
+}

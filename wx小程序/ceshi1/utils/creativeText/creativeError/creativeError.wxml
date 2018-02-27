@@ -1,0 +1,7 @@
+<!-- 警告template -->
+<template name="creativeError">
+    <view class="creativeError boxsize textAlign_left">
+        <image src="https://www.qcourse.com/images/creativeError.png"></image>
+        <text class="contentTextStyle">典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字</text>
+    </view>
+</template>

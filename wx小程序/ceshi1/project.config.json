@@ -1,0 +1,46 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.90",
+	"appid": "wx18512bfb5b5a12a7",
+	"projectname": "ceshi1",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 1,
+			"list": [
+				{
+					"id": 0,
+					"name": "卡片测试",
+					"pathName": "pages/view/view",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "卡片模板",
+					"pathName": "pages/logs/logs",
+					"query": ""
+				}
+			]
+		}
+	}
+}
