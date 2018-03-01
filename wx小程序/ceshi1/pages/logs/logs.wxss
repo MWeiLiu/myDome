@@ -16,7 +16,7 @@
 
 /** 序列 **/
 @import "../../utils/sequence/seqNumList/seqNumList.wxss";
-/* @import "../../utils/sequence/seqCheckBoxList/seqCheckBoxList.wxss"; */
+@import "../../utils/sequence/seqCheckBoxList/seqCheckBoxList.wxss";
 @import "../../utils/sequence/seqSymList/seqSymList.wxss";
 
 /** 图像 **/
