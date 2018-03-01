@@ -1,0 +1,9 @@
+var fs = require('fs');
+var path = 'files',name = 'ANG-100';
+for (var i=0;i<20;i++ ) {
+    var number = 2070 + i;
+    var pathStr = path + '/' + name + number.toString();
+    fs.mkdirSync(pathStr,0777);
+    var newPathStr = pathStr + '/' + name + number.toString() + '.txt';
+    fs.mkdirSync(newPathStr,0777);
+}

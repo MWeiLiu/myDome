@@ -1,0 +1,90 @@
+
+cd ..返回上一级
+node -v版本号
+npm -v
+node main.js新建一个main.js的文件
+node输入命令
+npm install npm -g显示信息
+
+作为插件类型的fs模块不能放在全局，必须装在工程目录下， 
+npm init 初始化
+npm install fs 下载fs
+
+
+ctrl + c - 退出当前终端。
+
+ctrl + c 按下两次 - 退出 Node REPL。
+
+ctrl + d - 退出 Node REPL.
+
+向上/向下 键 - 查看输入的历史命令
+
+tab 键 - 列出当前命令
+
+.help - 列出使用命令
+
+.break - 退出多行表达式
+
+.clear - 退出多行表达式
+
+.save filename - 保存当前的 Node REPL 会话到指定文件
+
+.load filename - 载入当前 Node REPL 会话的文件内容。
+
+
+搭建服务器 浏览器地址：http://localhost:4000或http://127.0.0.1:4000/
+var http = require('http');
+//使用require方式将node的内置对象http引入
+//http.createServer().listen(port,ip)创建一个服务之后再监听一个地址
+　　http.createServer(function (req, res) {
+//req请求request，res回复response
+//req用于请求阶段的解析处理，比如get中的地址栏url字符的处理
+
+　　  res.writeHead(200, {'Content-Type': 'text/plain'});
+ 　　 res.end('Hello liu-wei\n');
+　　}).listen(4000, "127.0.0.1");
+　　console.log('Server running at http://127.0.0.1:4000/');
+
+
+内网
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+brew install nginx
+
+nginx(localhost:8080)
+
+文件在/usr/local/Cellar/nginx/1.12.0_1/html/下
+
+配置/usr/local/etc/nginx.conf.default
+server {        
+    listen       8080;    
+    server_name  localhost;         
+    #access_log  logs/host.access.log  main; 
+    location ~* {             
+        add_header Content-Type "application/json";
+        root   html;             
+        if (!-f $request_filename) {                 
+            rewrite ^/(.*)  /$1.json last;
+        }             
+    index  index.php index.html index.htm;
+    }         
+error_page 405 =200 http://$host$request_uri;     }
+
+地址：localhost:8080/文件名
+
+————————————————————————————————————————
+
+apache下部署web
+
+/资源库/WebServer/Documents/
+
+配置：/etc/apache2/httpd.conf(DocumentRoot/Listen)
+
+启用：sudo apachectl start/restart
+
+停止：sudo apachectl stop
+
+地址：localhost:80
+
+
+
