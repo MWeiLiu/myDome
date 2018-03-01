@@ -1,0 +1,10 @@
+
+<view class="header" style="background: {{background}}">
+    <view class="shade1" style="{{json.wholeSet.userLogo == '' ? 'background-color: rgba(0, 0, 0, 0);' : 'background-color: rgba(123, 123, 123, 0.3);'}}">
+        <view class="changeBox">
+            <view class="changeInfoBoxs">
+                <view class="panme">{{json.wholeSet.summary}}</view>
+            </view>
+        </view>
+    </view>
+</view>

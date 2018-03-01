@@ -1,12 +1,14 @@
 <!--components/Tab/tab.wxml-->
 
 <view class="wx_tab_container">
-    <view>
-        <view class="tab">{{title}}</view>
-    </view>
-    <view>
-        <view class="tabText boxsize">{{text}}</view>
-        <image src="{{img}}"></image>
+    <view class="{{className}}">
+        <block wx:if="{{tabHidden == 0}}">
+            <view class="boxsize">{{text}}</view>
+        </block>
+        <block wx:elif="{{tabHidden == 1}}">
+            <view class="boxsize">{{text}}</view>
+            <image src="{{img}}"></image>
+        </block>
     </view>
     
 </view>

@@ -11,3 +11,12 @@
 .activeTab {
     color: #ff00;
 }
+
+.tabTitle {
+    width: 100%;
+}
+
+.tabTitle > view {
+    width: 100%;
+    text-align: center;
+}

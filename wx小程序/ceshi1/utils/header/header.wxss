@@ -1,0 +1,18 @@
+
+.header {
+    display: block;
+    width: 100%;
+}
+
+.header .shade1 {
+    padding: 26px 12px 35px;
+}
+
+.header .changeBox {
+    margin: 0 auto;
+}
+
+.header .changeInfoBoxs {
+    padding-left: 0;
+    position: relative;
+}

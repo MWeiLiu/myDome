@@ -6,9 +6,17 @@ Component({
     },
 
     properties: {
-        title: {
+        className: {
             type: String,
-            value: '标题'
+            value: '内容'
+        },
+        tabIndex: {
+            type: Number,
+            value: 0
+        },
+        tabHidden: {
+            type: Number,
+            value: 0
         },
         text: {
             type: String,
@@ -16,7 +24,7 @@ Component({
         },
         img: {
             type: String,
-            value: '图片地址'
+            value: ''
         }
     },
 
@@ -31,6 +39,16 @@ Component({
     },
 
     methods: {
+        hideTab: function(){
+            this.setData({
+                isShow: !this.data.isShow
+            });
+        },
+        showTab: function(){
+            this.setData({
+                isShow: !this.data.isShow
+            });
+        },
         _tabIndex: function(){
             this.triggerEvent('tabIndex')
         }

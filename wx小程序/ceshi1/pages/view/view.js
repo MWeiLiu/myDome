@@ -13,10 +13,7 @@ Page({
     autoplay: false,
     duration: 300,
     swiperIndex: 0,
-    arry: [],
-    tab:{
-      activeClass: 'tabActive'
-    }
+    arry: []
   },
   onLoad: function () {
     var animate = wx.createAnimation({

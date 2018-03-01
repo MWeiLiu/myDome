@@ -1,7 +1,7 @@
 {
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "联系",
+    "navigationBarBackgroundColor": "#9EBC2B",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "我的",
     "navgationStyle": "custom",
     "backgroundColor": "#fff",
     "backgroundTextStyle":"light",

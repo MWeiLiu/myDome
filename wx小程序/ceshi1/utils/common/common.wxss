@@ -69,3 +69,52 @@
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
 }
+
+/*flex布局*/
+
+.qFlex {
+	display: flex;
+	display: -webkit-flex;
+}
+
+/*竖向*/
+.qFlexDirectionColumn {
+	flex-direction: column;
+	-webkit-flex-direction: column;
+}
+
+/*横向剧中*/
+.qFlexJustifyCenter {
+	justify-content: center;
+	-webkit-justify-content: center;
+}
+
+/*横向平均*/
+.qFlexJustifyAround {
+	justify-content: space-around;
+	-webkit-justify-content: space-around;
+}
+
+/*横向左右*/
+.qFlexJustifyBetween {
+	justify-content: space-between;
+	-webkit-justify-content: space-between;
+}
+
+/*横向居右*/
+.qFlexJustifyEnd {
+	justify-content: flex-end;
+	-webkit-justify-content: flex-end;
+}
+
+/*上下居中*/
+.qFlexAlignCenter {
+	align-items: center;
+	-webkit-align-items: center;
+}
+
+/*从下排列*/
+.qFlexAlignEnd {
+	align-items: flex-end;
+	-webkit-align-items: flex-end;
+}

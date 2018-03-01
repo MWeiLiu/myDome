@@ -1,5 +1,6 @@
 <!--logs.wxml-->
 
+
 <!-- 纯文本template -->
 <import src="../../utils/pureText/paragraph/paragraph.wxml"/>
 <import src="../../utils/pureText/titleParagraph/titleParagraph.wxml"/>
@@ -37,7 +38,21 @@
 <import src="../../utils/pageBreaks/pbSplitter/pbSplitter.wxml"/>
 
 
+<include src="../../utils/header/header.wxml"/>
 <view class="box">
+    <view class="qFlex qFlexJustifyAround">
+        <tab id="tab" className="tabTitle" tabHidden="0" tabIndex="{{index}}" text="{{item.title}}" wx:for="{{iPagetab}}" wx:key="*this" wx:for-index="{{index}}"></tab>
+    </view>
+    <view class="tab_swiper">
+        <swiper duration="500">
+            <block wx:for="{{iPagetab}}" wx:key="{{iPagetab}}">
+                <swiper-item>
+                    <tab id="tab" className="tabText" tabHidden="1" data-index="{{index}}" tabIndex="{{index}}" text="{{item.text}}" img="{{item.img}}"></tab>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    
 
     <template is="paragraph"/>
     <template is="titleParagraph"/>
