@@ -4,3 +4,36 @@ git remote add origin https://github.com/MWeiLiu/practiceDome.git
 git push -u origin master
 git status -s
 git log
+
+
+提交：
+git status
+git add .
+git commit -m "重新提交"
+git status
+git push
+git status
+git pull
+‘Already up-to-date.’ok
+
+
+报错:Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+nothing to commit, working directory clean
+用:git push origin master
+
+failed to push some refs to 解决方法
+git pull --rebase origin master
+git push -u origin master
+
+Cannot pull with rebase: You have unstaged changes.解决方法
+
+
+Delta compression using up to 8 threads.
+Compressing objects: 100% (6555/6555), done.
+Writing objects:  45% (4712/10382), 306.55 MiB | 306.55 MiB/s
+解决办法：
+git reset --hard origin/master
+git status
+‘Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean’ok
