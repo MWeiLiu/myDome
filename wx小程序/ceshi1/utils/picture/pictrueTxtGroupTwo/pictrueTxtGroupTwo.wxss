@@ -1,0 +1,10 @@
+
+.pictrueTxtGroupTwo {
+    width: 100%;
+    padding: 30px 14px;
+    background: url("https://www.qcourse.com/images/pictureBack.jpg") center center / cover no-repeat;
+}
+
+.pictrueTxtGroupTwo text {
+    color: #fff;
+}

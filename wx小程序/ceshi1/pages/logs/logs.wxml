@@ -18,8 +18,27 @@
 <import src="../../utils/creativeText/creativeError/creativeError.wxml"/>
 
 <!-- 序列template -->
+<import src="../../utils/sequence/seqNumList/seqNumList.wxml"/>
+<import src="../../utils/sequence/seqCheckBoxList/seqCheckBoxList.wxml"/>
+<import src="../../utils/sequence/seqSymList/seqSymList.wxml"/>
+
+
+<!-- 图像emplate -->
+<import src="../../utils/picture/pictrueSingle/pictrueSingle.wxml"/>
+<import src="../../utils/picture/pictrueDouble/pictrueDouble.wxml"/>
+<import src="../../utils/picture/pictrueTxtGroupOne/pictrueTxtGroupOne.wxml"/>
+<import src="../../utils/picture/pictrueTxtGroupTwo/pictrueTxtGroupTwo.wxml"/>
+<import src="../../utils/picture/pictrueTurntable/pictrueTurntable.wxml"/>
+
+
+<!-- 分页符template -->
+<import src="../../utils/pageBreaks/pbKeepon/pbKeepon.wxml"/>
+<import src="../../utils/pageBreaks/pbPayOff/pbPayOff.wxml"/>
+<import src="../../utils/pageBreaks/pbSplitter/pbSplitter.wxml"/>
+
 
 <view class="box">
+
     <template is="paragraph"/>
     <template is="titleParagraph"/>
     <template is="vicTitleParagraph"/>
@@ -35,5 +54,19 @@
     <template is="creativeDeclareThre"/>
     <template is="creativeError"/>
     
-</view>
+    <template is="seqNumList"/>
+    <template is="seqCheckBoxList"/>
+    <template is="seqSymList"/>
 
+
+    <template is="pictrueSingle"/>
+    <template is="pictrueDouble"/>
+    <template is="pictrueTxtGroupOne" data="{{...pictrueTxtGroupOne}}"/>
+    <template is="pictrueTxtGroupTwo"/>
+    <template is="pictrueTurntable" data="{{...pictrueTurntable}}"/>
+
+    
+    <template is="pbKeepon"/>
+    <template is="pbPayOff" data="{{...pbPayOff}}"/>
+    <template is="pbSplitter"/>
+</view>

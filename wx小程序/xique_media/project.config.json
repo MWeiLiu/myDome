@@ -10,7 +10,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "1.9.90",
 	"appid": "wx18512bfb5b5a12a7",
-	"projectname": "qcourse%E6%A8%A1%E6%9D%BF",
+	"projectname": "%E5%96%9C%E9%B9%8A%E4%BC%A0%E5%AA%92",
 	"isGameTourist": false,
 	"condition": {
 		"search": {
@@ -27,20 +27,7 @@
 		},
 		"miniprogram": {
 			"current": -1,
-			"list": [
-				{
-					"id": 0,
-					"name": "卡片测试",
-					"pathName": "pages/view/view",
-					"query": ""
-				},
-				{
-					"id": 1,
-					"name": "卡片模板",
-					"pathName": "pages/logs/logs",
-					"query": ""
-				}
-			]
+			"list": []
 		}
 	}
 }

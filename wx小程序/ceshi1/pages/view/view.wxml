@@ -8,7 +8,7 @@
 </view>
 <view class="taby">
   <view>
-    <view class="tab boxsize" wx:for="{{tabTitArray}}" wx:key="*this" wx:for-index="idx" bindtap="tab" data-datatab="{{idx}}">{{item}}</view>
+    <view class="tab boxsize {{idx == swiperIndex ? 'tabActive' : ''}}" wx:for="{{tabTitArray}}" wx:key="*this" wx:for-index="idx" bindtap="tab" data-datatab="{{idx}}">{{item}}</view>
   </view>
   <swiper current="{{swiperIndex}}" class="tabTextBox" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" duration="{{duration}}">    
     <block wx:for="{{tabTxtArray}}" wx:for-index="idx" wx:key="*this">

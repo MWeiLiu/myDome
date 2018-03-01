@@ -1,0 +1,11 @@
+<!-- 双图template -->
+<template name="pictrueDouble">
+    <view class="pictrueDouble picture">
+        <image src="https://www.qcourse.com/images/pictrue.jpg"></image>
+        <text class="describe">图片描述</text>
+    </view>
+    <view class="pictrueDouble picture">
+        <image src="https://www.qcourse.com/images/pictrue.jpg"></image>
+        <text class="describe">图片描述</text>
+    </view>
+</template>

@@ -1,0 +1,6 @@
+<!--继续template-->
+<template name="pbKeepon">
+    <view class="pbKeepon pageBreaks">
+        <text>继续</text>
+    </view>
+</template>

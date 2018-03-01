@@ -1,0 +1,6 @@
+<!-- 底图加文字template -->
+<template name="pictrueTxtGroupTwo">
+    <view class="pictrueTxtGroupTwo picture boxsize">
+        <text class="contentTextStyle">啊实打实</text>
+    </view>
+</template>

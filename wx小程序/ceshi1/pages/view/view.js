@@ -13,7 +13,10 @@ Page({
     autoplay: false,
     duration: 300,
     swiperIndex: 0,
-    arry: []
+    arry: [],
+    tab:{
+      activeClass: 'tabActive'
+    }
   },
   onLoad: function () {
     var animate = wx.createAnimation({
@@ -55,5 +58,6 @@ Page({
     this.setData({
       swiperIndex: index
     })
+    console.log(index)
   }
 })

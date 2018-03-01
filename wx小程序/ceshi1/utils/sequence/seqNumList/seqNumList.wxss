@@ -1,0 +1,16 @@
+
+.sequence text {
+    display:block;
+    margin-left: 38px;
+}
+.seqNumList .orderName {
+    float: left;
+    width: 22px;
+    height: 22px;
+    margin-top:3px;
+    border: 1px solid #5e5e5e;
+    border-radius: 50%;
+    font-size: 12px;
+    text-align: center;
+    line-height: 21.5px;
+}

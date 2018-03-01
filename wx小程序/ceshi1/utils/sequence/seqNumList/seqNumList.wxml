@@ -1,0 +1,17 @@
+<!-- 序号序列emplate -->
+<template name="seqNumList">
+    <view class="seqNumList sequence">
+        <view class="contentTextStyle">
+            <view class="orderName">1</view>
+            <text>典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字</text>
+        </view>
+        <view class="contentTextStyle">
+            <view class="orderName">2</view>
+            <text>典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字</text>
+        </view>
+        <view class="contentTextStyle">
+            <view class="orderName">3</view>
+            <text>典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字</text>
+        </view>
+    </view>
+</template>

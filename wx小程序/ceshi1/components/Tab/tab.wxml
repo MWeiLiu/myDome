@@ -1,0 +1,12 @@
+<!--components/Tab/tab.wxml-->
+
+<view class="wx_tab_container">
+    <view>
+        <view class="tab">{{title}}</view>
+    </view>
+    <view>
+        <view class="tabText boxsize">{{text}}</view>
+        <image src="{{img}}"></image>
+    </view>
+    
+</view>

@@ -1,0 +1,17 @@
+<!-- 圆序列emplate -->
+<template name="seqSymList">
+    <view class="seqSymList sequence">
+        <view class="contentTextStyle">
+            <view class="orderName"></view>
+            <text>典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字</text>
+        </view>
+        <view class="contentTextStyle">
+            <view class="orderName"></view>
+            <text>典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字</text>
+        </view>
+        <view class="contentTextStyle">
+            <view class="orderName"></view>
+            <text>典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字</text>
+        </view>
+    </view>
+</template>

@@ -1,0 +1,48 @@
+
+
+.box {
+    width: 100%;
+    background: #eaeaea;
+}
+
+.box > view {
+    margin: 5px 0;
+}
+
+.slide-image,
+.horizontal,
+.wedding,
+.aboutUs,
+.advantage,
+.discount,
+.team,
+.contact {
+    width: 100%;
+    background: #fff;
+}
+
+.width_100 {
+    width: 100%;
+}
+
+.sample {
+    font-size: 15px;
+    text-align: center;
+    color: #353535;
+    line-height: 50px;
+}
+
+.sample .title {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.footer {
+    height: 40px;
+    margin: 0;
+    line-height: 40px;
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+    background-color: #f4f4f4;
+    border: 1px dashed transparent;
+}

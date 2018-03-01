@@ -89,3 +89,7 @@
   border: 1px solid #f1f2f3;
   margin-top: 10px;
 }
+
+.tabActive {
+  border-color: #ff0052;
+}

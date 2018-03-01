@@ -1,0 +1,6 @@
+<!--支付template-->
+<template name="pbPayOff">
+    <view class="pbPayOff pageBreaks">
+        <text>支付{{payment}}元</text>
+    </view>
+</template>

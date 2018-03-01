@@ -1,0 +1,31 @@
+<view class="box">
+  <view class="advantage sample">
+    <view class="title">-服务优势-</view>
+    <view class="aboutUsBox">
+      <image src="{{aboutUs.img}}"></image>
+      <view>{{aboutUs.text}}</view>
+    </view>
+  </view>
+  <view class="discount sample">
+    <view class="title">-优惠套餐-</view>
+    <view class="aboutUsBox">
+      <image src="{{aboutUs.img}}"></image>
+      <view>{{aboutUs.text}}</view>
+    </view>
+  </view>
+  <view class="team sample">
+    <view class="title">-主持团队-</view>
+    <view class="aboutUsBox">
+      <image src="{{aboutUs.img}}"></image>
+      <view>{{aboutUs.text}}</view>
+    </view>
+  </view>
+  <view class="contact sample">
+    <view class="title">-联系我们-</view>
+    <view class="aboutUsBox">
+      <image src="{{aboutUs.img}}"></image>
+      <view>{{aboutUs.text}}</view>
+    </view>
+  </view>
+  <include src="../../utils/common/footer.wxml"/>
+</view>

@@ -1,0 +1,7 @@
+<!-- 左图右文template -->
+<template name="pictrueTxtGroupOne">
+    <view class="pictrueTxtGroupOne picture">
+        <image src="https://www.qcourse.com/images/pictrue.jpg"></image>
+        <text class="contentTextStyle">{{fzkpText}}</text>
+    </view>
+</template>

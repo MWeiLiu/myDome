@@ -1,0 +1,33 @@
+<!--index.wxml-->
+<view class="box">
+  <view class="width_100">
+    <swiper class="swiper" indicator-dots="{{swiper.indicatorDots}}" 
+    autoplay="{{swiper.autoplay}}" interval="{{swiper.interval}}" duration="{{swiper.duration}}">
+      <block wx:for="{{swiper.imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image"/>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="horizontal">
+    <view class="horizontalItem" wx:for="{{horizontal}}" wx:key="*this" wx:for-item="item">
+      <image src="{{item.img}}"></image>
+      <view>{{item.text}}</view>
+    </view>
+  </view>
+  <view class="wedding sample">
+    <view class="title">-婚礼定制-</view>
+    <view class="weddingBox">
+      <image src="{{item}}" wx:for="{{wedding}}" wx:key="*this"></image>
+    </view>
+  </view>
+  <view class="aboutUs sample">
+    <view class="title">-婚礼定制-</view>
+    <view class="aboutUsBox">
+      <image src="{{aboutUs.img}}"></image>
+      <view>{{aboutUs.text}}</view>
+    </view>
+  </view>
+  <include src="../../utils/common/footer.wxml"/>
+</view>

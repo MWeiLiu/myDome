@@ -1,0 +1,7 @@
+<!-- 单图template -->
+<template name="pictrueSingle">
+    <view class="pictrueSingle picture">
+        <image src="https://www.qcourse.com/images/pictrue.jpg"></image>
+        <text class="describe">图片描述</text>
+    </view>
+</template>

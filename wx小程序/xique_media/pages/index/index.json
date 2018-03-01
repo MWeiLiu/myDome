@@ -1,0 +1,10 @@
+{
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "喜鹊传媒",
+    "navgationStyle": "custom",
+    "backgroundColor": "#fff",
+    "backgroundTextStyle":"light",
+    "enablePullDownRefresh": false,
+    "onReachBottomDistance":"50"
+  }

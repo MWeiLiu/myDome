@@ -1,0 +1,13 @@
+/* components/Tab/tab.wxss */
+
+.wx_tab_container {
+    width: 100%;
+}
+
+.wx_tab_container image {
+    width: 100%;
+}
+
+.activeTab {
+    color: #ff00;
+}
