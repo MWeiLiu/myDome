@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>添加终端权限</title>		
+		<script src="../js/p.jquery.zjs.js"></script>
+		<script src="../js/m.cselector.config.js"></script>
+		<script src="../js/m.cselector.1.0.js"></script>
+		<script src="../js/p.WdatePicker.js"></script>
+		<script type="text/javascript" src="../js/city.min.js" ></script>
+		<script src="../js/ODN.js"></script>
+		<link href="../js/layout.m.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="../css/city.css" />
+		<link rel="stylesheet" href="../js/odn.css" />
+		<script type="application/javascript">
+			function beforerenderrow(datai) {
+      		datai.xuke = zjs.getvals("xuke", datai.status);      		
+  		};
+  			function setcallback(){
+				 window.ctablePrivilegebot.search();
+			}
+		</script>
+	</head>
+	<body>
+		<form class="cform" id="AddSb" cmd-insert="terminalManagement/addTerminal" setcallback="close()" setcallback="setcallback()">
+			<table border="0" cellpadding="0" cellspacing="12" class="c12 one">
+				<tr><td class="w2"><h4>添加终端权限</h4></td></tr>
+				<tr><td class="w1">操作账号：</td><td class="w3"><input id="account" type="text"/></td></tr>
+				<tr><td class="w1">是否许可：</td><td class="w3"><input id="status" mode="xuke1" class="cselector" type="text" readonly="readonly"/></td></tr>
+				<tr><td class="w1">用户类型：</td><td class="w3"><input id="userType" class="cselector" mode="userType" type="text" /></td></tr>
+				<tr><td class="w2"><a id="submit" class="qd">确定</a></td></tr>
+			</table>			
+		</form>
+	</body>
+</html>

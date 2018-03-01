@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>人员管理-添加修改</title>		
+		<script src="../js/p.jquery.zjs.js"></script>
+		<script src="../js/m.cselector.config.js"></script>
+		<script src="../js/m.cselector.1.0.js"></script>
+		<script src="../js/p.WdatePicker.js"></script>
+		<script type="text/javascript" src="../js/city.min.js" ></script>
+		<script src="../js/ODN.js"></script>
+		<link href="../js/layout.m.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="../css/city.css" />
+		<link rel="stylesheet" href="../js/odn.css" />
+		<script type="application/javascript">
+			function getcallback(){
+				$("#Province i").text($("#provinceName").val());
+				$("#City i").text($("#cityName").val());
+				$("#Area i").text($("#districtName").val());
+			}		
+			function beforesubmit(){
+				if($("#provinceName").val()=="请选择省份"||$("#cityName").val()=="请选择城市"||$("#districtName").val()=="请选择地区"){
+  					zjs.tips("请选择所在地址！")
+  					return false;
+  				}else{
+  					return true
+  				}
+  				
+			}
+		</script>
+	</head>
+	<body>
+		<form class="cform" id="Upper" cmd-insert="terminalManagement/addPeople" setcallback="close()" cmd-select="terminalManagement/moreInfo" cmd-update="terminalManagement/changeInfo" getcallback="getcallback()" beforesubmit="beforesubmit()">			
+			<table border="0" cellpadding="0" cellspacing="12" class="c12 one">				
+				<tr><td class="w1">姓名：</td><td class="w3"><input id="name" type="text" rule="required"/></td></tr>
+				<tr><td class="w1">帐号：</td><td class="w3"><input id="account" type="text" rule="required"/></td></tr>
+				<tr><td class="w1">公司：</td><td class="w3"><input id="company" type="text" rule="required"/></td></tr>
+				<tr><td class="w1">部门：</td><td class="w3"><input id="department" type="text" rule="required"/></td></tr>
+				<tr><td class="w1">性别：</td><td class="w3"><input id="sex" mode="sex" class="cselector" type="text" rule="required"/></td></tr>
+				<tr><td class="w1">手机：</td><td class="w3"><input id="mobileNo" type="text" rule="required;phone"/></td></tr>
+				<tr><td class="w1">身份证：</td><td class="w3"><input id="idNo" type="text" rule="code" /></td></tr>
+				<tr><td class="w1">邮箱：</td><td class="w3"><input id="mail" type="text" rule="email"/></td></tr>				
+				<tr>
+					<td class="w1">区域地址：</td>
+					<td class="w3">
+						<div class="infolist">
+	                        <div class="liststyle">
+	                            <span id="Province">
+	                                <i>请选择省份</i>
+	                                <ul>
+	                                    <li><a href="javascript:void(0)" alt="请选择省份">请选择省份</a></li>
+	                                </ul>
+	                                <input  id="provinceName" type="hidden" name="cho_Province" value="请选择省份">
+	                            </span>
+	                            <span id="City">
+	                                <i>请选择城市</i>
+	                                <ul>
+	                                    <li><a href="javascript:void(0)" alt="请选择城市">请选择城市</a></li>
+	                                </ul>
+	                                <input id="cityName" type="hidden" name="cho_City" value="请选择城市">
+	                            </span>
+	                            <span id="Area">
+	                            <i>请选择地区</i>
+	                                <ul>
+	                                    <li><a href="javascript:void(0)" alt="请选择地区">请选择地区</a></li>
+	                                </ul>
+	                                <input  id="districtName" type="hidden" name="cho_Area" value="请选择地区" >
+	                            </span>
+	                        </div>
+	                    </div>
+					</td>
+				</tr>
+				<tr><td class="w1">详细地址：</td><td class="w3"><input id="areaAddr" type="text" rule="required"/></td></tr>
+				<tr><td class="w2"><a id="submit" class="qd">确定</a></td></tr>
+			</table>			
+		</form>
+	</body>
+</html>

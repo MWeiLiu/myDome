@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>局站管理</title>
+		<script src="../js/p.jquery.zjs.js"></script>
+		<script src="../js/m.cselector.config.js"></script>
+		<script src="../js/m.cselector.1.0.js"></script>
+		<script src="../js/p.WdatePicker.js"></script>
+		<script type="text/javascript" src="../js/city.min.js" ></script>
+		<script src="../js/ODN.js"></script>
+		<link href="../js/layout.m.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="../css/city.css" />
+		<link rel="stylesheet" href="../js/odn.css" />
+	</head>
+	<body>
+		<form class="cform" id="Addequipment">
+			<div class="one">
+				<h4>添加设备</h4>
+				<p><label class="bh">设备编号：</label><input type="text" /></p>
+				<p><label class="mc">设备名称：</label><input type="text" /></p>
+				<p><label class="lx">设备类型：</label><select><option selected="selected">ODF</option></select></p>
+				<p><label class="gg">设备规格：</label><input type="text" /></p>
+				<p><label class="cj">生产厂家：</label><input type="text" /></p>
+				<p><label class="jz">所属局站：</label><input type="text" /></p>
+				<div class="szdq">
+					<label class="dq">所属区域：</label>
+					<div class="infolist">
+                        <div class="liststyle">
+                            <span id="Province">
+                                <i>请选择省份</i>
+                                <ul>
+                                    <li><a href="javascript:void(0)" alt="请选择省份">请选择省份</a></li>
+                                </ul>
+                                <input type="hidden" name="cho_Province" value="请选择省份">
+                            </span>
+                            <span id="City">
+                                <i>请选择城市</i>
+                                <ul>
+                                    <li><a href="javascript:void(0)" alt="请选择城市">请选择城市</a></li>
+                                </ul>
+                                <input type="hidden" name="cho_City" value="请选择城市">
+                            </span>
+                            <span id="Area">
+                            <i>请选择地区</i>
+                                <ul>
+                                    <li><a href="javascript:void(0)" alt="请选择地区">请选择地区</a></li>
+                                </ul>
+                                <input type="hidden" name="cho_Area" value="请选择地区" >
+                            </span>
+                        </div>
+                    </div>		            
+				</div>
+				<p><label class="xxdz">详细地址：</label><input type="text" /></p>
+				<p><label class="jwd">经纬度：</label><input class="jd" type="text" placeholder="经度" /> <input class="wd" type="text" placeholder="纬度" /></p>				
+				<p><label class="sbpz">设备配置：</label>主板地址<input class="zbdz" type="text" /> 最大框数<input class="zdks" type="text" /> 单框盘数<input class="dkps"  type="text" /></p>
+				<p><label class="fzr">负责人：</label><select><option selected="selected">请选择</option></select></p>
+				<p><label class="zt">设备类型：</label><select><option selected="selected">启用</option></select></p>
+				<p><a class="qx">取消</a><a class="qd">确定</a></p>
+			</div>
+		</form>
+	</body>
+</html>

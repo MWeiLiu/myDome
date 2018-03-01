@@ -1,0 +1,38 @@
+/*全局公共样式*/
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;-webkit-tap-highlight-color:rgba(255,0,0,0);}
+html{overflow-x:hidden;}
+html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,table,th,td,form,fieldset,input,button,textarea,menu,i{margin:0;padding:0;} 
+body{font-family:'Microsoft YaHei';font-size:14px;margin:0;padding:0;background:#FFF}
+input,textarea{font-family:'Microsoft YaHei',Arial,Helvetica,sans-serif;height:30px;display:block;width:100%;*width:auto;padding-left:10px;font-size:14px;background-image:none;border-radius:3px;border:solid 1px #e0e0e0;}
+input[type='text']:focus,textarea:focus{-moz-box-shadow:0px 0px 5px rgba(204,204,204,0.5);-webkit-box-shadow:0px 0px 5px rgba(204,204,204,0.5);box-shadow:0px 0px 5px rgba(204,204,204,0.5);}
+input.inputu{display:inline;width:35px;height:20px;margin:0 3px;padding:0 2px;vertical-align:baseline;}
+input.lineinput{display:inline;width:100px;}
+a,a:link,a:visited,a:hover,a:focus,a:active{text-decoration:none;cursor:pointer;color:#2a6496;} 
+img{vertical-align:middle;border:0px none;}
+h1,h2,h3,h4,h5,h6{font-weight:500;color:inherit;}
+h1,h,h3,h4,h5{padding:10px 0;}
+h1{font-size:36px;}h2{font-size:30px;}h3{font-size:25px;}h4{font-size:18px;}h5{font-size:14px;}h6{font-size:14px;}
+p{margin:0px;line-height:25px;}li{list-style:none;}
+ul {margin:0;padding:0;list-style:none;}
+li ul{margin-bottom:0;padding-left:10px;} 
+li a img{border:0;max-width:100%;}
+div{margin:0 auto;}
+/*盒子 所有元素都包含在盒子内*/
+.zbox {width:100%;margin-right:auto;margin-left:auto;}.zbox:before,.zbox:after {display:table;content:" ";}.zbox:after {clear:both;}
+/*按钮*/
+.btn{}
+.btn-blue {
+    background: rgba(0, 0, 0, 0) -moz-linear-gradient(center top , #3b75b4 0%, #064884 100%) repeat scroll 0 0;
+    border-color: #09365f;color: #fff;text-shadow: 1px 1px 0 #09365f;}
+.btn-green {
+    background: rgba(0, 0, 0, 0) -moz-linear-gradient(center top , #93aa4c 0%, #7d8f33 100%) repeat scroll 0 0;
+    border-color: #6b7735;color: #fff; text-shadow: 1px 1px 0 #6b7735;}
+.btn-red {
+    background: rgba(0, 0, 0, 0) -moz-linear-gradient(center top , #b42364 0%, #90013f 100%) repeat scroll 0 0;
+    border-color: #7e0238;color: #fff;text-shadow: 1px 1px 0 #7e0238;}
+.btn-orange {
+    background: rgba(0, 0, 0, 0) -moz-linear-gradient(center top , #f86c1f 0%, #d54d01 100%) repeat scroll 0 0;
+    border-color: #c04501;color: #fff;text-shadow: 1px 1px 0 #c04501;}
+.btn-black {
+    background: rgba(0, 0, 0, 0) -moz-linear-gradient(center top , #444444 0%, #222222 100%) repeat scroll 0 0;
+    border-color: #111111;color: #fff;text-shadow: 1px 1px 0 #111111;}

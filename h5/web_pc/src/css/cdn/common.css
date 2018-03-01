@@ -1,0 +1,223 @@
+/*
+(c) Copyright 2017 wei. All Rights Reserved.
+2017-08-26 
+*/
+
+@charset "utf-8";
+/* CSS Document */
+html,body{
+    width:100%;
+    height:100%;
+/*    box-sizing: border-box;*/
+    font-size: 14px;    
+    font-family: "Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+    font-weight: 700;
+}
+.fl{
+    float:left;
+}
+.fr{
+    float:right;
+}
+a{
+    cursor: pointer
+}
+.myBox{
+    width:100%;
+    height:100%;
+}
+p{
+    margin: 0 0 10px;
+}
+
+/*
+    top
+*/
+.myBox .header{
+    width:100%;
+    height:50px;
+    line-height:50px;
+    background-color: rgba(41,60,85,0.4);
+    position: fixed;
+    top:0;
+}
+.header>div{
+    width:50%;
+}
+.header>div:nth-child(1){
+    text-align: left;
+}
+.header>div:nth-child(2){
+    text-align: right;
+}
+.header .navItem{
+    position: relative;
+    display: inline-block;
+}
+.navItem>a{
+    padding:15px 15px;
+    color: #fff;
+}
+.navItem>a:hover{
+    padding-top: 11px;
+    border-top: 4px solid #a9334c;
+}
+.navItem ul{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    text-align: left;
+    background-color: #162436;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    display: none;
+}
+.navItem ul li{
+    background-color: #162436;
+    padding: 5px 0 0 5px;
+    color:#fff;
+    cursor: pointer;
+}
+.navItem ul li:hover{
+    background-color: #a9334c;
+}
+.navItem ul li a{
+    display: block;
+    position: relative;
+}
+.navItem ul li a input{
+    width:150px;
+    height:50px;
+    opacity:0;
+    position:absolute;
+    top:0;
+    left:0;
+    cursor: pointer;
+}
+.navItem.search input{
+    width:100%;
+    height:47px;
+    background:none;
+    text-indent: 5px;
+    color:#fff;
+    font-weight: 500;
+}
+
+/*
+    banner
+*/
+.myBox .banner{
+    width:100%;
+    height:325px;
+    background: linear-gradient(45deg,#020031 0,#6d3353 100%);
+    padding-top:75px;
+}
+.banner .container{
+    width:1190px;
+    height:230px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 0 auto;
+}
+.container p{
+    margin-top: 30px;    
+    margin-bottom: 15px;
+    font-size: 40px;
+    font-weight: 200;
+    line-height: 1.25;
+}
+
+/*
+    projects
+*/
+.myBox .projects{
+    width:1170px;
+    padding-top: 60px;
+    margin: 0 auto;
+}
+.projects .projectsHeader{
+    width: 60%;
+    text-align: center;
+    margin: 0 auto 40px;
+    font-weight: 200;
+}
+.projectsHeader h2{
+    font-size: 42px;
+}
+
+.projects .projectsList{
+    width:100%;
+    height:100%;
+}
+.projectsList .projectBox{
+    width: 23%;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+    display: inline-block;
+}
+.projectBox .thumbnail{
+    height: 336px;
+    text-align: center;
+    max-width: 310px;
+    margin: 0 auto 30px;
+    padding: 4px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+.thumbnail img{
+    max-width: 100%;
+    height: auto;
+}
+.thumbnail .caption{
+    height: 200px;
+    overflow-y: hidden;
+    color: #555;    
+    padding: 9px;
+}
+.caption h3{
+    margin-top: 20px;
+    margin-bottom: 10px;    
+    font-weight: 500;
+    line-height: 1.1;
+    font-size: 30px;
+    
+}
+.caption h3 a{
+    color: #337ab7;
+}
+.caption h3 small{
+    font-weight: 400;
+    line-height: 1;
+    color: #777;
+    font-size: 15px;
+}
+.caption p{
+    color:#555;
+    font-weight: 100
+}
+#scrollUp{
+    background-color: #777;
+    color: #eee;
+    font-size: 40px;
+    line-height:45px;
+    text-align: center;
+    text-decoration: none;
+    bottom: 20px;
+    right: 20px;
+    overflow: hidden;
+    width: 46px;
+    height: 46px;
+    border: none;
+    opacity: .8;
+}

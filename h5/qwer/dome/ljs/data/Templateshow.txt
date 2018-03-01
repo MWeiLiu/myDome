@@ -1,0 +1,16 @@
+/**展示页面 存储过程模式的命令 查询SelectByID如有需要 自行切换**/
+<form id="Show" cmd-select="_Query" isTemplate="true"> 
+<table border="0" cellpadding="0" cellspacing="12" class="c12"> 
+
+</table>
+</form>
+
+/**展示列表页 HTML自行定义**/
+<ul id="List" cmd-select="_List"> 
+<li></li>
+</ul>
+
+/*页脚区域 自行选用*/
+<div id="Listtfoot">
+    <div class="tfoot"><a class="nextPage">加载更多</a></div>
+</div>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>HTML | Files</title>
+        <link rel="stylesheet" href="css/files.css"/>
+	</head>
+	<body>
+        <div class="fileBox">
+            <input id="upFile" type="file"  name="file" />
+<!--            accept="video/mp4,audio/mp3,image/jpeg,image/png,image/gif ,text/plain ,text/html ,text/css,text/javascript, application/javascript,application/json"-->
+        </div>
+        
+<!--图片--->
+        <div class="imageBox"></div>
+        
+<!--视频--->
+<!--
+		<div class="videoBox">
+            <video class="videoContent" >
+                <source type="video/mp4"/>
+            </video>
+            <div class="videoMask">
+                <img class="videoPlay" src="images/videoPlay.png" alt=""/>
+                <div class="videoLoadLoading videoWaiting"></div>
+            </div>
+            <div class="videoOperators">
+                <img class="inlineBlock videoPlayPause" src="images/videoPlayS.png" />
+                <div class="inlineBlock videoCurrentTime">00:00</div>
+                <span class="inlineBlock" style="font-size:14px">&nbsp;/&nbsp;</span>
+                <div class="inlineBlock videoTotalTime">00:00</div>
+                <div class="inlineBlock videoProgressContainer">
+                    <div class="videoProgress">
+                        <span class="progressPoint"></span>
+                    </div>
+                </div>
+                <div class="inlineBlock videoVolumeContent" spellcheck="false">
+                    <img class="inlineBlock volumeMuteMax" src="images/volumeMax1.0.png" />
+                    <div class="inlineBlock volumeProgressWrap">
+                        <div class="volumeProgress"></div>
+                    </div>
+                </div>
+                <img class="inlineBlock videoFull" src="images/fullScreen1.0.png" />
+            </div>
+        </div>
+-->
+<!--
+        <div class="audioEditer">
+            <div class="editThumb editering" style="display: block;">
+                <img class="recordStatus" src="images/redordingIcon.png" alt="">
+                <span class="recordTime">00:00</span>
+                <div class="operators">
+                    <span class="record recordPause"></span>
+                    <input type="button" class="audioUploadBtn uploadRecord" value="完成">
+                </div>
+            </div>
+        </div>
+-->
+        
+<!--
+        <div style="font-size:13px;">
+            <span style="font-weight:bold;vertical-align:middle;cursor:pointer;" onclick="javascript:bShare.more(event);return false;">分享到：</span>
+
+            <a title="分享到腾讯朋友" onclick="javascript:bShare.share(event,'qqxiaoyou',0);return false;" style="cursor:pointer;color:#2e3192;">
+                <img src="http://static.bshare.cn/frame/images/logos/s4/qqxiaoyou.gif" style="height:16px; width:16px; vertical-align:middle;"/>
+                <span style="padding-left:2px; vertical-align:middle;">腾讯朋友</span>
+            </a>
+
+            <a title="分享到新浪微博" onclick="javascript:bShare.share(event,'sinaminiblog',0);return false;" style="cursor:pointer;color:#2e3192;">
+               <img src="http://static.bshare.cn/frame/images/logos/s4/sinaminiblog.gif" style="height:16px; width:16px; vertical-align:middle;"/>
+               <span style="padding-left:2px; vertical-align:middle;">新浪微博</span>
+            </a>
+
+            <a title="更多平台" onclick="javascript:bShare.more(event);return false;" style="cursor:pointer;color:#000;">
+                <img src="http://static.bshare.cn/frame/images/logos/s4/more.gif" style="height:16px; width:16px; vertical-align:middle;"/>
+                <span style="padding-left:2px; vertical-align:middle;">更多平台</span>
+            </a>
+        </div>
+-->
+        
+        <audio id="audio"></audio>
+        <script src="js/jquery-1.8.3.js"></script>
+        <script src="plug-in/recorder/lib/myna.js"></script>
+        <script src="js/files.js"></script>
+        <script src="js/video.js"></script>
+<!--        <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=<你的UUID>&style=-1"></script>-->
+<!--
+        <script>
+            bShare.addEntry(entry);
+            bShare.share(event, shortName[, entryNum]);
+            bShare.init();
+        </script>
+-->
+	</body>
+</html>

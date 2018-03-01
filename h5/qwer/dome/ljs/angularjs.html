@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+<meta charset="utf-8">
+<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script> 
+<!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular.js"></script>-->
+</head>
+<body>
+
+<!--<div>
+  <p>名字 : <input type="text" ng-model="name" palceholder="1111"></p>
+  <h1>Hello {{name}}</h1>
+</div>-->
+
+<div >
+	<input ng-model="clock" type="text" placeholder="Your name">
+	<h1>Hello {{clock}}</h1>
+</div>
+<script>
+	function MyController($scope, $timeout) {
+ 			var updateClock = function() {
+ 			$scope.clock = new Date();
+ 				$timeout(function() {
+ 					updateClock();
+ 				}, 1000);
+ 			};
+ 			updateClock();
+	}; 
+</script>
+</body>
+</html>

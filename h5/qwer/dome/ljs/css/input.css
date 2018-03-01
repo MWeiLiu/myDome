@@ -1,0 +1,28 @@
+﻿*{margin:0;padding:0;}
+.uploader {border-radius: 5px;box-shadow: 0 0 5px #ddd;cursor: default;display: inline-block;margin: 10px 10px;
+            overflow: hidden;padding: 0;position: relative;}
+.filename {-moz-border-bottom-colors: none;-moz-border-left-colors: none;-moz-border-right-colors: none;
+  -moz-border-top-colors: none;background: rgba(0, 0, 0, 0) -moz-linear-gradient(center top , #fafafa 0%, #eee 100%) repeat scroll 0 0;
+    border-color: #ccc;border-image: none;border-radius: 5px 0 0 5px;border-style: solid none solid solid;border-width: 1px 0 1px 1px;
+    box-shadow: 0 0 1px #fff inset;box-sizing: border-box;color: #777;cursor: default;display: inline-block;float: left;
+    font: 9pt/100% Arial,Helvetica,sans-serif; height: 32px;margin: 0;outline: 0 none; overflow: hidden;padding: 8px 10px;
+    text-overflow: ellipsis;text-shadow: 1px 1px 0 #fff;white-space: nowrap;width: 180px;}
+.button {border: 1px solid;border-radius: 0 5px 5px 0;box-shadow: 0 0 1px #fff inset;cursor: pointer;display: inline-block;
+    float: left;font: bold 9pt/100% Arial,Helvetica,sans-serif;height: 32px;margin: 0;outline: 0 none;padding: 8px 12px;}
+.uploader input[type="file"] {border: 0 none;bottom: 0;cursor: pointer;height: 30px;margin: 0;opacity: 0;padding: 0;
+    position: absolute;right: 0;top: 0;}     
+.blue .button {
+    background: rgba(0, 0, 0, 0) -moz-linear-gradient(center top , #3b75b4 0%, #064884 100%) repeat scroll 0 0;
+    border-color: #09365f;color: #fff;text-shadow: 1px 1px 0 #09365f;}
+.green .button {
+    background: rgba(0, 0, 0, 0) -moz-linear-gradient(center top , #93aa4c 0%, #7d8f33 100%) repeat scroll 0 0;
+    border-color: #6b7735;color: #fff; text-shadow: 1px 1px 0 #6b7735;}
+.red .button {
+    background: rgba(0, 0, 0, 0) -moz-linear-gradient(center top , #b42364 0%, #90013f 100%) repeat scroll 0 0;
+    border-color: #7e0238;color: #fff;text-shadow: 1px 1px 0 #7e0238;}
+.orange .button {
+    background: rgba(0, 0, 0, 0) -moz-linear-gradient(center top , #f86c1f 0%, #d54d01 100%) repeat scroll 0 0;
+    border-color: #c04501;color: #fff;text-shadow: 1px 1px 0 #c04501;}
+.black .button {
+    background: rgba(0, 0, 0, 0) -moz-linear-gradient(center top , #444444 0%, #222222 100%) repeat scroll 0 0;
+    border-color: #111111;color: #fff;text-shadow: 1px 1px 0 #111111;}

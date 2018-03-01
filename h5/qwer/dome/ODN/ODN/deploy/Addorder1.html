@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>添加工单</title>	
+		<script src="../js/p.jquery.zjs.js"></script>
+		<script src="../js/m.cselector.config.js"></script>
+		<script src="../js/m.cselector.1.0.js"></script>
+		<script src="../js/p.WdatePicker.js"></script>
+		<script src="../js/ODN.js"></script>
+		<link href="../js/layout.m.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="../js/odn.css" />
+		<script type="application/javascript">
+			function getBeforeDate(n) {
+				var n = n;
+				var d = new Date();
+				var year = d.getFullYear();
+				var mon = d.getMonth() + 1;
+				var day = d.getDate();
+				var hour = d.getHours()
+				var minu = d.getMinutes()
+				var sec = d.getSeconds()
+				if(day <= n) {
+					if(mon > 1) {
+						mon = mon - 1;
+					} else {
+						year = year - 1;
+						mon = 12;
+					}
+				}
+				d.setDate(d.getDate() - n);
+				year = d.getFullYear();
+				mon = d.getMonth() + 1;
+				day = d.getDate();
+				s = year + "-" + (mon < 10 ? ('0' + mon) : mon) + "-" + (day < 10 ? ('0' + day) : day) + " " + hour + ":" + minu + ":" + sec;
+				return s;
+			}
+			function gglx(){
+				var gglx=$(".gglx .cselectorInput").html()
+				if(gglx=="配置工单"){
+					window.location.href="deployorder.html"
+				}
+			}
+			function setcallback(){
+				window.localStorage.removeItem("id")
+				close()
+			}
+			$(function(){
+				
+				zjs.cmd({
+					cmd:"workOrder/autoGenerateWorkOrder",
+					callback:function(data){
+						$("#workOrderId").val(data.workOrderID)
+					}
+				})
+				$(".gjxaa").live("click",function(){
+					var api = frameElement.api;					 
+		            if (api) {
+		                W = api.opener;
+		                var dil=W.$.dialog({
+		                    "title": "设备列表",
+		                    "content": "url:deploy/equipmentlist.html",
+		                    "dial.parent" : api,
+		                    "max": false,
+		                    "min": false,
+		                    "width": "900px",
+		                    "height": "650px",
+		                    "fixed": true,
+		                    "lock": true,
+		                    "close": function () { 
+		                       var deviceId=dil.content.document.getElementById("deviceId").value
+		                       var deviceName=dil.content.document.getElementById("deviceName").value
+		                       var kg=dil.content.document.getElementById("kg").value
+		                       if(kg==1){
+		                       		$(".gjxinputa").val(deviceName)
+		                       }      
+		                    }
+		                });
+		            }					
+				})
+				$(".gjxba").live("click",function(){
+					var api = frameElement.api;					 
+		            if (api) {
+		                W = api.opener;
+		                var dil=W.$.dialog({
+		                    "title": "设备列表",
+		                    "content": "url:deploy/equipmentlist.html",
+		                    "dial.parent" : api,
+		                    "max": false,
+		                    "min": false,
+		                    "width": "900px",
+		                    "height": "650px",
+		                    "fixed": true,
+		                    "lock": true,
+		                    "close": function () { 
+		                       var deviceId=dil.content.document.getElementById("deviceId").value
+		                       var deviceName=dil.content.document.getElementById("deviceName").value
+		                       var kg=dil.content.document.getElementById("kg").value
+		                       if(kg==1){
+		                       		$(".gjxinputb").val(deviceName)
+		                       	}
+		                      
+		                    }
+		                });
+		            }					
+				})
+				$(".tjdka").live("click",function(){
+					var api = frameElement.api;					 
+		            if (api) {
+		                W = api.opener;
+		                var dil=W.$.dialog({
+		                    "title": "设备列表",
+		                    "content": "url:deploy/addImpoort.html",
+		                    "dial.parent" : api,
+		                    "max": false,
+		                    "min": false,
+		                    "width": "650px",
+		                    "height": "650px",
+		                    "fixed": true,
+		                    "lock": true,
+		                    "close": function () { 
+		                       var duan=dil.content.document.getElementById("duan").value
+		                       var kg=dil.content.document.getElementById("kg").value
+		                       if(kg==1){
+			                       	if($(".tjdktextareaa").val()==""){
+			                       		$(".tjdktextareaa").val(duan)
+			                       }else{
+			                       		$(".tjdktextareaa").val($(".tjdktextareaa").val()+","+duan);
+			                       }
+		                       }
+		                       
+		                    }
+		                });
+		            }		
+				})
+				$(".tjdkb").live("click",function(){
+					var api = frameElement.api;					 
+		            if (api) {
+		                W = api.opener;
+		                var dil=W.$.dialog({
+		                    "title": "设备列表",
+		                    "content": "url:deploy/addImpoort.html",
+		                    "dial.parent" : api,
+		                    "max": false,
+		                    "min": false,
+		                    "width": "650px",
+		                    "height": "650px",
+		                    "fixed": true,
+		                    "lock": true,
+		                    "close": function () { 
+		                       var duan=dil.content.document.getElementById("duan").value
+		                       var kg=dil.content.document.getElementById("kg").value
+		                       if(kg==1){
+			                       	if($(".tjdktextareab").val()==""){
+			                       		$(".tjdktextareab").val(duan)
+			                       }else{
+			                       		$(".tjdktextareab").val($(".tjdktextareab").val()+","+duan);
+			                       }
+			                       if($(".tjdktextareac").val()!=""){
+			                       		$(".tjdktextareac").val($(".tjdktextareac").val()+",");
+			                       }
+		                       }
+		                    }
+		                });
+		            }		
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<form class="cform" id="addworkorder" cmd-insert="workOrder/addWorkOrder" setcallback="setcallback()">
+			<input type="hidden" id="secondOrderType" value="4"/>
+			<table  border="0" cellpadding="0" cellspacing="12" class="c12 one">
+				<tr><td style="margin-left: 220px;" colspan="3" ><h4>添加工单</h4></td></tr>
+				<tr><td class="w1">工单类型：</td><td colspan="2" class="w3 gglx">柜间跳接</td></tr>					
+				<tr><td class="w1">期望完成日期：</td><td colspan="2" class="w3"><input id="completeTime" type="text" onClick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})"/></td></tr>				
+				<tr><td class="w1">工单编号：</td><td colspan="2" class="w3"><input id="workOrderId" type="text" readonly="readonly"/></td></tr>
+				<tr><td class="w1">业务信息：</td><td colspan="2" class="w35"><input id="workOrderInfo" style="height: 25px;width: 350px;" type="text" rule="required" /></td></tr>
+				<tr><td class="w1">光交箱A：</td><td style="height: 25px;" colspan="2" class="w35"><input class="gjxinputa" style="height: 25px;width: 350px;" type="text" rule="required"/><a class="gjxaa" style="position: relative;top:-25px;right: -325px;"><img  src="/ODN/img/search.png" /></a></td></tr>
+				<tr><td class="w1">跳接端口A：</td><td class="w35 tjdk" style="height: 60px;"><textarea id="portA" class="tjdktextareaa" style="height: 60px;width: 350px;padding: 5px;" type="text" rule="required"></textarea><a class="tjdka" ><img src="/ODN/img/search.png" /></a></td><td class="w1" style="text-align: left;">&nbsp;&nbsp;共<span> 0 </span>个</td></tr>
+				<tr><td class="w1">光交箱Z：</td><td style="height: 25px;" colspan="2" class="w35"><input class="gjxinputb" style="height: 25px;width: 350px;" type="text" rule="required"/><a class="gjxba" style="position: relative;top:-25px;right: -325px;"><img  src="/ODN/img/search.png" /></a></td></tr>
+				<tr><td class="w1">跳接端口Z：</td><td class="w35 tjdk" style="height: 60px;"><textarea id="portZ" class="tjdktextareab" style="height: 60px;width: 350px;padding: 5px" type="text" rule="required"></textarea><a class="tjdkb"><img src="/ODN/img/search.png" /></a></td><td class="w1" style="text-align: left;">&nbsp;&nbsp;共<span> 0 </span>个</td></tr>
+				<tr><td class="w1">承载业务：</td><td class="w35 czyw" style="height: 60px;"><textarea class="tjdktextareac" style="height: 60px;width: 350px;padding: 5px" type="text"></textarea></td><td class="w1" style="text-align: left;">&nbsp;&nbsp;按端口顺序<br />&nbsp;&nbsp;添加信息</td></tr>
+				<tr><td class="w1">业务员：</td><td colspan="2" class="w3"><input id="merchandiserUserId" type="text" class="cselector" mode="" cmd-select="workOrder/Salesman" template="<a value='{{merchandiserUserId}}'>{{company}}|{{department}}|{{name}}</a>"/></td></tr>
+				<tr><td colspan="3" style="margin-left: 160px;"><a class="qd" id="submit">确定</a></td></tr>
+			</table>			
+		</form>
+	</body>
+</html>

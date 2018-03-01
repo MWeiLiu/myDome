@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>工单管理</title>
+		<script src="../js/p.jquery.zjs.js"></script>
+		<script src="../js/m.cselector.config.js"></script>
+		<script src="../js/m.cselector.1.0.js"></script>
+		<script src="../js/p.WdatePicker.js"></script>
+		<script src="../js/ODN.js"></script>
+		<link href="../js/layout.m.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="../js/odn.css" />
+		<script type="application/javascript">
+			function beforerenderrow(datai) {
+      			datai.gdzt = zjs.getvals("orderStatus1", datai.status);
+      			datai.gdlx = zjs.getvals("firstOrderType", datai.firstOrderType);
+  			};
+  			$(function(){
+  				$(".addworkorder").live("click",function(){					
+		                var dil=$.dialog({
+		                    "title": "添加工单",
+		                    "content": "url:deploy/addor.html",
+		                    "max": false,
+		                    "min": false,
+		                    "width": "1200px",
+		                    "height": "650px",
+		                    "fixed": true,
+		                    "lock": true,
+		                    "close": function () { 
+		                      window.location.href=window.location.href
+		                    }
+		                });
+				})
+  				$("#workorderbot .details").live("click",function(){
+  					var one=$(this).parents("tr").find(".gdlx").attr("leixo")
+					var two=$(this).parents("tr").find(".gdlx").attr("leixt")
+  					var id=$(this).parents("tr").attr("id")
+  					if(two==1||two==4){
+  						window.location.href="detail.html?id="+id+"&firstOrderType="+one+"&secondOrderType="+two;
+  					}else if(two==11){
+  						window.location.href="detail_peizhi.html?id="+id+"&firstOrderType="+one+"&secondOrderType="+two;
+  					}
+  				})
+  				$(".paifa").live("click",function(){
+  					var s="0";
+  					$(".xuanze input:checked").each(function(){
+  						if(s=="0"){
+  							s=$(this).val()
+  						}else{
+  							s+=','+$(this).val()
+  						}
+  						
+  					})
+  					zjs.cmd({
+  						cmd:"workOrder/distributeWorkOrder",
+  						para:{"id":s},
+  						callback:function(){
+  							
+  						}
+  					})
+  				})
+  			})
+  			
+		</script>
+	</head>
+	<body>
+		<form class="cform" id="workorderbotParas">
+			<table>
+				<tr>
+					<td class="ws8">日期：</td>
+					<td class="w12"><input id="createTime" class="sdate" type="text" onClick="WdatePicker()"/></td>
+					<td class="wss">-</td>
+					<td class="w12"><input id="createTimeEnd" class="sdate" type="text" onClick="WdatePicker()"/></td>
+					<td class="ws8">工单类型：</td>
+					<td class="w12"><input id="firstOrderType" mode="firstOrderType" class="cselector"/></td>
+					<td class="ws8">状态：</td>
+					<td class="w12"><input id="status" mode="orderStatus" class="cselector"/></td>
+					<td><a class="search1" id="search">搜索</a></td>
+					<td class="ws8"><a class="you6 you "><img src="../img/workorder/3.png" /> 导入工单</a></td>
+					<td class="ws8"><a class="you5 you addworkorder " ><img src="/ODN/img/workorder/2.png" /> 添加工单</a></td>
+					<td class="ws8"><a class="you4 you paifa"><img src="../img/workorder/1.png" /> 工单派发</a></td>
+				</tr>
+			</table>			
+		</form>
+		
+		<table class="ctable" id="workorderbot" border="0" cellspacing="0" cellpadding="0" dateformat="yyyy-MM-dd hh:mm:ss" cmd-select="workOrder/allWorkOrder" pagesize=8  beforerenderrow="beforerenderrow()" idkey="id">
+			<thead>
+				<tr>
+					<td></td>
+					<td>序号</td>
+					<td>工单日期</td>
+					<td>工单编号</td>
+					<td>工单类型</td>
+					<td>业务信息</td>
+					<td>业务员</td>
+					<td>转派给</td>
+					<td>下单时间</td>
+					<td>提交时间</td>
+					<td>状态</td>			
+					<td>操作</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="uls" id="{{id}}">
+					<td class="xuanze"><input style="display: inline-block;width: 14px;position: relative;top: 8px;" type="checkbox" value="{{id}}"/></td>
+					<td>{{rindex}}</td>
+					<td>{{createTime}}</td>
+					<td>{{workOrderId}}</td>
+					<td class="gdlx" leixo="{{firstOrderType}}" leixt="{{secondOrderType}}">{{gdlx}}</td>
+					<td>{{workOrderInfo}}</td>	
+					<td>{{merchandiserName}}</td>
+					<td>{{turnSentPersonName}}</td>
+					<td>{{downloadTime}}</td>
+					<td>{{uploadTime}}</td>
+					<td>{{gdzt}}</td>			
+					<td><a class="details">详情</a> &nbsp;&nbsp;&nbsp;<a class="dele" delete="workOrder/delWorkOrder" deleteid="{{id}}">删除</a></td>
+				</tr>				
+			</tbody>
+			<tfoot class="one">
+				<tr>
+		            <td colspan="14">
+		                <div >
+		                    <table border="0" cellpadding="0" cellspacing="0" class="fenye">
+		                        <tfoot>
+		                            <tr>		
+		                                <!-- 上一页命令关键勾子样式 prevPage-->
+		                                <td><a href="javascript:void(0);" class="prevPage btn"><img src="../img/left.png" /></a></td>		
+		                                <!-- 页码容器关键勾子样式 pageNumbers-->
+		                                <td class="pageNumbers"></td>		
+		                                <!-- 下一页命令关键勾子样式 nextPage -->                         
+		                                <td><a href="javascript:void(0);" class="nextPage btn"><img src="../img/right.png" /></a></td>
+		                            </tr>
+		                        </tfoot>
+		                    </table>
+		                </div>
+		            </td>
+		        </tr>
+			</tfoot>
+		</table>			
+	</body>
+</html>

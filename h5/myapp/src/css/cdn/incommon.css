@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS 默认样式 */
+html{-webkit-tap-highlight-color: transparent;overflow-x: hidden;height: 100%;min-width: 320px;max-width: 1920px;overflow-x: auto;font-size:100%;-webkit-text-size-adjust:none;margin: 0 auto;}
+/*兼容不同浏览器去边界，内填充*/
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0;}
+/*app模式减少css计算错误产生*/
+body{-webkit-box-sizing: border-box;font-family:arial,Microsoft Yahei;color:#333333;background:#FFFFFF;}
+/*兼容不同浏览器的table默认样式*/
+table{border-collapse:collapse;border-spacing:0}
+/*不同标题样式初始化*/
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+ul,ol,li{list-style:none;}
+em,i{font-style:normal}
+strong,b{font-weight:normal}
+img{border:none}
+input,img{vertical-align:middle}
+a{text-decoration:none;}
+/*去默认样式*/
+input,select,textarea{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-appearance:none;border:0;border-radius:0}
+textarea:focus{outline:0}
+input, textarea, keygen, select, button, isindex, meter, progress {-webkit-writing-mode: horizontal-tb;font-size:100%;}
+input, textarea, keygen, select, button, isindex {margin: 0em;font: -webkit-small-control;color: initial;letter-spacing: normal;word-spacing: normal;text-transform: none;text-indent: 0px;text-shadow: none;display: inline-block;text-align:start;}
+legend{color:#333333;}

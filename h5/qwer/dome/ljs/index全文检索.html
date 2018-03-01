@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-1.11.1.js" ></script>
+		<script type="text/javascript" src="js/m.cselect.lv.js" ></script>
+		<link rel="stylesheet" href="css/layout.css" />
+	</head>
+	<body>
+		<div id="demo-wrap">
+	<div class="product-head">
+		<p>医院名称:</p>
+		<div id="form"></div>
+	</div>
+	<table id="demo-list">
+		<tr><td >张三</td></tr>
+		<tr><td >张三</td></tr>
+		<tr><td >张三</td></tr>
+		<tr><td >张三</td></tr>
+		<tr><td >张三</td></tr>
+		<tr><td >张三</td></tr>
+		<tr><td >张三</td></tr>
+		<tr><td >张三</td></tr>
+		<tr><td >张三</td></tr>
+		<tr><td >张三</td></tr>
+	</table>
+</div>
+<script>
+	(function($) {
+	
+	//全文检索√
+    $.expr[":"].Contains = function(a, i, m) {
+        return (a.textContent || a.innerText || "").toUpperCase().indexOf(m[3].toUpperCase()) >= 0;
+    };
+    function filterList(header, list) {
+        var form = $("<form>").attr({
+            "class":"filterform",
+            action:"#"
+        }), input = $("<input>").attr({
+            "class":"filterinput",
+            type:"text"
+        });
+        $(form).append(input).appendTo(header);
+        $(input).change(function() {
+            var filter = $(this).val();
+            if (filter) {
+                $matches = $(list).find("td:Contains(" + filter + ")").parent();
+                $("tr", list).not($matches).slideUp();
+                $matches.slideDown();
+            } else {
+                $(list).find("tr").slideDown();
+            }
+            return false;
+        }).keyup(function() {
+            $(this).change();
+        });
+    }
+    $(function() {
+        filterList($("#form"), $("#demo-list"));
+    });
+})(jQuery);	
+</script>
+	</body>
+</html>

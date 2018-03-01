@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>光链路示意图</title>
+		<script src="../js/p.jquery.zjs.js"></script>
+		<script src="../js/m.cselector.config.js"></script>
+		<script src="../js/m.cselector.1.0.js"></script>
+		<script src="../js/p.WdatePicker.js"></script>
+		<script src="../js/ODN.js"></script>
+		<link href="../js/layout.m.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="../js/odn.css" />
+		<script type="application/javascript">
+			$(function(){
+				var id=localStorage.getItem("z")
+				zjs.cmd({
+					cmd:"resourceDevice/opticalLink",
+					para:{"id":id},
+					callback:function(data){
+						var acount=data.Datas.length
+						if(acount==1){
+							var html1=zjs.render(data.Datas,'<li><b>{{deviceCode}}</b><p>设备名称：{{deviceName}}</p><img src="../img/sb-1.jpg"  /><font class="syou">{{frameBoardPort}}</font></li>')
+							$("#glianl ul").html(html1)
+							$("#glianl ul li").css("width","100%")
+							$("#glianl .syou").css({"top":"0px","right":"0px"})
+						}else if(acount==2){
+							var html1=zjs.render(data.Datas,'<li><b>{{deviceCode}}</b><p>设备名称：{{deviceName}}</p><img src="../img/sb-1.jpg"  /><font class="syou">{{frameBoardPort}}</font></li>')
+							$("#glianl ul").html(html1)
+							$("#glianl ul li").css("width","50%")
+							$("#glianl .syou").css({"top":"0px","right":"0px"})
+							$("#glianl").append('<img class="xian4" src="../img/sb-2.jpg" />')
+						}else if(acount==3){
+							var html1=zjs.render(data.Datas,'<li><b>{{deviceCode}}</b><p>设备名称：{{deviceName}}</p><img src="../img/sb-1.jpg"  /><font class="syou">{{frameBoardPort}}</font></li>')
+							$("#glianl ul").html(html1)
+							$("#glianl ul li").css("width","33.33%")
+							$("#glianl .syou").css({"top":"0px","right":"0px"})
+							$("#glianl").append('<img class="xian1" src="../img/sb-2.jpg" /><img class="xian2" src="../img/sb-2.jpg" />')
+						}
+					}
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<form class="cform" id="glianl">
+			<h4>光链路示意图</h4>
+			<ul class="bottom">
+				
+			</ul>
+			<!--<img class="xian2" src="../img/sb-2.jpg" />-->
+		</form>
+	</body>
+</html>

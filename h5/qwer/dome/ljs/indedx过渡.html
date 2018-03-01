@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/p.jquery.zjs.js" ></script>
+		<style>
+.id1{width:100px;height:100px;position:absolute;top:0;left:400px;opacity:1;background:red;
+transition:left 3s,opacity 3s;}
+.id2{width:100px;height:100px;position:absolute;top:0;left:500px;opacity:0;background:blue;
+transition:left 3s,opacity 3s;}
+.qwe1{left:200px;opacity:0;}
+.qwe2{left:300px;opacity:1;}
+</style>
+<script>
+	$(function(){
+		$("#dianji").click(function(){
+			if($(".id1").hasClass("qwe1")){
+				$(".id1").removeClass("qwe1");
+				$(".id2").removeClass("qwe2");
+			}else{
+				$(".id1").addClass("qwe1");
+				$(".id2").addClass("qwe2");
+			}
+		});
+	})
+</script>
+	</head>
+	<body>
+
+<div class="id1">id1</div>
+<div class="id2">id2</div>
+<input type="button" value="点击" id="dianji">
+	</body>
+</html>

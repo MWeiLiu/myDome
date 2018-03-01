@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title></title>	
+		<script src="../js/p.jquery.zjs.js"></script>
+		<script src="../js/m.cselector.config.js"></script>
+		<script src="../js/m.cselector.1.0.js"></script>
+		<script src="../js/p.WdatePicker.js"></script>
+		<script src="../js/ODN.js"></script>
+		<link href="../js/layout.m.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="../js/odn.css" />
+		<script type="text/javascript">
+			function beforerender($id,datai) {     
+   		datai.gzyy = zjs.getvals("alarmReason", datai.alarmReason);
+	};
+		</script>
+	</head>
+	<body>
+		<form class="cform" id="Upfailure" cmd-select="MalfunctionAlarm/details"  cmd-update="MalfunctionAlarm/changeFauleInfo" beforerender="beforerender()" setcallback="close()">			
+			<table border="0" cellpadding="0" cellspacing="12" class="c12 one" >
+				<tr><td colspan="2" class="w100"><h4>故障详情</h4></td></tr>
+				<tr><td class="w1">故障设备：</td><td class="w3"><input id="deviceName" type="text" readonly="readonly"/></td></tr>
+				<tr><td class="w1">故障位置：</td><td class="w3"><input id="faultPosition" type="text" readonly="readonly"/></td></tr>
+				<tr><td class="w1">故障等级：</td><td class="w3"><input id="alarmType" mode="alarmType1" class="cselector"></td></tr>
+				<tr><td class="w1">告警时间：</td><td class="w3"><input id="alarmTime" type="text" readonly="readonly"/></td></tr>
+				<tr><td class="w1">故障原因：</td><td class="w3"><input id="gzyy" type="text" readonly="readonly"/></td></tr>
+				<tr><td class="w1">处理状态：</td><td class="w3"><input id="status" mode="status1" class="cselector" type="text"></td></tr>
+				<tr><td class="w2"><a id="submit" class="qd">确定</a></td></tr>
+			</table>
+		</form>
+	</body>
+</html>

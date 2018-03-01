@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title></title>	
+		<script src="../js/p.jquery.zjs.js"></script>
+		<script src="../js/m.cselector.config.js"></script>
+		<script src="../js/m.cselector.1.0.js"></script>
+		<script src="../js/p.WdatePicker.js"></script>
+		<script src="../js/ODN.js"></script>
+		<link href="../js/layout.m.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="../js/odn.css" />
+		<script type="application/javascript">
+			$(function(){
+				$("a.qd").live("click",function(){
+					var a=$(".gdlx .cselectorInput").html()
+					if(a=="配置工单"){
+						window.location.href="deployorder.html"
+					}else if(a=="柜内跳接"){
+						window.location.href="Addorder.html"
+					}else if(a=="柜间跳接"){
+						window.location.href="Addorder1.html"
+					}
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<form style="width: 450px;height: 200px;margin: 150px auto 0;border: 1px solid #3EBDAA;border-radius:5px ;font-size: 12px;" class="cform">
+			<table >
+				<tr  style="height: 100px;"><td class="w15" style="text-align: right;">请选择工单类型：</td><td class="w25 gdlx"><input style="width: 250px;" type="text" class="cselector" mode="secondOrderType" /></td></tr>
+				<tr style="height: 75px;"><td colspan="2"><a class="qd" style="display: block;width: 200px;height: 30px;background: #3EBDAA;color: #fff;line-height: 30px;text-align: center;margin-left: 130px;font-size: 12px;">确定</a></td></tr>
+			</table>
+		</form>
+	</body>
+</html>

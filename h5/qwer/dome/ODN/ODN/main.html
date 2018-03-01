@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>首页</title>
+		<script src="js/p.jquery.zjs.js"></script>
+		<script src="js/m.cselector.config.js"></script>
+		<script src="js/m.cselector.1.0.js"></script>
+		<script src="js/p.WdatePicker.js"></script>
+		<script src="js/ODN.js"></script>
+		<link href="js/layout.m.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="js/odn.css" />
+	</head>
+	<body>
+		<form class="cform" id="maintop">
+			<div class="maintop">
+				<span class="fr nowdate">2016-12-02 星期四</span><a href="login.html" class="fr exit">退出登录</a><a class="fr changepass">修改密码</a><span class="fr user">某某某，你好！</span><span class="fl logo">ODN智能管理系统</span>
+			</div>
+		</form>
+		<div class="mainmiddle">
+			<div class="left">
+				<ul>
+					<li class="lia">
+						<a class="one liaa"><img src="img/main/one.png"/> 拓扑管理</a>
+						<ul class="hide">
+							<li class="lib"><a path="topology/guanglu.html">光路拓扑</a></li>
+							<li class="lib"><a path="topology/guanglan.html">光缆拓扑</a></li>
+						</ul>
+					</li>
+					<li class="lia">
+						<a class="three  liaa"><img src="img/main/three.png"/> 资源管理</a>
+						<ul  class="hide">
+							<li class="lib"><a path="Resource/indexa.html">首页</a></li>
+							<li class="lib"><a path="Resource/Station.html">局站管理</a></li>
+							<li class="lib"><a path="Resource/machine.html">机房管理</a></li>
+							<li class="lib"><a path="Resource/equipment.html">设备管理</a></li>
+							<li class="lib"><a path="Resource/opticalCable.html">光缆管理</a></li>
+							<li class="lib"><a path="Resource/pole.html">线杆管理</a></li>
+							<li class="lib"><a path="Resource/pipeline.html">管道管理</a></li>
+						</ul>
+					</li>
+					<li class="lia">
+						<a class="two  liaa"><img src="img/main/two.png"/> 工单管理</a>
+						<ul class="hide">
+							<li class="lib"><a path="deploy/workorder.html">工单管理</a></li>							
+						</ul>
+					</li>
+					<li class="lia">
+						<a class="four  liaa"><img src="img/main/four.png"/> 系统设置</a>
+						<ul  class="hide">							
+							<li class="lib"><a path="systemSetup/Update.html">软件升级</a></li>
+							<li class="lib"><a path="Resource/Import.html">数据导入</a></li>
+							<li class="lib"><a path="safety/backup.html">数据备份</a></li>
+						</ul>
+					</li>
+					<li class="lia">
+						<a class="five  liaa"><img src="img/main/five.png"/> 故障管理</a>
+						<ul  class="hide">
+							<li class="lib"><a path="failure/failure.html">故障管理</a></li>
+						</ul>
+					</li>
+					<li class="lia">
+						<a class="six  liaa"><img src="img/main/six.png"/> 日志管理</a>
+						<ul  class="hide">
+							<li class="lib"><a path="log/log.html">日志管理</a></li>
+						</ul>
+					</li>
+					<li class="lia">
+						<a class="seven  liaa"><img src="img/main/seven.png"/> 安全管理</a>
+						<ul  class="hide">
+							<li class="lib"><a path="safety/authority.html">权限管理</a></li>
+						</ul>
+					</li>
+					<li class="lia">
+						<a class="eight  liaa"><img src="img/main/eight.png"/> 实时监测</a>
+						<ul  class="hide">
+							<li class="lib"><a path="monitor/monitor.html">实时监测</a></li>
+						</ul>
+					</li>
+					<li class="lia">
+						<a class="nine  liaa"><img src="img/main/nine.png"/> 用户管理</a>
+						<ul  class="hide">
+							<li class="lib"><a path="Device/person.html">帐号管理</a></li>
+							<li class="lib"><a path="Device/Privilege.html">用户权限管理</a></li>
+						</ul>
+					</li>
+					<li class="lia">
+						<a class="ten  liaa"><img src="img/main/ten.png"/> 统计分析</a>
+						<ul class="hide">
+							<li class="lib"><a path="Resource/userate.html">资源利用率统计</a></li>
+							<li class="lib"><a path="assess/assess.html">其他指标统计</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="right">
+				<iframe id="center" width="100%" height="99%" frameborder="0" src="topology/guanglu.html"></iframe>
+			</div>
+		</div>
+		<form class="cform" id="Changepass">
+			<div class="sc">
+				<h4>修改密码</h4>
+				<p><label class="oldpass">原密码：</label><input type="text"  /> </p>
+				<p><label class="newpass1">新密码：</label><input type="text"  /> </p>
+				<p><label class="newpass2">重新输入：</label><input type="text"  /> </p>
+				<h5><a class="qx">取消</a><a class="qd">确定</a></h5>
+			</div>
+		</form>
+	</body>
+</html>

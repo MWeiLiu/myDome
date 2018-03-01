@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>工单管理</title>
+		<script src="../js/p.jquery.zjs.js"></script>
+		<script src="../js/m.cselector.config.js"></script>
+		<script src="../js/m.cselector.1.0.js"></script>
+		<script src="../js/p.WdatePicker.js"></script>
+		<script src="../js/ODN.js"></script>
+		<link href="../js/layout.m.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="../js/odn.css" />
+	</head>
+	<body>
+		<form class="cform" id="workordertop">
+			<p>
+				<a href="distribute.html" class="fr you4 you"><img src="../img/workorder/1.png" /> 工单派发</a>
+				<a class="fr you5 you addworkorder"><img src="../img/workorder/2.png" /> 添加工单</a>
+				<a class="fr you6 you"><img src="../img/workorder/3.png" /> 导入工单</a>
+				<label class="time1">日期：</label>
+				<input id="s1date" class="sdate" type="text" onClick="WdatePicker()"/> - <input id="s2date" class="sdate" type="text" onClick="WdatePicker()"/> 
+				<label class="state1">工单类型：</label>
+				<select class="state2"></select>
+				<label class="degree1">状态：</label>
+				<select class="degree2"></select>
+				
+				<a class="search1">搜索</a>				
+			</p>
+		</form>
+		<table class="ctable" id="workorderbot" border="0" cellspacing="0" cellpadding="0">
+			<thead>
+				<tr>
+					<td>序号</td>
+					<td>工单日期</td>
+					<td>工单编号</td>
+					<td>工单类型</td>
+					<td>业务信息</td>
+					<td>光交箱A</td>
+					<td>光交箱B</td>		
+					<td>业务员</td>
+					<td>转派给</td>
+					<td>下单时间</td>
+					<td>提交时间</td>
+					<td>状态</td>			
+					<td>操作</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>2016-12-05</td>
+					<td>GD2016120500001</td>
+					<td>柜内跳接</td>
+					<td>交通集团机房</td>
+					<td>金海二期光交箱</td>
+					<td>金海三期光交箱</td>		
+					<td>张三</td>
+					<td>李四</td>
+					<td>2016-11-30 16:10:57</td>
+					<td>2016-12-04 09:15:30</td>
+					<td>施工中</td>			
+					<td><a href="detail.html" class="details">详情</a> &nbsp;&nbsp;&nbsp;<a class="dele">删除</a></td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>2016-12-05</td>
+					<td>GD2016120500001</td>
+					<td>柜内跳接</td>
+					<td>交通集团机房</td>
+					<td>金海二期光交箱</td>
+					<td>金海三期光交箱</td>		
+					<td>张三</td>
+					<td>李四</td>
+					<td>2016-11-30 16:10:57</td>
+					<td>2016-12-04 09:15:30</td>
+					<td>施工中</td>			
+					<td><a class="details">详情</a> &nbsp;&nbsp;&nbsp;<a class="dele">删除</a></td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>2016-12-05</td>
+					<td>GD2016120500001</td>
+					<td>柜内跳接</td>
+					<td>交通集团机房</td>
+					<td>金海二期光交箱</td>
+					<td>金海三期光交箱</td>		
+					<td>张三</td>
+					<td>李四</td>
+					<td>2016-11-30 16:10:57</td>
+					<td>2016-12-04 09:15:30</td>
+					<td>施工中</td>			
+					<td><a class="details">详情</a> &nbsp;&nbsp;&nbsp;<a class="dele">删除</a></td>
+				</tr>
+			</tbody>
+			<tfoot class="one">
+				<tr>
+		            <td colspan="14">
+		                <div >
+		                    <table border="0" cellpadding="0" cellspacing="0" class="fenye">
+		                        <tfoot>
+		                            <tr>		
+		                                <!-- 上一页命令关键勾子样式 prevPage-->
+		                                <td><a href="javascript:void(0);" class="prevPage btn"><img src="../img/left.png" /></a></td>		
+		                                <!-- 页码容器关键勾子样式 pageNumbers-->
+		                                <td class="pageNumbers"></td>		
+		                                <!-- 下一页命令关键勾子样式 nextPage -->                         
+		                                <td><a href="javascript:void(0);" class="nextPage btn"><img src="../img/right.png" /></a></td>
+		                            </tr>
+		                        </tfoot>
+		                    </table>
+		                </div>
+		            </td>
+		        </tr>
+			</tfoot>
+		</table>
+		<form class="cform" id="delworkorder">
+			<div class="sc">
+				<h4>删除</h4>
+				<p>真的要删除吗？</p>
+				<h5><a class="qx">取消</a><a class="qd">确定</a></h5>
+			</div>
+		</form>
+		<form class="cform" id="addworkorder">
+			<div class="one">
+				<h4>添加工单</h4>
+				<p><label class="mc">工单日期：</label><input id="sdate" type="text" onClick="WdatePicker()"/> </p>
+				<p><label class="bh">工单编号：</label><input type="text" /></p>
+				<p><label class="mc">工单类型：</label><input type="text" /></p>	
+				<p><label class="xxdz">业务信息：</label><input type="text" /></p>
+				<p><label class="mc">光交箱A：</label><input type="text" /></p>
+				<p><label class="mc">光交箱B：</label><input type="text" /></p>
+				<p><label class="mc">业务员：</label><input type="text" /></p>
+				<p><label class="mc">转派给：</label><input type="text" /></p>
+				<p><label class="mc">下单时间：</label><input id="sdate" type="text" onClick="WdatePicker()"/> </p>
+				<p><label class="mc">提交时间：</label><input id="sdate" type="text" onClick="WdatePicker()"/> </p>
+				<p><label class="state">状态：</label><select><option selected="selected">未处理</option><option>已完成</option></select></p>
+				<p><a class="qx">取消</a><a class="qd">确定</a></p>
+			</div>
+		</form>
+	</body>
+</html>

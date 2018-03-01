@@ -1,0 +1,30 @@
+/**表格页面 存储过程模式的命令 查询列表SelectAll删除DeleteByID我的列表MyList如有需要 自行切换**/
+/**添加页面菜单编号 请注意一定要修改为对应的值**/
+<form id="sParas" class="cform" onsubmit="return false;">
+<table border="0" cellpadding="0" cellspacing="12"><tr>
+
+<td><a id="search" class="btn"><i class="iconfont">&#xe62d;</i><span>查询</span></a>
+<a class="btn btn-org" href="javascript:void(0);" add="/mn/?mid=添加页面菜单编号"><i class="iconfont">&#xe641;</i><span>添加</span></a>
+</td></tr></table></form> 
+<table id="s" class="ctable" border="0" cellpadding="0" cellspacing="0" 
+cmd-select="_List" scrollToRefresh="true" idkey="ID">
+<thead>
+<tr class="trth">
+<td>编号</td><td class="w2">操作</td></tr>
+</thead>
+<tbody style="display:none;">
+<tr class="uls" id="{{ID}}">
+<td>{{ID}}</td>
+<td class="tbody_btns">
+<a class="btn" update="/mn/?mid=添加页面菜单编号&id={{ID}}" title="修改"><i class="iconfont">&#xe6b1;</i>修改</a>
+<a class="btn" delete="_Remove" deleteid="{{ID}}" delmessage="确认要删除吗?"><i class="icon-bitbucket"></i>删除</a>
+</td></tr></tbody>
+<tfoot><tr><td colspan="100"><div class="fr tfootbar">
+<table border="0" cellpadding="0" cellspacing="0">
+<tfoot><tr><td>共 <span class="TotalRows">0</span> 条</td>
+<td>每页显示<select id="pagesize"><option>20</option><option>50</option><option>100</option></select>条</td>
+<td>第 <span class="PageIndex">1/1</span> 页</td>
+<td><a href="javascript:void(0);" class="prevPage btn"><i class="iconfont">&#xe686;</i></a></td>
+<td class="pageNumbers"></td>
+<td><a href="javascript:void(0);" class="nextPage btn"><i class="iconfont">&#xe687;</i></a></td>
+</tr></tfoot></table></div></td></tr></tfoot></table>

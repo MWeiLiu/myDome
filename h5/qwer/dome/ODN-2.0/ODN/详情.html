@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>设备管理-详情</title>
+		<script src="js/p.jquery.zjs.js"></script>
+		<script src="js/m.cselector.config.js"></script>
+		<script src="js/m.cselector.1.0.js"></script>
+		<script src="js/p.WdatePicker.js"></script>
+		<script src="js/ODN.js"></script>
+		<link href="js/layout.m.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="js/odn.css" />
+	</head>
+	<body>
+		<div class="details-top">
+			<span>设备管理&nbsp;&nbsp;&lt;&lt;&nbsp;&nbsp;详情</span>
+		</div>
+		<div class="details">
+			<div class="details-information">
+				<table class="details-tablelist">
+					<tbody>
+						<tr>
+							<td width="260"><span>设备编号：</span>&nbsp;&nbsp;<font>14-0DB-D0</font></td>
+							<td width="280"><span>设备名称：</span>&nbsp;&nbsp;<font>自贸区服务中心ODB-D</font></td>
+							<td width="130"><span>设备类型：</span>&nbsp;&nbsp;<font>ODF</font></td>
+							<td><span>设备型号：</span>&nbsp;&nbsp;<font>12盘2框</font></td>
+						</tr>
+						<tr>
+							<td width="260"><span>所属机房：</span>&nbsp;&nbsp;<font>自贸区服务中心B1F机房</font></td>
+							<td width="280"><span>设备地址：</span>&nbsp;&nbsp;<font>天津市滨海新区商业街与融义路口交口</font></td>
+						</tr>
+						<tr>
+							<td width="260"><span>生产厂家：</span>&nbsp;&nbsp;<font>浙江缆盛通信科技</font></td>
+							<td width="280"><span>设施厂商标识：</span>&nbsp;&nbsp;<font></font></td>
+							<td width="130"><span>厂商设施类型：</span>&nbsp;&nbsp;<font></font></td>
+							<td width="130"><span>框总数：</span>&nbsp;&nbsp;<font></font></td>
+							<td width="130"><span>盘总数：</span>&nbsp;&nbsp;<font></font></td>
+							<td width="130"><span>端口总数：</span>&nbsp;&nbsp;<font></font></td>
+						</tr>
+					</tbody>
+				</table>
+				<a class="details-btn">×&nbsp;修改设备信息</a>
+				<div class="details-list details-left">
+					<div class="details-head">
+						<p class="list-title"><span>14-0DB-D0:</span>&nbsp;&nbsp;<font>端口列表</font></p>
+						<p class="list-btn"><a class="btn-left">×&nbsp;&nbsp;GIS光路由</a><a class="btn-right">×&nbsp;&nbsp;光链路示意图</a></p>
+					</div>
+					<div class="details-body">
+						<ul class="details-atate">
+							<li><div class="status_1"></div><span>正常使用</span></li>
+							<li><div class="status_2"></div><span>未成端</span></li>
+							<li><div class="status_3"></div><span>成端</span></li>
+							<li><div class="status_4"></div><span>故障</span></li>
+						</ul>
+				
+					</div>
+				</div>
+				<div class="details-list details-right">
+					<div class="details-head">
+						<p><span>跳接信息</span></p>
+					</div>
+					<div class="details-body">
+						<p class="right-title"><b>本端信息</b></p>
+						<p><span>本端端口：</span><input id="bddk"/></p>
+						<p><span>本端光缆：</span><font class="bdgl">联通大厦-青海中医院144</font></p>
+						<p><span>本端纤芯：</span></p>
+						<p class="right-title"><b>对端信息</b></p>
+						<p><span>对端端口：</span><input id="dddk"/><span class="dddk-ts">使用CTRL+端口点击选择</span></p>
+						<p><span>对端光缆：</span><font></font></p>
+						<p><span>对端纤芯：</span></p>
+						<a class="btn">保存</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+<script>
+	
+	$(function(){
+		
+			
+		$.ajax({
+			type:"get",
+			dataType:"json",
+			url:"HH.txt",
+			async:true,
+			success:function(d){
+				var data=d.Data;
+				
+				var html='';
+					
+					for(var i=0;i<data.MaxFrameNum;i++){
+						var MaxD=i+1;
+						html+='<div class="details-foot"><b>D'+MaxD+'</b><ul class="details-vertical">'+
+									'<li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li>'+
+								'</ul><table class="details-footlist"><thead class="details-cross">'+
+										'<tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td>'+
+										'<td>6</td><td>7</td><td>8</td><td>9</td><td>10</td>'+
+											'<td>11</td><td>12</td></tr></thead>'+
+									'<tbody class="details-port">';
+						for(var tri=0;tri<data.MaxBoardNum;tri++){
+							var TR=tri+1;
+							html+='<tr>';
+							for(var tdi=0;tdi<data.MaxPortNum;tdi++){
+								var TD=tri+1;
+								html+='<td><div></div></td>';
+							}
+							html+='</tr>'
+						}
+						html+='</tbody></table></div>';
+					}
+					$(".details-left .details-body").append(html);
+					
+					var tdleng=$(".details-body .details-cross").find("td").length;
+					
+					for(var s=0;s<data.Datas.length;s++){
+						var ds=data.Datas[s];
+						var status=parseInt(ds.status);
+						$(".details-body .details-port tr td").eq(s).attr("class","status_"+status+"");
+					}
+					
+				}
+			
+			
+				
+		});
+		
+		
+		
+		$(".details-right #bddk").val("");
+		$(".details-port td").attr("path",0);
+		$(".details-port td").live("click",function(e){
+			e = e || window.event;
+			var $t=$(this);
+			$t.attr("path",1);
+			$t.siblings().attr("path",0);
+			$t.parent().siblings().find("td").attr("path",0);
+			$t.parents(".details-foot").siblings().find("td").attr("path",0);
+			var D_title=$t.parents(".details-foot").children("b").html();
+			
+			var td;
+			var tdleng=$t.parents("tbody").find("td").length;
+			for(i=0;i<tdleng;i++){
+				if($t.parent().find("td").eq(i).attr("path")==1){
+					td=i+1;
+				}
+			}
+			
+			var tr;
+			var trleng=$t.parents("tr").find("td").length;
+			for(var x=0;x<trleng;x++){
+				var $trn=$t.parents("tbody").find("tr").eq(x);
+				for(var j=0;j<trleng;j++){
+					if($trn.find("td").eq(j).attr("path")==1){
+						tr=x+1;
+					}
+				}
+			}
+			
+			
+		
+			if(e.ctrlKey&&e.button==0){
+				$(".details-right #dddk").val("");
+				$(".details-right #dddk").val(D_title+"-"+tr+"-"+td);
+			}else{
+				$(".details-right #bddk").val("");
+				$(".details-right #bddk").val(D_title+"-"+tr+"-"+td);
+			}
+        });
+		 
+
+		
+	});
+
+	
+	
+	
+</script>
+</html>
+	

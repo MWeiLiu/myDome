@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>光缆管理</title>
+		<script src="../js/p.jquery.zjs.js"></script>
+		<script src="../js/m.cselector.config.js"></script>
+		<script src="../js/m.cselector.1.0.js"></script>
+		<script src="../js/p.WdatePicker.js"></script>
+		<script type="text/javascript" src="../js/city.min.js" ></script>
+		<script src="../js/ODN.js"></script>
+		<link href="../js/layout.m.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="../css/city.css" />
+		<link rel="stylesheet" href="../js/odn.css" />
+		<script type="text/javascript">
+			function beforerenderrow(datai) {
+      			datai.glzt = zjs.getvals("glzt", datai.status);
+  			};
+			function beforesearchclick(){
+  				if($("#provinceName").val()=="请选择省份"){
+  					$("#provinceName").val("");
+  				}
+  				if($("#cityName").val()=="请选择城市"){
+  					$("#cityName").val("");
+  				}
+  				if($("#districtName").val()=="请选择地区"){
+  					$("#districtName").val("");
+  				}
+  			}			
+		</script>
+	</head>
+	<body>
+		<form class="cform" id="opticalCablebotParas" onsubmit="return false">
+			<div>
+				<a class="you fr Addoptical" add="./Resource/addOpticalCable.html"><img src="../img/workorder/2.png" /> 添加光缆</a>
+					<label>地区：</label>
+					<div class="infolist">
+                        <div class="liststyle">
+                            <span id="Province">
+                                <i>请选择省份</i>
+                                <ul>
+                                    <li><a href="javascript:void(0)" alt="请选择省份">请选择省份</a></li>
+                                </ul>
+                                <input id="provinceName" type="hidden" name="cho_Province" value="">
+                            </span>
+                            <span id="City">
+                                <i>请选择城市</i>
+                                <ul>
+                                    <li><a href="javascript:void(0)" alt="请选择城市">请选择城市</a></li>
+                                </ul>
+                                <input id="cityName" type="hidden" name="cho_City" value="">
+                            </span>
+                            <span id="Area">
+                            <i>请选择地区</i>
+                                <ul>
+                                    <li><a href="javascript:void(0)" alt="请选择地区">请选择地区</a></li>
+                                </ul>
+                                <input id="districtName" type="hidden" name="cho_Area" value="" >
+                            </span>
+                        </div>
+                    </div>		                                
+				<label class="state1">光缆名称： </label>
+				<input id="name" class="state2" type="text"/>
+				<a class="search1" id="search">搜索</a>				
+			</div>
+		</form>
+		<table class="ctable" id="opticalCablebot" border="0" cellspacing="0" cellpadding="0" beforesearchclick="beforesearchclick()" beforerenderrow="beforerenderrow()" pagesize=8 cmd-select="resourceCable/showResourceCableSection" idkey="id">
+			<thead>
+				<tr>
+					<td>序号</td>
+					<td>光缆编号</td>
+					<td>光缆名称</td>
+					<td>所属省份</td>
+					<td>所属城市</td>
+					<td>所属区县</td>
+					<td>纤芯数</td>
+					<td>光缆长度</td>
+					<td>A端</td>
+					<td>B端</td>
+					<td>状态</td>
+					<td>操作</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="uls" id={{id}}>
+					<td>{{rindex}}</td>
+					<td>{{code}}</td>
+					<td>{{name}}</td>
+					<td>{{provinceName}}</td>
+					<td>{{cityName}}</td>
+					<td>{{districtName}}</td>
+					<td>{{fiberNum}}</td>
+					<td>{{length}}</td>
+					<td>{{deviceNamea}}</td>
+					<td>{{deviceNamez}}</td>
+					<td>{{glzt}}</td>
+					<td><a class="update" update="./Resource/upOpticalCable.html?id={{id}}">修改</a> &nbsp;&nbsp;&nbsp;<a class="dele" delete="resourceCable/delCableSection" deleteid="{{id}}">删除</a></td>
+				</tr>
+				
+			</tbody>
+			<tfoot class="one">
+				<tr>
+		            <td colspan="12">
+		                <div >
+		                    <table border="0" cellpadding="0" cellspacing="0" class="fenye">
+		                        <tfoot>
+		                            <tr>		
+		                                <!-- 上一页命令关键勾子样式 prevPage-->
+		                                <td><a href="javascript:void(0);" class="prevPage btn"><img src="../img/left.png" /></a></td>		
+		                                <!-- 页码容器关键勾子样式 pageNumbers-->
+		                                <td class="pageNumbers"></td>		
+		                                <!-- 下一页命令关键勾子样式 nextPage -->                         
+		                                <td><a href="javascript:void(0);" class="nextPage btn"><img src="../img/right.png" /></a></td>
+		                            </tr>
+		                        </tfoot>
+		                    </table>
+		                </div>
+		            </td>
+		        </tr>
+			</tfoot>
+		</table>		
+	</body>
+</html>

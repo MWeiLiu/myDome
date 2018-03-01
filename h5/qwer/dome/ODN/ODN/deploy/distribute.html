@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>工单派发</title>		
+		<script src="../js/p.jquery.zjs.js"></script>
+		<script src="../js/m.cselector.config.js"></script>
+		<script src="../js/m.cselector.1.0.js"></script>
+		<script src="../js/p.WdatePicker.js"></script>
+		<script src="../js/ODN.js"></script>
+		<link href="../js/layout.m.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="../js/odn.css" />
+	</head>
+	<body>		
+		<form class="cform" id="distribot">
+			<div class="one">
+				<p><label id="d1">请选择工单类型：<select><option selected="selected">请选择</option><option aid="0">柜内跳接</option><option  aid="2">柜内光分跳接</option><option  aid="3">柜间跳接</option><option  aid="5">柜间光分跳接</option><option aid="6">电子标签写入</option><option aid="7">拆除工单</option><option aid="8">升级工单</option><option aid="9">抢修工单</option><option aid="10">数据采集工单</option><option aid="11">配置工单</option><option aid="12">施工工单</option><option aid="13">巡检工单</option></select></label><label id="d2">工单编号：<span>自动生成</span></label></p>
+				<p><label id="d3">业务信息：<input type="text" placeholder="请填写业务信息"/></label></p>
+				<p><label id="d4">需要配置的设备：<select onchange="device()"><option selected="selected">请选择</option></select></label></p>
+				<p><label id="d5">业务员：<select><option>请选择业务员</option></select></label></p>
+			</div>
+			<div class="two">
+				<h5>配置设备读取的信息</h5>
+				<p><label id="d6">设备ID：<input type="text" readonly="readonly"/></label><label id="d7">设备类型：<input type="text" readonly="readonly"/></label><label id="d19">运营商预留：<input type="text" /></label><label id="d20">厂商预留：<input type="text" /></label></p>
+				<p><label id="d8">设备IP地址：<input type="text" /></label><label id="d9">设备IP地址掩码：<input type="text" /></label><label id="d10">设备IP网关：<input type="text" /></label></p>
+				<p><label id="d11">网管IP地址：<input type="text" /></label><label id="d12">网管trap端口：<input type="text" /></label><label id="d13">网管trap使能：<select><option selected="selected">请选择</option><option aid="true">使能</option><option aid="false">不使能</option></select></label><label id="d14">网管trap安全名：<input type="text" /></label></p>
+				<p><label id="d15">SNMP团体名：<input type="text" /></label><label id="d16">SNMP权限：<input type="text" /></label><label id="d17">SNMP配置视图：<select><option selected="selected">请选择</option><option aid="true">配置</option><option aid="false">不配置</option></select></label><label id="d18">SNMP视图名：<input type="text" /></label></p>
+				<h4><a class="qx">取消</a><a class="qd">确定</a></h4>
+			</div>
+		</form>
+		<script type="application/javascript">
+			function put(){
+				var workOrderId=$("#d2 span").text()
+				var workOrderInfo=$("#d3 input").val()
+				var id=$("#d4 option:selected").attr("aid")
+				var merchandiserUserId=$("#d5 option:selected").attr("aid")
+				var deviceIpAddr=$("#d8 input").val()
+				var deviceIpAddrMask=$("#d9 input").val()
+				var deviceIpGateway=$("#d10 input").val()
+				var SNMPIpAddr=$("#d11 input").val()
+				var SNMPPort=$("#d12 input").val()
+				var NMSTrapEnable=$("#d13 option:selected").attr("aid")
+				var NMSTrapSecurityName=$("#d14 input").val()
+				var SNMPGroupName=$("#d15 input").val()
+				var SNMPViewEnable=$("#d17 option:selected").attr("aid")
+				var SNMPViewName=$("#d18 input").val()
+				var serviceProviderReserved=$("#d19 input").val()
+				var vendorReserved=$("#d20 input").val()
+				if(id==undefined){
+					zjs.tips("请选择需要配置的设备！")
+				}else if(merchandiserUserId==undefined){
+					zjs.tips("请选择业务员！")
+				}else if(deviceIpAddr==""){
+					zjs.tips("请输入设备IP地址！")
+				}else if(deviceIpAddrMask==""){
+					zjs.tips("请输入设备IP地址掩码！")
+				}else if(deviceIpGateway==""){
+					zjs.tips("请输入设备IP网关！")
+				}else if(SNMPIpAddr==""){
+					zjs.tips("请输入网管IP地址！")
+				}else if(SNMPPort==""){
+					zjs.tips("请输入网管trap端口！")
+				}else if(NMSTrapEnable==undefined){
+					zjs.tips("请选择网管trap使能！")
+				}else if(NMSTrapSecurityName==""){
+					zjs.tips("请输入网管trap安全名！")
+				}else if(SNMPGroupName==""){
+					zjs.tips("请输入SNMP团体名！")
+				}else if(SNMPViewEnable==undefined){
+					zjs.tips("请选择SNMP配置视图！")
+				}else if(SNMPViewName==""){
+					zjs.tips("请输入SNMP视图名！")
+				}else{
+					zjs.cmd({
+						cmd:"workOrder/addConfigurationWorkOrder",
+						para:{"workOrderId":workOrderId,"workOrderInfo":workOrderInfo,"id":id,"merchandiserUserId":merchandiserUserId,"deviceIpAddr":deviceIpAddr,"deviceIpAddrMask":deviceIpAddrMask,"deviceIpGateway":deviceIpGateway,"SNMPIpAddr":SNMPIpAddr,"SNMPPort":SNMPPort,"NMSTrapEnable":NMSTrapEnable,"NMSTrapSecurityName":NMSTrapSecurityName,"SNMPGroupName":SNMPGroupName,"SNMPViewEnable":SNMPViewEnable,"SNMPViewName":SNMPViewName,"serviceProviderReserved":serviceProviderReserved,"vendorReserved":vendorReserved},
+						callback:function(){							
+							window.location.href="workorder.html"
+						}
+					})
+				}				
+			}
+			function device(){
+				var deviceid=$("#d4 option:selected").attr("aid")
+				zjs.cmd({
+					cmd:"workOrder/infoInRead",
+					para:{"id":deviceid},
+					callback:function(data){
+						$("#d6 input").val(data.deviceCode);
+						if(data.deviceType==0){
+							data.deviceType="ODF"
+						}else if(data.deviceType==1){
+							data.deviceType="OCC"
+						}else if(data.deviceType==2){
+							data.deviceType="ODB"
+						}else if(data.deviceType==3){
+							data.deviceType="分光路器"
+						}else if(data.deviceType==100){
+							data.deviceType="综合配线架"
+						}else if(data.deviceType==101){
+							data.deviceType="OLT"
+						}else if(data.deviceType==10){
+							data.deviceType="电杆"
+						}else if(data.deviceType==255){
+							data.deviceType="其他"
+						}
+						$("#d7 input").val(data.deviceType);
+						$("#d8 input").val(data.deviceIpAddr);
+						$("#d9 input").val(data.deviceIpAddrMask);
+						$("#d10 input").val(data.deviceIpGateway);
+						$("#d11 input").val(data.SNMPIpAddr);
+						$("#d12 input").val(data.SNMPPort);
+						$("#d15 input").val(data.SNMPGroupName);		
+					}
+				})
+			}
+			function autoGenerateWorkOrder(){
+				zjs.cmd({
+					cmd:"workOrder/autoGenerateWorkOrder",
+					callback:function(data){
+						$("#d2 span").text(data.workOrderID)
+					}
+				})
+			}
+			function inneedDevice(){
+				zjs.cmd({
+					cmd:"workOrder/inneedDevice",
+					callback:function(data){
+						$("#d4").css("width","310px")
+						$("#d4 select").css("width","200px")
+						$("#d4 select").empty()
+						$("#d4 select").append('<option selected="selected">请选择</option>')
+						var html1=zjs.render(data.Datas,'<option aid="{{id}}">{{deviceName}}|{{deviceCode}}</option>')
+						$("#d4 select").append(html1)
+					}
+				})
+			}
+			function Salesman(){
+				zjs.cmd({
+					cmd:"workOrder/Salesman",
+					callback:function(data){
+						$("#d5 select").empty()
+						$("#d5 select").append('<option selected="selected">请选择</option>')
+						var html1=zjs.render(data.Datas,'<option aid="{{id}}">{{company}}|{{department}}|{{name}}</option>')
+						$("#d5 select").append(html1)
+					}
+				})
+			}
+			$(function(){
+				autoGenerateWorkOrder()
+				inneedDevice()
+				Salesman()
+				$("#distribot .two h4 .qd").live("click",function(){
+					put()
+				})
+			})
+		</script>
+	</body>
+</html>

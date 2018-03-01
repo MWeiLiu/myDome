@@ -1,0 +1,37 @@
+body{overflow-x:hidden;}
+ul li{list-style:none;}
+table{border-collapse:collapse;width:100%;}
+table td,
+table th{border:solid 1px #ddd;padding:5px 10px;} 
+.testrandom{position:fixed;top:5px;right:15px;background:#fff;padding:5px;}
+h2{font-family: "微软雅黑",Arial;}
+h3{border:1px dashed #308895;padding:5px;}
+.zbox{width:80%;padding-left:16%;margin: 0 auto;}
+pre {-moz-border-bottom-colors: none;-moz-border-left-colors: none;-moz-border-right-colors: none;
+    -moz-border-top-colors: none;border-color: #ddd;border-image: none;border-style: solid;
+    border-width: 1px 1px 1px 4px;font: 12px/20px "courier new";margin: 15px auto;padding: 10px 15px;
+    white-space: pre-wrap;word-break: break-all;word-wrap: break-word;}
+/*代码段*/
+.demo{padding: 10px;background: #efefef;border: solid 1px #ddd;overflow:hidden;}
+.code{padding: 10px;background: #efefef;border: solid 1px #ddd;overflow:hidden;line-height:25px;}
+.code .division{padding: 0 30px;}
+.tips{padding: 10px;background: #efefef;border: solid 1px #ddd;overflow:hidden;}
+.zhushi{color:green;margin:0;}
+.clear{overflow:hidden;}
+.uldemo li{list-style:disc;}
+/*站点导航*/
+.site-menus{position:fixed;left:0;top:0px;bottom:0px;width:16.5%;overflow-y:scroll;overflow-x:hidden;
+			margin:0 5px 5px 5px;padding:5px;background:#F6F4F0;}
+.site-menus li{font-family:"微软雅黑",Arial;font-weight:bold;border-bottom:1px dashed #DDDDDD;padding:1%;}
+.site-menus li:hover{color:#398691;cursor:pointer;}
+.ml5{margin-left:10px;}
+/*表格*/
+button, input, select, td, textarea, th {font-size: 1em;}
+table.reference, table.tecspec {border-collapse: collapse;margin-bottom: 4px;margin-top: 4px;width: 100%;}
+table.reference tr:nth-child(2n+1) {background-color: #f6f4f0;}
+table.reference tr:nth-child(2n) {background-color: #fff;}
+table.reference th {background-color: #555;border: 1px solid #555;color: #fff;font-size: 12px;padding: 3px;text-align: left;vertical-align: top;}
+table.reference td {border: 1px solid #d4d4d4;padding: 7px 5px;vertical-align: top;}
+
+a{text-decoration:none;color:#308895;}
+a:link{color:#308895;}
