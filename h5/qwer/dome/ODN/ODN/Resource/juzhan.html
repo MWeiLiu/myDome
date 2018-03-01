@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<style type="text/css">
+	body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:"微软雅黑";}
+	p{margin-left:5px; font-size:12px;height:12px}
+	</style>
+	<script src="../js/p.jquery.zjs.js"></script>
+	<script src="../js/m.cselector.config.js"></script>
+		<script src="../js/m.cselector.1.0.js"></script>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZsCKTqdrSzcMFioUV1SKsr5WgZXWKmIE"></script>
+	<title>地图展示</title>
+</head>
+<body>
+	<div id="allmap"></div>	
+</body>
+</html>
+<script type="text/javascript">
+	// 百度地图API功能
+//	var map = new BMap.Map("allmap");    // 创建Map实例
+//	map.centerAndZoom(new BMap.Point(120.121114,30.294409), 14);  // 初始化地图,设置中心点坐标和地图级别
+//	map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+//	map.enableScrollWheelZoom(false);     //开启鼠标滚轮缩放
+//	var myIcon = new BMap.Icon("http://developer.baidu.com/map/jsdemo/img/fox.gif", new BMap.Size(100,150),{imageOffset: new BMap.Size(-75, -35)});
+//	var marker1 = new BMap.Marker(new BMap.Point(120.191828,30.273764),{icon:myIcon}); // 创建点
+//	var marker2 = new BMap.Marker(new BMap.Point(120.224598,30.269272)); // 创建点
+//	var marker3 = new BMap.Marker(new BMap.Point(120.197721,30.245627)); // 创建点
+//	var polyline = new BMap.Polyline([
+//		new BMap.Point(120.191828,30.273764),
+//		new BMap.Point(120.224598,30.269272),
+//		new BMap.Point(120.197721,30.245627)
+//	], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});   //创建折线
+//	map.addOverlay(marker1);            //增加点
+//	map.addOverlay(marker2);            //增加点
+//	map.addOverlay(marker3);            //增加点
+//	var sContent ="<div class='prompt'><h5>ODF5T-1</h5><p>编号：123456</p><p>地址：西园三路</p><p>本端端口：1-1-2-3</p><p>本端光缆：凤凰城联通大厦144芯-1</p><p>本端纤芯：27</p><p>对端端口：1-1-2-3</p><p>对端光缆：凤凰城联通大厦144芯-1</p><p>对端纤芯：27</p></div>";
+//	var infoWindow = new BMap.InfoWindow(sContent);  // 创建信息窗口对象
+//	
+//	marker1.addEventListener("click", function(){          
+//	   this.openInfoWindow(infoWindow);
+//	})	
+//	map.addOverlay(polyline);          //增加折线
+//	
+var map = new BMap.Map("allmap");    // 创建Map实例
+	$(function(){
+		var gps=zjs.getQueryStr()		
+		var cityname=gps.city
+//		map.centerAndZoom(new BMap.Point(84.325132,47.5546), 5);  // 初始化地图,设置中心点坐标和地图级别
+//		map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+//		map.enableScrollWheelZoom(false);     //开启鼠标滚轮缩放
+		
+		zjs.cmd({
+			cmd:"resourceManagement/selBureauAddressbyProvince",
+			para:{"id":cityname},
+			callback:function(data){
+				var leng=data.Data.Datas.length;
+				map.centerAndZoom(cityname, 11);  // 初始化地图,设置中心点坐标和地图级别
+				map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+				map.enableScrollWheelZoom(false);     //开启鼠标滚轮缩放
+				var html1=[]
+				var html2=[]
+				var html3=[]
+				var myIcon = new BMap.Icon("/ODN/img/juzhan.png", new BMap.Size(100,150),{imageSize:new BMap.Size(50, 75)});
+				for(i=0;i<leng;i++){
+					var x=data.Data.Datas[i].latitude
+					var y=data.Data.Datas[i].longitude
+					var b=data.Data.Datas[i].bureauName
+					html1[i]=new BMap.Point(y,x)
+					html2[i]=new BMap.Marker(html1[i],{icon:myIcon});
+					map.addOverlay(html2[i]);   
+					var label = new BMap.Label(b,{offset:new BMap.Size(20,-50)});
+					html2[i].setLabel(label);
+				}				
+				var polyline = new BMap.Polyline(html1, {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+				map.addOverlay(polyline);
+			}
+		})		
+	})
+	function addClickHandler(content,marker){
+		marker.addEventListener("click",function(e){
+			//openInfo(content,e)
+			}
+		);
+	}
+//	function openInfo(content,e){
+//		var opts = {
+//				  width : 300,     // 信息窗口宽度
+//				  height: 200      // 信息窗口高度
+//				}
+//		var p = e.target;
+//		var point = new BMap.Point(p.getPosition().lng, p.getPosition().lat);
+//		var infoWindow = new BMap.InfoWindow(content,opts);  // 创建信息窗口对象 
+//		map.openInfoWindow(infoWindow,point); //开启信息窗口
+//	}
+//	
+</script>

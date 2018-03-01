@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/p.jquery.zjs.js"></script>
+		<script src="../js/m.cselector.config.js"></script>
+		<script src="../js/m.cselector.1.0.js"></script>
+		<script src="../js/p.WdatePicker.js"></script>
+		<script type="text/javascript" src="../js/echarts.js" ></script>
+		<script src="../js/ODN.js"></script>
+		<link href="../js/layout.m.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="../js/odn.css" />
+	</head>
+	<body>
+		<div id="Index-map" class="Index-bottom" style="width: 900px;height:600px;">
+				
+		</div>
+	</body>
+	<script type="application/javascript">
+//		function map() {
+//					var datay = [];
+//					zjs.cmd({
+//						cmd: "resourceManagement/countDeviceNumByProvince",
+//						callback: function(data) {
+//							for(var i = 0; i < data.ProvinceAndDeviceNum.length; i++) {
+//								datay.push({
+//									"name": data.ProvinceAndDeviceNum[i].provinceName,
+//									"value": data.ProvinceAndDeviceNum[i].deviceNum
+//								})
+//							}
+//							$.get("/ODN/js/china.json", function(chinaJson) {
+//								echarts.registerMap('china', chinaJson);
+//								var myChart = echarts.init(document.getElementById('Index-map'));
+//								myChart.setOption({
+//									tooltip: {
+//										trigger: 'item'
+//									},
+//									visualMap: {
+//										min: 0,
+//										max: 10000,
+//										left: 'left',
+//										top: 'bottom', // 文本，默认为数值文本
+//										calculable: true,
+//										inRange: {
+//											color: ['#33d61d', '#d78107', 'red'],
+//											symbolSize: [30, 100]
+//										}
+//									},
+//									toolbox: {
+//										show: true,
+//										orient: 'vertical',
+//										right: '50',
+//										top: 'center',
+//										feature: {
+//											dataView: {
+//												readOnly: false
+//											},
+//											restore: {},
+//											saveAsImage: {}
+//										}
+//									},
+//									series: [{
+//										name: '',
+//										type: 'map',
+//										mapType: 'china',
+//										roam: false,
+//										label: {
+//											normal: {
+//												show: true
+//											},
+//											emphasis: {
+//												show: true
+//											}
+//										},
+//										data: datay
+//									}]
+//								})
+//							})
+//						}
+//					})			
+//				}
+//				myChart.on('click', function (params) {
+//			    var city = params.name;
+//			    loadChart(city); 
+//			});
+				$(function() {
+					var datay = [];
+					zjs.cmd({
+						cmd: "resourceManagement/countDeviceNumByProvince",
+						callback: function(data) {
+							for(var i = 0; i < data.ProvinceAndDeviceNum.length; i++) {
+								var n=data.ProvinceAndDeviceNum[i].provinceName
+								if(n=="内蒙古"){
+									
+								}else if(n.length>2){
+									n=n.substring(0,n.length-1)
+								}
+								
+								datay.push({
+									"name": n,
+									"value": data.ProvinceAndDeviceNum[i].deviceNum
+								})
+							}
+							$.get("/ODN/js/china.json", function(chinaJson) {
+								echarts.registerMap('china', chinaJson);
+								var myChart = echarts.init(document.getElementById('Index-map'));
+								myChart.setOption({
+									tooltip: {
+										trigger: 'item'
+									},
+									visualMap: {
+										min: 0,
+										max: 100,
+										left: 'left',
+										top: 'bottom', // 文本，默认为数值文本
+										calculable: true,
+										inRange: {
+											color: ['#33d61d', '#d78107', 'red'],
+											symbolSize: [30, 100]
+										}
+									},
+									toolbox: {
+										show: true,
+										orient: 'vertical',
+										right: '50',
+										top: 'center',
+										feature: {
+											dataView: {
+												readOnly: false
+											},
+											restore: {},
+											saveAsImage: {}
+										}
+									},
+									series: [{
+										name: '',
+										type: 'map',
+										mapType: 'china',
+										roam: false,
+										itemStyle:{  
+									        normal:{  
+									               label:{show:true}  
+									               ,areaStyle:{color:'blue'}  
+									        },  
+									        emphasis:{label:{show:true}}  
+									    },  
+										data: datay
+									}]
+								})
+								myChart.on('click', function (params) {
+								    var city = params.name;
+								    window.location.href="juzhan.html?city="+city
+								});
+							})
+						}
+					})	
+					
+				})
+	</script>
+</html>

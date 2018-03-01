@@ -1,0 +1,225 @@
+body{
+    background:#dedede;
+}
+.mm_left_tabs{
+    /*float: left;*/
+    background: #fff;
+    width: 200px;
+    text-align: center;
+    position: fixed;
+    margin-top: 50px;
+}
+.mm_left_tabs .mm_tabone{
+    padding:10px 10px;
+    border-bottom:2px solid #fafafa;
+}
+
+/*音频部分*/
+.wrap{
+    width: 1190px;
+    margin:auto;
+    padding-top: 50xp;
+}
+/*.ma_wrap .title{
+    color: #212121;
+    font-size: 24px;
+    border-bottom:3px solid #448AFF;
+    padding-bottom: 3px;
+    margin-bottom: 50px;
+}*/
+.wrap .mmAudio{
+    width: 1050px;
+    margin:auto;
+    background: #fff;
+    padding-top:10px;
+    margin-bottom: 50px;
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.06);
+}
+.wrap .audioThumb span,.maEditer .audioThumb span{
+    display: inline-block;
+    vertical-align: -webkit-baseline-middle;
+    vertical-align: middle;
+}
+.wrap .audioThumb{
+    width: 550px;
+    font-size: 0;
+    margin:40px auto 20px;
+}
+.wrap .audioThumb .audioPP,.wrap .audioThumb .audioPP{
+    width:13px;
+    height: 13px;
+    background-image: url('../../images/audioPlayIco.png');
+    background-size: 100% 100%;
+    background-position: center;
+    /*background:#448AFF;*/
+}
+.wrap .audioThumb .progressWrap{
+    width: 467px;
+    height: 2px;
+    background:#ddd;
+    position: relative;
+    margin:0 10px;
+}
+.wrap .audioThumb .progress{
+    width: 10%;
+    height: 2px;
+    background:#448AFF;
+    position: absolute;
+}
+.wrap .audioThumb .surplusTime{
+    font-size: 14px;
+    color: #8e8e93;
+}
+.wrap .mmAudio .left,.wrap .mmAudio .right{
+    width: 200px;
+    height: 30px;
+    padding-left: 20px;
+    display: inline-block;
+}
+.wrap .mmAudio .right{
+    float: right;
+}
+.wrap .mmAudio .ico{
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    width: 27px;
+    height: 27px;
+    margin-right: 20px;
+    cursor: pointer;
+    display: none;
+}
+.wrap .mmAudio .ico.edit{
+    background-image: url('../../images/editIcon.png');
+}
+.wrap .mmAudio .ico.seting{
+    background-image: url('../../images/setIcon.png');
+}
+.wrap .mmAudio .ico.clone{
+    background-image: url('../../images/cloneIcon.png');
+}
+.wrap .mmAudio .ico.up{
+    background-image: url('../../images/upIcon.png');
+}
+.wrap .mmAudio .ico.down{
+    background-image: url('../../images/downIcon.png');
+}
+.wrap .mmAudio .ico.delete{
+    background-image: url('../../images/deleteIcon.png');
+}
+/*音频编辑弹出层*/
+.wrap .mmEditer{
+    width: 336px;
+    height: 100%;
+    background:#fff;
+    position: absolute;
+    z-index: 1;
+    /*display: none;*/
+}
+.wrap .audioEditer .editThumb{
+    width: 100%;
+    height: 134px;
+    padding-top: 50px;
+    background:#f7f7f7;
+}
+.wrap .audioEditer .editering{
+    padding-top: 40px;
+    display: none;
+}
+
+.wrap .audioEditer .audioThumb{
+    width: 260px;
+    font-size: 0;
+    margin:auto;
+    margin-bottom:20px;
+}
+.wrap .audioEditer .progressWrap{
+    width: 180px;
+    height: 2px;
+    background:#c2c2c2;
+    position: relative;
+    margin:0 10px;
+}
+.wrap .audioEditer .progress{
+    width: 10%;
+    height: 2px;
+    background:#448AFF;
+    position: absolute;
+}
+.wrap .audioEditer .surplusTime{
+    font-size: 14px;
+    color: #8e8e93;
+}
+.wrap .audioEditer .record{
+    background-size: 100% 100%;
+    background-position: center;
+    margin-right: 60px;
+    cursor: pointer;
+}
+.wrap .audioEditer .gotoRecord{
+    width: 18px;
+    height: 29px;
+    background-image: url('../temImages/recordIcon.png');
+    cursor: pointer;
+}
+.wrap .audioEditer .recordPause{
+    width: 22px;
+    height: 22px;
+    margin-left: 30px;
+    margin-right: 90px;
+    background-image: url('../temImages/recordContinueIcon.png');
+}
+.wrap .audioEditer .recordPause.recordActive{
+    background-image: url('../temImages/recordPauseIcon.png');
+}
+.wrap .audioEditer .operators{
+    font-size: 0;
+    padding: 5px 43px;
+}
+.wrap .audioEditer .inlineBlock{
+    display: inline-block;
+    vertical-align: -webkit-baseline-middle;
+    vertical-align: middle;
+}
+.wrap .audioEditer .audioUploadBtn{
+    border:1px solid #0ebac5;
+    border-radius:5px;
+    font-size: 14px;
+    outline: none;
+    width: 96px;
+    height: 27px;
+    color: #0ebac5;
+    cursor: pointer;
+}
+.wrap .audioEditer .uploadLocal{
+    background:#fff;
+}
+.wrap .audioEditer .uploadRecord{
+    background:#0ebac5;
+    color: #fff;
+}
+.wrap .audioEditer .recordStatus{
+    display: block;
+    margin:0 auto 15px;
+}
+.wrap .audioEditer .recordTime{
+    display: block;
+    margin:auto;
+    text-align: center;
+}
+.wrap .audioEditer .mmAudioFile{
+    display: none;
+}
+/*设置弹出层*/
+.wrap .maskWrap{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background:rgba(1,1,1,.1);
+    /*display:none;*/
+}

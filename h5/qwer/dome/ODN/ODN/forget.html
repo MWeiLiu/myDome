@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/p.jquery.zjs.js"></script>
+		<script src="js/m.cselector.config.js"></script>
+		<script src="js/m.cselector.1.0.js"></script>
+		<script src="js/p.WdatePicker.js"></script>
+		<style type="text/css">
+		a{cursor: pointer;text-decoration: none;}
+		*{box-sizing: border-box;}
+		#forget{width: 680px;height: 420px;position: absolute;top: 50%;left: 50%;margin-top: -210px;margin-left: -300px;padding: 50px 100px;}
+		#forget tbody{height: 320px;display: block;padding-top: 50px;}
+		#forget tr{display: block;}
+		#forget h3{color: #DAE9F0;font-weight: bold;height: 40px;line-height: 40px;font-family: "楷体";font-size: 25px;}
+		#forget .w2{width: 350px;height: 60px;line-height: 60px;text-align: center;} #forget .w1{width: 120px;height: 50px;line-height: 50px;text-align: center;}
+		#forget input{width: 320px;height: 40px;line-height: 40px;border-radius: 5px;padding: 0 20px;background: #DAE9F0;border: 1px solid #DAE9F0;font-size: 18px;font-family: "黑体";box-shadow: 0px 0px 10px #AAAAAA;}
+		#forget .getcode{color: #F72B5;font-family: "楷体";border: 1px solid #939da2;background:#DAE9F0;display: block;width: 120px;height: 30px;line-height: 30px;border-radius: 5px;box-shadow: 0px 0px 10px #888888;}
+		#forget .next{color:#DAE9F0;display: block;width: 320px;height: 40px;line-height: 40px;margin: 0 auto;border-radius: 5px;margin-top: 15px;}
+	</style>
+	</head>
+	<body>
+		<img src="img/bg.jpg" width="100%" height="100%" style="position: absolute;top: 0px;left: 0px;z-index: -1;">
+		<table class="ctable" border="0" cellspacing="0" cellpadding="0" id="forget">
+			<tr><td class="w2"><h3>忘记密码</h3></td></tr>
+			<tr><td class="w2"><input id="phone" type="text"  placeholder="请输入手机号"/></td></tr>
+			<tr><td class="w2"><input id="ycode" type="text" placeholder="请输入验证码"/></td><td class="w1"><a path="0" class="getcode">获取验证码</a></td></tr>
+			<tr><td class="w2"><img src="img/dl.png" style="position: absolute;top: 312px;left: 92px;z-index: -1;width: 366px;height: 78px;"><a class="next" href="forget_1.html">下一步</a></td></tr>
+		</table>
+		<script type="application/javascript">
+			$(function(){
+				$(".getcode").live("click",function(){
+					var phone=$("#phone").val();
+					var $t=$(this);
+					var path=$t.attr("path")
+					if(path==0){
+						var time=60;		
+						$t.html(time+"s重新发送！")
+						var timer=setInterval(function(){
+							if(time==1){
+								$t.html("重新发送")
+								$t.attr("path","0")
+								clearInterval(timer);
+							}else{
+								time--;
+								$t.html(time+"s重新发送！")
+							}
+						},1000)
+						$t.attr("path","1")
+					}
+				})
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,20 @@
+*{word-break:break-all;word-wrap:break-word;}
+div,p,form,h1,h2,h3,h4,h5,h6,input,textarea,span,label{margin:0;padding:0;}
+body{font-size:14px;font-family:"Microsoft YaHei","微软雅黑";margin:0;padding:0;color:#676767;background:#fff;}
+input,textarea{font-family:"Microsoft YaHei","微软雅黑";font-size:16px;}
+textarea{resize:none;outline:none;}
+dl,dd,dt,ul,li,ol{list-style-type:none;margin:0;padding:0;}
+a{outline:none;text-decoration:none;}
+img{vertical-align:middle;}
+i{font-style:normal;}
+.infolist{font-size:14px;color:#494949;height:50px;width:100%;}
+lable{position:absolute;width:5em;left:10px;top:0;overflow:hidden;height:30px;line-height:30px;}
+.infolist .liststyle{margin: 0 auto;width: 380px;}
+.infolist .liststyle span{height:40px;line-height:40px;display:inline-block;border:1px solid #E8E8E8;text-align: center;cursor:pointer;background:#fff;float:left;margin-right:10px;margin-bottom:10px;color:#919191;width:120px;border-radius: 3px;position: relative;}
+.infolist .liststyle span:last-child{margin-right: 0;}
+.infolist .liststyle span i{display:inline-block;height:30px;line-height:30px;position:relative;text-align: center;width: 100%;}
+.infolist .liststyle span i:after{content:"";display:block;width:20px;height:36px;position:absolute;right:0;top:0;background-image:url(../img/jt_nor.png);background-repeat:no-repeat;background-position:0 center;background-size:10px auto;}
+
+.infolist .liststyle span ul{border-radius:0 0 5px 5px;position:absolute;border:1px solid #E8E8E8;background:white;left:-1px;top:39px;border-top:0;margin-bottom:10px;display:none;z-index:100;width: 120px;overflow-x: hidden;overflow-y: auto !important;max-height: 300px;}
+.infolist .liststyle span ul li{width:118px;float:left;overflow:hidden;border: 1px solid #EEEEEE;text-align: center;}
+.infolist .liststyle span ul li a{display:block;height:36px;line-height:36px;padding:0 8px;color:#494949;}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>端口选择</title>		
+		<script src="../js/p.jquery.zjs.js"></script>
+		<script src="../js/m.cselector.config.js"></script>
+		<script src="../js/m.cselector.1.0.js"></script>
+		<script src="../js/p.WdatePicker.js"></script>
+		<script src="../js/ODN.js"></script>
+		<link href="../js/layout.m.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="../js/odn.css" />
+		<style type="text/css">
+			.xuanzhong{background: #002E72;}
+			.xuanguo{background: #CCCCCC;}
+		</style>
+		<script type="application/javascript">
+			$(function(){
+				var id=localStorage.getItem("id");
+				zjs.cmd({
+					cmd:"resourceDevice/deviceAllPort",
+					para:{"id":id},
+					callback:function(data){
+						var a=data.MaxFrameNum
+						var b=data.MaxBoardNum
+						var c=data.MaxPortNum
+						var l=0
+						for(var i=0;i<a;i++){//框
+							var html=[];
+							var i1=i+1
+							html.push('<li class="lia"><div class="diva">D'+i1+'</div><ul class="ulb">')
+							for(var j=0;j<=b;j++){//盘								 
+								html.push('<li class="lib"><div class="divb" style="width: 3%;">'+j+'</div><ul class="ulc">')
+								for(var k=0;k<c;k++){
+									var k1=k+1
+									if(j==0){
+										html.push('<li class="lic licc">'+k1+'</li>')
+									}else{
+										
+										if(data.Datas[l].status==1){
+											html.push('<li class="lic"><div style="border:1px solid #AAAAAA;background: #FFF;"></div></li>')
+										}else if(data.Datas[l].status==2){
+											html.push('<li class="lic"><div style="border: #3EBDAA 1px solid;background: #FFF;"></div></li>')
+										}else if(data.Datas[l].status==3){
+											html.push('<li class="lic"><div style="color: #3EBDAA;background: #3EBDAA;border:none"></div></li>')
+										}else {
+											html.push('<li class="lic"><div style="color: red;background: red;border:none"></div></li>')
+										}
+										l=l+1;										
+									}									
+									
+								}								
+								html.push('</ul></li>')
+							}
+							html.push('</ul></li>')
+							$("#importSel .two .ula").append(html.join(""))
+						}
+					}					
+				})
+				$("#importSel .lic:not(.licc)").live("click",function(){
+					var t=$(this)
+					t.parents(".ula").find(".lic").removeClass("xuanzhong")
+					t.addClass("xuanzhong")		
+					var kuang=t.parents(".lia").find(".diva").html().substring(1)
+					var pan=t.parents(".lib").find(".divb").html()
+					var duan=t.index()+1
+					$("#duan").val(id+'-'+kuang+'-'+pan+'-'+duan)
+				})
+				$("#importSel .divc a").live("click",function(){
+					$("#importSel .lic.xuanzhong").removeClass("xuanzhong").addClass("xuanguo")
+					$("#kg").val("1")
+					closefast()
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<div id="importSel">
+			<input type="hidden" id="duan" />
+			<input type="hidden" id="kg" value="0" />
+			<div class="one"><h4>端口选择</h4></div>
+			<div class="two">
+				<ul class="ulz">
+					<li class="liz"><div class="onez" style="color: #3EBDAA;background: #3EBDAA;"></div>正常使用</li>
+					<li class="liz"><div class="twoz" style="border:1px solid #AAAAAA;background: #FFF;"></div>未成端</li>
+					<li class="liz"><div class="threez" style="border: #3EBDAA 1px solid;background: #FFF;"></div>成端</li>
+					<li class="liz"><div class="fourz" style="color: red;background: red;"></div>故障</li>
+				</ul>
+				<ul class="ula"> 								
+				</ul>
+				<div class="divc"><a>确定</a></div>
+			</div>			
+		</div>
+	</body>
+</html>

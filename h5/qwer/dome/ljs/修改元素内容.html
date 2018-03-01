@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/p.jquery.1.7.2.js" ></script>
+		<script>
+			$("#xg").live("click",function(){
+				$("span").attr("contenteditable","true");
+				alert("qwer");
+			});
+			$("#qr").live("click",function(){
+				$("span").attr("contenteditable","flase");
+			});
+		</script>
+	</head>
+	<body>
+		<span>呵呵</span><br />
+		<input type="button" id="xg" value="修改"><input type="button" id="qr" value="确认">
+	</body>
+</html>

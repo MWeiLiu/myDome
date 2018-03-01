@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>巡检策略配置</title>		
+		<script src="../js/p.jquery.zjs.js"></script>
+		<script src="../js/m.cselector.config.js"></script>
+		<script src="../js/m.cselector.1.0.js"></script>
+		<script src="../js/p.WdatePicker.js"></script>
+		<script type="text/javascript" src="../js/city.min.js" ></script>
+		<script src="../js/ODN.js"></script>
+		<link href="../js/layout.m.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="../css/city.css" />
+		<link rel="stylesheet" href="../js/odn.css" />
+	</head>
+	<body>
+		<form class="cform" id="polling">
+			<h4>巡检策略配置</h4>
+			<p><label>设施名称：</label><input type="text"  /> </p>
+			<p><label>设施ID：</label><input type="text"  /> </p>
+			<p><label>设施类型：</label><select><option selected="selected">请选择类型</option></select></p>
+			<p><label>巡检时间：</label><input id="sdate" type="text" onClick="WdatePicker()"/></p>
+			<h5><a class="qx">取消</a><a class="qd">确定</a></h5>
+		</form>
+	</body>
+</html>

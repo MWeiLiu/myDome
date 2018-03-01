@@ -1,0 +1,325 @@
+@charset "utf-8";
+/* CSS Document */
+body{width: 100%;position: relative;}
+/**
+*.project-class{width: 100%;position: relative;}
+*/
+.editor-class{width: 100%;position: relative;-webkit-box-sizing: border-box;min-width: 800px;}
+/*导航*/
+.editor-class-nav{width: 100%;position: relative;background-color: #448AFF;color: #fff;-webkit-box-sizing: border-box;display: block;}
+.editor-class-nav ul{width: 100%;}
+.editor-class-nav ul li:nth-child(1){width: 24.5%;display: inline-block;}
+.editor-class-nav ul li:nth-child(2){}
+.editor-class-nav ul li{width: 12.5%;display: inline-block;line-height: 2.0;text-align: center;}
+/*功能区*/
+.functional-zone{width: 8%;display: inline-block;vertical-align: top;background-color: #fff;border: 1px solid #02a8f3;-webkit-box-sizing: border-box;}
+.functional-zone>ul{width: 100%;}
+.functional-zone>ul>li{width: 100%;text-align: center;padding: 20px 0 20px 0;border: 1px solid #02a8f3;}
+/*二级功能区*/
+.second-level-functional-zone{width: 22%;display: inline-block;border: 1px solid #02a8f3;-webkit-box-sizing: border-box;text-align: center;vertical-align: top;position: relative;}
+.template-all{width: 100%;position: relative;padding: 5%;-webkit-box-sizing: border-box;display: inline-block;display: none;}
+.second-search{width: 100%;position: relative;padding: 5%;-webkit-box-sizing: border-box;display: inline-block;}
+.second-search input{border: 1px solid #999999;}
+.second-model{}
+.second-model>ul{width: 100%;position: relative;}
+.second-model>ul>li{width: 50%;display: inline-block;vertical-align: top;-webkit-box-sizing: border-box;float: left;}
+.second-model>ul>li>img{width: 100%;}
+/*
+.img-all{width: 100%;position: relative;display: none;}
+.img-all>ul{width: 100%;position: relative;}
+*/
+.img-all{width: 100%;position: relative;display: none;}
+.img-all>ul{width: 200%;position: relative;}
+.second-model>ul>li:nth-child(even)>div>ul{left: -100%;}
+/*
+.img-all{width: 100%;position: absolute;left: 0;display: none;}
+.img-all>ul{width: 100%;position: relative;}
+*/
+.second-model>ul>li:nth-child(odd)>div>ul{}
+.img-all>ul>li{width: 50%;position: relative;display: inline-block;float: left;}
+.img-all>ul>li>img{width: 100%;position: relative;transform-origin: center center;}
+.second-text{}
+.second-element{width: 100%;position: relative;}
+.second-element ul{width: 100%;}
+.second-element ul li{width: 33.33%;display: inline-block;vertical-align: top;-webkit-box-sizing: border-box;float: left;padding: 5% 1% 5% 1%;text-align: left;border: 1px solid #02a8f3;}
+.second-element ul li img{width: 100%;}
+.second-multimedia{width: 100%;}
+.second-multimedia ul{width: 100%;}
+.second-multimedia li{width: 50%;display: inline-block;vertical-align: top;-webkit-box-sizing: border-box;float: left;padding: 5% 0 5% 0;}
+.second-multimedia p{padding: 5% 0 5% 0;text-align: left;}
+.second-interaction{width: 100%;}
+.second-uploading{width: 100%;}
+
+
+	
+/*文本*/
+.template-text{width: 100%;position: relative;display: none;}
+.template-text p{width: 100%;position: relative;}
+/*编辑器画板*/
+.editor-canvas{width: 70%;position: relative;display: inline-block;border: 1px solid #02a8f3;-webkit-box-sizing: border-box;text-align: center;vertical-align: top;}
+/*浮动编辑器*/
+/*文本的浮动编辑器*/
+.floating-editor-content{
+    box-sizing: border-box;
+    width: 100%;
+    height: 32px;
+    overflow: hidden;
+    color: #3f4652;
+}
+.floating-editor-content>li{
+    /*position: relative;*/
+    float: left;
+    height: 32px;
+    line-height: 32px;
+    /*padding-top: 7px;*/
+    margin-left: 15px;
+    cursor: pointer;
+}
+.floating-editor-content>li.floating-editor-word{
+    margin-left: 10px;
+    /*padding-top: 8px;*/
+    width:120px;
+    height: 32px;
+    line-height: 32px;
+}
+.floating-editor-content>li.floating-editor-word .ztbt{
+    margin: 3px ;
+    padding-left: 6px;
+    padding-right: 6px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.floating-editor-content>li.floating-editor-size{
+    width: 80px;
+}
+.ztbt{
+    border: 1px solid #c0c0c0;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.floating-editor-content>li.floating-editor-word #ztbt span{
+    float: left;
+}
+.floating-editor-content>li.floating-editor-word #ztbt a{
+    display: inline-block;
+    float: right;
+    margin: 3px;
+    width: 15px;
+    height: 15px;
+    border: 1px solid red;
+}
+.floating-editor-content>li.floating-editor-word #ztbt a img{
+    float: right;
+    width: 20px;
+    height: 20px;
+    border: 1px solid red;
+    /*margin-top:-4px;*/
+}
+.floating-editor-content .floating-editor-word .floating-editor-frame,.floating-editor-content .floating-editor-word .floating-editor-fontSize,.backBox{
+    display: none;
+    position: absolute;
+    top: 50px;
+    max-height: 800%;
+    border: 2px solid #cccccc;
+    border-radius: 10px;
+    z-index: 2;
+    clear: both;
+}
+.floating-editor-content .floating-editor-word .floating-editor-frame{
+    width:110px;
+    left: 20px;
+    /*overflow-y:scroll ;*/
+}
+.floating-editor-content .floating-editor-word #floating-editor-title{
+    left:150px;
+    /*overflow-y:scroll ;*/
+}
+.floating-editor-content .floating-editor-word .floating-editor-frame>li:hover{
+    background: #D1D3D6;
+}
+.floating-editor-content .floating-editor-word .floating-editor-fontSize{
+    left: 259px;
+    width: 10%;
+    overflow-y:scroll ;
+}
+.tab .table{
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 5px;
+}
+/* 滚动槽 */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.1);    border-radius: 10px;
+}
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+    border-radius: 20px; /*滚动条的圆角*/
+    background: rgba(0,0,0,0.15); /*颜色*/
+    -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.3);/*阴影*/
+}
+
+/*文本浮动编辑器的颜色*/
+.floating-editor-content .w8{
+    width: 70%;
+    margin: 20px auto;
+}
+.floating-editor-content .backColor{
+    margin-top: 6px;
+    width: 20px;
+    height: 20px;
+    background: #000000;
+    border-radius: 3px;
+}
+.floating-editor-content .backBox {
+    width: 24%;
+    height:125px;
+    color: rgba(63,70,82,.4);
+}
+.floating-editor-content .backBox-one{
+    overflow: hidden;
+}
+.floating-editor-content .backBox-one span{
+    width: 26px;
+    height: 26px;
+    background: #F5F5F5;;
+    float: left;
+}
+.floating-editor-content .backBox ul{
+    overflow: hidden;
+}
+.floating-editor-content .backBox ul li{
+    width: 26px;
+    height: 26px;
+    border-radius: 5px;
+    float: left;
+}
+.floating-editor-content .backBox ul li div{
+    width: 26px;
+    height: 26px;
+
+}
+.floating-editor-content .defaColor{
+    margin-bottom: 20px;
+}
+.floating-editor-content .colorTitle,.colorMOre{
+    margin-left: -47px;
+}
+.floating-editor-content .wordBold{
+    font-weight: bold;
+}
+.floating-editor-content .wordTilt{
+    font-style: italic;
+}
+.floating-editor-content #word-padding{
+    padding:0;
+}
+
+.floating-editor-content .word-bold span,.word-tilt span,.word-italic span{
+
+    font-size: 20px;
+    font-weight: bold;
+}
+.floating-editor-content .word-italic span{
+    font-style: italic;
+}
+
+/*元素背景、布局的浮动编辑器（还不确定，目前先放一个背景颜色）*/
+.floating-editor-bg .back-color,.floating-editor-lo .layout{
+    width: 26px;
+    height: 26px;
+    background: #828D95;
+    border-radius: 5px;
+    margin: 3px;
+}
+/*形状、背景、插画的浮动编辑器*/
+.floating-editor-svg0 .shape{
+    margin: 3px;
+    width: 26px;
+    height: 26px;
+    background: #c0c0c0;
+    border-radius: 5px;
+}
+/*插画的浮动编辑器*/
+.floating-editor-svg1 ul{
+    overflow: hidden;
+}
+.floating-editor-svg1 ul.svg1-bg li>div{
+    margin: 3px;
+    float: left;
+    width: 26px;
+    height: 26px;
+    border-radius: 5px;
+}
+/*图标的浮动编辑器*/
+.floating-editor-chart>div{
+    margin: 3px;
+    width: 60px;
+    height: 26px;
+    line-height: 26px;
+    border-radius: 3px;
+    text-align: center;
+    background: #c0c0c0;
+}
+.floating-editor{width: 100%;position: relative;line-height: 2.0;}
+.floating-editor-all{display: none;width: 60%;position: absolute;left: 0; border: 1px solid #02a8f3;}
+.floating-editor-text{}
+.floating-editor-bg{}
+.floating-editor-lo{}
+.floating-editor-svg0{}
+.floating-editor-svg1{}
+.floating-editor-chart{}
+.floating-editor-plugin{}
+.floating-editor-common{width: 40%;position: absolute;left: 60%; border: 1px solid #02a8f3;display: none;}
+/*动画*/
+.fl{float:left;}
+.fr{float:right;}
+.floating-editor-common li{width:20%;text-align:center;float: left;position:relative;}
+.floating-editor-common li .addanimate{position:absolute;left:0;z-index:1;width:200px;border:1px solid #000;display: none;}
+.floating-editor-common li .addanimate div{overflow: hidden;}
+.floating-editor-common li .addanimate span{float: left;border:1px solid #000;height:50px;line-height: 50px;padding: 0 8%;border-left:0 ;}
+.floating-editor-common li .addanimate input{float:right;width:51%;height:50px;border:1px solid #000;border-right:0;line-height: 50px;text-indent: 5px;text-align: center;}
+.floating-editor-common li .animate-start{margin-bottom:10px;border-bottom:1px solid #000}
+.floating-editor-common li .animate-start span{border:0;}
+.floating-editor-common li .animate-start font{line-height: 50px;padding-right: 5px;}
+/*图层顺序*/
+.floating-editor-common li .layer{position:absolute;left:0;z-index:1;display: none;}
+.floating-editor-common li .layer li{float:none;width:100px;border: 1px solid #000;padding:5px 30px;}
+/*透明度*/
+.floating-editor-common li .transparency{position:absolute;left:0;z-index:1;display:none ;}
+.floating-editor-common li .transparency input{border: 1px solid #000;width: 40%;}
+
+/*画板*/
+.canvas-panel{width: 100%;position: relative;height: 600px;border: 1px solid #02a8f3;-webkit-box-sizing: border-box;overflow: hidden;}
+
+.add-elemets-position{width: 80%;position: relative;margin: 10% auto;border: 0;display: inline-block;vertical-align: top;-webkit-box-sizing: border-box;transform-origin: left top;}
+
+
+
+/*滤镜*/
+.grayscale{filter:grayscale();}
+.sepia{filter:sepia();}
+.saturate{filter:saturate();}
+.hue-rotate{filter:hue-rotate();}
+.invert{filter:invert();}
+.opacity{filter:opacity();}
+.brightness{filter:brightness(1.5);}
+.contrast{filter:contrast(3);}
+.blur{filter:blur();}
+.drop-shadow{filter:drop-shadow();}
+/*grayscale灰度
+sepia褐色
+saturate饱和度
+hue-rotate色相旋转
+invert反色
+opacity透明度
+brightness亮度
+contrast对比度
+blur模糊
+drop-shadow阴影*/
+
+text{}

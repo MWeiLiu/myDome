@@ -1,0 +1,440 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title></title>
+        <style>
+            body{
+                background: #acacac;
+            }
+            .avatarModificationBox{
+                width:870px;
+                height:450px;
+                background: #fff;
+                border-radius: 5px;
+            }
+            .avatarModificationBox .avatarTitle{
+                height:45px;
+                padding:0 15px;
+                border-bottom:1px solid #000;
+            }
+            .avatarModificationBox .modificationBox{
+                padding:0 15px;
+                overflow: hidden;
+            }
+            .modificationBox .boxTip{
+                float: left;
+            }
+            .modificationBox .upLoadFile{
+                float: left;
+            }
+            .modificationBox .BOX{
+                width: 600px;
+                height: 300px;
+                clear: both;
+                float: left;
+                position: relative;
+                background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAAA3NCSVQICAjb4U/gAAAABlBMVEXMzMz////TjRV2AAAACXBIWXMAAArrAAAK6wGCiw1aAAAAHHRFWHRTb2Z0d2FyZQBBZG9iZSBGaXJld29ya3MgQ1M26LyyjAAAABFJREFUCJlj+M/AgBVhF/0PAH6/D/HkDxOGAAAAAElFTkSuQmCC");
+            }
+            
+            .cropper-canvas, .cropper-drag-box, .cropper-crop-box, .cropper-modal {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
+            .cropper-container img {
+                display: block;
+                width: 100%;
+                min-width: 0 !important;
+                max-width: none !important;
+                height: 100%;
+                min-height: 0 !important;
+                max-height: none !important;
+                image-orientation: 0deg !important;
+            }
+            img {
+                vertical-align: middle;
+            }
+            .cropper-move {
+                cursor: move;
+            }
+            .cropper-drag-box {
+                background-color: #fff;
+                filter: alpha(opacity=0);
+                opacity: 0;
+            }
+            .cropper-modal {
+                background-color: #000;
+                filter: alpha(opacity=50);
+                opacity: .5;
+            }
+            .cropper-view-box {
+                display: block;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                outline: 1px solid #69f;
+                outline-color: rgba(102, 153, 255, .75);
+            }
+            
+            .cropper-dashed {
+                position: absolute;
+                display: block;
+                filter: alpha(opacity=50);
+                border: 0 dashed #fff;
+                /* opacity: .5; */
+            }
+            .cropper-dashed.dashed-h {
+                top: 33.33333333%;
+                left: 0;
+                width: 100%;
+                height: 33.33333333%;
+                border-top-width: 1px;
+                border-bottom-width: 1px;
+            }
+            .cropper-dashed.dashed-v {
+                top: 0;
+                left: 33.33333333%;
+                width: 33.33333333%;
+                height: 100%;
+                border-right-width: 1px;
+                border-left-width: 1px;
+            }
+            .cropper-face {
+                top: 0;
+                left: 0;
+                cursor: move;
+                background-color: #fff;
+            }
+            .cropper-face, .cropper-line, .cropper-point {
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 100%;
+                filter: alpha(opacity=10);
+                opacity: .1;
+            }
+            .cropper-line {
+                background-color: #69f;
+            }
+            .cropper-line.line-e {
+                top: 0;
+                right: -3px;
+                width: 5px;
+                cursor: e-resize;
+            }
+            .cropper-line.line-n {
+                top: -3px;
+                left: 0;
+                height: 5px;
+                cursor: n-resize;
+            }
+            .cropper-line.line-w {
+                top: 0;
+                left: -3px;
+                width: 5px;
+                cursor: w-resize;
+            }
+            .cropper-line.line-s {
+                bottom: -3px;
+                left: 0;
+                height: 5px;
+                cursor: s-resize;
+            }
+            .cropper-point {
+                width: 5px;
+                height: 5px;
+                background-color: #69f;
+                filter: alpha(opacity=75);
+                opacity: .75;
+            }
+            .cropper-point.point-e {
+                top: 50%;
+                right: -3px;
+                margin-top: -3px;
+                cursor: e-resize;
+            }
+            .cropper-point.point-n {
+                top: -3px;
+                left: 50%;
+                margin-left: -3px;
+                cursor: n-resize;
+            }
+            .cropper-point.point-w {
+                top: 50%;
+                left: -3px;
+                margin-top: -3px;
+                cursor: w-resize;
+            }
+            .cropper-point.point-s {
+                bottom: -3px;
+                left: 50%;
+                margin-left: -3px;
+                cursor: s-resize;
+            }
+            .cropper-point.point-ne {
+                top: -3px;
+                right: -3px;
+                cursor: ne-resize;
+            }
+            .cropper-point.point-nw {
+                top: -3px;
+                left: -3px;
+                cursor: nw-resize;
+            }
+            .cropper-point.point-sw {
+                bottom: -3px;
+                left: -3px;
+                cursor: sw-resize;
+            }
+            .cropper-point.point-se {
+                right: -3px;
+                bottom: -3px;
+                width: 20px;
+                height: 20px;
+                cursor: se-resize;
+                filter: alpha(opacity=100);
+                opacity: 1;
+            }
+            .cropper-point.point-se:before {
+                position: absolute;
+                right: -50%;
+                bottom: -50%;
+                display: block;
+                width: 200%;
+                height: 200%;
+                content: " ";
+                background-color: #69f;
+                filter: alpha(opacity=0);
+                opacity: 0;
+            }
+            
+            .docs-preview {
+                margin-right: -15px;
+                margin-bottom: 10px;
+            }
+            .preview1 {
+                width: 263px;
+                height: 148px;
+            }
+            .preview2 {
+                width: 139px;
+                height: 78px;
+            }
+            .img-preview {
+                float: left;
+                margin-right: 10px;
+                margin-bottom: 10px;
+            }
+            .img-container, .img-preview {
+                background-color: #f7f7f7;
+                overflow: hidden;
+                width: 100%;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div class="avatarModificationBox">
+            <div class="avatarTitle">
+                <div>&lt;作者列表</div>
+                <div>新建作者</div>
+            </div>
+            <div class="modificationBox">
+                <div class="boxTip">图片上传</div>
+                <input class="upLoadFile" type="file"/>
+                <div class="BOX">
+                    <div class="cropper-container cropper-bg">
+                        <div class="cropper-canvas" style="width: 500px; height: 280px; margin-left: 0px; margin-top: 0px; transform: none;">
+                            <img src="../images/terminal.png" class="" style="width: 500px; height: 280px; margin-left: 0px; margin-top: 0px; transform: none;">
+                        </div>
+                        <div class="cropper-drag-box cropper-modal cropper-move"></div>
+                        <div class="cropper-crop-box" style="width: 200px; height: 200px;left: 0px;top: 0px;">
+                            <span class="cropper-view-box">
+                                <img src="../images/terminal.png" style="width: 500px; height: 280px; margin-left:0px; margin-top: 0px; transform: none;">
+                            </span>
+                            <span class="cropper-dashed dashed-h"></span>
+                            <span class="cropper-dashed dashed-v"></span>
+                            <span class="cropper-face"></span>
+                            <span class="cropper-line line-e"></span>
+                            <span class="cropper-line line-n"></span>
+                            <span class="cropper-line line-w"></span>
+                            <span class="cropper-line line-s"></span>
+                            <span class="cropper-point point-e"></span>
+                            <span class="cropper-point point-n"></span>
+                            <span class="cropper-point point-w"></span>
+                            <span class="cropper-point point-s"></span>
+                            <span class="cropper-point point-ne" ></span>
+                            <span class="cropper-point point-nw" ></span>
+                            <span class="cropper-point point-sw" ></span>
+                            <span class="cropper-point point-se" ></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="float:right">
+                    <div class="docs-preview clearfix">
+                        <div class="img-preview preview1" style="width: 148px; height: 148px;">
+                            <img src="../images/terminal.png" style="display: block; width: 466.117px; min-width: 0px !important; min-height: 0px !important; max-width: none !important; max-height: none !important; height: 262.191px; margin-left: 0px; margin-top: 0px; transform: none;">
+                        </div>
+                        <div class="img-preview preview2" style="width: 78px; height: 78px;">
+                            <img src="../images/terminal.png" style="display: block; width: 245.656px; min-width: 0px !important; min-height: 0px !important; max-width: none !important; max-height: none !important; height: 138.182px; margin-left:0px; margin-top: 0px; transform: none;">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <input placeholder="作者名称"/>
+                        <div class="save">保存修改</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="avatarTool">
+                <div>向左旋转</div>
+                <div>向右旋转</div>
+            </div>
+        </div>
+		<div class="asd"></div>
+        
+        <script src="../js/jquery-1.8.3.js"></script>
+        <script>
+            
+            (function(window, $){
+                
+                
+                $(function(){
+                    
+                    //移动剪裁
+                    $('.cropper-crop-box').live('mousedown', function(e){
+						e.preventDefault()||e.stopPropagation()
+						
+						if( e.which != 1 ){
+							return;
+						}
+                        var _this=$(this),
+                            pos=_this.offset(),
+							
+                            initX=pos.left-23,initY=pos.top-77,
+							
+                            beforeX=e.pageX,beforeY=e.pageY,
+							
+                            afterX=0,afterY=0,
+							
+							X=0,Y=0,
+							
+							rate=1,
+							
+                            move=true;
+                        $(document).live('mousemove', function(e){
+                            afterX=e.pageX;
+                            afterY=e.pageY;
+                            if(move){
+								X=afterX-beforeX+initX;
+								Y=afterY-beforeY+initY;
+								//框
+                                _this.css({
+                                    top:Y,
+                                    left:X
+                                })
+								//原图
+								_this.find('.cropper-view-box img').css({
+									marginTop:-Y,
+									marginLeft:-X
+								})
+								//缩略图
+								$('.preview1 img').css({
+									marginTop:-(Y*148/200),
+									marginLeft:-(X*148/200)
+								})
+								$('.preview2 img').css({
+									marginTop:-(Y*78/200),
+									marginLeft:-(X*78/200)
+								})
+                            }
+                        })
+                        $(document).live('mouseup', function(){
+                            _this.die('mousemove mouseup');
+                            move=false;
+                        })
+                        
+                    });
+                    
+                    //保存
+					$('.save').live('click', function(){
+						var preview1={
+								width:$('.preview1 img').width(),
+								height:$('.preview1 img').height(),
+								marginTop:parseInt($('.preview1 img').css('marginTop').replace('px', '')),
+								marginLeft:parseInt($('.preview1 img').css('marginLeft').replace('px', ''))
+							}
+//							preview2={
+//								width:$('.preview2 img').width(),
+//								height:$('.preview2 img').height(),
+//								marginTop:parseInt($('.preview2 img').css('marginTop').replace('px', '')),
+//								marginLeft:parseInt($('.preview2 img').css('marginLeft').replace('px', ''))
+//							}
+						console.log(preview1);
+						
+						var width = preview1.width,
+							height = preview1.height,
+							canvas = document.createElement("canvas"),
+							Img = new Image();
+						Img.crossOrigin = '*';
+						Img.src=$('.preview1 img').attr('src');
+						Img.width=width;
+						Img.height=height;
+							
+//						dim = el.css('background-position').split(' '),
+//						size = el.css('background-size').split(' '),
+//							
+//						所要绘制的图像区域的左上角的画布坐标。
+//						dx = parseInt(dim[0]) - el.width() / 2 + width / 2,
+//						dy = parseInt(dim[1]) - el.height() / 2 + height / 2,
+//							
+//						图像区域所要绘制的画布大小。
+//						dw = parseInt(size[0]),
+//						dh = parseInt(size[1]),
+//							
+//						图像所要绘制区域的大小，用图像像素表示。
+//						sh = parseInt(this.image.height),
+//						sw = parseInt(this.image.width);
+						
+//						图像将要被绘制的区域的左上角。这些整数参数用图像像素来度量。
+//						context.drawImage(this.image, 0, 0, sw, sh, dx, dy, dw, dh);
+
+						Img.onload=function(){
+							canvas.width = 200;
+							canvas.height = 200;
+							
+
+							//sw 和 sh 为图片的像素宽高。
+//							context.drawImage(Img, sx(imgX), sy(imgY), sw(imgW), sh(imgH), dx(canvasX), dy(canvasY), [dw(canvasX), dh(canvasY)]);
+							
+							
+							var context = canvas.getContext("2d"),
+								x=preview1.marginLeft,
+								y=preview1.marginTop,
+								dx=x-148/2+500/2,
+								dy=y-148/2+280/2
+							console.log(Img+','+ -x+','+ -y+','+ canvas.width+','+ canvas.height)
+							context.drawImage(Img, 0, 0, Img.width, Img.height, dx, dy, 148, 148);
+
+							var imageData = canvas.toDataURL('image/png');
+							console.log(Img.src)
+							console.log(imageData)
+							$('.asd').html('<div style="width:'+148+'px;height:'+148+'px;"><img src="'+imageData+'"/></div>')
+						}
+						
+					})
+					
+                })
+                
+            })(window, $)
+            
+            
+        </script>
+    </body>
+</html>

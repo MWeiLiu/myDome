@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>配置工单</title>		
+		<script src="../js/p.jquery.zjs.js"></script>
+		<script src="../js/m.cselector.config.js"></script>
+		<script src="../js/m.cselector.1.0.js"></script>
+		<script src="../js/p.WdatePicker.js"></script>
+		<script src="../js/ODN.js"></script>
+		<link href="../js/layout.m.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="../js/odn.css" />
+		<script type="application/javascript">
+			$(function(){
+				zjs.cmd({
+					cmd:"workOrder/autoGenerateWorkOrder",
+					callback:function(data){
+						$("#deployorder .gdbh").val(data.workOrderID)
+					}
+				})
+				$(".gjxa").live("click",function(){
+					var api = frameElement.api;					 
+		            if (api) {
+		                W = api.opener;
+		                var dil=W.$.dialog({
+		                    "title": "设备列表",
+		                    "content": "url:deploy/equipmentlist.html",
+		                    "dial.parent" : api,
+		                    "max": false,
+		                    "min": false,
+		                    "width": "900px",
+		                    "height": "650px",
+		                    "fixed": true,
+		                    "lock": true,
+		                    "close": function () { 
+		                       var deviceId=dil.content.document.getElementById("deviceId").value
+		                       var deviceName=dil.content.document.getElementById("deviceName").value
+		                       $("#deployorder .gjxinput").val(deviceName)
+		                       $("#deployorder #id").val(deviceId)
+		                       zjs.cmd({
+									cmd:"workOrder/infoInRead",
+									para:{"id":deviceId},
+									callback:function(data){
+										$("#deployorder .d4").val(data.deviceCode);
+										if(data.deviceType==0){
+											data.deviceType="ODF"
+										}else if(data.deviceType==1){
+											data.deviceType="OCC"
+										}else if(data.deviceType==2){
+											data.deviceType="ODB"
+										}else if(data.deviceType==3){
+											data.deviceType="分光路器"
+										}else if(data.deviceType==100){
+											data.deviceType="综合配线架"
+										}else if(data.deviceType==101){
+											data.deviceType="OLT"
+										}else if(data.deviceType==10){
+											data.deviceType="电杆"
+										}else if(data.deviceType==255){
+											data.deviceType="其他"
+										}
+										$("#deployorder .d5").val(data.deviceType);
+										$("#deployorder .d6").val(data.deviceIpAddr);
+										$("#deployorder .d7").val(data.deviceIpAddrMask);
+										$("#deployorder .d8").val(data.deviceIpGateway);
+										$("#deployorder .d9").val(data.NMSIpAddr);
+										$("#deployorder .d10").val(data.NMSTrapPort);
+										if(data.NMSTrapEnable=="false"){
+											data.NMSTrapEnable="不使能"
+										}else{
+											data.NMSTrapEnable="使能"
+										}
+										$("#deployorder .td11 .cselectorInput").html(data.NMSTrapEnable);
+										$("#deployorder .d12").val(data.NMSTrapSecurityName);
+										$("#deployorder .d13").val(data.SNMPGroupName);
+										$("#deployorder .d14").val(data.SNMPAuthority);
+										if(data.SNMPViewEnable=="false"){
+											data.SNMPViewEnable="不配置"
+										}else{
+											data.SNMPViewEnable="配置"
+										}
+										$("#deployorder .td15 .cselectorInput").html(data.SNMPViewEnable);
+										$("#deployorder .d16").val(data.SNMPViewName);
+									}
+								})
+		                    }
+		                });
+		            }					
+				})
+			})
+		</script>
+	</head>
+	<body>		
+		<form class="cform" id="deployorder" cmd-insert="workOrder/addConfigurationWorkOrder" setcallback="close()">	
+			<input type="hidden" id="id" value="" />
+			<table border="0" cellpadding="0" cellspacing="12">
+				<tr><td colspan="4"><h4>添加工单</h4></td></tr>
+				<tr><td class="w12">工单类型：</td><td class="w23">配置工单</td><td class="w12">工单编号：</td><td class="w23"><input class="gdbh" id="workOrderId" type="text" readonly="readonly" /></td></tr>
+				<tr><td class="w12">业务信息：</td><td class="w23"><input id="workOrderInfo" type="text" class="d1" rule="required"/></td><td class="w12">光交箱：</td><td class="w23"><input class="gjxinput d2" type="text" rule="required" /><a class="gjxa" style="position: absolute;top:0px;right: 5px;"><img  src="/ODN/img/search.png" /></a> </td></tr>
+				<tr><td class="w12">业务员：</td><td class="w23"><input id="merchandiserUserId" type="text" class="cselector d3" mode="" cmd-select="workOrder/Salesman" template="<a value='{{merchandiserUserId}}'>{{company}}|{{department}}|{{name}}</a>"/> </td><td class="w12">设备ID：</td><td class="w23"><input class="d4" type="text" readonly="readonly" rule="required"/> </td></tr>
+				<tr><td class="w12">设备类型：</td><td class="w23"><input type="text" class="d5" readonly="readonly" rule="required"/> </td><td class="w12">设备IP地址：</td><td class="w23"><input id="deviceIpAddr" type="text" class="d6" rule="required"/> </td></tr>
+				<tr><td class="w12">设备IP地址掩码：</td><td class="w23"><input id="deviceIpAddrMask" type="text" class="d7" rule="required"/> </td><td class="w12">设备IP网关：</td><td class="w23"><input id="deviceIpGateway" type="text" class="d8" rule="required"/> </td></tr>
+				<tr><td class="w12">网管IP地址：</td><td class="w23"><input id="NMSIpAddr" type="text" class="d9" rule="required"/> </td><td class="w12">网管trap端口：</td><td class="w23"><input id="NMSTrapPort" type="text" class="d10" rule="required"/> </td></tr>
+				<tr><td class="w12">网管trap使能：</td><td class="w23 td11"><input rule="required" id="NMSTrapEnable" type="text" class="cselector d11" mode="NMSTrapEnable" /> </td><td class="w12">网管trap安全名：</td><td class="w23"><input id="NMSTrapSecurityName" type="text" class="d12" rule="required"/> </td></tr>
+				<tr><td class="w12">SNMP团体名：</td><td class="w23"><input id="SNMPGroupName" type="text" class="d13" rule="required"/> </td><td class="w12">SNMP权限：</td><td class="w23"><input id="SNMPAuthority" type="text" class="d14" rule="required"/> </td></tr>
+				<tr><td class="w12">SNMP配置视图：</td><td class="w23 td15"><input id="SNMPViewEnable" type="text" class="cselector d15" mode="SNMPViewEnable" /> </td><td class="w12">SNMP视图名：</td><td class="w23"><input id="SNMPViewName" type="text" class="d16" rule="required"/> </td></tr>
+				<tr><td class="w12">运营商预留：</td><td class="w23"><input id="serviceProviderReserved" type="text" class="d17" /> </td><td class="w12">厂商预留：</td><td class="w23"><input id="vendorReserved" type="text" class="d18"/> </td></tr>
+				<tr><td colspan="4"><a class="qd" id="submit">确定</a></td></tr>
+			</table>
+		</form>		
+	</body>
+</html>

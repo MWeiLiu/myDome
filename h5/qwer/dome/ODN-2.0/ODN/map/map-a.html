@@ -1,0 +1,154 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<style type="text/css">
+		body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:"微软雅黑";}
+	</style>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZsCKTqdrSzcMFioUV1SKsr5WgZXWKmIE"></script>
+	<title></title>
+</head>
+<body>
+	<div id="allmap"></div>
+</body>
+</html>
+<script type="text/javascript">
+	// 百度地图API功能
+	var map = new BMap.Map("allmap");
+	var point = new BMap.Point(120.135512, 30.282661);
+	map.centerAndZoom(point, 18);
+
+	//红点坐标
+	var json_data = [[120.131505,30.280597],[120.132916,30.283934],
+	[120.133545,30.282281],[120.135966,30.284519],
+	[120.136765,30.282796],[120.136976,30.281213],
+	[120.140255,30.282733]];
+	var pointArray = new Array();
+	for(var i=0;i<json_data.length;i++){
+		var marker = new BMap.Marker(new BMap.Point(json_data[i][0], json_data[i][1])); // 创建点
+		map.addOverlay(marker);    //增加点
+		pointArray[i] = new BMap.Point(json_data[i][0], json_data[i][1]);
+		marker.addEventListener("click",overlay_style);
+	}
+	
+	
+	//折线图
+	var polyline = new BMap.Polyline([
+		new BMap.Point(120.133545,30.282281),
+		
+		new BMap.Point(120.133733,30.282632),
+		new BMap.Point(120.134515,30.282881),
+		new BMap.Point(120.134632,30.283162),
+		new BMap.Point(120.134856,30.283326),
+		new BMap.Point(120.135009,30.283614),
+		new BMap.Point(120.135233,30.28384),
+		new BMap.Point(120.135521,30.284308),
+		
+		new BMap.Point(120.135966,30.284519),
+		
+		new BMap.Point(120.13615,30.284168),
+		new BMap.Point(120.136222,30.28384),
+		new BMap.Point(120.136455,30.283505),
+		new BMap.Point(120.136491,30.283061),
+		
+		new BMap.Point(120.136765,30.282796)
+	], {strokeColor:"#3FBDAA", strokeWeight:2, strokeOpacity:0.5});   //创建折线
+	map.addOverlay(polyline);          //增加折线
+	polyline.addEventListener("click",overlay_style);
+		
+		
+		//黄圈坐标
+	var circle = new BMap.Circle(new BMap.Point(120.133733,30.282632),4,{strokeColor:"#FCB63B", strokeWeight:3, strokeOpacity:0.7}); //创建圆
+	map.addOverlay(circle);            //增加圆
+	circle.addEventListener("click",overlay_style);
+		
+	var circle = new BMap.Circle(new BMap.Point(120.134515,30.282881),4,{strokeColor:"#FCB63B", strokeWeight:3, strokeOpacity:0.7}); //创建圆
+	map.addOverlay(circle);            //增加圆
+	circle.addEventListener("click",overlay_style);
+		
+	var circle = new BMap.Circle(new BMap.Point(120.134632,30.283162),4,{strokeColor:"#FCB63B", strokeWeight:3, strokeOpacity:0.7}); //创建圆
+	map.addOverlay(circle);            //增加圆
+	circle.addEventListener("click",overlay_style);
+		
+	var circle = new BMap.Circle(new BMap.Point(120.134856,30.283326),4,{strokeColor:"#FCB63B", strokeWeight:3, strokeOpacity:0.7}); //创建圆
+	map.addOverlay(circle);            //增加圆
+	circle.addEventListener("click",overlay_style);
+		
+	var circle = new BMap.Circle(new BMap.Point(120.135009,30.283614),4,{strokeColor:"#FCB63B", strokeWeight:3, strokeOpacity:0.7}); //创建圆
+	map.addOverlay(circle);            //增加圆
+	circle.addEventListener("click",overlay_style);
+		
+	var circle = new BMap.Circle(new BMap.Point(120.135233,30.28384),4,{strokeColor:"#FCB63B", strokeWeight:3, strokeOpacity:0.7}); //创建圆
+	map.addOverlay(circle);            //增加圆
+	circle.addEventListener("click",overlay_style);
+		
+	var circle = new BMap.Circle(new BMap.Point(120.135521,30.284308),4,{strokeColor:"#FCB63B", strokeWeight:3, strokeOpacity:0.7}); //创建圆
+	map.addOverlay(circle);            //增加圆
+	circle.addEventListener("click",overlay_style);
+		
+	var circle = new BMap.Circle(new BMap.Point(120.13615,30.284168),4,{strokeColor:"#FCB63B", strokeWeight:3, strokeOpacity:0.7}); //创建圆
+	map.addOverlay(circle);            //增加圆
+	circle.addEventListener("click",overlay_style);
+		
+	var circle = new BMap.Circle(new BMap.Point(120.136222,30.28384),4,{strokeColor:"#FCB63B", strokeWeight:3, strokeOpacity:0.7}); //创建圆
+	map.addOverlay(circle);            //增加圆
+	circle.addEventListener("click",overlay_style);
+		
+	var circle = new BMap.Circle(new BMap.Point(120.136455,30.283505),4,{strokeColor:"#FDB63B", strokeWeight:3, strokeOpacity:0.7}); //创建圆
+	map.addOverlay(circle);            //增加圆
+	circle.addEventListener("click",overlay_style);
+		
+	var circle = new BMap.Circle(new BMap.Point(120.136491,30.283061),4,{strokeColor:"#FCB63B", strokeWeight:3, strokeOpacity:0.7}); //创建圆
+	map.addOverlay(circle);            //增加圆
+	circle.addEventListener("click",overlay_style);
+	
+	//提示信息
+	
+	var data_info = [	[120.131505,30.280597,"1"],
+						[120.132916,30.283934,"2"],
+						[120.133545,30.282281,"3"],
+						[120.136765,30.282796,"4"],
+						[120.135966,30.284519,"5"],
+						[120.136976,30.281213,"6"],
+						[120.140255,30.282733,"7"]
+					];
+	var opts = {
+				width : 250,     // 信息窗口宽度
+				height: 80,     // 信息窗口高度
+				title : "信息窗口" , // 信息窗口标题
+				enableMessage:true//设置允许信息窗发送短息
+			   };
+	for(var i=0;i<data_info.length;i++){
+		var marker = new BMap.Marker(new BMap.Point(data_info[i][0],data_info[i][1]));  // 创建标注
+		var content = data_info[i][2];
+		map.addOverlay(marker);               // 将标注添加到地图中
+		addClickHandler(content,marker);
+	}
+	function addClickHandler(content,marker){
+		marker.addEventListener("click",function(e){
+			openInfo(content,e)}
+		);
+	}
+	function openInfo(content,e){
+		var p = e.target;
+		var point = new BMap.Point(p.getPosition().lng, p.getPosition().lat);
+		var infoWindow = new BMap.InfoWindow(content,opts);  // 创建信息窗口对象 
+		map.openInfoWindow(infoWindow,point); //开启信息窗口
+	}
+
+	
+	
+	//获取marker的属性
+	function overlay_style(e){
+		var p = e.target;
+		if(p instanceof BMap.Marker){
+			alert("该覆盖物是点，点的坐标是：" + p.getPosition().lng + "," + p.getPosition().lat);   
+		}else if(p instanceof BMap.Circle){
+			alert("该覆盖物是圆，圆的半径是：" + p.getRadius() + "，圆的中心点坐标是：" + p.getCenter().lng + "," + p.getCenter().lat);   
+		}else if(p instanceof BMap.Polyline){
+			alert("该覆盖物是折线，所画点的个数是：" + p.getPath().length);   
+		}else{
+			alert("无法获知该覆盖物类型");
+		}
+	}	
+</script>

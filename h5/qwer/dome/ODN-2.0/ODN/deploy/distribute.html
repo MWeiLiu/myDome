@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>工单派发</title>		
+		<script src="../js/p.jquery.zjs.js"></script>
+		<script src="../js/m.cselector.config.js"></script>
+		<script src="../js/m.cselector.1.0.js"></script>
+		<script src="../js/p.WdatePicker.js"></script>
+		<script src="../js/ODN.js"></script>
+		<link href="../js/layout.m.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="../js/odn.css" />
+	</head>
+	<body>
+		<div class="distritop">
+			<p>工单管理 >> 工单派发</p>
+		</div>
+		<form class="cform" id="distribot">
+			<div class="one">
+				<p><label id="1">请选择工单类型：<select></select></label><label id="2">工单编号：<span>自动生成</span></label></p>
+				<p><label id="3">业务信息：<input type="text" placeholder="请填写业务信息"/></label></p>
+				<p><label id="4">需要配置的设备：<input type="text"  /></label></p>
+				<p><label id="5">业务员：<select><option>请选择业务员</option></select></label></p>
+			</div>
+			<div class="two">
+				<h5>配置设备读取的信息</h5>
+				<p><label id="6">设备ID：<input type="text" /></label><label id="7">设备类型：<select><option>请选择类型</option></select></label></p>
+				<p><label id="8">设备IP地址：<input type="text" /></label><label id="9">设备IP地址掩码：<input type="text" /></label>
+					<label id="10">设备IP网关：<input type="text" /></label></p>
+				<p><label id="11">网管IP地址：<input type="text" /></label><label id="12">网管trap端口：<input type="text" /></label><label id="13">网管trap使能：<select><option>使能</option></select></label><label id="14">网管IP地址：<input type="text" /></label></p>
+				<p><label id="15">SNMP团体名：<input type="text" /></label><label id="12">SNMP权限：<input type="text" /></label><label id="13">SNMP配置视图：<select><option>配置</option></select></label><label id="14">SNMP视图名：<input type="text" /></label></p>
+				<h4><a class="qx">取消</a><a class="qd">确定</a></h4>
+			</div>
+		</form>
+	</body>
+</html>

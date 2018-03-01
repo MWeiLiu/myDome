@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <title>测试</title>
+    <!--<link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet" />-->
+    <!--字体图标-->
+    <link href="css/layout.m.css" rel="stylesheet" />
+    <!--移动端和PC端通用主样式-->
+    <!--<link href="/js/layout.p.css" rel="stylesheet" />-->
+    <script src="js/p.jquery.1.7.2.js"></script>
+    <!--PC端专用JQUERY文件-->
+    <script src='js/m.cselector.config.js'></script>
+    <script src="js/m.cselector.1.0.js"></script>
+    <!--移动端和PC端通用zjs主框架文件-->
+    <!--<script src="/js/p.cselector.plugins.js"></script> -->
+    <script type="text/javascript">   
+        $(function () { 
+            $("#submit").click(function () {
+                var TableName = $("#TableName").val();
+                var TableTuo = "";//表名转驼峰语法
+                var TableMode = TableName.replace(new RegExp("_", 'g'), "/");
+                var TableKey = TableName.split("_")[0]+"Id";
+                var TableEnum = "";//枚举命名
+                var toupp = true;
+                for (var ti in TableName) {
+                    if (TableName[ti] == "_") {//逢_移除 并在紧邻的单词首字母大写
+                        toupp = true;
+                        if (TableEnum == "")
+                            TableEnum = TableTuo+"Enum";
+                    } else {
+                        if (toupp) {
+                            toupp = false;
+                            TableTuo += TableName[ti].toUpperCase();
+                        } else {
+                            TableTuo += TableName[ti];
+                        }
+                    }
+                }
+
+                var TableNameSmall = $("#TableNameSmall").val(); 
+                var TableCols = $("#TableCols").val().split("\n");
+                var data = [];
+                var dataclear = []; //清除ID APP之类字段的结果集
+
+                var firstcolname = "";//java中的首字段
+                var uniquecolname = "";//java中的唯一约束字段
+                var firstcoltype = "";//java中的首字段
+                for (var tci in TableCols) { 
+                    var tcdatai = TableCols[tci].split("\t");
+                    if (tcdatai[0] != "") {
+                        var datai = {}; 
+                        datai.colname = tcdatai[0];     //字段名
+                        datai.coltype = tcdatai[1];     //字段类型 int varchar(50)
+                        datai.javalength = "";//java类型长度
+                        datai.coltypename = datai.coltype.split("(")[0];    //字段类型名称 int varchar
+                        if (datai.coltypename == "varchar") {//如果有 ( 就表示有长度 
+                            datai.coltypelength = datai.coltype.split("(")[1].split(")")[0]; //字段长度 第一个 varchar(50) decimal(18,2)
+                            datai.javalength = ", length=" + datai.coltypelength;
+                        }
+                        if (datai.coltypename == "decimal") {//如果有 ( 就表示有长度 
+                            datai.coltypelength1 = datai.coltype.split("(")[1].split(",")[0]; //字段长度 第一个 varchar(50) decimal(18,2)
+                            datai.coltypelength2 = datai.coltype.split(",")[1].split(")")[0]; //字段长度 第一个 varchar(50) decimal(18,2)
+                            datai.javalength = ", precision=" + datai.coltypelength1 + ", scale=" + datai.coltypelength2;
+                        }
+                        datai.colisnull = tcdatai[2];//是否为空
+                        datai.coldesc = tcdatai[3];//字段介绍
+                        
+                        if (tcdatai[4] == "unique") {
+                            datai.unique = ", unique=true"
+                            uniquecolname = datai.colname;
+                        } else {
+                            datai.unique = ""
+                        };//唯一字段
+                        datai.tablename = TableName;//表名
+                        datai.identity = "";//自增字段
+                        datai.myidentity = "";//自增字段
+                        datai.javatype = "";//JavaModel里的类型
+                        datai.javatimestp = "";//Datetime类型的 用时间戳
+                        if (datai.colname == "ID" || datai.colname == TableKey) {
+                            datai.identity = "IDENTITY(100,1) ";
+                            datai.myidentity = "AUTO_INCREMENT ";
+                        }
+                        var isrequired = datai.colisnull == "not null," ? "required;" : "";
+                        datai.javanull = datai.colisnull == "not null," ? "\t@NotNullColumn(value=\"" + datai.coldesc + "\")\r\n" : "";
+                        datai.javanullable = datai.colisnull == "not null," ? ", nullable = false" : ", nullable = true"; 
+                        datai.javaenum = "";
+                        switch (datai.coltypename) {
+                            case "bigint":
+                                datai.javatype = "Long";
+                                datai.dvalue = parseInt(100 * Math.random());
+                                datai.colrule = " rule=\"" + isrequired + "integer\" ";
+                                break;
+                            case "int":
+                                datai.javatype = "Integer";
+                                datai.dvalue = parseInt(100 * Math.random());
+                                datai.colrule = " rule=\"" + isrequired + "integer\" ";
+                                break;
+                            case "decimal":
+                                datai.javatype = "BigDecimal";
+                                datai.dvalue = parseInt(10 * Math.random()) + 0.01;
+                                datai.colrule = " rule=\"" + isrequired + "number\" ";
+                                break;
+                            case "Date":
+                                datai.javatype = "Date";
+                                datai.dvalue = "\"2015-1-" + parseInt(10 * Math.random()) + "\"";
+                                datai.colrule = " onClick=\"WdatePicker()\" ";
+                                break;
+                            case "Datetime":
+                                datai.javatimestp = "\t@Temporal(TemporalType.TIMESTAMP)\r\n";
+                                datai.javatype = "Date";
+                                datai.dvalue = "\"2015-1-" + parseInt(10 * Math.random()) + "\"";
+                                datai.colrule = " onClick=\"WdatePicker()\" ";
+                                break;
+                            case "tinyint":
+                                datai.javatype = TableEnum;
+                                datai.javaenum = "\t@Enumerated(EnumType.STRING)\r\n";
+                                datai.dvalue = parseInt(10 * Math.random());
+                                datai.colrule = " class=\"cselector\" mode=\"" + datai.colname + "\" ";
+                                break;
+                            case "varchar":
+                                datai.javatype = "String";
+                                datai.dvalue = "\"测试数据" + datai.colname + "的值" + parseInt(10 * Math.random()) + "\"";
+                                datai.colrule = " rule=\"" + isrequired + "length:" + (datai.coltypelength / 2) + "\" ";
+                                break;
+                            default:
+                                datai.javatype = "String";
+                                datai.dvalue = "\"测试数据" + datai.colname + "的值" + parseInt(10 * Math.random()) + "\"";
+                                datai.colrule = "";
+                                break;
+                        }
+
+                        if (tci == "0") {
+                            firstcolname = datai.colname;
+                            firstcoltype = datai.javatype;
+                            uniquecolname = datai.colname;
+                        }
+                        data.push(datai);
+                        if (datai.colname != TableKey && datai.colname != "ID" && datai.colname != "App" && datai.colname != "DateAdded") {
+                            dataclear.push(datai);
+                        }
+                    }
+                }//整理表结构 end
+
+                //建表逻辑 start
+                //注释模板
+                var createdesctemp = "EXEC sys.sp_addextendedproperty @name=N'MS_Description',@value=N'{{coldesc}}',@level0type=N'SCHEMA',\
+                     @level0name=N'dbo',@level1type=N'TABLE',@level1name=N'{{tablename}}',@level2type=N'COLUMN',@level2name=N'{{colname}}'\r\nGO\r\n";
+                //行模板
+                var createrowtemp = "{{colname}} {{coltype}} {{identity}} {{colisnull}}\r\n";
+                //表模板
+                var createTableCode = "CREATE TABLE dbo." + TableName + " (\r\n" + zjs.render(data, createrowtemp) + "\r\n"
+                  +"CONSTRAINT [PK_"+ TableName + "] PRIMARY KEY CLUSTERED ([ID] ASC)WITH (PAD_INDEX=OFF,STATISTICS_NORECOMPUTE=OFF,\r\n"
+                  + "IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]) ON [PRIMARY] \r\nGO\r\n"
+                  + zjs.render(data, createdesctemp);
+                $("#CreateTableCode").val(createTableCode);
+                //建表逻辑end
+
+                //mysql建表 
+                //行模板
+                var mycreaterowtemp = "{{colname}} {{coltype}} {{myidentity}} COMMENT '{{coldesc}}' {{colisnull}}\r\n";
+                //表模板
+                 var CreateTableMySQL = "CREATE TABLE " + TableName + " (\r\n" + zjs.render(data, mycreaterowtemp) + "\r\n"
+                  + "PRIMARY KEY (`ID`))";
+                $("#CreateTableMySQL").val(CreateTableMySQL);
+                //end mysql
+
+                //存储过程start
+                $.get("data/Templateproc.txt", function (procTemplateData) {
+                    var procTemplate = procTemplateData;
+                    //处理表名
+                    procTemplate = procTemplate.replace(new RegExp("#Table#", 'g'), TableName);
+                    //处理视图
+                    var ViewList = zjs.render(data, TableNameSmall + ".{{colname}} as {{colname}}/*{{coldesc}}*/,");
+                    procTemplate = procTemplate.replace(new RegExp("#ViewList#", 'g'), ViewList.substr(0, ViewList.length - 1));
+                    //处理新增和更新的参数
+                    procTemplate = procTemplate.replace(new RegExp("#proUpdatePara#", 'g'),
+                        zjs.render(dataclear, "@{{colname}} {{coltype}},\t/*{{coldesc}}*/\r\n"));
+                    //处理insert命令参数
+                    procTemplate = procTemplate.replace(new RegExp("#TableCols#", 'g'),
+                        zjs.render(dataclear, "{{colname}}/*{{coldesc}}*/,"));
+                    procTemplate = procTemplate.replace(new RegExp("#TableColsValue#", 'g'),
+                        zjs.render(dataclear, "@{{colname}}/*{{coldesc}}*/,"));
+                    //处理update命令参数
+                    procTemplate = procTemplate.replace(new RegExp("#TableUpdateCols#", 'g'),
+                        zjs.render(dataclear, "{{colname}}=@{{colname}}/*{{coldesc}}*/,"));
+                    $("#procTemplate").val(procTemplate); 
+                });
+                //存储过程end
+
+                //添加页面start
+                $.get("data/Templateadd.txt", function (addTemplateData) {
+                    var addTemplate = addTemplateData;
+                    //处理表名
+                    addTemplate = addTemplate.replace(new RegExp("#Table#", 'g'), TableName);
+                    //处理行 
+                    addTemplate = addTemplate.replace(new RegExp("#AddPage#", 'g'),
+                        zjs.render(dataclear, "\t<tr><td>{{coldesc}}：</td><td><input id=\"{{colname}}\" type=\"text\" {{colrule}}/></td></tr>\r\n"));
+                    $("#addTemplate").val(addTemplate);
+                });
+                //添加页面end
+
+                //列表页面start
+                $.get("data/Templatelist.txt", function (listTemplateData) {
+                    var listTemplate = listTemplateData;
+                    //处理表名
+                    listTemplate = listTemplate.replace(new RegExp("#Table#", 'g'), TableName);
+                    //处理搜索结果行 
+                    listTemplate = listTemplate.replace(new RegExp("#ListPageSearch#", 'g'),
+                        zjs.render(dataclear, "<td>{{coldesc}}：</td><td><input id=\"{{colname}}\" type=\"text\"/></td>\r\n"));
+                    //处理表头列名 
+                    listTemplate = listTemplate.replace(new RegExp("#ListPageTD#", 'g'),
+                        zjs.render(dataclear, "<td>{{coldesc}}</td>"));
+                    //处理表体绑定列名 
+                    listTemplate = listTemplate.replace(new RegExp("#ListPageTbodyTD#", 'g'),
+                        zjs.render(dataclear, "<td>{{{{colname}}}}</td>"));
+
+                    $("#listTemplate").val(listTemplate);
+                });
+                //列表页面end
+
+                //展示页面start
+                $.get("data/Templateshow.txt", function (showTemplateData) {
+                    var showTemplate = showTemplateData;
+                    //处理表名
+                    showTemplate = showTemplate.replace(new RegExp("#Table#", 'g'), TableName);
+                    //处理搜索结果行 
+                    showTemplate = showTemplate.replace(new RegExp("#ShowPage#", 'g'),
+                        zjs.render(dataclear, "<tr><td>{{coldesc}}：</td><td>{{{{colname}}}}</td></tr>\r\n"));
+                    //处理表头列名 
+                    showTemplate = showTemplate.replace(new RegExp("#ShowPageList#", 'g'),
+                        zjs.render(dataclear, "{{{{colname}}}}"));
+
+                    $("#showTemplate").val(showTemplate);
+                });
+                //展示页面end
+                //假数据
+                $.get("data/Templatedata.txt", function (dataTemplateData) {
+                    var dataTemplatelist = [];
+                    for (var i = 1 ; i < 6 ; i++) {
+                        var dtemp = zjs.render(dataclear, "\t\t\t  \"{{colname}}\":{{dvalue}},\r\n");
+                        dataTemplatelist.push("\t\t\t{\r\n\t\t\t  \"ID\":" + i + ",\r\n" +
+                            dtemp.substring(0, dtemp.length - 3) + "\r\n\t\t\t}");
+                    }
+                    var dataTemplate = dataTemplateData; 
+                    //处理假数据 
+                    dataTemplate = dataTemplate.replace(new RegExp("#DataList#", 'g'),
+                        dataTemplatelist.join(',\r\n'));
+                     
+                    $("#dataTemplate").val(dataTemplate);
+                });
+                //假数据
+            });//end submit
+
+            $(".tabtitle a").click(function () {
+                $(this).addClass("hover").siblings().removeClass("hover");
+                $(".tabbox .tabitems").eq($(this).index()).show().siblings().hide();
+            });
+            $(".tabtitle a").eq(0).trigger("click");
+        });//end ready
+
+    </script>
+    <style type="text/css">
+    .tabtitle {height:32px;}
+    .tabtitle a {border:1px solid #ccc;margin-right:5px;padding:5px;}
+    .tabtitle a.hover, 
+    .tabtitle a:hover {border:1px solid #f60;}
+    .tabitems {border:1px solid #ccc;}
+    </style>
+</head>
+<body>
+    <form class="cform" id="coder">
+    <table border="0" cellpadding="0" cellspacing="12" class="c12">
+        <tr>
+            <td class="ws">表名：
+            </td>
+            <td class="w2">
+                <input id="TableName" type="text" />
+            </td>
+            <td class="ws">表结构：
+            </td>
+            <td rowspan="11" colspan="11" valign="top">
+                <textarea id="TableCols" class="c12 h1"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>表名缩写：
+            </td>
+            <td>
+                <input id="TableNameSmall" type="text" value="t"/>
+            </td>
+        </tr> 
+        <tr>
+            <td></td>
+            <td>
+                <a id="submit" class="btn">生成</a>&nbsp;&nbsp;
+                <a href="/Demo.xls" target="_blank">Demo下载</a>
+            </td>
+        </tr> 
+    </table>
+    </form>
+    <div class="p20">
+	    <div class="tabtitle">
+		    <a>MSSQL建表</a><a>MySQL建表</a><a>存储过程</a><a>详情页面</a><a>列表页面</a><a>展示页面</a><a>假数据</a>
+	    </div>
+	    <div class="tabbox">
+		    <div class="tabitems"> 
+                <textarea id="CreateTableCode" class="c12 h3"></textarea>
+		    </div>
+		    <div class="tabitems"> 
+                <textarea id="CreateTableMySQL" class="c12 h3"></textarea>
+		    </div>
+		    <div class="tabitems"> 
+                <textarea id="procTemplate" class="c12 h3"></textarea>
+		    </div>
+		    <div class="tabitems"> 
+                <textarea id="addTemplate" class="c12 h3"></textarea>
+		    </div>
+		    <div class="tabitems"> 
+                <textarea id="listTemplate" class="c12 h3"></textarea>
+		    </div>
+		    <div class="tabitems"> 
+                <textarea id="showTemplate" class="c12 h3"></textarea>
+		    </div>
+		    <div class="tabitems"> 
+                <textarea id="dataTemplate" class="c12 h3"></textarea>
+		    </div> 
+	    </div> 
+    </div> 
+</body>
+</html>
+

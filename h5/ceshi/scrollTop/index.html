@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+    </head>
+    <title>scrollTop</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+            width:100%;
+            height:500px;
+            text-align: center;
+            line-height: 500px;
+            color: #fff;
+            font-size: 50px;
+        }
+        .chu{
+            animation: cubic-bezier(0.8, 0.22, 0.15, 0.75) 0.6s chu;
+            width:50%;
+        }
+        @keyframes chu{
+            from{width:100%}
+            to{width:50%}
+        }
+        
+    </style>
+    <body>
+        
+        <ul>
+            <li style="background:#ff0;"><span>1</span></li>
+            <li style="background:#f40;"><span>2</span></li>
+            <li style="background:#404;"><span>3</span></li>
+            <li style="background:#101;"><span>4</span></li>
+            <li style="background:#090;"><span>5</span></li>
+            <li style="background:#439;"><span>6</span></li>
+            <li style="background:#056;"><span>7</span></li>
+            <li style="background:#315;"><span>8</span></li>
+        </ul>
+        
+        <script src="../js/jquery-1.8.3.min.js"></script>
+        <script src="scroll.js"></script>
+    </body>
+</html>

@@ -1,0 +1,282 @@
+*{
+    margin: 0;
+    padding:0;
+}
+.inlineBlock{
+    display: inline-block;
+    vertical-align: -webkit-baseline-middle;
+    vertical-align: middle;
+}
+
+.fileBox{
+    width:400px;
+    height:200px;
+    background:#ccc;
+}
+.fileBox #upFile{
+    width:100%;
+    height:100%;
+    border: none;
+    display: block;
+    opacity: 0;
+}
+
+/*图片*/
+/*
+.imageBox{
+    width:300px;
+    height:300px;
+}
+.imageBox img{
+    width:100%;
+}
+*/
+/*录音*/
+.audioEditer .editering {
+    padding-top: .1px;
+    display: none;
+}
+.mmEditer .editThumb {
+    width: 100%;
+    height: 220px;
+    /* padding-top: 50px; */
+    /* background: #f7f7f7; */
+    border-bottom: 2px solid #f7f7f7;
+    position: relative;
+}
+.audioEditer .recordStatus {
+    display: block;
+    margin: 24px auto 15px;
+}
+.audioEditer .recordTime {
+    display: block;
+    margin: auto;
+    text-align: center;
+    /* margin-bottom: 10px; */
+}
+.audioEditer .operators {
+    font-size: 0;
+    width: 80%;
+    display: flex;
+    display: -webkit-flex;
+    margin: auto;
+    justify-content: center;
+    -webkit-justify-content: center;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    align-items: center;
+    -webkit-align-items: center;
+}
+.audioEditer .recordPause {
+    width: 22px;
+    height: 22px;
+    margin: 20px auto;
+    /* margin-left: 30px; */
+    /* margin-right: 40px; */
+    background-image: url(../images/recordContinueIcon.png);
+}
+.audioEditer .record {
+    background-size: 100% 100%;
+    background-position: center;
+    /* margin-right: 50px; */
+    cursor: pointer;
+}
+.audioEditer .audioUploadBtn,.videoEdit .videoUploadBtn,.mmAUpload {
+    border: 1px solid #0ebac5;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    width: 96px;
+    height: 27px;
+    color: #0ebac5;
+    cursor: pointer;
+    background: #fff;
+}
+.operators .mmAudioFile,.mmEditer .mmVideoFile {
+    display: none;
+}
+input {
+    outline: none;
+}
+
+
+/*音频*/
+.multimedia .audioThumb {
+    width: 550px;
+    font-size: 0;
+    margin: auto;
+}
+.multimedia .audioThumb .audioPP, .mmEditer .audioThumb .audioPP {
+    width: 13px;
+    height: 13px;
+    background-image: url(../images/videoPlayS.png);
+    background-size: 100% 100%;
+    background-position: center;
+    cursor: pointer;
+}
+.multimedia .audioThumb .progressWrap {
+    width: 467px;
+    height: 2px;
+    background: #ddd;
+    position: relative;
+    margin: 0 10px;
+}
+.multimedia .audioThumb .progress {
+    width: 0%;
+    height: 2px;
+    background: #0EBAC5;
+    position: absolute;
+}
+.multimedia .audioThumb .surplusTime {
+    font-size: 14px;
+    color: #8e8e93;
+}
+.multimedia .audioThumb span, .maEditer .audioThumb span, .mmAttachment .inlineBlock, .mmEditer .inlineBlock, .multimedia .inlineBlock {
+    display: inline-block;
+    vertical-align: -webkit-baseline-middle;
+    vertical-align: middle;
+}
+
+/*视频*/
+.videoBox{
+    width:700px;
+    height:500px;
+    background: #000;
+    position: relative;
+    margin:100px auto;
+}
+.videoBox .videoContent{
+    width: 100%;
+    height: 100%;
+}
+.videoBox .videoMask{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+    align-items: center;
+    -webkit-align-items: center;
+}
+.videoMask .videoPlay{
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+.videoMask .videoLoadLoading{
+    width: 50px;
+    height: 50px;
+    box-shadow: 2px 2px 0 0 #898989;
+    border-radius: 50%;
+    background: inherit;
+    margin: 0 auto;
+    animation: uploading 1s linear;
+    -webkit-animation: uploading 1s linear infinite;
+    -moz-animation: uploading 1s linear infinite;
+    -ms-animation: uploading 1s linear infinite;
+    -o-animation: uploading 1s linear infinite;
+    display: none;
+}
+
+@keyframes uploading {
+    0% {transform:rotate(0deg);}
+    100% {transform:rotate(360deg);}
+}
+@-webkit-keyframes uploading {//苹果，谷歌
+    0% {-webkit-transform:rotate(0deg);}
+    100% {-webkit-transform:rotate(360deg);}
+}
+@-ms-keyframes uploading {//ie9
+    0% {-ms-transform:rotate(0deg);}
+    100% {-ms-transform:rotate(360deg);}
+}
+@-moz-keyframes uploading {//火狐
+    0% {-moz-transform:rotate(0deg);}
+    100% {-moz-transform:rotate(360deg);}
+}
+@-o-keyframes uploading {//欧朋
+    0% {-o-transform:rotate(0deg);}
+    100% {-o-transform:rotate(360deg);}
+}
+.videoBox .videoOperators {
+    width: 100%;
+    height: 40px;
+    background: #fff;
+    color: #707070;
+    font-size:14px;
+    line-height:35px;
+    position: absolute;
+    bottom: 0;
+    box-sizing: border-box;
+    border: 1px solid #dedede;
+/*    display: none;*/
+}
+.videoOperators .videoPlayPause{
+    width: 14px;
+    height: 14px;
+    margin-left: 10px;
+}
+.videoOperators .videoCurrentTime{
+    margin-left: 10px;
+}
+.videoOperators .videoProgressContainer{
+    width: 400px;
+    height: 3px;
+    background: #dedede;
+    border-radius: 3px;
+    margin: 0 15px;
+}
+.videoOperators .videoProgressContainer .videoProgress{
+    width: 0%;
+    height: 3px;
+    background: #4A90E2;
+    border-radius: 3px;
+    position: relative;
+}
+.videoOperators .videoProgressContainer .progressPoint{
+    position: absolute;
+    right: -4px;
+    top: -2px;
+    width: 8px;
+    height: 8px;
+    background: #4A90E2;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+.videoOperators .videoVolumeContent{
+    
+}
+.videoOperators .videoVolumeContent .volumeMuteMax{
+    width: 14px;
+    height: 14px;
+}
+.videoOperators .videoVolumeContent .volumeProgressWrap{
+    margin: 0 5.6px;
+    width: 60px;
+    height: 2px;
+    background: #dedede;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+}
+.videoOperators .videoVolumeContent .volumeItem{
+    width: 12px;
+    height: 15px;
+    margin-top: -36px;
+}
+.videoOperators .videoVolumeContent .vActive{
+    background: #4A90E2;
+}
+.videoOperators .videoFull{
+    width: 14px;
+    height: 14px;
+    margin-left: 5px;
+}
+/*------------------------------------------------------------------------*/

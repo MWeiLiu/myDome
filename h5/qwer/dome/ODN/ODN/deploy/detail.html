@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>详情</title>		
+		<script src="../js/p.jquery.zjs.js"></script>
+		<script src="../js/m.cselector.config.js"></script>
+		<script src="../js/m.cselector.1.0.js"></script>
+		<script src="../js/p.WdatePicker.js"></script>
+		<script src="../js/ODN.js"></script>
+		<link href="../js/layout.m.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="../js/odn.css" />
+		<script type="application/javascript">
+		$(function(){
+			var gps=zjs.getQueryStr();
+			var id=gps.id;
+			var firstOrderType=gps.firstOrderType
+			var secondOrderType=gps.secondOrderType
+			zjs.cmd({
+				cmd:"workOrder/orderDetails",
+				para:{"id":id,"firstOrderType":firstOrderType,"secondOrderType":secondOrderType},
+				callback:function(data){
+					var n=data.status
+					if(n==0){
+		      			$("#detail .one1 img").attr("src","../img/detail/12.png");
+		      		}else if(n==1){
+		      			$("#detail .one1 img").attr("src","../img/detail/12.png");
+		      			$("#detail .two1 img").attr("src","../img/detail/2.png");
+		      			$("#detail .three1 img").attr("src","../img/detail/22.png");
+		      		}else if(n==2){
+		      			$("#detail .one1 img").attr("src","../img/detail/12.png");
+		      			$("#detail .two1 img").attr("src","../img/detail/2.png");
+		      			$("#detail .three1 img").attr("src","../img/detail/22.png");
+		      			$("#detail .four1 img").attr("src","../img/detail/2.png");
+		      			$("#detail .five1 img").attr("src","../img/detail/32.png");
+		      		}else if(n==3){
+		      			$("#detail .one1 img").attr("src","../img/detail/12.png");
+		      			$("#detail .two1 img").attr("src","../img/detail/2.png");
+		      			$("#detail .three1 img").attr("src","../img/detail/22.png");
+		      			$("#detail .four1 img").attr("src","../img/detail/2.png");
+		      			$("#detail .five1 img").attr("src","../img/detail/32.png");
+		      			$("#detail .six1 img").attr("src","../img/detail/2.png");
+		      			$("#detail .seven1 img").attr("src","../img/detail/42.png");
+		      			$("#detail .two").append('<p><a id="submit">完成审核</a></p>')
+		      		}else if(n==4){
+		      			$("#detail .one1 img").attr("src","../img/detail/12.png");
+		      			$("#detail .two1 img").attr("src","../img/detail/2.png");
+		      			$("#detail .three1 img").attr("src","../img/detail/22.png");
+		      			$("#detail .four1 img").attr("src","../img/detail/2.png");
+		      			$("#detail .five1 img").attr("src","../img/detail/32.png");
+		      			$("#detail .six1 img").attr("src","../img/detail/2.png");
+		      			$("#detail .seven1 img").attr("src","../img/detail/42.png");
+		      			$("#detail .eight1 img").attr("src","../img/detail/2.png");
+		      			$("#detail .nine1 img").attr("src","../img/detail/42.png");
+		      		}
+		      		var html1=zjs.render(data.ports,'<label class="detail5">光交箱A：{{aDeviceName}}</label><label class="detail6">光交箱B：{{zDeviceName}}</label>	<label class="detail7">跳接端口A：{{aPort}}</label><label class="detail8">跳接端口B：{{zPort}}</label>')
+		      		$(".two .gjx").html(html1)
+				}
+			})
+			
+	  		$(".two #submit").live("click",function(){
+	  			var id=$(".two").attr("id");
+	  			zjs.cmd({
+	  				cmd:"workOrder/completeExamine",
+	  				para:{"id":id},
+	  				callback:function(data){  					
+	  					close()
+	  				}
+	  			})
+	  		})
+		})
+		    
+		</script>
+	</head>
+	<body>
+		<div class="detail">
+			<p>工单管理 >> 详情</p>
+		</div>
+		<input type="hidden" value="4" id="orderStatus" />
+		<input type="hidden"  id="isclose" value="1" />
+		<form class="cform" id="detail" cmd-select="workOrder/orderDetails" istemplate="true" allcmds="true" >
+			<div class="one">
+				<label class="one1"><img src="../img/detail/11.png" />工单派发</label><label class="two1 heng"><img src="../img/detail/1.png" /></label>
+				<label class="three1"><img src="../img/detail/21.png" />待施工</label><label class="four1  heng"><img src="../img/detail/1.png" /></label>
+				<label class="five1"><img src="../img/detail/31.png" />施工中</label><label class="six1  heng"><img src="../img/detail/1.png" /></label>
+				<label class="seven1"><img src="../img/detail/41.png" />待审核</label><label class="eight1  heng"><img src="../img/detail/1.png" /></label>
+				<label class="nine1"><img src="../img/detail/51.png" />已完工</label>
+			</div>			
+			<div class="two uls" id="{{id}}">
+				<label class="detail1">工单编号：{{workOrderId}}</label><label class="detail2">工单日期：{{createTime}}</label>
+				<label class="detail3">工单类型：{{secondOrderType}}</label><label class="detail4">业务信息：{{workOrderInfo}}</label>
+				<label class="detail9">业务员：{{merchandiserName}}</label><label class="detail10">转派给：{{turnSentPersonName}}</label>
+				<label class="detail11">下单时间：{{downloadTime}}</label><label class="detail12">提交时间：{{uploadTime}}</label>
+				<div class="gjx">
+					<label class="detail5">光交箱A：{{aDeviceName}}</label><label class="detail6">光交箱B：{{zDeviceName}}</label>
+					<label class="detail7">跳接端口A：{{aPort}}</label><label class="detail8">跳接端口B：{{zPort}}</label>	
+				</div>
+			</div>
+		</form>
+	</body>
+</html>

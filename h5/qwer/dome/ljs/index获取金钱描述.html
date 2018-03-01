@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/p.jquery.zjs.js" ></script>
+		<script type="text/javascript" src="js/m.cselect.lv.js" ></script>
+		<link rel="stylesheet" href="css/layout.css" />
+		<script>
+			$(function(){
+				$("input#button").live("click",function(){
+				var moneyinput=$("#moneyinput").val();
+				var money=getmoney(moneyinput);
+				$("#box").html(money);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<input type="text" id="moneyinput">
+		<input type="button" id="button" value="确定">
+		<div id="box"></div>
+	</body>
+</html>

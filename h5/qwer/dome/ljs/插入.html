@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+	<title>Bootstrap 实例 - 向右对齐下拉菜单</title>
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<style>
+		.dropdown-menu.pull-right{
+			left:0;
+			width:200px;
+		}
+	</style>
+
+<div class="dropdown">
+	<button type="button" class="btn dropdown-toggle" id="dropdownMenu1" 
+			data-toggle="dropdown">主题
+		<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu pull-right" role="menu" 
+		aria-labelledby="dropdownMenu1">
+		<li role="presentation">
+			<a role="menuitem" tabindex="-1" href="#">Java</a>
+		</li>
+		<li role="presentation">
+			<a role="menuitem" tabindex="-1" href="#">数据挖掘</a>
+		</li>
+		<li role="presentation">
+			<a role="menuitem" tabindex="-1" href="#">数据通信/网络</a>
+		</li>
+		<li role="presentation" class="divider"></li>
+		<li role="presentation" class="xinzeng">
+			<a role="menuitem xinzeng" tabindex="-1" >+新增</a>
+		</li>
+	</ul>
+</div>
+<select>
+	<option>123</option>
+</select>
+<script>
+	$(function(){
+		$(".dropdown-menu .xinzeng").click(function(){
+			var html='<li role="presentation">'+
+			'<a role="menuitem" tabindex="-1" href="#">数据通信/网络</a></li>';
+			$(".divider").before(html);
+		});
+	});
+</script>
+
+</body>
+</html>

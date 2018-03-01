@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>登录</title>
+		<script src="js/p.jquery.zjs.js"></script>
+		<script src="js/m.cselector.config.js"></script>
+		<script src="js/m.cselector.1.0.js"></script>
+		<script src="js/p.WdatePicker.js"></script>
+		<link href="js/layout.m.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="js/odn.css" />
+	</head>
+	<body style="background: url(img/bg.png) left top no-repeat;background-size:100%;overflow: hidden;height: 100%;">
+		<form id="login" class="cform">
+			<h3>——ODN智能管理系统——</h3>
+			<div class="login">
+				<p><label>用户名:</label><input id="user" type="text" rule="required" /></p>
+				<p><label>密&nbsp;&nbsp; 码:</label><input id="pass" type="password" rule="required" /></p>
+				<p><label>验证码:</label><img src="http://192.168.0.114:6060/odn-webservice-pc/code" /><input class="yanzheng" type="text" rule="required" /></p>
+				<h4><a class="dl">登录</a></h4>
+			</div>			
+		</form>
+	</body>
+	<script type="application/javascript">
+		$(function(){			
+			$(".dl").live("click",function(){
+				var user=$("#user").val();
+				var pass=hex_md5($("#pass").val());
+				var code1=$(".yanzheng").val();
+				zjs.cmd({
+					cmd:"user/login",
+					async: true,
+					crossDomain: true,
+					para:{"account":user,"password":pass,"identifyCode":code1},
+					callback:function(data){
+						if(data.code==200){
+							zjs.tips(data.message)
+							localStorage.setItem("user",user)
+							window.location.href="main.html"
+						}else{
+							zjs.tips(data.message)
+						}
+					}
+				})
+			})
+		})
+	</script>
+</html>

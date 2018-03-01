@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			$(window).scroll(function () {
+    if ($(window).scrollTop() > 100) {
+        $("li a").eq(0).addClass("hover").siblings().removeClass("hover");
+    } else if ($(window).scrollTop() > 200) {
+        $("li a").eq(1).addClass("hover").siblings().removeClass("hover");
+    } else if ($(window).scrollTop() > 300) {
+        $("li a").eq(2).addClass("hover").siblings().removeClass("hover");
+    }
+});
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

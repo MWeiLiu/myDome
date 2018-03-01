@@ -1,0 +1,8 @@
+body{
+background: #e8e8e8 url("../images/index-bg.jpg") no-repeat scroll center bottom / cover ;
+color: #111;
+font-family: "Open Sans",sans-serif;
+font-size: 14px;
+height: 100%;
+overflow: hidden;
+}

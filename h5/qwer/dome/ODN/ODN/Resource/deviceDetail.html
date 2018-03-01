@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>设备管理-详情</title>
+		<script src="../js/p.jquery.zjs.js"></script>
+		<script src="../js/m.cselector.config.js"></script>
+		<script src="../js/m.cselector.1.0.js"></script>
+		<script src="../js/p.WdatePicker.js"></script>
+		<script src="../js/ODN.js"></script>
+		<link href="../js/layout.m.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="../js/odn.css" />
+		<style type="text/css">
+			.xuanzhong{background: #002E72;}
+			.sbinfo {height: 250px;position: absolute;right: 60px;top: 290px;width: 340px;background: #fff;box-shadow: 0px 0px 5px;padding: 0 20px;display: none;}
+			.sbinfo h5{text-align: center;color: #3EBDAA;margin-bottom: 10px;}
+			.sbinfo tr{height: 30px;line-height: 30px;text-align: left;}
+			.sbinfo td{text-align: left;font-size: 12px;}
+			.sbinfo .gb {  background: #FE413F none repeat scroll 0 0;color:#fff;  border-radius: 50%;  display: inline-block;  font-size: 15px;  height: 20px;  line-height: 17px;  text-align: center;  width: 20px;position: relative;top: -205px;right:-285px}
+			.seled{border:1px solid red;background-color:#D6DFF7;} 
+		</style>
+		<script type="application/javascript">
+		function beforerender($id,datai) {
+      			datai.sblx = zjs.getvals("deviceType", datai.deviceType);
+  			};
+  		function getcallback($id,datai){ 
+  				var a=datai.deviceCode
+  				$(".list-title span").html(a)
+  			}
+  		function colorchange(rgb){
+				if(!$.browser.msie){
+				rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+				function hex(x) {
+				return ("0" + parseInt(x).toString(16)).slice(-2);
+				}
+				rgb= "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
+				}
+				return rgb; 
+			}
+			$(function(){
+				var SelInfo="";
+				var id=localStorage.getItem("sbid");
+				zjs.cmd({
+					cmd:"resourceDevice/deviceAllPort",
+					para:{"id":id},
+					callback:function(data){
+						var a=data.MaxFrameNum
+						var b=data.MaxBoardNum
+						var c=data.MaxPortNum
+						var l=0
+						for(var i=0;i<a;i++){//框
+							var html=[];
+							var i1=i+1
+							html.push('<li class="lia"><div class="diva">D'+i1+'</div><ul class="ulb">')
+							for(var j=0;j<=b;j++){//盘								 
+								html.push('<li class="lib"><div class="divb" style="width: 3%;">'+j+'</div><ul class="ulc">')
+								for(var k=0;k<c;k++){
+									var k1=k+1
+									if(j==0){
+										html.push('<li class="lic licc">'+k1+'</li>')
+									}else{
+										
+										if(data.Datas[l].status==1){
+											html.push('<li class="lic"><div class="licDiv" style="border:1px solid #AAAAAA;background: #FFF;font-size:0px">D'+i1+'-'+j+'-'+k1+'</div></li>')
+										}else if(data.Datas[l].status==2){
+											html.push('<li class="lic"><div class="licDiv" style="background: #FAA700;border:none;font-size:0px">D'+i1+'-'+j+'-'+k1+'</div></li>')
+										}else if(data.Datas[l].status==3){
+											html.push('<li class="lic"><div class="licDiv" style="color: #3EBDAA;background: #3EBDAA;border:none;font-size:0px">D'+i1+'-'+j+'-'+k1+'</div></li>')
+										}else {
+											html.push('<li class="lic"><div class="licDiv" style="color: red;background: red;border:none;font-size:0px">D'+i1+'-'+j+'-'+k1+'</div></li>')
+										}
+										l=l+1;										
+									}									
+									
+								}								
+								html.push('</ul></li>')
+							}
+							html.push('</ul></li>')
+							$(".details-left .details-body .ula").append(html.join(""))
+						}
+					}					
+				})
+				var kg=0
+				$(".details-left .details-body .lic:not(.licc)").live("click",function(e){
+					e = e || window.event
+					if(e.ctrlKey&&e.button==0){
+						$(".details-list.details-right.details-two").show()
+						$(".details-list.details-right.details-one").hide()
+						var t=$(this)		
+						if(kg==0){
+							t.parents(".ula").find(".lic").removeClass("xuanzhong")
+							kg=1
+						}
+						var ys=t.find("div").css("background-color")
+						ys=colorchange(ys);
+						if(ys=="#ffffff"){
+							t.addClass("xuanzhong")		
+							var kuang=t.parents(".lia").find(".diva").html().substring(1)
+							var pan=t.parents(".lib").find(".divb").html()
+							var duan=t.index()+1
+							var a=kuang+'-'+pan+'-'+duan
+							if($(".details-two .bbdkt").val()==""){
+								$(".details-two .bbdkt").val(SelInfo)
+								$(".details-two .bbdkt").attr("sbid",id)
+							}else{
+								$(".details-two .bbdkt").val(SelInfo)
+								$(".details-two .bbdkt").attr("sbid",id)
+							}	
+						}else{
+							zjs.tips("请选择未成端端口")
+						}					
+						
+					}else{
+						$(".details-two .bbdkt").val("")
+						$(".details-list.details-right.details-two").hide()
+						$(".details-list.details-right.details-one").show()
+						var t=$(this)
+						t.parents(".ula").find(".lic").removeClass("xuanzhong")
+						kg=0
+						t.addClass("xuanzhong")		
+						var kuang=t.parents(".lia").find(".diva").html().substring(1)
+						var pan=t.parents(".lib").find(".divb").html()
+						var duan=t.index()+1
+						var a=id+'-'+kuang+'-'+pan+'-'+duan
+						localStorage.setItem("z",a)
+						zjs.cmd({
+							cmd:"resourceDevice/infoRight",
+							para:{"id":a},
+							callback:function(data){
+								$("#bddk").text(data.portNoA)
+								$("#dddk").text(data.portNoZ)
+								$(".bdgl").text(data.cableNameA)
+								$(".bdgl").attr("glid",data.cableSectionIdA)
+								$(".ddgl").text(data.cableNameZ)
+								$(".ddgl").attr("glid",data.cableSectionIdZ)
+								$(".bdxx").text(data.fiberNoA)
+								$(".ddxx").text(data.fiberNoZ)
+								$(".ywxx").val(data.businessInfo)
+							}
+						})
+					}
+				});
+				
+				$(".bdgl").live("click",function(){
+					var id=$(".bdgl").attr("glid")
+					zjs.cmd({
+						cmd:"resourceCable/clickCable",
+						para:{"id":id},
+						callback:function(data){
+							$(".sbinfo .glbh").text(data.code);
+							$(".sbinfo .gllx").text(data.fiberType);
+							$(".sbinfo .glxs").text(data.fiberNum);
+							$(".sbinfo .glcd").text(data.length+"km");
+							var status
+							if(data.status==0){
+								status="未启用"
+							}else if(data.status==1){
+								status="启用"
+							}
+							$(".sbinfo .glzt").text(status);
+							$(".sbinfo .adgj").text(data.aDeviceName);
+							$(".sbinfo .bdgj").text(data.zDeviceName);
+							$(".sbinfo .ssqy").text(data.address);
+						}
+					})
+					$(".sbinfo").show()
+				})
+				$(".ddgl").live("click",function(){
+					var id=$(".ddgl").attr("glid")
+					zjs.cmd({
+						cmd:"resourceCable/clickCable",
+						para:{"id":id},
+						callback:function(data){
+							$(".sbinfo .glbh").text(data.code);
+							$(".sbinfo .gllx").text(data.fiberType);
+							$(".sbinfo .glxs").text(data.fiberNum);
+							$(".sbinfo .glcd").text(data.length+"km");
+							var status
+							if(data.status==0){
+								status="未启用"
+							}else if(data.status==1){
+								status="启用"
+							}
+							$(".sbinfo .glzt").text(status);
+							$(".sbinfo .adgj").text(data.aDeviceName);
+							$(".sbinfo .bdgj").text(data.zDeviceName);
+							$(".sbinfo .ssqy").text(data.address);
+						}
+					})
+					$(".sbinfo").show()				
+				})
+				$(".sbinfo .gb").live("click",function(){
+					$(".sbinfo").hide()
+				})
+				$(".gllb").live("click",function(){
+					 var dil=$.dialog({
+		                    "title": "光缆列表",
+		                    "content": "url:Resource/opticallist.html",
+		                    "max": false,
+		                    "min": false,
+		                    "width": "1200px",
+		                    "height": "600px",
+		                    "fixed": true,
+		                    "lock": true,
+		                    "close": function () { 
+		                        var glid=dil.content.document.getElementById("glid").value
+		                        var glmc=dil.content.document.getElementById("glmc").value
+		                        var glbh=dil.content.document.getElementById("glbh").value
+		                        $(".bdglw").val(glmc)
+		                        $(".bdglw").attr("glid",glid);
+		                        $(".glbht").val(glbh)
+		                    }
+		              })
+				})
+				$(".baocun").live("click",function(){
+					var a=$(".bbdkt").val()					
+					var c=$(".bdglw").attr("glid")
+					zjs.cmd({
+						cmd:"resourceDevice/deviceChenDuan",
+						para:{"ports":a,"cableSectionId":c,"deviceId":id},
+						callback:function(){
+							zjs.tips("设置成功！")
+							$(".bbdkt").val("")	
+							$(".bdglw").val("")
+							$(".glbht").val("")
+							window.location.reload();
+						}
+					})
+				})
+				$(".glianlu").live("click",function(){
+					$(".details-left .details-body .lic:not(.licc)").each(function(){
+						if($(this).hasClass("xuanzhong")){
+							//$(".glianlu").attr("openurl","./Resource/glianl.html")
+							var dil=$.dialog({
+			                    "title": "",
+			                    "content": "url:Resource/glianl.html",
+			                    "max": false,
+			                    "min": false,
+			                    "width": "800px",
+			                    "height": "400px",
+			                    "fixed": true,
+			                    "lock": true,
+			                    "close": function () { 		                        
+			                    }
+		              		})
+						}else{
+							zjs.tips("请先选择端口！")
+						}
+					})
+					
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<div class="details-top">
+			<span>设备管理&nbsp;&nbsp;&lt;&lt;&nbsp;&nbsp;详情</span>
+		</div>
+		<div class="details">
+			<div class="details-information">
+				<form class="cform" cmd-select="resourceDevice/info" beforerender="beforerender()" getcallback="getcallback()" istemplate="true">
+					<table class="details-tablelist" >
+						<tbody>
+							<tr>
+								<td width="180"><span>设备编号：</span>&nbsp;&nbsp;<font>{{deviceCode}}</font></td>
+								<td width="180"><span>设备名称：</span>&nbsp;&nbsp;<font>{{deviceName}}</font></td>
+								
+							</tr>
+							<tr>
+								<td width="180"><span>设备类型：</span>&nbsp;&nbsp;<font>{{sblx}}</font></td>
+								<td width="280" colspan="2"><span>设备型号：</span>&nbsp;&nbsp;<font>{{deviceModel}}</font></td>
+							</tr>
+							<tr>
+								<td width="180"><span>所属机房：</span>&nbsp;&nbsp;<font>{{machineRoomName}}</font></td>
+								<td width="280" colspan="2"><span>设备地址：</span>&nbsp;&nbsp;<font>{{deviceAddress}}</font></td>
+							</tr>
+							<tr>
+								<td width="180"><span>生产厂家：</span>&nbsp;&nbsp;<font>{{vendorName}}</font></td>
+								<td width="180"><span>设施厂商标识：</span>&nbsp;&nbsp;<font>{{vendorId}}</font></td>
+								<td width="130"><span>厂商设施类型：</span>&nbsp;&nbsp;<font>{{vendorDeviceType}}</font></td>
+								
+							</tr>
+							<tr>
+								<td width="130"><span>框总数：</span>&nbsp;&nbsp;<font>{{maxFrameNum}}</font></td>
+								<td width="130"><span>单框盘数：</span>&nbsp;&nbsp;<font>{{maxBoardNum}}</font></td>
+								<td width="130"><span>单盘端口数：</span>&nbsp;&nbsp;<font>{{maxPortNum}}</font></td>
+							</tr>
+						</tbody>
+					</table>
+				</form>
+				
+				<!--<a class="details-btn"><img style="position: relative;top:-2px" src="../img/xiugai.png" /> &nbsp;修改设备信息</a>-->
+				<div class="details-list details-left">
+					<div class="details-head">
+						<p class="list-title"><span>14-0DB-D0:</span>&nbsp;&nbsp;<font>端口列表</font></p>
+						<p class="list-btn"><a class="btn-left gisgly" owidth="1300px" oheight="750px" openurl="./Resource/gisgly.html" ><img style="position: relative;top:-2px" src="../img/guangluyou.png" /> &nbsp;&nbsp;GIS光路由</a><a class="glianlu" owidth="800px" oheight="400px"  class="btn-right"><img style="position: relative;top:-2px" src="../img/guanglianlu.png" />&nbsp;&nbsp;光链路示意图</a></p>
+					</div>
+					<div class="details-body">
+						<ul class="ulz">
+							<li class="liz"><div class="onez" style="color: #3EBDAA;background: #3EBDAA;"></div>正常使用</li>
+							<li class="liz"><div class="twoz" style="border:1px solid #AAAAAA;background: #FFF;"></div>未成端</li>
+							<li class="liz"><div class="threez" style="background: #FAA700;border: none;"></div>成端</li>
+							<li class="liz"><div class="fourz" style="color: red;background: red;"></div>故障</li>
+						</ul>
+						<ul class="ula"> 								
+						</ul>
+					</div>
+				</div>
+				<div class="details-list details-right details-two hide">
+					<div class="details-head">
+						<p><span>跳接信息</span></p>
+					</div>
+					<div class="details-body">
+						<p class="right-title" style="margin-bottom: 20px;width: 400px;"><b>本端信息</b></p>
+						<p style="height: 100px;line-height: 100px;display: inline-flex;width: 400px;"><span >本端端口：</span><textarea style="height: 90px;overflow-y: hidden;" class="bbdkt" readonly="readonly"></textarea></p>
+						<p style="position: relative;height: 40px;line-height: 40px;width: 400px;"><span>本端光缆：</span><input class="bdglw" style="height: 30px;width: 320px;display: inline-block;" readonly="readonly"/><a  class="gllb" style="position: absolute;top: 0;right: 20px;"><img src="../img/search.png" /></a></p>
+						<p style="position: relative;height: 40px;line-height: 40px;width: 400px;"><span>光缆编号：</span><input class="glbht" style="height: 30px;width: 320px;display: inline-block;" readonly="readonly"/></p>
+						<p style="position: relative;height: 80px;line-height: 80px;width: 400px;margin-top: 30px;"><a style="display: block;width: 150px;height: 35px;line-height: 35px;text-align: center;margin: 0 auto;background:#3EBDAA;color: #fff;border-radius: 3px;" class="baocun">保存</a></p>
+						
+					</div>
+				</div>
+				<div class="details-list details-right details-one" >
+					<div class="details-head">
+						<p><span>跳接信息</span></p>
+					</div>
+					<div class="details-body">
+						<p class="right-title"><b>本端信息</b></p>
+						<p><span>本端端口：</span><font id="bddk"></font></p>
+						<p><span>本端光缆：</span><font class="bdgl"></font></p>
+						<p><span>本端纤芯：</span><font class="bdxx"></font></p>
+						<p class="right-title"><b>对端信息</b></p>
+						<p><span>对端端口：</span><font id="dddk"></font></p>
+						<p><span>对端光缆：</span><font class="ddgl"></font></p>
+						<p><span>对端纤芯：</span><font class="ddxx"></font></p>
+						<p><span class="bzxx">业务信息：</span><textarea class="ywxx" readonly="readonly"></textarea></p>
+					</div>
+				</div>
+				<div class="sbinfo">
+					<h5>光缆信息</h5>
+					<table>
+						<tr><td class="w15">光缆编号：<font class="glbh"></font></td></tr>
+						<tr><td class="w15">光缆类型：<font class="gllx"></font></td><td class="w15">光缆芯数：<font class="glxs"></font></td></tr>
+						<tr><td class="w15">光缆长度：<font class="glcd"></font></td><td class="w15">光缆状态：<font class="glcd"></font></td></tr>
+						<tr><td class="w15">A端光交：<font class="adgj"></font></td><td class="w15">B端光交：<font class="bdgj"></font></td></tr>
+						<tr><td class="w3" colspan="2">所属区域：<font class="ssqy"></font></td></tr>
+					</table>
+					<a class="gb">x</a>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
+	

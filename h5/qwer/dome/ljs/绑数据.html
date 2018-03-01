@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>蒙牛集团2017校园招聘</title>
+        <script type="text/javascript" src="js/p.jquery.zjs.js" ></script>
+        
+	</head>
+	<body>
+
+                    <span>宣讲会行程</span>
+                    <table border="0"  cellpadding="0" width="750">
+                        <thead>
+                            <tr>
+                                <td width="62">城市</td>
+                                <td width="110">高校</td>
+                                <td width="140">宣讲日期</td>
+                                <td width="88">宣讲时间</td>
+                                <td width="80">校区</td>
+                                <td width="170">宣讲地点</td>
+                                <td width="90">面试时间</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!--<tr class="bai">
+                                <td>成都</td>
+                                <td>四川大学</td>
+                                <td>2016-9-20&nbsp;星期二</td>
+                                <td>18:30-20:30</td>
+                                <td>望江校区</td>
+                                <td>西五报告厅</td>
+                                <td>9月21/22日</td>
+                            </tr>
+                            <tr class="hui">
+                                <td>西安</td>
+                                <td>西安交通大学</td>
+                                <td>2016-9-23&nbsp;星期五</td>
+                                <td>19:00-21:00</td>
+                                <td>兴庆校区</td>
+                                <td>就创中心一楼信息发布厅</td>
+                                <td>9月24/25日</td>
+                            </tr>
+                            <tr class="bai">
+                                <td>武汉</td>
+                                <td>武汉大学</td>
+                                <td>2016-9-26&nbsp;星期一</td>
+                                <td>19:00-21:00</td>
+                                <td>校本部</td>
+                                <td>生科院报告厅</td>
+                                <td>9月27/28日</td>
+                            </tr>
+                            <tr class="hui">
+                                <td>哈尔滨</td>
+                                <td>哈尔滨工业大学</td>
+                                <td>2016-10-10&nbsp;星期一</td>
+                                <td>18:30-20:30</td>
+                                <td>一校区</td>
+                                <td>待定</td>
+                                <td>10月11/12日</td>
+                            </tr>
+                            <tr class="bai">
+                                <td>沈阳</td>
+                                <td>东北大学</td>
+                                <td>2016-10-13&nbsp;星期四</td>
+                                <td>18:30-20:30</td>
+                                <td>南湖校区</td>
+                                <td>待定</td>
+                                <td>10月14/15日</td>
+                            </tr>
+                            <tr class="hui">
+                                <td>济南</td>
+                                <td>山东大学</td>
+                                <td>2016-10-17&nbsp;星期一</td>
+                                <td>18:30-20:30</td>
+                                <td>中心校区</td>
+                                <td>待定</td>
+                                <td>10月18/19日</td>
+                            </tr>
+                            <tr class="bai">
+                                <td>杭州</td>
+                                <td>浙江大学</td>
+                                <td>2016-10-21&nbsp;星期五</td>
+                                <td>18:30-20:30</td>
+                                <td>紫金港校区</td>
+                                <td>待定</td>
+                                <td>10月22/23日</td>
+                            </tr>
+                            <tr class="hui">
+                                <td>上海</td>
+                                <td>上海交通大学</td>
+                                <td>2016-10-24&nbsp;星期一</td>
+                                <td>19:00-21:00</td>
+                                <td>闵行校区</td>
+                                <td>光彪楼一层多功能厅</td>
+                                <td>10月25/26日</td>
+                            </tr>
+                            <tr class="bai">
+                                <td>广州</td>
+                                <td>中山大学</td>
+                                <td>2016-10-28&nbsp;星期五</td>
+                                <td>19:00-21:00</td>
+                                <td>闵行校区</td>
+                                <td>行政楼B101</td>
+                                <td>10月29/30日</td>
+                            </tr>
+                            <tr class="hui">
+                                <td>呼和浩特</td>
+                                <td>内蒙古大学</td>
+                                <td>2016-11-1&nbsp;星期二</td>
+                                <td>18:30-20:30</td>
+                                <td>北校区</td>
+                                <td>学术会议中心9号会议室</td>
+                                <td>11月2/3日</td>
+                            </tr>
+                            <tr class="bai">
+                                <td>北京</td>
+                                <td>中国农业大学</td>
+                                <td>2016-11-4&nbsp;星期五</td>
+                                <td>18:30-20:30</td>
+                                <td>东校区</td>
+                                <td>食品学院报告厅</td>
+                                <td>11月5/6日</td>
+                            </tr>-->
+                        </tbody>
+                    </table>
+                    <div style="font-size: 14px;width: 100%;background: none;margin-left: 0;color: #f60;font-weight: normal;">备注：请及时关注校园招聘行程动态，如因特殊情况需要变更信息，蒙牛校招官网会及时更新。</div>
+                </div>
+			</div>
+
+
+		</div>
+		<footer>
+			<a href="#top"></a>
+            <span>Copyright © 北京五八信息技术有限公司 版权所有</span>
+		</footer>
+	</body>
+</html>
+<script>
+	$.ajax({
+		type:"get",
+		dataType:"json",
+		url:"data/journey.txt",
+		async:true,
+		data:{id:"1",city:$(".nav li span").html()},
+		success:function(d){
+			var data=d.datal;
+			var html=[];
+			for(var i=0;i<data.Datas.length;i++){
+				var datai=data.Datas[i];
+				if(i%2==0){
+					html.push('<tr class="bai"><td>'+datai.city+'</td><td>'+datai.colleges+'</td><td>'+datai.presentation1+'</td>'+
+                        '<td>'+datai.presentation2+'</td><td>'+datai.campus+'</td><td>'+datai.presentation3+'</td><td>'+datai.Interview+'</td></tr>');
+				}else{
+					html.push('<tr class="hui"><td>'+datai.city+'</td><td>'+datai.colleges+'</td><td>'+datai.presentation1+'</td>'+
+                        '<td>'+datai.presentation2+'</td><td>'+datai.campus+'</td><td>'+datai.presentation3+'</td><td>'+datai.Interview+'</td></tr>');
+				}
+			}
+			$("table tbody").append(html.join(''));
+		}
+	});
+
+//  var city=$(".nav li span").html();
+//	$.get("data/journey.txt",{id:"1",city:'city'},function(data,state){
+//			var Data=$.evalJSON(data);
+//			Data=Data.datal;
+//			var html=[];
+//			for(var i=0;i<Data.Datas.length;i++){
+//				var datai=Data.Datas[i];
+//				if(i%2==0){
+//					html.push('<tr class="bai"><td>'+datai.city+'</td><td>'+datai.colleges+'</td><td>'+datai.presentation1+'</td>'+
+//                      '<td>'+datai.presentation2+'</td><td>'+datai.campus+'</td><td>'+datai.presentation3+'</td><td>'+datai.Interview+'</td></tr>');
+//				}else{
+//					html.push('<tr class="hui"><td>'+datai.city+'</td><td>'+datai.colleges+'</td><td>'+datai.presentation1+'</td>'+
+//                      '<td>'+datai.presentation2+'</td><td>'+datai.campus+'</td><td>'+datai.presentation3+'</td><td>'+datai.Interview+'</td></tr>');
+//				}
+//			}
+//			$("table tbody").append(html.join(''));
+//	});
+//</script>

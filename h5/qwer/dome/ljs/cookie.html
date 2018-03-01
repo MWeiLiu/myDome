@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/p.jquery.zjs.js" ></script>
+		<script type="text/javascript" src="js/m.cselect.lv.js" ></script>
+		<script>
+			$(function(){
+				$("#button").live("click",function(){
+					var username=$("#username").val();
+					var password=$("#password").val();
+					var zhuangtai=$("#zhuangtai").val();
+					setCookie(username,username);
+					setCookie(password,password);
+					setCookie(zhuangtai,zhuangtai);
+				});
+				
+				$("#buttonlishi").live("click",function(){
+					
+						var username=getCookie(username);
+						var password=getCookie(password);
+						var zhuangtai=getCookie(zhuangtai);
+						$("#username").val(password);
+						$("#password").val(zhuangtai);
+						$("#zhuangtai").val(username);
+					
+						
+					
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div class="id">
+			
+		</div>
+		用户名：<input type="text" id="username"/><br />
+		密码	 ：<input type="text" id="password"/><br />
+		状态	 ：<input type="text" id="zhuangtai"/><br />
+		<input type="button" value="提交" id="button"/>
+		<input type="button" value="历史登录" id="buttonlishi"/>
+	</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>操作日志</title>		
+		<script src="../js/p.jquery.zjs.js"></script>
+		<script src="../js/m.cselector.config.js"></script>
+		<script src="../js/m.cselector.1.0.js"></script>
+		<script src="../js/p.WdatePicker.js"></script>
+		<script src="../js/ODN.js"></script>
+		<link href="../js/layout.m.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="../js/odn.css" />		
+	</head>
+	<body>
+		<form class="cform" id="logtop">
+			<p>				
+				<a class="fr you3 you"><img src="../img/log/log.png" /> 日志备份</a>
+				<label class="user1">用户名:</label>
+				<input type="text"  />		
+				<label class="time1">操作时间：</label>
+				<input id="s1date" class="sdate" type="text" onClick="WdatePicker()"/> - <input id="s2date" class="sdate" type="text" onClick="WdatePicker()"/> 
+				<a class="search1">搜索日志</a>				
+			</p>
+		</form>
+		<table class="ctable" id="logbot" border="0" cellspacing="0" cellpadding="0">
+			<thead>
+				<tr>
+					<td>序号</td>
+					<td>用户名</td>
+					<td>操作对象</td>
+					<td>操作动作</td>
+					<td>操作时间</td>
+					<td>操作结果</td>			
+					<td>操作</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>张三</td>
+					<td>杭州新牌坊/GJ888J</td>
+					<td>巡检并添加该设备</td>
+					<td>2016-12-03 17:07:15</td>
+					<td>巡检完成</td>	
+					<td><a class="dele">删除</a></td>
+				</tr>				
+			</tbody>
+			<tfoot class="one">
+				<tr>
+		            <td colspan="8">
+		                <div >
+		                    <table border="0" cellpadding="0" cellspacing="0" class="fenye">
+		                        <tfoot>
+		                            <tr>		
+		                                <!-- 上一页命令关键勾子样式 prevPage-->
+		                                <td><a href="javascript:void(0);" class="prevPage btn"><img src="../img/left.png" /></a></td>		
+		                                <!-- 页码容器关键勾子样式 pageNumbers-->
+		                                <td class="pageNumbers"></td>		
+		                                <!-- 下一页命令关键勾子样式 nextPage -->                         
+		                                <td><a href="javascript:void(0);" class="nextPage btn"><img src="../img/right.png" /></a></td>
+		                            </tr>
+		                        </tfoot>
+		                    </table>
+		                </div>
+		            </td>
+		        </tr>
+			</tfoot>
+		</table>
+		<form class="cform" id="dellog">
+			<div class="sc">
+				<h4>删除</h4>
+				<p>真的要删除吗？</p>
+				<h5><a class="qx">取消</a><a class="qd">确定</a></h5>
+			</div>
+		</form>
+		<form class="cform" id="logCopy">
+			<div class="sc">
+				<h4>日志备份</h4>
+				<p>确定要备份吗？</p>
+				<h5><a class="qx">取消</a><a class="qd">确定</a></h5>
+			</div>
+		</form>
+	</body>
+</html>

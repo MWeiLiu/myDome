@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>数据导入</title>		
+		<script src="../js/p.jquery.zjs.js"></script>
+		<script src="../js/m.cselector.config.js"></script>
+		<script src="../js/m.cselector.1.0.js"></script>
+		<script type="text/javascript" src="../js/jquery.uploadify.min.js" ></script>
+		<script src="../js/ODN.js"></script>
+		<link href="../js/layout.m.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="../js/uploadify.css" />
+		<link rel="stylesheet" href="../js/odn.css" />
+	</head>
+	<body>
+		<form class="cform" id="Import">
+			<h4>数据导入</h4>
+			<div class="one"><label>请导入数据：</label><input id="filename" type="text" readonly="readonly" /><input type="file" name="file_upload" id="file_upload" /></div>
+			<a class="qd">确定导入</a>
+		</form>
+		
+		
+		<script>
+		$(function(){
+		 　　$('#file_upload').uploadify({
+		       　　 'swf':'../uploadify/uploadify.swf',
+		     　	'uploader':'../uploadify/uploadify.php',
+		        onUploadStart: function(file){
+                    $("#filename").attr("value",file.name);
+                }		       
+		    　});
+		});
+		</script>
+	</body>
+</html>

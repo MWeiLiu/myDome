@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>设备列表</title>		
+		<script src="../js/p.jquery.zjs.js"></script>
+		<script src="../js/m.cselector.config.js"></script>
+		<script src="../js/m.cselector.1.0.js"></script>
+		<script src="../js/p.WdatePicker.js"></script>
+		<script src="../js/ODN.js"></script>
+		<link href="../js/layout.m.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="../js/odn.css" />
+		<style type="text/css">
+			.bgm{background: #fff !important;}
+		</style>
+		<script type="application/javascript">
+			$(function(){
+				$("#equipmentlist1 tbody tr").live("click",function(){
+					$(this).addClass("bgm").siblings().removeClass("bgm")
+				})
+				$(".sbqd").live("click",function(){
+					var id=$("#equipmentlist1 tbody tr.bgm").attr("id")
+					var deviceName=$("#equipmentlist1 tbody tr.bgm").find(".aname").html()		
+					localStorage.setItem("id",id)
+					$("#deviceId").val(id)
+					$("#deviceName").val(deviceName)
+					$("#kg").val("1")
+					closefast()
+				})
+			})
+			
+		</script>
+	</head>
+	<body style="width:700px;height: 400px;margin: 0 auto;text-align: center;">
+		<input type="hidden" value="" id="deviceName" />
+		<input type="hidden" value="" id="deviceId" />
+		<input type="hidden" id="kg" value="0" />
+		<div class="equiptop">
+			<h4>设备列表</h4>
+		</div>
+		<table class="ctable" id="equipmentlist1" cmd-select="workOrder/inneedDevice" pagesize=20>
+			<thead>
+				<tr>
+					<td>序号</td>
+					<td>局站名称</td>
+					<td>设备名称</td>
+					<td>设备编号</td>
+					<td>省</td>
+					<td>市</td>
+					<td>区</td>
+					<td>详细地址</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr id="{{id}}">
+					<td>{{rindex}}</td>
+					<td >{{bureauName}}</td>
+					<td class="aname" style="width: 140px;">{{deviceName}}</td>
+					<td>{{deviceCode}}</td>
+					<td>{{provinceName}}</td>
+					<td>{{cityName}}</td>
+					<td>{{districtName}}</td>
+					<td style="width: 210px;">{{detailedAddr}}</td>
+				</tr>
+			</tbody>
+		</table>
+		<a style="background: #3EBDAA;color: #FFF;display: inline-block;width: 150px;height: 30px;margin: 0 auto;line-height: 30px;position: fixed;bottom: 50px;left: 0;right: 0;" class="sbqd">确定</a>
+	</body>
+</html>

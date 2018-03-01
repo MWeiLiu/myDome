@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>设备列表</title>		
+		<script src="../js/p.jquery.zjs.js"></script>
+		<script src="../js/m.cselector.config.js"></script>
+		<script src="../js/m.cselector.1.0.js"></script>
+		<script src="../js/p.WdatePicker.js"></script>
+		<script src="../js/ODN.js"></script>
+		<link href="../js/layout.m.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="../js/odn.css" />
+		<script type="application/javascript">
+			function beforerenderrow(datai) {
+      			datai.sblx = zjs.getvals("deviceType", datai.deviceType);
+  			};
+  			function getcallback(data){
+  				var a=arguments[1].length
+  				$(".equiptop h4").html("设备列表（"+a+"个）")
+  			}
+			$(function(){				
+				$(".equipname").live("click",function(){
+					var sbid=$(this).parents("tr").attr("id")
+					localStorage.setItem("sbid",sbid)
+					var api = frameElement.api;					 
+		            if (api) {
+		                W = api.opener;
+		                var dil=W.$.dialog({
+		                    "title": "设备列表",
+		                    "content": "url:Resource/DeviceInfo.html?id="+sbid,
+		                    "dial.parent" : api,
+		                    "max": false,
+		                    "min": false,
+		                    "width": "1300px",
+		                    "height": "800px",
+		                    "fixed": true,
+		                    "lock": true,
+		                    "close": function () {                 
+		                       
+		                    }
+		                });
+		            }		
+				})
+			})
+		</script>
+	</head>
+	<body style="width:700px;height: 400px;margin: 0 auto;text-align: center;">
+		<div class="equiptop">
+			<h4></h4>
+		</div>
+		<table class="ctable" id="equipmentlist" cmd-select="resourceDevice/selDeviceByRoom" beforerenderrow="beforerenderrow()" getcallback="getcallback()">
+			<thead>
+				<tr>
+					<td>序号</td>
+					<td>设备名称</td>
+					<td>设备编号</td>
+					<td>设备类型</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="uls" id="{{id}}">
+					<td>{{rindex}}</td>
+					<td class="equipname" >
+						<a>{{deviceName}}</a>
+					</td>
+					<td>{{deviceCode}}</td>					
+					<td class="equipmanager">{{sblx}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>

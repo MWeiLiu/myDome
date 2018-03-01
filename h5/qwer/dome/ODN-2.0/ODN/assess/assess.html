@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>评估分析</title>
+		<script src="../js/p.jquery.zjs.js"></script>
+		<script src="../js/m.cselector.config.js"></script>
+		<script src="../js/m.cselector.1.0.js"></script>
+		<script src="../js/p.WdatePicker.js"></script>
+		<script type="text/javascript" src="../js/echarts.min.js" ></script>
+		<script src="../js/ODN.js"></script>
+		<link href="../js/layout.m.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="../js/odn.css" />		
+	</head>
+	<body>
+		<form class="cform" id="accesstop">
+			<p>				
+				<label class="state1">状态:</label>
+				<select class="state2"></select>				
+				<a class="search1">搜索</a>				
+			</p>
+		</form>
+		<div id="accessbot">
+			<div id="tu1" style="width:27%;height: 300px;float: left;margin-right: 3%;"></div>
+			<div id="tu2" style="width:27%;height: 300px;float: left;margin-right: 3%;"></div>
+			<div id="tu3" style="width:40%;height: 300px;float: left;"></div>
+		</div>
+		<script type="text/javascript">
+	        var myChart1 = echarts.init(document.getElementById('tu1'));
+	        var option1 = {
+	        		color: ['#3EBDAA'],
+				    title : {text: '光路资源利用率'},   
+				    xAxis : [
+				        {type : 'category',axisLine:{show:false},axisTick:{show:false},data : ['传统ODN', '智能ODN']}
+				    ],
+				    yAxis : [
+				        {type : 'value',axisLine:{show:false},axisTick:{show:false}}
+				        ],
+				    series : [
+				        {name:'光路资源',type:'bar',data:[0.1,0.8],barWidth: '40%'}
+				    ]
+			};
+	        myChart1.setOption(option1);
+	        var myChart2 = echarts.init(document.getElementById('tu2'));
+	        var option2 = {
+	        		color: ['#F1B449'],
+				    title : {text: '光纤资源利用率'},   
+				    xAxis : [
+				        {type : 'category',axisLine:{show:false},axisTick:{show:false},data : ['传统ODN', '智能ODN']}
+				    ],
+				    yAxis : [
+				        {type : 'value',axisLine:{show:false},axisTick:{show:false}}
+				        ],
+				    series : [
+				        {name:'光纤资源',type:'bar',data:[0.1,0.8],barWidth: '40%'}
+				    ]
+			};
+	        myChart2.setOption(option2);
+	        var myChart3 = echarts.init(document.getElementById('tu3'));
+	        var option3 = {
+			    title : {
+			        text: '光缆路由故障率'
+			    },
+			    tooltip : {
+			        trigger: 'item',
+			        formatter: "{a} <br/>{b} : {c} ({d}%)"
+			    },
+			    series : [
+			        {
+			            name: '',
+			            type: 'pie',
+			            radius : '55%',
+			            center: ['50%', '60%'],
+			            data:[
+			                {value:0.32, name:'无源光缆故障'},
+			                {value:0.41, name:'设备掉电'},
+			                {value:0.23, name:'主设备故障'},
+			                {value:0.01, name:'分光器故障'},
+			                {value:0.03, name:'其他'}
+			            ]
+			        }
+			    ]
+			};
+	        myChart3.setOption(option3);
+	    </script>
+	</body>
+</html>

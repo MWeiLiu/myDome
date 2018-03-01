@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>局站管理</title>
+		<script src="../js/p.jquery.zjs.js"></script>
+		<script src="../js/m.cselector.config.js"></script>
+		<script src="../js/m.cselector.1.0.js"></script>
+		<script src="../js/p.WdatePicker.js"></script>
+		<script src="../js/ODN.js"></script>
+		<script type="text/javascript" src="../js/city.min.js" ></script>
+		<link href="../js/layout.m.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="../js/odn.css" />
+		<link rel="stylesheet" href="../css/city.css" />
+	</head>
+	<body>
+		<form class="cform" id="Stationtop">
+			<div>
+				<a class="you fr AddStation" href="Stationing.html" target="_blank"><img src="../img/workorder/2.png" /> 添加局站</a>
+					<label>地区：</label>
+					<div class="infolist">
+                        <div class="liststyle">
+                            <span id="Province">
+                                <i>请选择省份</i>
+                                <ul>
+                                    <li><a href="javascript:void(0)" alt="请选择省份">请选择省份</a></li>
+                                </ul>
+                                <input type="hidden" name="cho_Province" value="请选择省份">
+                            </span>
+                            <span id="City">
+                                <i>请选择城市</i>
+                                <ul>
+                                    <li><a href="javascript:void(0)" alt="请选择城市">请选择城市</a></li>
+                                </ul>
+                                <input type="hidden" name="cho_City" value="请选择城市">
+                            </span>
+                            <span id="Area">
+                            <i>请选择地区</i>
+                                <ul>
+                                    <li><a href="javascript:void(0)" alt="请选择地区">请选择地区</a></li>
+                                </ul>
+                                <input type="hidden" name="cho_Area" value="请选择地区" >
+                            </span>
+                        </div>
+                    </div>		                        
+				<label class="state1">局站名称： </label>
+				<select class="state2"></select>
+				<a class="search1">搜索</a>				
+			</div>
+		</form>
+		<table class="ctable" id="Stationbot" border="0" cellspacing="0" cellpadding="0">
+			<thead>
+				<tr>
+					<td>序号</td>
+					<td>局站编号</td>
+					<td>局站名称</td>
+					<td>所属城市</td>
+					<td>所属区县</td>
+					<td>详细地址</td>
+					<td>状态</td>
+					<td>操作</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>1111</td>
+					<td>局站名称</td>
+					<td>杭州市</td>
+					<td>西湖区</td>
+					<td>西湖科技园</td>
+					<td>启用</td>
+					<td><a class="details">修改</a> &nbsp;&nbsp;&nbsp;<a class="dele" >删除</a></td>
+				</tr>
+				
+			</tbody>
+			<tfoot class="one">
+				<tr>
+		            <td colspan="8">
+		                <div >
+		                    <table border="0" cellpadding="0" cellspacing="0" class="fenye">
+		                        <tfoot>
+		                            <tr>		
+		                                <!-- 上一页命令关键勾子样式 prevPage-->
+		                                <td><a href="javascript:void(0);" class="prevPage btn"><img src="../img/left.png" /></a></td>		
+		                                <!-- 页码容器关键勾子样式 pageNumbers-->
+		                                <td class="pageNumbers"></td>		
+		                                <!-- 下一页命令关键勾子样式 nextPage -->                         
+		                                <td><a href="javascript:void(0);" class="nextPage btn"><img src="../img/right.png" /></a></td>
+		                            </tr>
+		                        </tfoot>
+		                    </table>
+		                </div>
+		            </td>
+		        </tr>
+			</tfoot>
+		</table>
+	</body>
+</html>

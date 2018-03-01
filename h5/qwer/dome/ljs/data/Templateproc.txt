@@ -1,0 +1,74 @@
+Create PROC [dbo].[_SelectAll]
+    @sysUserID varchar(50)='', 
+    @App varchar(50), 
+    @pageindex INT = 1 ,    /*数据页码*/
+    @pagesize INT = 15     /*分页数据大小*/ 
+AS      
+    DECLARE @sqlWhere VARCHAR(1000) 
+    DECLARE @totalPages INT 
+    DECLARE @totalRows INT 
+    
+    set @sqlWhere = ' App='+@App+' ' /*带默认查询条件*/ 
+    
+                             
+    EXEC sp_DataPager2015 @tableName = '',@fields = '*',@orderField = 'ID DESC', 
+        @sqlWhere = @sqlWhere,@pageSize = @pagesize,@pageIndex = @pageindex, --数据页码
+        @totalRows = @totalRows OUTPUT, --记录总个数
+        @totalPages = @totalPages OUTPUT --记录总页数
+    select @totalRows,@totalPages
+GO 
+
+/*视图*/
+CREATE VIEW [dbo].[v]
+AS
+SELECT  
+FROM  t
+GO
+
+/*新增*/
+Create PROC [dbo].[_Insert]
+@sysUserID varchar(50), 
+
+@App int/*系统标识*/,
+@DateAdded datetime/*添加日期*/
+AS  
+DECLARE @tbl TABLE ( col1 INT )/*表变量 存储输出的 id*/
+INSERT  INTO  ( 
+ App,DateAdded) 
+OUTPUT  INSERTED.ID
+INTO @tbl
+VALUES  (
+ @App,@DateAdded) 
+select col1 as ID from @tbl  
+GO
+
+/*更新*/
+Create PROC [dbo].[_UpdateByID]
+@sysUserID varchar(50), 
+@id int/*主键*/,
+
+@App int/*系统标识*/,
+@DateAdded datetime/*添加日期*/
+AS 
+    UPDATE  
+    SET     DateAdded=@DateAdded
+    WHERE  ID=@id
+GO
+
+/*查询单条*/
+Create PROC [dbo].[_SelectByID]
+@sysUserID varchar(50), 
+@App int/*站点编号*/,
+@id int/*信息编号*/ 
+AS  
+    SELECT * FROM   WHERE  ID=@id  AND App=@App
+GO
+
+/*删除*/
+Create PROC [dbo].[_DeleteByID]
+@sysUserID varchar(50), 
+@App int/*站点编号*/,
+@id int/*信息编号*/ 
+AS  
+    DELETE FROM   WHERE  ID=@id  AND App=@App
+GO

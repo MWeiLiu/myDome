@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>添加设备</title>
+		<script src="../js/p.jquery.zjs.js"></script>
+		<script src="../js/m.cselector.config.js"></script>
+		<script src="../js/m.cselector.1.0.js"></script>
+		<script src="../js/p.WdatePicker.js"></script>
+		<script type="text/javascript" src="../js/city.min.js" ></script>
+		<script src="../js/ODN.js"></script>
+		<link href="../js/layout.m.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="../css/city.css" />
+		<link rel="stylesheet" href="../js/odn.css" />		
+		<script type="application/javascript">
+			function tconchange(){
+				var bureauId=$("#bureauId").val()
+				$("#roomId").attr("cmd-select","resourceRoom/chooseRoomAfterBureau?bureauId="+bureauId);
+				if(window.Addequipment_roomId){
+					window.Addequipment_roomId.refresh();		
+				}
+				
+						$("#bureauName").val($(".ssjz .cselectorInput").html())
+				
+						
+			}
+			function beforesubmit(){
+				if($("#provinceName").val()=="请选择省份"||$("#cityName").val()=="请选择城市"||$("#districtName").val()=="请选择地区"){
+  					zjs.tips("请选择所在地址！")
+  					return false;
+  				}else if($("#maxFrameNum").val()==""||$("#priceBoardNum").val()==""||$("#pricePortNum").val()==""){
+  					zjs.tips("请输入完整的设备配置！")
+  					return false;
+  				}else if($(".ssjf .cselectorInput").html()=="请选择"){
+  					zjs.tips("请选择所属机房！")
+  					return false;
+  				}
+  				else{
+  					$("#machineRoomName").val($(".ssjf .cselectorInput").html())
+  					return true
+  				}
+  				
+			}
+			$("#Addequipment .jwd").live("click",function(){
+				var api = frameElement.api;					 
+		            if (api) {
+		                W = api.opener;
+		                var dil=W.$.dialog({
+		                    "title": "",
+		                    "content": "url:Resource/jwd.html",
+		                    "dial.parent" : api,
+		                    "max": false,
+		                    "min": false,
+		                    "width": "1200px",
+		                    "height": "750px",
+		                    "fixed": true,
+		                    "lock": true,
+		                    "close": function () { 
+		                       var jing=dil.content.document.getElementById("jd").value
+		                       var wei=dil.content.document.getElementById("wd").value
+		                       $("#longitude").val(jing)	
+		                       $("#latitude").val(wei)
+		                    }
+		                });
+		            }		
+			})
+		</script>
+	</head>
+	<body>
+		<form class="cform" id="Addequipment" cmd-insert="resourceDevice/addDevice" setcallback="close()" beforesubmit="beforesubmit()">
+			<input id="deviceModel" type="hidden" value=""/>
+			<input id="machineRoomName" type="hidden" value=""/>
+			<input id="bureauName" type="hidden" value=""/>
+			<table class="one">
+				<tr><td><h4>添加设备</h4></td></tr>
+				<tr><td class="w1">设备编号：</td><td class="w35"><input id="deviceCode" type="text" rule="required" /></td></tr>
+				<tr><td class="w1">设备名称：</td><td class="w35"><input id="deviceName" type="text" rule="required" /></td></tr>
+				<tr><td class="w1">设备类型：</td><td class="w35"><input id="deviceType" type="text" class="cselector" mode="deviceType" /></td></tr>
+				<tr><td class="w1">设备规格：</td><td class="w35"><input id="deviceSpecification" type="text" /></td></tr>
+				<tr><td class="w1">生产厂家：</td><td class="w35"><input id="vendorName" type="text" /></td></tr>
+				<tr><td class="w1">所属局站：</td><td class="w35 ssjz"><input id="bureauId" type="text" class="cselector" cmd-select="resourceBureau/choosebureau" template="<a value='{{id}}' aid='{{bureauName}}'>{{bureauName}}</a>" conchange="tconchange()" /></td></tr>
+				<tr><td class="w1">所属机房：</td><td class="w35 ssjf"><input id="roomId" type="text" class="cselector" prevtemplate="<a value=''>请选择</a>" template="<a value='{{id}}'>{{roomName}}</a>" /></td></tr>
+				<tr>
+					<td class="w1">所属区域：</td>
+					<td class="w35">
+						<div class="infolist">
+	                        <div class="liststyle">
+	                            <span id="Province">
+	                                <i>请选择省份</i>
+	                                <ul>
+	                                    <li><a href="javascript:void(0)" alt="请选择省份">请选择省份</a></li>
+	                                </ul>
+	                                <input id="provinceName" type="hidden" name="cho_Province" value="">
+	                            </span>
+	                            <span id="City">
+	                                <i>请选择城市</i>
+	                                <ul>
+	                                    <li><a href="javascript:void(0)" alt="请选择城市">请选择城市</a></li>
+	                                </ul>
+	                                <input id="cityName" type="hidden" name="cho_City" value="">
+	                            </span>
+	                            <span id="Area">
+	                            <i>请选择地区</i>
+	                                <ul>
+	                                    <li><a href="javascript:void(0)" alt="请选择地区">请选择地区</a></li>
+	                                </ul>
+	                                <input id="districtName" type="hidden" name="cho_Area" value="" >
+	                            </span>
+	                        </div>
+	                    </div>		  
+					</td>
+				</tr>
+				<tr><td class="w1">详细地址：</td><td class="w35"><input id="detailedAddr" type="text" /></td></tr>
+				<tr><td class="w1">经纬度：</td><td class="w35"><input id="longitude" class="jd" type="text" placeholder="经度" /> <input id="latitude"  class="wd" type="text" placeholder="纬度" /><a class="jwd" style="position:absolute;top:0;left:355px"><img src="/ODN/img/search.png" /></a></td></tr>
+				<tr><td class="w1">设备配置：</td><td class="w35">最大框数<input id="maxFrameNum" class="zdks" type="text"  /> 单框盘数<input id="priceBoardNum" class="dkps"  type="text" /> 单盘端口数<input id="pricePortNum" type="text" class="dpdks" /></td></tr>
+				<tr><td class="w1">主板地址：</td><td class="w35"><input id="deviceIpAddr" type="text" /></td></tr>
+				<tr><td class="w1">负责人：</td><td class="w35"><input id="principal" type="text" class="cselector" cmd-select="workOrder/admin" template="<a value='{{merchandiserUserId}}'>{{company}}{{department}}{{name}}</a>" /></td></tr>
+				<tr><td class="w1">状态：</td><td class="w35"><input id="deviceStatus" type="text" class="cselector" mode="deviceStatus" /></td></tr>
+				<tr><td ><a id="submit" class="qd">确定</a></td></tr>
+			</table>			
+		</form>				
+	</body>
+</html>
