@@ -3,6 +3,7 @@
     display:block;
     margin-left: 38px;
 }
+
 .seqNumList .orderName {
     float: left;
     width: 22px;

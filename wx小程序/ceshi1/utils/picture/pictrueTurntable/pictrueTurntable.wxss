@@ -1,7 +1,4 @@
 
-.pictrueTurntable {
-    margin: 10px 0;
-}
 
 .pictrueTurntable image {
     width: 100%;

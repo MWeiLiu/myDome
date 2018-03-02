@@ -1,11 +1,11 @@
 <!-- 图片轮播template -->
 <template name="pictrueTurntable">
-    <view class="pictrueTurntable">
-        <swiper current="{{swiperIndex}}" indicator-dots="{{indicatorDots}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{indicatorActiveColor}}" class="tabTextBox" duration="{{duration}}">    
-            <block wx:for="{{tabTxtArray}}" wx:for-index="idx" wx:key="*this">
-            <swiper-item>
-                <image class="pictrueTurntableItem" src="{{item}}"></image>
-            </swiper-item>
+    <view class="pictrueTurntable" style="background-color:{{item.backgroundColor}};padding-top:{{item.marginTop}};padding-bottom:{{item.marginBottom}};">
+        <swiper indicator-dots="{{baseData.indicatorDotsTrue}}" indicator-color="{{baseData.indicatorColor}}" indicator-active-color="{{baseData.indicatorActiveColor}}" duration="{{baseData.duration}}">    
+            <block wx:for="{{item.content.slide}}" wx:key="*this">
+                <swiper-item>
+                    <image class="pictrueTurntableItem" src="{{item.backImg.imgSrc}}"></image>
+                </swiper-item>
             </block>
         </swiper>
     </view>

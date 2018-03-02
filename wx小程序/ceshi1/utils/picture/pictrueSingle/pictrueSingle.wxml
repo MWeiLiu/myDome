@@ -1,7 +1,7 @@
 <!-- 单图template -->
 <template name="pictrueSingle">
-    <view class="pictrueSingle picture">
-        <image src="https://www.qcourse.com/images/pictrue.jpg"></image>
-        <text class="describe">图片描述</text>
+    <view class="pictrueSingle picture" style="background-color:{{item.backgroundColor}};padding-top:{{item.marginTop}};padding-bottom:{{item.marginBottom}};">
+        <image src="{{item.content.item[0].backImg.imgSrc}}"></image>
+        <text class="describe">{{item.content.item[0].label.textHtml}}</text>
     </view>
 </template>

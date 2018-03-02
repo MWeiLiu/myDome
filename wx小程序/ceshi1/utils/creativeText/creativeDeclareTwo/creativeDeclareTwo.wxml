@@ -1,7 +1,7 @@
 <!-- 摘抄Btemplate -->
 <template name="creativeDeclareTwo">
-    <view class="creativeDeclareTwo textAlign_center">
+    <view class="creativeDeclareTwo textAlign_center" style="background-color:{{item.backgroundColor}};padding-top:{{item.marginTop}};padding-bottom:{{item.marginBottom}};">
         <view class="hr"></view>
-        <text class="contentTextStyle">典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字</text>
+        <text class="contentTextStyle">{{item.content.text.textHtml}}</text>
     </view>
 </template>

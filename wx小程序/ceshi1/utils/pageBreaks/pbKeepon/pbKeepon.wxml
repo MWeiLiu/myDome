@@ -1,6 +1,8 @@
 <!--继续template-->
 <template name="pbKeepon">
-    <view class="pbKeepon pageBreaks boxsize">
-        <text>继续</text>
+    <view class="pbKeepon boxsize" style="background-color:{{item.backgroundColor}};padding-top:{{item.marginTop}};padding-bottom:{{item.marginBottom}};">
+        <view class="pageBreaks">
+            <text>继续</text>
+        </view>
     </view>
 </template>

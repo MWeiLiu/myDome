@@ -1,5 +1,5 @@
 
-.creativeError {
+.creativeError > view {
     width: 100%;
     padding: 16px 15px;
     border: 1px solid #C63636;

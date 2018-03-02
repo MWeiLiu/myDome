@@ -1,6 +1,3 @@
-.creativeQuoteTwo {
-    overflow: hidden;
-}
 
 .userImageBox {
     width: 80px;

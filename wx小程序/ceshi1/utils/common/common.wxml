@@ -22,14 +22,12 @@
 <import src="../../utils/sequence/seqCheckBoxList/seqCheckBoxList.wxml"/>
 <import src="../../utils/sequence/seqSymList/seqSymList.wxml"/>
 
-
 <!-- 图像emplate -->
 <import src="../../utils/picture/pictrueSingle/pictrueSingle.wxml"/>
 <import src="../../utils/picture/pictrueDouble/pictrueDouble.wxml"/>
 <import src="../../utils/picture/pictrueTxtGroupOne/pictrueTxtGroupOne.wxml"/>
 <import src="../../utils/picture/pictrueTxtGroupTwo/pictrueTxtGroupTwo.wxml"/>
 <import src="../../utils/picture/pictrueTurntable/pictrueTurntable.wxml"/>
-
 
 <!-- 分页符template -->
 <import src="../../utils/pageBreaks/pbKeepon/pbKeepon.wxml"/>

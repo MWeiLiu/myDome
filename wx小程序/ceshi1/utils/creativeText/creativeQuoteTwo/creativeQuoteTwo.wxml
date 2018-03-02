@@ -1,10 +1,10 @@
 <!-- 引言2template -->
 <template name="creativeQuoteTwo">
-    <view class="creativeQuoteTwo">
-        <view class="userImageBox authorStyle textAlign_center">
-            <image class="userImage" src="user-unlogin.png"></image>
-            <text>人名</text>
+    <view class="creativeQuoteTwo" style="background-color:{{item.backgroundColor}};padding-top:{{item.marginTop}};padding-bottom:{{item.marginBottom}};">
+        <view class="userImageBox cardUserName textAlign_center">
+            <image class="cardUserImage" src="{{item.content.headerImg.imgSrc}}"></image>
+            <text>{{item.content.userName.textHtml}}</text>
         </view>
-        <text class="contentTextStyle textAlign_left">典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字</text>
+        <text class="contentTextStyle textAlign_left">{{item.content.text.textHtml}}</text>
     </view>
 </template>

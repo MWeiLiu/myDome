@@ -3,8 +3,14 @@ const common = require('../../utils/common/common.js');
 
 Page({
   data: {
-    background: '',
-    color: '',
+    baseData: {
+      background: '',
+      color: '',
+      indicatorDotsTrue: true,
+      indicatorColor: '#f3f4f5',
+      indicatorActiveColor: '#333',
+      duration: '500'
+    },
     data: {
       pname: '小程序样式的花样儿小程序样式的花样儿',
       price: '2.0000',
@@ -92,8 +98,8 @@ Page({
             "marginBottom": "20px",
             "themeColorBoardLists": "#5e5e5e",
             "content": {
-              "textContentLeft": "小程序样式示例",
-              "textContentRight": "小程序样式示例"
+              "textContentLeft": "小程序样式示例1",
+              "textContentRight": "小程序样式示例2"
             }
           },
           {
@@ -108,7 +114,7 @@ Page({
               },
               "text": {
                 "margin": "0px",
-                "textHtml": "",
+                "textHtml": "小程序样式示例1小程序样式示例2",
                 "textAlign": "center"
               },
               "userName": {
@@ -155,7 +161,7 @@ Page({
           },
           {
             "dataType": "creativeTitTxtGroup",
-            "backgroundColor": "url('https: //www.qcourse.com/images/pictureBack1.0.png')",
+            "backgroundColor": "url('https://www.qcourse.com/images/pictureBack1.0.png')",
             "marginTop": "20px",
             "marginBottom": "20px",
             "themeColorBoardLists": "#5e5e5e",
@@ -211,7 +217,7 @@ Page({
           },
           {
             "dataType": "creativeDeclareThre",
-            "backgroundColor": "rgb(255, 255, 255)",
+            "backgroundColor": "rgb(69, 255, 255)",
             "marginTop": "20px",
             "marginBottom": "20px",
             "themeColorBoardLists": "#5e5e5e",
@@ -230,8 +236,8 @@ Page({
             }
           },
           {
-            "dataType": "creativeDeclareThre",
-            "backgroundColor": "rgb(255, 255, 255)",
+            "dataType": "creativeDeclareOne",
+            "backgroundColor": "rgb(255, 98, 255)",
             "marginTop": "20px",
             "marginBottom": "20px",
             "themeColorBoardLists": "#5e5e5e",
@@ -241,7 +247,7 @@ Page({
               },
               "text": {
                 "margin": "0px",
-                "textHtml": "小程序样式示例",
+                "textHtml": "小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例",
                 "textAlign": "justify"
               },
               "guide": {
@@ -251,7 +257,7 @@ Page({
           },
           {
             "dataType": "creativeError",
-            "backgroundColor": "rgb(255, 255, 255)",
+            "backgroundColor": "rgb(255, 59, 255)",
             "marginTop": "20px",
             "marginBottom": "20px",
             "themeColorBoardLists": "#5e5e5e",
@@ -263,7 +269,7 @@ Page({
                 "height": "20px"
               },
               "text": {
-                "textHtml": "小程序样式示例",
+                "textHtml": "小程序样式示例小程序样式示例小程序样式示例小程序样式示例",
                 "color": "rgb(249, 89, 58)",
                 "margin": "0px"
               },
@@ -274,6 +280,153 @@ Page({
           },
           {
             "dataType": "seqNumList",
+            "backgroundColor": "rgb(90, 255, 255)",
+            "marginTop": "20px",
+            "marginBottom": "20px",
+            "themeColorBoardLists": "#5e5e5e",
+            "content": {
+              "textLi": [
+                "小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例",
+                "小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例",
+                "小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例"
+              ]
+            }
+          },
+          {
+            "dataType": "seqCheckBoxList",
+            "backgroundColor": "rgb(4, 255, 2)",
+            "marginTop": "20px",
+            "marginBottom": "20px",
+            "themeColorBoardLists": "#5e5e5e",
+            "content": {
+              "textLi": [
+                "小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例",
+                "小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例",
+                "小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例"
+              ]
+            }
+          },
+          {
+            "dataType": "seqSymList",
+            "backgroundColor": "rgb(90, 6, 255)",
+            "marginTop": "20px",
+            "marginBottom": "20px",
+            "themeColorBoardLists": "#5e5e5e",
+            "content": {
+              "textLi": [
+                "小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例",
+                "小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例",
+                "小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例"
+              ]
+            }
+          },
+          {
+            "dataType": "pictrueSingle",
+            "backgroundColor": "rgb(90, 69, 10)",
+            "marginTop": "20px",
+            "marginBottom": "20px",
+            "themeColorBoardLists": "#5e5e5e",
+            "content": {
+              "item": [
+                {
+                  backImg: {
+                    imgSrc: 'https://www.qcourse.cc/images/pictrue.jpg'
+                  },
+                  label: {
+                    textHtml: '小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例'
+                  }
+                  
+                }
+              ]
+            }
+          },
+          {
+            "dataType": "pictrueDouble",
+            "backgroundColor": "rgb(30, 63, 1)",
+            "marginTop": "20px",
+            "marginBottom": "20px",
+            "themeColorBoardLists": "#5e5e5e",
+            "content": {
+              "item": [
+                {
+                  backImg: {
+                    imgSrc: 'https://www.qcourse.cc/images/pictrue.jpg'
+                  },
+                  label: {
+                    textHtml: '小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例'
+                  }
+                  
+                },
+                {
+                  backImg: {
+                    imgSrc: 'https://www.qcourse.cc/images/pictrue.jpg'
+                  },
+                  label: {
+                    textHtml: '小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例'
+                  }
+                  
+                }
+              ]
+            }
+          },
+          {
+            "dataType": "pictrueTxtGroupOne",
+            "backgroundColor": "rgb(90, 6, 100)",
+            "marginTop": "20px",
+            "marginBottom": "20px",
+            "themeColorBoardLists": "#5e5e5e",
+            "content": {
+                backImg: {
+                  imgSrc: 'https://www.qcourse.com/images/pictrue.jpg'
+                },
+                text: {
+                  textHtml: '小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例'
+                }
+            }
+          },
+          {
+            "dataType": "pictrueTxtGroupTwo",
+            "backgroundColor": "rgb(90, 255, 100)",
+            "marginTop": "20px",
+            "marginBottom": "20px",
+            "themeColorBoardLists": "#5e5e5e",
+            "content": {
+                backImg: {
+                  imgSrc: 'https://www.qcourse.com/images/pictureBack.jpg'
+                },
+                text: {
+                  textHtml: '小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例'
+                }
+            }
+          },
+          {
+            "dataType": "pictrueTurntable",
+            "backgroundColor": "rgb(90, 255, 100)",
+            "marginTop": "20px",
+            "marginBottom": "20px",
+            "themeColorBoardLists": "#5e5e5e",
+            "content": {
+              slide: [
+                {
+                  backImg: {
+                    imgSrc: 'https://www.qcourse.com/images/pictrueSingle.png'
+                  }
+                },
+                {
+                  backImg: {
+                    imgSrc: 'https://www.qcourse.com/images/pictrue.jpg'
+                  }
+                },
+                {
+                  backImg: {
+                    imgSrc: 'https://www.qcourse.com/images/pictrueSingle.png'
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "dataType": "mmAudio",
             "backgroundColor": "rgb(255, 255, 255)",
             "marginTop": "20px",
             "marginBottom": "20px",
@@ -469,7 +622,7 @@ Page({
           },
           {
             "dataType": "pbKeepon",
-            "backgroundColor": "rgb(255, 255, 255)",
+            "backgroundColor": "rgb(0, 255, 255)",
             "marginTop": "20px",
             "marginBottom": "20px",
             "themeColorBoardLists": "#5e5e5e",
@@ -491,7 +644,7 @@ Page({
           },
           {
             "dataType": "pbPayOff",
-            "backgroundColor": "rgb(255, 255, 255)",
+            "backgroundColor": "rgb(255, 0, 5)",
             "marginTop": "20px",
             "marginBottom": "20px",
             "themeColorBoardLists": "#5e5e5e",
@@ -503,7 +656,7 @@ Page({
           },
           {
             "dataType": "pbSplitter",
-            "backgroundColor": "rgb(255, 255, 255)",
+            "backgroundColor": "rgb(255, 0, 255)",
             "marginTop": "20px",
             "marginBottom": "20px",
             "themeColorBoardLists": "#5e5e5e",

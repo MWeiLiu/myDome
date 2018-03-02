@@ -1,17 +1,9 @@
 <!-- 方序列emplate -->
 <template name="seqCheckBoxList">
-    <view class="seqCheckBoxList sequence">
-        <view class="contentTextStyle">
+    <view class="seqCheckBoxList sequence" style="background-color:{{item.backgroundColor}};padding-top:{{item.marginTop}};padding-bottom:{{item.marginBottom}};">
+        <view class="contentTextStyle" wx:for="{{item.content.textLi}}" wx:key="*this">
             <view class="orderName"></view>
-            <text>典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字</text>
-        </view>
-        <view class="contentTextStyle">
-            <view class="orderName"></view>
-            <text>典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字</text>
-        </view>
-        <view class="contentTextStyle">
-            <view class="orderName"></view>
-            <text>典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字</text>
+            <text>{{item}}</text>
         </view>
     </view>
 </template>

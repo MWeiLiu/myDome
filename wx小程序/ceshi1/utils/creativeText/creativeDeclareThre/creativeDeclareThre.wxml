@@ -1,9 +1,9 @@
 <!-- 摘抄Btemplate -->
 <template name="creativeDeclareThre">
-    <view class="creativeDeclareThre textAlign_left">
+    <view class="creativeDeclareThre textAlign_left" style="background-color:{{item.backgroundColor}};padding-top:{{item.marginTop}};padding-bottom:{{item.marginBottom}};">
         <view class="hr"></view>
         <view class="creativeList">
-            <text class="contentTextStyle">典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字</text>
+            <text class="contentTextStyle">{{item.content.text.textHtml}}</text>
         </view>
     </view>
 </template>

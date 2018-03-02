@@ -1,4 +1,6 @@
 <!-- 分屏template -->
 <template name="pbSplitter">
-    <view class="pbSplitter"></view>
+    <view style="background-color:{{item.backgroundColor}};padding-top:{{item.marginTop}};padding-bottom:{{item.marginBottom}};">
+        <view class="pbSplitter"></view>
+    </view>
 </template>

@@ -7,7 +7,7 @@
         <include src="../../utils/describe/describe.wxml"/>
         <view class="content boxsize">
             <block wx:for="{{data.json.content}}" wx:key="*this">
-                <template is="{{item.dataType}}" data="{{item}}"/>
+                <template is="{{item.dataType}}" data="{{item,baseData}}"/>
             </block>
 
 
@@ -27,30 +27,6 @@
                     </block>
                 </swiper>
             </view>
-
-            <template is="creativeQuoteOne"/>
-            <template is="creativeQuoteTwo"/>
-            <template is="creativeTitTxtGroup"/>
-            <template is="creativeDeclareOne"/>
-            <template is="creativeDeclareTwo"/>
-            <template is="creativeDeclareThre"/>
-            <template is="creativeError"/>
-            
-            <template is="seqNumList"/>
-            <template is="seqCheckBoxList"/>
-            <template is="seqSymList"/>
-
-
-            <template is="pictrueSingle"/>
-            <template is="pictrueDouble"/>
-            <template is="pictrueTxtGroupOne" data="{{...pictrueTxtGroupOne}}"/>
-            <template is="pictrueTxtGroupTwo"/>
-            <template is="pictrueTurntable" data="{{...pictrueTurntable}}"/>
-
-            
-            <template is="pbKeepon"/>
-            <template is="pbPayOff" data="{{...pbPayOff}}"/>
-            <template is="pbSplitter"/>
 -->
         </view>
     </view>

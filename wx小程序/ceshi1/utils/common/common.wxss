@@ -43,12 +43,6 @@
     line-height: 36px;
 }
 
-/* 作者名称 */
-.authorStyle {
-	font-size: 14px;
-    letter-spacing: 4px;
-}
-
 .textAlign_center {
     text-align: center;
 }
@@ -58,17 +52,36 @@
 }
 
 /** 卡片中的头像 **/
-.userImage {
+.cardUserImage {
     width: 80px;
     height: 80px;
 }
 
+/* 作者名称 */
+.cardUserName {
+    color: rgb(107, 143, 179);
+	font-size: 14px;
+    letter-spacing: 4px;
+}
+
+
 .boxsize {
-    box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
+    box-sizing: border-box;
 }
+
+.backgroundImageStyle{
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+swiper {
+    height: 280px;
+}
+    
 
 /*flex布局*/
 

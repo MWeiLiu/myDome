@@ -2,8 +2,6 @@
 @import "../../utils/common/common.wxss";
 @import "../../utils/header/header.wxss";
 @import "../../utils/describe/describe.wxss";
-/* @import "../view/view.wxss"; */
-
 
 /** 创意文本 **/
 @import "../../utils/creativeText/creativeQuoteTwo/creativeQuoteTwo.wxss";
@@ -38,10 +36,6 @@
 
 .box > view {
     width: 100%;
-}
-
-.tab_swiper {
-    height: 300px;
 }
 
 .content > view {

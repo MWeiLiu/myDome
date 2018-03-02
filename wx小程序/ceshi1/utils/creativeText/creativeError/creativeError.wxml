@@ -1,7 +1,9 @@
 <!-- 警告template -->
 <template name="creativeError">
-    <view class="creativeError boxsize textAlign_left">
-        <image src="https://www.qcourse.com/images/creativeError.png"></image>
-        <text class="contentTextStyle">典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字</text>
+    <view class="creativeError boxsize textAlign_left" style="background-color:{{item.backgroundColor}};padding-top:{{item.marginTop}};padding-bottom:{{item.marginBottom}};">
+        <view class="boxsize">
+            <image src="{{item.content.headerImg.imgSrc}}"></image>
+            <text class="contentTextStyle">{{item.content.text.textHtml}}</text>
+        </view>
     </view>
 </template>
