@@ -1,0 +1,6 @@
+<view class="companyInfo boxsize">
+    <view class="shiftTop">
+        <image src="{{data.json.wholeSet.userLogo}}"></image>
+    </view>
+    <view class="summary">{{data.json.wholeSet.summary}}</view>
+</view>

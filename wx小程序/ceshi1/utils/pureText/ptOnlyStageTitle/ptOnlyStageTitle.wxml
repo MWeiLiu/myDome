@@ -1,6 +1,6 @@
 <!-- 副标题template -->
-<template name="vicTitle">
-    <view class="vicTitle">
+<template name="ptOnlyStageTitle">
+    <view class="ptOnlyStageTitle">
         <view class="contentVicTitleStyle">
             <text>典雅的文字</text>
         </view>

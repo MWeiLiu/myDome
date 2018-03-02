@@ -1,6 +1,0 @@
-<!-- 段落template -->
-<template name="paragraph">
-    <view class="paragraph contentTextStyle">
-        <text>淡淡素笺，浓浓墨韵，典雅的文字，浸染尘世情怀；悠悠岁月，袅袅茶香，别致的杯盏，盛满诗样芳华；云淡风轻，捧茗品文，灵动的音符，吟唱温馨暖语；春花秋月，红尘阡陌，放飞的思绪，漫过四季如歌。读一段美文，品一盏香茗，听一曲琴音，拾一抹心情</text>
-    </view>
-</template>

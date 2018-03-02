@@ -1,0 +1,37 @@
+
+
+<!-- 纯文本template -->
+<import src="../../utils/pureText/ptOnlyText/ptOnlyText.wxml"/>
+<import src="../../utils/pureText/ptTextTitle/ptTextTitle.wxml"/>
+<import src="../../utils/pureText/ptStageTitle/ptStageTitle.wxml"/>
+<import src="../../utils/pureText/ptOnlyTitle/ptOnlyTitle.wxml"/>
+<import src="../../utils/pureText/ptOnlyStageTitle/ptOnlyStageTitle.wxml"/>
+<import src="../../utils/pureText/ptDoubleCol/ptDoubleCol.wxml"/>
+
+<!-- 创意文本template -->
+<import src="../../utils/creativeText/creativeQuoteOne/creativeQuoteOne.wxml"/>
+<import src="../../utils/creativeText/creativeQuoteTwo/creativeQuoteTwo.wxml"/>
+<import src="../../utils/creativeText/creativeTitTxtGroup/creativeTitTxtGroup.wxml"/>
+<import src="../../utils/creativeText/creativeDeclareOne/creativeDeclareOne.wxml"/>
+<import src="../../utils/creativeText/creativeDeclareTwo/creativeDeclareTwo.wxml"/>
+<import src="../../utils/creativeText/creativeDeclareThre/creativeDeclareThre.wxml"/>
+<import src="../../utils/creativeText/creativeError/creativeError.wxml"/>
+
+<!-- 序列template -->
+<import src="../../utils/sequence/seqNumList/seqNumList.wxml"/>
+<import src="../../utils/sequence/seqCheckBoxList/seqCheckBoxList.wxml"/>
+<import src="../../utils/sequence/seqSymList/seqSymList.wxml"/>
+
+
+<!-- 图像emplate -->
+<import src="../../utils/picture/pictrueSingle/pictrueSingle.wxml"/>
+<import src="../../utils/picture/pictrueDouble/pictrueDouble.wxml"/>
+<import src="../../utils/picture/pictrueTxtGroupOne/pictrueTxtGroupOne.wxml"/>
+<import src="../../utils/picture/pictrueTxtGroupTwo/pictrueTxtGroupTwo.wxml"/>
+<import src="../../utils/picture/pictrueTurntable/pictrueTurntable.wxml"/>
+
+
+<!-- 分页符template -->
+<import src="../../utils/pageBreaks/pbKeepon/pbKeepon.wxml"/>
+<import src="../../utils/pageBreaks/pbPayOff/pbPayOff.wxml"/>
+<import src="../../utils/pageBreaks/pbSplitter/pbSplitter.wxml"/>

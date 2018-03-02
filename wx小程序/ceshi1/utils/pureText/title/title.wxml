@@ -1,8 +1,0 @@
-<!-- 标题template -->
-<template name="title">
-    <view class="title">
-        <view class="contentTitleStyle">
-            <text>典雅的文字</text>
-        </view>
-    </view>
-</template>

@@ -1,0 +1,6 @@
+<!-- 段落template -->
+<template name="ptOnlyText">
+    <view class="ptOnlyText contentTextStyle" style="background-color:{{item.backgroundColor}};padding-top:{{item.marginTop}};padding-bottom:{{item.marginBottom}};">
+        <text>{{item.content.text}}</text>
+    </view>
+</template>

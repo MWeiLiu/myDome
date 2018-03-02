@@ -1,12 +1,9 @@
 /** 公共wxss **/
 @import "../../utils/common/common.wxss";
 @import "../../utils/header/header.wxss";
-@import "../view/view.wxss";
+@import "../../utils/describe/describe.wxss";
+/* @import "../view/view.wxss"; */
 
-
-/** 纯文本 **/
-@import "../../utils/pureText/paragraph/paragraph.wxss";
-@import "../../utils/pureText/doubleColumn/doubleColumn.wxss";
 
 /** 创意文本 **/
 @import "../../utils/creativeText/creativeQuoteTwo/creativeQuoteTwo.wxss";
@@ -32,15 +29,21 @@
 
 
 .box {
-    width: 95%;
-    margin: 0 auto;
+    width: 750rpx;
+    color: #333;
+    font-size: 16px;
+    line-height: 36px;
+    letter-spacing: 1.2px;
 }
 
 .box > view {
-    width:100%;
-    color: #333;
+    width: 100%;
 }
 
 .tab_swiper {
     height: 300px;
+}
+
+.content > view {
+    padding: 0 12px;
 }

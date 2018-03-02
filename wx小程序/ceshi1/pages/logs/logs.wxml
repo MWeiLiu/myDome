@@ -1,87 +1,57 @@
 <!--logs.wxml-->
+<include src="../../utils/common/common.wxml"/>
 
-
-<!-- 纯文本template -->
-<import src="../../utils/pureText/paragraph/paragraph.wxml"/>
-<import src="../../utils/pureText/titleParagraph/titleParagraph.wxml"/>
-<import src="../../utils/pureText/vicTitleParagraph/vicTitleParagraph.wxml"/>
-<import src="../../utils/pureText/title/title.wxml"/>
-<import src="../../utils/pureText/vicTitle/vicTitle.wxml"/>
-<import src="../../utils/pureText/doubleColumn/doubleColumn.wxml"/>
-
-<!-- 创意文本template -->
-<import src="../../utils/creativeText/creativeQuoteOne/creativeQuoteOne.wxml"/>
-<import src="../../utils/creativeText/creativeQuoteTwo/creativeQuoteTwo.wxml"/>
-<import src="../../utils/creativeText/creativeTitTxtGroup/creativeTitTxtGroup.wxml"/>
-<import src="../../utils/creativeText/creativeDeclareOne/creativeDeclareOne.wxml"/>
-<import src="../../utils/creativeText/creativeDeclareTwo/creativeDeclareTwo.wxml"/>
-<import src="../../utils/creativeText/creativeDeclareThre/creativeDeclareThre.wxml"/>
-<import src="../../utils/creativeText/creativeError/creativeError.wxml"/>
-
-<!-- 序列template -->
-<import src="../../utils/sequence/seqNumList/seqNumList.wxml"/>
-<import src="../../utils/sequence/seqCheckBoxList/seqCheckBoxList.wxml"/>
-<import src="../../utils/sequence/seqSymList/seqSymList.wxml"/>
-
-
-<!-- 图像emplate -->
-<import src="../../utils/picture/pictrueSingle/pictrueSingle.wxml"/>
-<import src="../../utils/picture/pictrueDouble/pictrueDouble.wxml"/>
-<import src="../../utils/picture/pictrueTxtGroupOne/pictrueTxtGroupOne.wxml"/>
-<import src="../../utils/picture/pictrueTxtGroupTwo/pictrueTxtGroupTwo.wxml"/>
-<import src="../../utils/picture/pictrueTurntable/pictrueTurntable.wxml"/>
-
-
-<!-- 分页符template -->
-<import src="../../utils/pageBreaks/pbKeepon/pbKeepon.wxml"/>
-<import src="../../utils/pageBreaks/pbPayOff/pbPayOff.wxml"/>
-<import src="../../utils/pageBreaks/pbSplitter/pbSplitter.wxml"/>
-
-
-<include src="../../utils/header/header.wxml"/>
 <view class="box">
-    <view class="qFlex qFlexJustifyAround">
-        <tab id="tab" className="tabTitle" tabHidden="0" tabIndex="{{index}}" text="{{item.title}}" wx:for="{{iPagetab}}" wx:key="*this" wx:for-index="{{index}}"></tab>
-    </view>
-    <view class="tab_swiper">
-        <swiper duration="500">
-            <block wx:for="{{iPagetab}}" wx:key="{{iPagetab}}">
-                <swiper-item>
-                    <tab id="tab" className="tabText" tabHidden="1" data-index="{{index}}" tabIndex="{{index}}" text="{{item.text}}" img="{{item.img}}"></tab>
-                </swiper-item>
+    <include src="../../utils/header/header.wxml"/>
+    <view class="previewContent">
+        <include src="../../utils/describe/describe.wxml"/>
+        <view class="content boxsize">
+            <block wx:for="{{data.json.content}}" wx:key="*this">
+                <template is="{{item.dataType}}" data="{{item}}"/>
             </block>
-        </swiper>
+
+
+
+
+
+<!--
+            <view class="qFlex qFlexJustifyAround">
+                <tab id="tab" className="tabTitle" tabHidden="0" tabIndex="{{index}}" text="{{item.title}}" wx:for="{{iPagetab}}" wx:key="*this" wx:for-index="{{index}}"></tab>
+            </view>
+            <view class="tab_swiper">
+                <swiper duration="500">
+                    <block wx:for="{{iPagetab}}" wx:key="{{iPagetab}}">
+                        <swiper-item>
+                            <tab id="tab" className="tabText" tabHidden="1" data-index="{{index}}" tabIndex="{{index}}" text="{{item.text}}" img="{{item.img}}"></tab>
+                        </swiper-item>
+                    </block>
+                </swiper>
+            </view>
+
+            <template is="creativeQuoteOne"/>
+            <template is="creativeQuoteTwo"/>
+            <template is="creativeTitTxtGroup"/>
+            <template is="creativeDeclareOne"/>
+            <template is="creativeDeclareTwo"/>
+            <template is="creativeDeclareThre"/>
+            <template is="creativeError"/>
+            
+            <template is="seqNumList"/>
+            <template is="seqCheckBoxList"/>
+            <template is="seqSymList"/>
+
+
+            <template is="pictrueSingle"/>
+            <template is="pictrueDouble"/>
+            <template is="pictrueTxtGroupOne" data="{{...pictrueTxtGroupOne}}"/>
+            <template is="pictrueTxtGroupTwo"/>
+            <template is="pictrueTurntable" data="{{...pictrueTurntable}}"/>
+
+            
+            <template is="pbKeepon"/>
+            <template is="pbPayOff" data="{{...pbPayOff}}"/>
+            <template is="pbSplitter"/>
+-->
+        </view>
     </view>
-    
-
-    <template is="paragraph"/>
-    <template is="titleParagraph"/>
-    <template is="vicTitleParagraph"/>
-    <template is="title"/>
-    <template is="vicTitle"/>
-    <template is="doubleColumn"/>
-
-    <template is="creativeQuoteOne"/>
-    <template is="creativeQuoteTwo"/>
-    <template is="creativeTitTxtGroup"/>
-    <template is="creativeDeclareOne"/>
-    <template is="creativeDeclareTwo"/>
-    <template is="creativeDeclareThre"/>
-    <template is="creativeError"/>
-    
-    <template is="seqNumList"/>
-    <template is="seqCheckBoxList"/>
-    <template is="seqSymList"/>
-
-
-    <template is="pictrueSingle"/>
-    <template is="pictrueDouble"/>
-    <template is="pictrueTxtGroupOne" data="{{...pictrueTxtGroupOne}}"/>
-    <template is="pictrueTxtGroupTwo"/>
-    <template is="pictrueTurntable" data="{{...pictrueTurntable}}"/>
-
-    
-    <template is="pbKeepon"/>
-    <template is="pbPayOff" data="{{...pbPayOff}}"/>
-    <template is="pbSplitter"/>
 </view>

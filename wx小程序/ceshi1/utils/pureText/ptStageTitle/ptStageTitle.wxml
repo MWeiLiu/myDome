@@ -1,0 +1,11 @@
+<!-- 副标题段落template -->
+<template name="ptStageTitle">
+    <view class="ptStageTitle" style="background-color:{{item.backgroundColor}};padding-top:{{item.marginTop}};padding-bottom:{{item.marginBottom}};">
+        <view class="contentVicTitleStyle">
+            <text>{{item.content.title}}</text>
+        </view>
+        <view class="contentTextStyle">
+            <text>{{item.content.text}}</text>
+        </view>
+    </view>
+</template>

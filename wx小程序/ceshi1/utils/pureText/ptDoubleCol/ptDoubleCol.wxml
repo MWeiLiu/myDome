@@ -1,6 +1,6 @@
 <!-- 两列template -->
-<template name="doubleColumn">
-    <view class="doubleColumn">
+<template name="ptDoubleCol">
+    <view class="ptDoubleCol">
         <view class="contentTextStyle">
             <text>典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字典雅的文字</text>
         </view>

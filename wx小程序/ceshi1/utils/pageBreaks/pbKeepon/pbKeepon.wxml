@@ -1,6 +1,6 @@
 <!--继续template-->
 <template name="pbKeepon">
-    <view class="pbKeepon pageBreaks">
+    <view class="pbKeepon pageBreaks boxsize">
         <text>继续</text>
     </view>
 </template>

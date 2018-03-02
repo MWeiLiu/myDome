@@ -1,0 +1,17 @@
+.companyInfo {
+    padding: 60px 12px;
+}
+
+.companyInfo image{
+    max-width: 124px;
+    max-height: 110px;
+    margin-bottom: 40px;
+}
+
+.companyInfo .summary{
+    width: 100%;
+    border-bottom: 1px solid #DDD;
+    background: #fff;
+    overflow-y: auto;
+    padding-bottom: 20px;
+}

@@ -1,10 +1,4 @@
 
-.boxsize {
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-}
 
 /**翻页格**/
 
@@ -15,7 +9,7 @@
   position: relative;
 }
 
-.text{
+.fzkp .text{
   width:100%;
   height:100%;
   border: 1px solid #f1f2f3;
