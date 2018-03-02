@@ -5,7 +5,7 @@ const paragraph = require('../../utils/pureText/paragraph/paragraph.js');
 Page({
   data: {
     background: '',
-
+    color: '',
     pname: '小程序样式的花样儿小程序样式的花样儿',
     price: '2.0000',
     json:{
@@ -23,7 +23,7 @@ Page({
             }
           ]
         },
-        "userLogo": "http://www.qcourse.com/uploads/products/2778/5a97d253abfc9.jpg",
+        "userLogo": "",
         "userTheme": "#5e5e5e",
         "summary": "小程序样式的花样儿小程序样式的花样儿小程序样式的花样儿",
         "subTitle": "小程序样式的花样儿小程序样式的花样儿小程序样式的"
@@ -561,16 +561,24 @@ Page({
     }
   },
   onLoad: function () {
-    var that = this;
-    if(that.data.json.wholeSet.userLogo == ''){
+    var that = this,
+        wholeSet = this.data.json.wholeSet,
+        color = ''
+    if(wholeSet.userLogo == ''){
       this.setData({
-        background: that.data.json.wholeSet.userTheme
+        background: wholeSet.userTheme
       });
     } else {
       this.setData({
-        background: 'url(' + that.data.json.wholeSet.userLogo + ') center center / 100% no-repeat'
+        background: 'url(' + wholeSet.userLogo + ') center center / 100% no-repeat'
       });
-    }
+    };
+    color = common.fn.escapeColor(common.fn.hexToRgb(wholeSet.userTheme))
+    this.setData({
+      color: color
+    });
+    
+    
   },
   bindParagraph: function(){
     paragraph.paragraph()
@@ -578,11 +586,6 @@ Page({
   onReady: function(){
     this.dialog = this.selectComponent("#tab");
   },
-  // _tabIndex: function(e){
-  //   var index = e.target.dataset.datatab;
-  //   console.log(index);
-  //   // this.dialog.hideDialog();
-  // },
 
 
 

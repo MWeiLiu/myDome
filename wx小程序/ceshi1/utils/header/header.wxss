@@ -5,7 +5,7 @@
 }
 
 .header .shade1 {
-    padding: 26px 12px 35px;
+    padding: 26px 12px;
 }
 
 .header .changeBox {
@@ -15,4 +15,36 @@
 .header .changeInfoBoxs {
     padding-left: 0;
     position: relative;
+    overflow: hidden;
+}
+
+.header .changeInfoBoxs .panme {
+    font-size: 36px;
+    letter-spacing: 3px;
+    line-height: 50px;
+}
+
+.header .changeInfoBoxs .courseSubtitle {
+    font-size: 20px;
+    letter-spacing: 1.9px;
+    line-height: 28px;
+    margin-bottom: 20px;
+}
+
+.header .changeInfoBoxs .userIcoBox {
+    float: left;
+}
+
+.header .changeInfoBoxs .userIcoBox image{
+    width: 27px;
+    height: 27px;
+    margin-right: 8px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.header .changeInfoBoxs .userIcoBox text{
+    font-size: 14px;
+    letter-spacing: 4.67px;
+    line-height: 24px;
 }
