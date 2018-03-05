@@ -6,7 +6,7 @@
     <view class="previewContent">
         <include src="../../utils/describe/describe.wxml"/>
         <view class="content boxsize">
-            <block wx:for="{{data.json.content}}" wx:key="*this">
+            <block wx:for="{{dataContent.json.content}}" wx:key="*this">
                 <template is="{{item.dataType}}" data="{{item,baseData}}"/>
             </block>
 

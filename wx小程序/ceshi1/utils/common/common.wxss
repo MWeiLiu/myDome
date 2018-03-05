@@ -40,7 +40,7 @@
 	color: #333333;
 	font-size: 16px;
     letter-spacing: 1.2px;
-    line-height: 36px;
+    line-height: 28px;
 }
 
 .textAlign_center {
@@ -55,13 +55,14 @@
 .cardUserImage {
     width: 80px;
     height: 80px;
+    display: inherit;
 }
 
 /* 作者名称 */
 .cardUserName {
-    color: rgb(107, 143, 179);
+    color: #003989;
 	font-size: 14px;
-    letter-spacing: 4px;
+    letter-spacing: 6px;
 }
 
 
@@ -76,6 +77,11 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+page {
+    font-size: 16px;
+    color: #333;
 }
 
 swiper {
@@ -94,6 +100,11 @@ swiper {
 .qFlexDirectionColumn {
 	flex-direction: column;
 	-webkit-flex-direction: column;
+}
+
+.qFlexJustifyStart {
+	justify-content: flex-start;
+	-webkit-justify-content: flex-start;
 }
 
 /*横向剧中*/

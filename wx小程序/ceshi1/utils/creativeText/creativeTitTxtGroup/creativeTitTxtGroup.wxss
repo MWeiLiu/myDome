@@ -1,6 +1,15 @@
 
+.creativeTitTxtGroup .creativeBox > text {
+    color: #fff;
+}
+
+.creativeTitTxtGroup .cardUserName > text {
+    color: #cce6ff;
+}
+
 .creativeBox {
     width: 90%;
+    min-height: 105px;
     margin: 10px auto;
     overflow: hidden;
 }

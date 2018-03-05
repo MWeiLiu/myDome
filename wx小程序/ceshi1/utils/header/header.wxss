@@ -1,9 +1,4 @@
 
-.header {
-    display: block;
-    width: 100%;
-}
-
 .header .shade1 {
     padding: 26px 12px;
 }

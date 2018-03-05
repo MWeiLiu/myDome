@@ -6,15 +6,17 @@ Page({
     baseData: {
       background: '',
       color: '',
+      logoWidth: '124',
+      logoHeigh: '82',
       indicatorDotsTrue: true,
       indicatorColor: '#f3f4f5',
       indicatorActiveColor: '#333',
       duration: '500'
     },
-    data: {
+    dataContent: {
       pname: '小程序样式的花样儿小程序样式的花样儿',
       price: '2.0000',
-      pic: 'https://www.qcourse.com/uploads/products/2778/5a97d2588c1bb.jpg',
+      pic: '',
       json:{
         "wholeSet": {
           "header": {
@@ -30,12 +32,133 @@ Page({
               }
             ]
           },
-          "userLogo": "https://www.qcourse.com/uploads/products/2778/5a97d2588c1bb.jpg",
+          "userLogo": "https://www.qcourse.com/uploads/products/2778/5a9ce3caa928c.jpeg",
           "userTheme": "#5e5e5e",
           "summary": "小程序样式的花样儿小程序样式的花样儿程小序样式的花样儿",
           "subTitle": "小程序样式的花样儿小程序样式的花样儿小程序样式的"
         },
-        "content": [{
+        "content": [
+          {
+            "dataType": "creativeQuoteOne",
+            "backgroundColor": "rgb(0, 255, 255)",
+            "marginTop": "20px",
+            "marginBottom": "20px",
+            "themeColorBoardLists": "#5e5e5e",
+            "content": {
+              "headerImg": {
+                "id": "creativeTitle_1"
+              },
+              "text": {
+                "margin": "0px",
+                "textHtml": "小程序样式示例1小程序样式示例2小程序样式示例1小程序样式示例2",
+                "textAlign": "center"
+              },
+              "userName": {
+                "margin": "0px",
+                "textHtml": "喀秋莎",
+                "textAlign": "center",
+                "color": "rgb(107, 143, 179)"
+              },
+              "guide": {
+                "guide": false
+              }
+            }
+          },
+          {
+            "dataType": "creativeQuoteTwo",
+            "backgroundColor": "rgb(255, 0, 255)",
+            "marginTop": "20px",
+            "marginBottom": "20px",
+            "themeColorBoardLists": "#5e5e5e",
+            "content": {
+              "headerImg": {
+                "id": "creativeTitle_2",
+                "borderRadius": "50%",
+                "imgSrc": "https://www.qcourse.com/images/editorHeaderImg1.0.png",
+                "orignalSrc": "https://www.qcourse.com/images/editorHeaderImg1.0.png",
+                "margin": "0px 20px 0px 0px",
+                "Float": "left",
+                "width": "112px",
+                "height": "150px"
+              },
+              "text": {
+                "textHtml": "小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例",
+                "textAlign": "justify"
+              },
+              "userName": {
+                "textHtml": "喀秋莎",
+                "textAlign": "center",
+                "color": "rgb(107, 143, 179)"
+              },
+              "guide": {
+                "guide": false
+              }
+            }
+          },
+          {
+            "dataType": "creativeTitTxtGroup",
+            "backgroundColor": "url('https://www.qcourse.com/images/pictureBack1.0.png')",
+            "marginTop": "20px",
+            "marginBottom": "20px",
+            "themeColorBoardLists": "#5e5e5e",
+            "content": {
+              "headerImg": {
+                "id": "creativeTitle_3",
+                "borderRadius": "50%",
+                "margin": "0px 20px 0px 0px",
+                "imgSrc": "https://www.qcourse.com/images/editorHeaderImg1.0.png",
+                "orignalSrc": "https://www.qcourse.com/images/editorHeaderImg1.0.png",
+                "Float": "left",
+                "width": "112px",
+                "height": "150px"
+              },
+              "text": {
+                "textHtml": "小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例",
+                "textAlign": "justify",
+                "color": "rgb(255, 255, 255)"
+              },
+              "userName": {
+                "textHtml": "喀秋莎",
+                "textAlign": "center",
+                "color": "rgb(204, 230, 255)"
+              },
+              "guide": {
+                "guide": false
+              }
+            }
+          },
+          {
+            "dataType": "creativeDeclareTwo",
+            "backgroundColor": "rgb(255, 255, 0)",
+            "marginTop": "20px",
+            "marginBottom": "20px",
+            "themeColorBoardLists": "#5e5e5e",
+            "content": {
+              "headerImg": {
+                "id": "creativeTitle_5"
+              },
+              "text": {
+                "margin": "0px",
+                "textHtml": "小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例",
+                "textAlign": "justify"
+              },
+              "guide": {
+                "guide": true,
+                "margin": "0px 348.509px 10px 348.494px",
+                "width": "104px",
+                "height": "2px",
+                "position": "static"
+              }
+            }
+          },
+
+
+
+
+
+
+
+          {
             "dataType": "ptOnlyText",
             "backgroundColor": "rgb(0, 255, 255)",
             "marginTop": "20px",
@@ -100,119 +223,6 @@ Page({
             "content": {
               "textContentLeft": "小程序样式示例1",
               "textContentRight": "小程序样式示例2"
-            }
-          },
-          {
-            "dataType": "creativeQuoteOne",
-            "backgroundColor": "rgb(0, 255, 255)",
-            "marginTop": "20px",
-            "marginBottom": "20px",
-            "themeColorBoardLists": "#5e5e5e",
-            "content": {
-              "headerImg": {
-                "id": "creativeTitle_1"
-              },
-              "text": {
-                "margin": "0px",
-                "textHtml": "小程序样式示例1小程序样式示例2",
-                "textAlign": "center"
-              },
-              "userName": {
-                "margin": "0px",
-                "textHtml": "喀秋莎",
-                "textAlign": "center",
-                "color": "rgb(107, 143, 179)"
-              },
-              "guide": {
-                "guide": false
-              }
-            }
-          },
-          {
-            "dataType": "creativeQuoteTwo",
-            "backgroundColor": "rgb(255, 0, 255)",
-            "marginTop": "20px",
-            "marginBottom": "20px",
-            "themeColorBoardLists": "#5e5e5e",
-            "content": {
-              "headerImg": {
-                "id": "creativeTitle_2",
-                "borderRadius": "50%",
-                "imgSrc": "https://www.qcourse.com/images/editorHeaderImg1.0.png",
-                "orignalSrc": "https://www.qcourse.com/images/editorHeaderImg1.0.png",
-                "margin": "0px 20px 0px 0px",
-                "Float": "left",
-                "width": "112px",
-                "height": "150px"
-              },
-              "text": {
-                "textHtml": "小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例",
-                "textAlign": "justify"
-              },
-              "userName": {
-                "textHtml": "喀秋莎",
-                "textAlign": "center",
-                "color": "rgb(107, 143, 179)"
-              },
-              "guide": {
-                "guide": false
-              }
-            }
-          },
-          {
-            "dataType": "creativeTitTxtGroup",
-            "backgroundColor": "url('https://www.qcourse.com/images/pictureBack1.0.png')",
-            "marginTop": "20px",
-            "marginBottom": "20px",
-            "themeColorBoardLists": "#5e5e5e",
-            "content": {
-              "headerImg": {
-                "id": "creativeTitle_3",
-                "borderRadius": "50%",
-                "margin": "0px 20px 0px 0px",
-                "imgSrc": "https://www.qcourse.com/images/editorHeaderImg1.0.png",
-                "orignalSrc": "https://www.qcourse.com/images/editorHeaderImg1.0.png",
-                "Float": "left",
-                "width": "112px",
-                "height": "150px"
-              },
-              "text": {
-                "textHtml": "小程序样式示例",
-                "textAlign": "justify",
-                "color": "rgb(255, 255, 255)"
-              },
-              "userName": {
-                "textHtml": "喀秋莎",
-                "textAlign": "center",
-                "color": "rgb(204, 230, 255)"
-              },
-              "guide": {
-                "guide": false
-              }
-            }
-          },
-          {
-            "dataType": "creativeDeclareTwo",
-            "backgroundColor": "rgb(255, 255, 0)",
-            "marginTop": "20px",
-            "marginBottom": "20px",
-            "themeColorBoardLists": "#5e5e5e",
-            "content": {
-              "headerImg": {
-                "id": "creativeTitle_5"
-              },
-              "text": {
-                "margin": "0px",
-                "textHtml": "小程序样式示例",
-                "textAlign": "justify"
-              },
-              "guide": {
-                "guide": true,
-                "margin": "0px 348.509px 10px 348.494px",
-                "width": "104px",
-                "height": "2px",
-                "position": "static"
-              }
             }
           },
           {
@@ -684,49 +694,36 @@ Page({
   },
   onLoad: function () {
     var that = this,
-        wholeSet = this.data.data.json.wholeSet,
+        wholeSet = this.data.dataContent.json.wholeSet,
         color = '#333';
-    if(wholeSet.userLogo == ''){
+    if(that.data.dataContent.pic == ''){
       this.setData({
-        background: wholeSet.userTheme
+        'baseData.background': wholeSet.userTheme
       });
+      color = common.fn.escapeColor(common.fn.hexToRgb(wholeSet.userTheme));
     } else {
-      this.setData({
-        background: 'url(' + wholeSet.userLogo + ') center center / 100% no-repeat'
+      this.setData({ 
+        'baseData.background': 'url(' + that.data.dataContent.pic + ') center center / 100% repeat'
       });
     };
-    if(wholeSet.userLogo == ''){
-      color = common.fn.escapeColor(common.fn.hexToRgb(wholeSet.userTheme));
-    }
     this.setData({
-      color: color
+      'baseData.color': color
     });
-    
+    // this.imageSize();
     
   },
   onReady: function(){
     this.dialog = this.selectComponent("#tab");
-  },
-
-
-
-  onReady: function () {
-    //获得dialog组件
-    this.dialog = this.selectComponent("#dialog");
-  },
-
-  showDialog(){
-    this.dialog.showDialog();
-  },
-
-   //取消事件
-  _cancelEvent(){
-    console.log('你点击了取消');
-    this.dialog.hideDialog();
-  },
-  //确认事件
-  _confirmEvent(){
-    console.log('你点击了确定');
-    this.dialog.hideDialog();
   }
+  // imageSize: function(e){
+  //   console.log(e)
+  //   var imageWidth = e.detail.width,
+  //       imageHeight = e.detail.height;
+  //   console.log(this)
+  //   if(imageHeight >= 82){
+  //     this.setData({
+  //       'baseData.logoHeight': 82
+  //     });
+  //   }
+  // }
 })

@@ -1,12 +1,12 @@
 <!-- 底图引言template -->
 <template name="creativeTitTxtGroup">
-    <view class="creativeTitTxtGroup backgroundImageStyle" style="background-image:{{item.backgroundColor}};padding-top:{{item.marginTop}};padding-bottom:{{item.marginBottom}};">
+    <view class="creativeTitTxtGroup backgroundImageStyle contentTextStyle textAlign_left" style="background-image:{{item.backgroundColor}};padding-top:{{item.marginTop}};padding-bottom:{{item.marginBottom}};">
         <view class="creativeBox">
             <view class="userImageBox cardUserName textAlign_center">
                 <image class="cardUserImage" src="{{item.content.headerImg.imgSrc}}"></image>
                 <text>{{item.content.userName.textHtml}}</text>
             </view>
-            <text class="contentTextStyle textAlign_left">{{item.content.text.textHtml}}</text>
+            <text>{{item.content.text.textHtml}}</text>
         </view>
     </view>
 </template>

@@ -16,6 +16,10 @@ git status
 git pull
 ¡®Already up-to-date.¡¯ok
 
+»Ø¹ö£»
+git reset --hard e377f60e28c8b84158
+git push -f origin master
+
 
 ±¨´í:Your branch is ahead of 'origin/master' by 2 commits.
   (use "git push" to publish your local commits)
