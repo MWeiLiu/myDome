@@ -25,6 +25,12 @@
 @import "../../utils/pageBreaks/pbKeepon/pbKeepon.wxss";
 @import "../../utils/pageBreaks/pbSplitter/pbSplitter.wxss";
 
+/** 多媒体 **/
+@import "../../utils/multimedia/mmCode/mmCode.wxss";
+@import "../../utils/multimedia/mmAttachment/mmAttachment.wxss";
+
+/** 互动 **/
+@import "../../components/iAccordion/iAccordion.wxss";
 
 .box {
     width: 750rpx;

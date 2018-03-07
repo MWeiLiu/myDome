@@ -1,6 +1,6 @@
 //logs.js
 const common = require('../../utils/common/common.js');
-
+// const iAccordion = require('../../utils/Interaction/iAccordion/iAccordion.js');
 Page({
   data: {
     baseData: {
@@ -11,10 +11,13 @@ Page({
       indicatorDotsTrue: true,
       indicatorColor: '#f3f4f5',
       indicatorActiveColor: '#333',
-      duration: '500'
+      duration: '500',
+      iAccordion: {
+        iAccordionAnimate: ''
+      }
     },
     dataContent: {
-      pname: '小程序样式的花样儿小程序样式的花样儿',
+      pname: '投资人喜欢你吗投资人喜欢你吗',
       price: '2.0000',
       pic: '',
       json:{
@@ -35,9 +38,34 @@ Page({
           "userLogo": "https://www.qcourse.com/uploads/products/2778/5a9ce3caa928c.jpeg",
           "userTheme": "#5e5e5e",
           "summary": "小程序样式的花样儿小程序样式的花样儿程小序样式的花样儿",
-          "subTitle": "小程序样式的花样儿小程序样式的花样儿小程序样式的"
+          "subTitle": "采一点晨曦，装点一天的清新，捧一把阳光，温暖一季的心情"
         },
         "content": [
+          {
+            "dataType": "iAccordion",
+            "backgroundColor": "rgb(255, 90, 255)",
+            "marginTop": "20px",
+            "marginBottom": "20px",
+            "themeColorBoardLists": "#5e5e5e",
+            "content": {
+              "items": [{
+                  "title": "拥抱发现",
+                  "text": "每一个创造性的努力需要你承担风险。如果你尝试不成功，你还是学到了一些东西。",
+                  "img": "https://www.qcourse.com/images/interactionBg.png"
+                },
+                {
+                  "title": "获得洞察力",
+                  "text": "每一个创造性的努力需要你承担风险。如果你尝试不成功，你还是学到了一些东西。",
+                  "img": "https://www.qcourse.com/images/interactionBg.png"
+                },
+                {
+                  "title": "是他真实",
+                  "text": "每一个创造性的努力需要你承担风险。如果你尝试不成功，你还是学到了一些东西。",
+                  "img": "https://www.qcourse.com/images/interactionBg.png"
+                }
+              ]
+            }
+          },
           {
             "dataType": "creativeQuoteOne",
             "backgroundColor": "rgb(0, 255, 255)",
@@ -50,7 +78,7 @@ Page({
               },
               "text": {
                 "margin": "0px",
-                "textHtml": "小程序样式示例1小程序样式示例2小程序样式示例1小程序样式示例2",
+                "textHtml": "本课程以视频小课为线索，配文字、图片、图表等深刻解析互联网的核其发展路径，在此基础上预测未来商业的三大变革",
                 "textAlign": "center"
               },
               "userName": {
@@ -63,8 +91,7 @@ Page({
                 "guide": false
               }
             }
-          },
-          {
+          },{
             "dataType": "creativeQuoteTwo",
             "backgroundColor": "rgb(255, 0, 255)",
             "marginTop": "20px",
@@ -82,7 +109,7 @@ Page({
                 "height": "150px"
               },
               "text": {
-                "textHtml": "小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例",
+                "textHtml": "本课程以视频小课为线，配文字、图片、图表等深刻解析互联网的核其发展路径，在此基础上预测未来商业的三大变革商业的三大变革商本课程以视频小课为线，配文字、图片、图表等深刻解析互联网的核其发展路径，在此基础上预测未来商业的三大变革商业的三大变革商",
                 "textAlign": "justify"
               },
               "userName": {
@@ -94,8 +121,7 @@ Page({
                 "guide": false
               }
             }
-          },
-          {
+          },{
             "dataType": "creativeTitTxtGroup",
             "backgroundColor": "url('https://www.qcourse.com/images/pictureBack1.0.png')",
             "marginTop": "20px",
@@ -113,7 +139,7 @@ Page({
                 "height": "150px"
               },
               "text": {
-                "textHtml": "小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例",
+                "textHtml": "本课程以视频小课为线，配文字、图片、图表等深刻解析互联网的核其发展路径，在此基础上预测未来商业的三大变革商业的三大变革商",
                 "textAlign": "justify",
                 "color": "rgb(255, 255, 255)"
               },
@@ -139,7 +165,7 @@ Page({
               },
               "text": {
                 "margin": "0px",
-                "textHtml": "小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例",
+                "textHtml": "本课程以视频小课为线，配文字、图片、图表等深刻解析互联网的核其发展路径，在此基础上预测未来商业的三大变革商业的三大变革商",
                 "textAlign": "justify"
               },
               "guide": {
@@ -151,83 +177,9 @@ Page({
               }
             }
           },
-
-
-
-
-
-
-
-          {
-            "dataType": "ptOnlyText",
-            "backgroundColor": "rgb(0, 255, 255)",
-            "marginTop": "20px",
-            "marginBottom": "20px",
-            "themeColorBoardLists": "#5e5e5e",
-            "content": {
-              "text": "小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例"
-            }
-          },
-          {
-            "dataType": "ptTextTitle",
-            "backgroundColor": "rgb(255, 0, 255)",
-            "marginTop": "20px",
-            "marginBottom": "20px",
-            "themeColorBoardLists": "#5e5e5e",
-            "content": {
-              "title": "小程序样式示例",
-              "text": "小程序样式示例小程序样式示例小程序样式示例小程序样式示例",
-              "backImg": "none"
-            }
-          },
-          {
-            "dataType": "ptStageTitle",
-            "backgroundColor": "rgb(255, 56, 0)",
-            "marginTop": "20px",
-            "marginBottom": "20px",
-            "themeColorBoardLists": "#5e5e5e",
-            "content": {
-              "title": "小程序样式示例",
-              "text": "小程序样式示例小程序样式示例小程序样式搜索示例小程序样式示例",
-              "backImg": "none"
-            }
-          },
-          {
-            "dataType": "ptOnlyTitle",
-            "backgroundColor": "rgb(0, 255, 255)",
-            "marginTop": "20px",
-            "marginBottom": "20px",
-            "themeColorBoardLists": "#5e5e5e",
-            "content": {
-              "title": "小程序样式示例",
-              "backImg": "none"
-            }
-          },
-          {
-            "dataType": "ptOnlyStageTitle",
-            "backgroundColor": "rgb(255, 0, 255)",
-            "marginTop": "20px",
-            "marginBottom": "20px",
-            "themeColorBoardLists": "#5e5e5e",
-            "content": {
-              "title": "小程序样式示例",
-              "backImg": "none"
-            }
-          },
-          {
-            "dataType": "ptDoubleCol",
-            "backgroundColor": "rgb(255, 255, 0)",
-            "marginTop": "20px",
-            "marginBottom": "20px",
-            "themeColorBoardLists": "#5e5e5e",
-            "content": {
-              "textContentLeft": "小程序样式示例1",
-              "textContentRight": "小程序样式示例2"
-            }
-          },
           {
             "dataType": "creativeDeclareThre",
-            "backgroundColor": "rgb(69, 255, 255)",
+            "backgroundColor": "rgb(69, 56, 255)",
             "marginTop": "20px",
             "marginBottom": "20px",
             "themeColorBoardLists": "#5e5e5e",
@@ -237,27 +189,7 @@ Page({
               },
               "text": {
                 "margin": "0px",
-                "textHtml": "小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例",
-                "textAlign": "justify"
-              },
-              "guide": {
-                "guide": true
-              }
-            }
-          },
-          {
-            "dataType": "creativeDeclareOne",
-            "backgroundColor": "rgb(255, 98, 255)",
-            "marginTop": "20px",
-            "marginBottom": "20px",
-            "themeColorBoardLists": "#5e5e5e",
-            "content": {
-              "headerImg": {
-                "id": "creativeTitle_6"
-              },
-              "text": {
-                "margin": "0px",
-                "textHtml": "小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例",
+                "textHtml": "本课程以视频小课为线，配文字、图片、图表等深刻解析互联网的核其发展路径，在此基础上预测未来商业的三大变革商业的三大变革商",
                 "textAlign": "justify"
               },
               "guide": {
@@ -267,7 +199,7 @@ Page({
           },
           {
             "dataType": "creativeError",
-            "backgroundColor": "rgb(255, 59, 255)",
+            "backgroundColor": "rgb(5, 59, 1)",
             "marginTop": "20px",
             "marginBottom": "20px",
             "themeColorBoardLists": "#5e5e5e",
@@ -279,13 +211,69 @@ Page({
                 "height": "20px"
               },
               "text": {
-                "textHtml": "小程序样式示例小程序样式示例小程序样式示例小程序样式示例",
+                "textHtml": "本课程以视频小课为线，配文字、图片、图表等深刻解析互联网的核其发展路径，在此基础上预测未来商业的三大变革商业的三大变革商",
                 "color": "rgb(249, 89, 58)",
                 "margin": "0px"
               },
               "guide": {
                 "guide": false
               }
+            }
+          },
+          {
+            "dataType": "ptOnlyText",
+            "backgroundColor": "rgb(0, 255, 255)",
+            "marginTop": "20px",
+            "marginBottom": "20px",
+            "themeColorBoardLists": "#5e5e5e",
+            "content": {
+              "text": "本课程以视频小课为线索，配有文字、图片、图表等深刻解析互联网的核心及其发展路径，在此基础上预测未来商业的三大变革，即物联网时代、大数据时代以及机器智能，深入讨论了云计算、云和端、机器智能、企业DNA及发展方向、传统企业线上化等问题。"
+            }
+          },
+          {
+            "dataType": "ptTextTitle",
+            "backgroundColor": "rgb(255, 0, 255)",
+            "marginTop": "20px",
+            "marginBottom": "20px",
+            "themeColorBoardLists": "#5e5e5e",
+            "content": {
+              "title": "大数据时代对交易策略的研发提出了几大要求",
+              "text": "本课程以视频小课为线索，配有文字、图片、图表等深刻解析互联网的核心及其发展路径，在此基础上预测未来商业的三大变革，即物联网时代、大数据时代以及机器智能，深入讨论了云计算、云和端、机器智能、企业DNA及发展方向、传统企业线上化等问题。教授曾鸣是阿里专职思考未来的人，听听他的想法，掂掂他预判未来的逻辑，可以在臧否反思之中升级认知，在思维碰撞下获益良多。欢迎你来，看看未来。",
+              "backImg": "none"
+            }
+          },
+          {
+            "dataType": "ptStageTitle",
+            "backgroundColor": "rgb(255, 56, 0)",
+            "marginTop": "20px",
+            "marginBottom": "20px",
+            "themeColorBoardLists": "#5e5e5e",
+            "content": {
+              "title": "大数据时代对交易策略的研发提出了几大要求",
+              "text": "本课程以视频小课为线索，配有文字、图片、图表等深刻解析互联网的核心及其发展路径，在此基础上预测未来商业的三大变革，即物联网时代、大数据时代以及机器智能，深入讨论了云计算、云和端、机器智能、企业DNA及发展方向、传统企业线上化等问题。教授曾鸣是阿里专职思考未来的人，听听他的想法，掂掂他预判未来的逻辑，可以在臧否反思之中升级认知，在思维碰撞下获益良多。欢迎你来，看看未来。",
+              "backImg": "none"
+            }
+          },
+          {
+            "dataType": "ptOnlyTitle",
+            "backgroundColor": "rgb(0, 255, 255)",
+            "marginTop": "20px",
+            "marginBottom": "20px",
+            "themeColorBoardLists": "#5e5e5e",
+            "content": {
+              "title": "大数据时代对交易策略的研发提出了几大要求",
+              "backImg": "none"
+            }
+          },
+          {
+            "dataType": "ptOnlyStageTitle",
+            "backgroundColor": "rgb(255, 0, 255)",
+            "marginTop": "20px",
+            "marginBottom": "20px",
+            "themeColorBoardLists": "#5e5e5e",
+            "content": {
+              "title": "大数据时代对交易策略的研发提出了几大要求",
+              "backImg": "none"
             }
           },
           {
@@ -296,23 +284,18 @@ Page({
             "themeColorBoardLists": "#5e5e5e",
             "content": {
               "textLi": [
-                "小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例",
-                "小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例",
-                "小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例"
-              ]
-            }
-          },
-          {
-            "dataType": "seqCheckBoxList",
-            "backgroundColor": "rgb(4, 255, 2)",
-            "marginTop": "20px",
-            "marginBottom": "20px",
-            "themeColorBoardLists": "#5e5e5e",
-            "content": {
-              "textLi": [
-                "小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例",
-                "小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例",
-                "小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例"
+                "在网易邮箱大师设计团队内部中，为了避免设计师反复出现类似的问题，设计组会要求一些流程结果的可视化输出，如：我们将设计分析的常用方法整理形成模板",
+                "熟悉基本的设计工作后，设计师便不应该始终处在功能体验优化的工作舒适圈中，而要更系统的关注产品和团队",
+                "主动运用自己的专业能力，推动产品项目更快更好的发展，逐渐具备发现问题和机会的洞察力与敏感度",
+                "在网易邮箱大师设计团队内部中，为了避免设计师反复出现类似的问题，设计组会要求一些流程结果的可视化输出，如：我们将设计分析的常用方法整理形成模板",
+                "熟悉基本的设计工作后，设计师便不应该始终处在功能体验优化的工作舒适圈中，而要更系统的关注产品和团队",
+                "主动运用自己的专业能力，推动产品项目更快更好的发展，逐渐具备发现问题和机会的洞察力与敏感度",
+                "在网易邮箱大师设计团队内部中，为了避免设计师反复出现类似的问题，设计组会要求一些流程结果的可视化输出，如：我们将设计分析的常用方法整理形成模板",
+                "熟悉基本的设计工作后，设计师便不应该始终处在功能体验优化的工作舒适圈中，而要更系统的关注产品和团队",
+                "主动运用自己的专业能力，推动产品项目更快更好的发展，逐渐具备发现问题和机会的洞察力与敏感度",
+                "在网易邮箱大师设计团队内部中，为了避免设计师反复出现类似的问题，设计组会要求一些流程结果的可视化输出，如：我们将设计分析的常用方法整理形成模板",
+                "熟悉基本的设计工作后，设计师便不应该始终处在功能体验优化的工作舒适圈中，而要更系统的关注产品和团队",
+                "主动运用自己的专业能力，推动产品项目更快更好的发展，逐渐具备发现问题和机会的洞察力与敏感度"
               ]
             }
           },
@@ -324,377 +307,60 @@ Page({
             "themeColorBoardLists": "#5e5e5e",
             "content": {
               "textLi": [
-                "小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例",
-                "小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例",
-                "小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例"
+                "在网易邮箱大师设计团队内部中，为了避免设计师反复出现类似的问题，设计组会要求一些流程结果的可视化输出，如：我们将设计分析的常用方法整理形成模板",
+                "熟悉基本的设计工作后，设计师便不应该始终处在功能体验优化的工作舒适圈中，而要更系统的关注产品和团队",
+                "主动运用自己的专业能力，推动产品项目更快更好的发展，逐渐具备发现问题和机会的洞察力与敏感度",
+                "在网易邮箱大师设计团队内部中，为了避免设计师反复出现类似的问题，设计组会要求一些流程结果的可视化输出，如：我们将设计分析的常用方法整理形成模板",
+                "熟悉基本的设计工作后，设计师便不应该始终处在功能体验优化的工作舒适圈中，而要更系统的关注产品和团队",
+                "主动运用自己的专业能力，推动产品项目更快更好的发展，逐渐具备发现问题和机会的洞察力与敏感度",
+                "在网易邮箱大师设计团队内部中，为了避免设计师反复出现类似的问题，设计组会要求一些流程结果的可视化输出，如：我们将设计分析的常用方法整理形成模板",
+                "熟悉基本的设计工作后，设计师便不应该始终处在功能体验优化的工作舒适圈中，而要更系统的关注产品和团队",
+                "主动运用自己的专业能力，推动产品项目更快更好的发展，逐渐具备发现问题和机会的洞察力与敏感度",
+                "在网易邮箱大师设计团队内部中，为了避免设计师反复出现类似的问题，设计组会要求一些流程结果的可视化输出，如：我们将设计分析的常用方法整理形成模板",
+                "熟悉基本的设计工作后，设计师便不应该始终处在功能体验优化的工作舒适圈中，而要更系统的关注产品和团队",
+                "主动运用自己的专业能力，推动产品项目更快更好的发展，逐渐具备发现问题和机会的洞察力与敏感度"
               ]
             }
           },
           {
-            "dataType": "pictrueSingle",
-            "backgroundColor": "rgb(90, 69, 10)",
+            "dataType": "seqCheckBoxList",
+            "backgroundColor": "rgb(4, 255, 2)",
             "marginTop": "20px",
             "marginBottom": "20px",
             "themeColorBoardLists": "#5e5e5e",
             "content": {
-              "item": [
-                {
-                  backImg: {
-                    imgSrc: 'https://www.qcourse.cc/images/pictrue.jpg'
-                  },
-                  label: {
-                    textHtml: '小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例'
-                  }
-                  
-                }
+              "textLi": [
+                "在网易邮箱大师设计团队内部中，为了避免设计师反复出现类似的问题，设计组会要求一些流程结果的可视化输出，如：我们将设计分析的常用方法整理形成模板",
+                "熟悉基本的设计工作后，设计师便不应该始终处在功能体验优化的工作舒适圈中，而要更系统的关注产品和团队",
+                "主动运用自己的专业能力，推动产品项目更快更好的发展，逐渐具备发现问题和机会的洞察力与敏感度",
+                "在网易邮箱大师设计团队内部中，为了避免设计师反复出现类似的问题，设计组会要求一些流程结果的可视化输出，如：我们将设计分析的常用方法整理形成模板",
+                "熟悉基本的设计工作后，设计师便不应该始终处在功能体验优化的工作舒适圈中，而要更系统的关注产品和团队",
+                "主动运用自己的专业能力，推动产品项目更快更好的发展，逐渐具备发现问题和机会的洞察力与敏感度",
+                "在网易邮箱大师设计团队内部中，为了避免设计师反复出现类似的问题，设计组会要求一些流程结果的可视化输出，如：我们将设计分析的常用方法整理形成模板",
+                "熟悉基本的设计工作后，设计师便不应该始终处在功能体验优化的工作舒适圈中，而要更系统的关注产品和团队",
+                "主动运用自己的专业能力，推动产品项目更快更好的发展，逐渐具备发现问题和机会的洞察力与敏感度",
+                "在网易邮箱大师设计团队内部中，为了避免设计师反复出现类似的问题，设计组会要求一些流程结果的可视化输出，如：我们将设计分析的常用方法整理形成模板",
+                "熟悉基本的设计工作后，设计师便不应该始终处在功能体验优化的工作舒适圈中，而要更系统的关注产品和团队",
+                "主动运用自己的专业能力，推动产品项目更快更好的发展，逐渐具备发现问题和机会的洞察力与敏感度"
               ]
             }
           },
-          {
-            "dataType": "pictrueDouble",
-            "backgroundColor": "rgb(30, 63, 1)",
-            "marginTop": "20px",
-            "marginBottom": "20px",
-            "themeColorBoardLists": "#5e5e5e",
-            "content": {
-              "item": [
-                {
-                  backImg: {
-                    imgSrc: 'https://www.qcourse.cc/images/pictrue.jpg'
-                  },
-                  label: {
-                    textHtml: '小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例'
-                  }
-                  
-                },
-                {
-                  backImg: {
-                    imgSrc: 'https://www.qcourse.cc/images/pictrue.jpg'
-                  },
-                  label: {
-                    textHtml: '小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例'
-                  }
-                  
-                }
-              ]
-            }
-          },
-          {
-            "dataType": "pictrueTxtGroupOne",
-            "backgroundColor": "rgb(90, 6, 100)",
-            "marginTop": "20px",
-            "marginBottom": "20px",
-            "themeColorBoardLists": "#5e5e5e",
-            "content": {
-                backImg: {
-                  imgSrc: 'https://www.qcourse.com/images/pictrue.jpg'
-                },
-                text: {
-                  textHtml: '小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例'
-                }
-            }
-          },
-          {
-            "dataType": "pictrueTxtGroupTwo",
-            "backgroundColor": "rgb(90, 255, 100)",
-            "marginTop": "20px",
-            "marginBottom": "20px",
-            "themeColorBoardLists": "#5e5e5e",
-            "content": {
-                backImg: {
-                  imgSrc: 'https://www.qcourse.com/images/pictureBack.jpg'
-                },
-                text: {
-                  textHtml: '小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例'
-                }
-            }
-          },
-          {
-            "dataType": "pictrueTurntable",
-            "backgroundColor": "rgb(90, 255, 100)",
-            "marginTop": "20px",
-            "marginBottom": "20px",
-            "themeColorBoardLists": "#5e5e5e",
-            "content": {
-              slide: [
-                {
-                  backImg: {
-                    imgSrc: 'https://www.qcourse.com/images/pictrueSingle.png'
-                  }
-                },
-                {
-                  backImg: {
-                    imgSrc: 'https://www.qcourse.com/images/pictrue.jpg'
-                  }
-                },
-                {
-                  backImg: {
-                    imgSrc: 'https://www.qcourse.com/images/pictrueSingle.png'
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "dataType": "mmAudio",
-            "backgroundColor": "rgb(255, 255, 255)",
-            "marginTop": "20px",
-            "marginBottom": "20px",
-            "themeColorBoardLists": "#5e5e5e",
-            "content": {
-              "textLi": {
-                "text": "小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例",
-                "duration": "00:00",
-                "audioTheme": "https://www.qcourse.com/uploads/users/icons//5a6abfe8bc554.png"
-              }
-            }
-          },
-          {
-            "dataType": "mmVideo",
-            "backgroundColor": "rgb(255, 255, 255)",
-            "marginTop": "20px",
-            "marginBottom": "20px",
-            "themeColorBoardLists": "#5e5e5e",
-            "content": {
-              "video": "",
-              "text": "",
-              "duration": "00:00",
-              "poster": "",
-              "type": 1,
-              "vid": "",
-              "polyvVid": ""
-            }
-          },
-          {
-            "dataType": "mmAttachment",
-            "backgroundColor": "rgb(255, 255, 255)",
-            "marginTop": "20px",
-            "marginBottom": "20px",
-            "themeColorBoardLists": "#5e5e5e",
-            "content": {
-              "attachment": "",
-              "text": "还没有添加附件",
-              "size": null
-            }
-          },
-          {
-            "dataType": "mmCode",
-            "backgroundColor": "rgb(255, 255, 255)",
-            "marginTop": "20px",
-            "marginBottom": "20px",
-            "themeColorBoardLists": "#5e5e5e",
-            "content": {
-              "text": "程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例"
-            }
-          },
-          {
-            "dataType": "iAccordion",
-            "backgroundColor": "rgb(255, 255, 255)",
-            "marginTop": "20px",
-            "marginBottom": "20px",
-            "themeColorBoardLists": "#5e5e5e",
-            "content": {
-              "items": [{
-                  "title": "拥抱发现",
-                  "text": "每一个创造性的努力需要你承担风险。如果你尝试不成功，你还是学到了一些东西。",
-                  "img": "https://www.qcourse.com/images/interactionBg.png"
-                },
-                {
-                  "title": "获得洞察力",
-                  "text": "每一个创造性的努力需要你承担风险。如果你尝试不成功，你还是学到了一些东西。",
-                  "img": "https://www.qcourse.com/images/interactionBg.png"
-                },
-                {
-                  "title": "是他真实",
-                  "text": "每一个创造性的努力需要你承担风险。如果你尝试不成功，你还是学到了一些东西。",
-                  "img": "https://www.qcourse.com/images/interactionBg.png"
-                }
-              ]
-            }
-          },
-          {
-            "dataType": "iPagetab",
-            "backgroundColor": "rgb(255, 255, 255)",
-            "marginTop": "20px",
-            "marginBottom": "20px",
-            "themeColorBoardLists": "#5e5e5e",
-            "content": {
-              "items": [{
-                  "title": "程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例",
-                  "text": "每一个创造性的努力需要你承担风险。如果你尝试不成功，你还是学到了一些东西。",
-                  "img": "https://www.qcourse.com/images/interactionBg.png"
-                },
-                {
-                  "title": "程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例",
-                  "text": "每一个创造性的努力需要你承担风险。如果你尝试不成功，你还是学到了一些东西。",
-                  "img": "https://www.qcourse.com/images/interactionBg.png"
-                },
-                {
-                  "title": "程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例",
-                  "text": "",
-                  "img": "https://www.qcourse.com/images/interactionBg.png"
-                }
-              ]
-            }
-          },
-          {
-            "dataType": "iPageturning",
-            "backgroundColor": "rgb(255, 255, 255)",
-            "marginTop": "20px",
-            "marginBottom": "20px",
-            "themeColorBoardLists": "#5e5e5e",
-            "content": {
-              "items": [{
-                  "face": {
-                    "type": "text",
-                    "text": "程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例",
-                    "img": ""
-                  },
-                  "back": {
-                    "type": "text",
-                    "text": "",
-                    "img": ""
-                  }
-                },
-                {
-                  "face": {
-                    "type": "text",
-                    "text": "程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例",
-                    "img": ""
-                  },
-                  "back": {
-                    "type": "text",
-                    "text": "",
-                    "img": ""
-                  }
-                },
-                {
-                  "face": {
-                    "type": "text",
-                    "text": "程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例",
-                    "img": ""
-                  },
-                  "back": {
-                    "type": "text",
-                    "text": "",
-                    "img": ""
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "dataType": "iQuizzes",
-            "backgroundColor": "rgb(255, 255, 255)",
-            "marginTop": "20px",
-            "marginBottom": "20px",
-            "themeColorBoardLists": "#5e5e5e",
-            "content": {
-              "items": [{
-                  "type": "judge",
-                  "typeName": "判断",
-                  "question": "程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例",
-                  "analysis": "程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例小程序样式示例",
-                  "answerIndex": "0",
-                  "answerItems": [
-                    "对",
-                    "错"
-                  ]
-                },
-                {
-                  "type": "multiselect",
-                  "typeName": "多选",
-                  "question": "习近平同志在欧美同学会成立100周年庆祝大会上的讲话中说：“希望广大留学人员继承和发扬留学报国的关荣传统，做爱国主义的坚守者和传播者，秉持„先天下之忧而忧，后天下之乐而乐‟的人生理想，始终把国家富强，民族振兴，人民幸福作为努力志向，自居使个人成功的果实结在爱国主义这棵常青树上。”个人成功的果实之所以应该结在爱国主义这棵常青树上，是以为内爱国主义是？",
-                  "analysis": "",
-                  "answerIndex": "0",
-                  "answerItems": [
-                    "个人实现人生价值的力量源泉",
-                    "个人实现人生价值的直接条件",
-                    "个人成功的根本保障",
-                    "个人成功的决定性因素"
-                  ]
-                },
-                {
-                  "type": "select",
-                  "typeName": "单选",
-                  "question": "习近平同志在欧美同学会成立100周年庆祝大会上的讲话中说：“希望广大留学人员继承和发扬留学报国的关荣传统，做爱国主义的坚守者和传播者，秉持„先天下之忧而忧，后天下之乐而乐‟的人生理想，始终把国家富强，民族振兴，人民幸福作为努力志向，自居使个人成功的果实结在爱国主义这棵常青树上。”个人成功的果实之所以应该结在爱国主义这棵常青树上，是以为内爱国主义是？",
-                  "analysis": "",
-                  "answerIndex": "0",
-                  "answerItems": [
-                    "物理学是一种与化学相关的学科，是研究物体化学变化及特性的科学课程。",
-                    "物理学研究探索分析宇宙发生的现象，但不用了解其规则。",
-                    "物理学是关于大自然规律的知识。",
-                    "注重于研究物质、能量、空间、时间，尤其是它们各自的性质与彼此之间的相互关系。"
-                  ]
-                }
-              ]
-            }
-          },
-          {
-            "dataType": "pbKeepon",
-            "backgroundColor": "rgb(0, 255, 255)",
-            "marginTop": "20px",
-            "marginBottom": "20px",
-            "themeColorBoardLists": "#5e5e5e",
-            "content": {
-              "text": "继续",
-              "textSelect": "pbContinueNext"
-            }
-          },
-          {
-            "dataType": "pbAward",
-            "backgroundColor": "rgb(255, 255, 255)",
-            "marginTop": "20px",
-            "marginBottom": "20px",
-            "themeColorBoardLists": "#5e5e5e",
-            "content": {
-              "text": "您的支持是作者最大的动力",
-              "rewardImg": "https://www.qcourse.com/images/grant.png"
-            }
-          },
-          {
-            "dataType": "pbPayOff",
-            "backgroundColor": "rgb(255, 0, 5)",
-            "marginTop": "20px",
-            "marginBottom": "20px",
-            "themeColorBoardLists": "#5e5e5e",
-            "content": {
-              "text": "支付2元",
-              "payMoney": "2",
-              "pbPayId": "pbPayment_1"
-            }
-          },
-          {
-            "dataType": "pbSplitter",
-            "backgroundColor": "rgb(255, 0, 255)",
-            "marginTop": "20px",
-            "marginBottom": "20px",
-            "themeColorBoardLists": "#5e5e5e",
-            "content": {
-              "linewidth": 800,
-              "lineheight": 1,
-              "linecolor": "rgb(221, 221, 221)"
-            }
-          }
-        ],
-        "price": [{
-            "subid": "1",
-            "price": "2",
-            "discount": 100,
-            "typeName": "pay"
-          },
-          {
-            "subid": -1,
-            "discount": 100,
-            "typeName": "rewardRandom"
-          }
         ]
       }
     }
   },
   onLoad: function () {
+    // common.request.productInfo({
+    //   data: {
+    //     pid: '2226'
+    //   },
+    //   success: function(res){
+    //     console.log(res)
+    //   }
+    // });
     var that = this,
         wholeSet = this.data.dataContent.json.wholeSet,
+        con = this.data.dataContent.json.content,
         color = '#333';
     if(that.data.dataContent.pic == ''){
       this.setData({
@@ -709,21 +375,41 @@ Page({
     this.setData({
       'baseData.color': color
     });
-    // this.imageSize();
+    console.log(this)
+    // for(var i = 0; i < con.length; i++){
+    //   var dataType = con[i].dataType;
+    //   if(dataType == 'iAccordion'){
+    //     //折叠栏
+    //     for(var iAcci = 0; iAcci < con[i].content.items.length; iAcci++){
+    //       var iAccordion = con[i].content.items[iAcci];
+    //       iAccordion.animate = '';
+    //     }
+    //   }
+    // }
+    // console.log(con[0])
+    // this.animation = iAccordion.animation(this);
+
+    // this.animation.rotateY(90).step();
+    // this.setData({
+    //   'iAccordion.iAccordionAnimate': this.animation.export()
+    // });
+    
     
   },
   onReady: function(){
     this.dialog = this.selectComponent("#tab");
+    // this.iAccordion = this.selectComponent("#iAccordion");
+  },
+  iAccordion: function(e){
+    var index = e.target.dataset.index;
+    console.log(index)
+    this.animation.rotateY(0).step();
+
+    this.setData({
+      animate2: this.animation.export()
+    });
+  },
+  _iAccordionDown: function(){
+      console.log('iAccordionUp')
   }
-  // imageSize: function(e){
-  //   console.log(e)
-  //   var imageWidth = e.detail.width,
-  //       imageHeight = e.detail.height;
-  //   console.log(this)
-  //   if(imageHeight >= 82){
-  //     this.setData({
-  //       'baseData.logoHeight': 82
-  //     });
-  //   }
-  // }
 })

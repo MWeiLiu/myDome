@@ -3,6 +3,7 @@
   "navigationBarTitleText": "测试",
   "usingComponents": {
     "dialog": "/components/Dialog/dialog",
-    "tab": "/components/Tab/tab"
+    "tab": "/components/Tab/tab",
+    "iAccordion": "/components/iAccordion/iAccordion"
   }
 }

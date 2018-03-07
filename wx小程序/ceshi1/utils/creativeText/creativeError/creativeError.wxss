@@ -3,17 +3,19 @@
     width: 100%;
     padding: 16px 15px;
     border: 1px solid #C63636;
-    background: rgba(255,214,206,0.50);
+    overflow: hidden;
 }
 
 .creativeError image {
     width: 20px;
     height: 20px;
-    margin: 8px 5px 0 0;
+    margin: 3px 14px 0 0;
     vertical-align: middle;
     float: left;
 }
 
 .creativeError text {
+    display: block;
+    margin-left:34px;
     color: #C63636;
 }

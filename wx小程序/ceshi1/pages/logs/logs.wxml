@@ -2,12 +2,31 @@
 <include src="../../utils/common/common.wxml"/>
 
 <view class="box">
-    <include src="../../utils/header/header.wxml"/>
+    <!--<include src="../../utils/header/header.wxml"/>-->
     <view class="previewContent">
-        <include src="../../utils/describe/describe.wxml"/>
+        <!--<include src="../../utils/describe/describe.wxml"/>-->
         <view class="content boxsize">
             <block wx:for="{{dataContent.json.content}}" wx:key="*this">
-                <template is="{{item.dataType}}" data="{{item,baseData}}"/>
+                <block wx:if="{{item.dataType == 'iPagetab'}}">
+                    <view>1-1--1-1-1-1-1-1-1-1-1-1-1--1-11-1-1--1-1-1--1-1-1</view>
+                </block>
+                <block wx:elif="{{item.dataType == 'iAccordion'}}">
+                    <view style="background-color:{{item.backgroundColor}};padding-top:{{item.marginTop}};padding-bottom:{{item.marginBottom}};">
+                        <iAccordion id="iAccordion" data="{{item}}"></iAccordion>
+                    </view>
+                </block>
+                <block wx:elif="{{item.dataType == 'iPageturning'}}">
+                    <view>1-1--1-1-1-1-1-1-1-1-1-1-1--1-11-1-1--1-1-1--1-1-1</view>
+                </block>
+                <block wx:elif="{{item.dataType == 'iQuizzes'}}">
+                    <view>1-1--1-1-1-1-1-1-1-1-1-1-1--1-11-1-1--1-1-1--1-1-1</view>
+                </block>
+                <block wx:elif="{{item.dataType == 'pbAward'}}">
+                    <view>1-1--1-1-1-1-1-1-1-1-1-1-1--1-11-1-1--1-1-1--1-1-1</view>
+                </block>
+                <block wx:else>
+                    <template is="{{item.dataType}}" data="{{item,baseData}}"/>
+                </block>
             </block>
 
 

@@ -1,23 +1,29 @@
 // var getApp = getApp();
 var common = {
     rootUrl: 'https://www.qcourse.com',
-    token: 'NGQ5MjczNjEyYTAxNzAyNjgyOGJkNmIyZmZlNDdiNDk=',
+    token: 'NDE5NTc2NJkyYzBiN2UyYTg3MWJmOdBmMGQ4MTZmMDc%3D',
     reg: {
         colorHexReg: /^#([0-9a-fA-f]{3}|[0-9a-fA-f]{6})$/
     },
-    request: function (options){
-        wx.request({
-            url: options.url,
-            data: options.data || {},
-            header: {
-                QCTKA: 'NGQ5MjczNJEyYTAxNZAyNjgYOGJkNMIyZmZlNDdiNDk='
-            },
-            method: options.method || 'POST',
-            dataType: 'json',
-            success: options.success,
-            fail: options.success,
-            complete: options.success,
-        })
+    request: {
+        requestData: function (options){
+            console.log(options)
+            wx.request({
+                url: options.url,
+                data: options.data || {},
+                header: {
+                    QCTKA: common.token
+                },
+                method: options.method || 'POST',
+                dataType: 'json',
+                success: options.success,
+                fail: options.fail || function(){},
+            })
+        },
+        productInfo: function(options){
+            options.url = common.rootUrl + '/user/product-info-nologin';
+            this.requestData(options);
+        }
     },
     fn: {
         //color 16进制转rgb

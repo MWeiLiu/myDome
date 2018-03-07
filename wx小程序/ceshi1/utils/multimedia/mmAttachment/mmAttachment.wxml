@@ -1,0 +1,10 @@
+<!-- 代码区template -->
+<template name="mmAttachment">
+    <view class="mmAttachment multimedia" style="background-color:{{item.backgroundColor}};padding-top:{{item.marginTop}};padding-bottom:{{item.marginBottom}};">
+        <view class="contentTextStyle">
+            <view class="fileTitle showByStep">{{item.content.text}}</view>
+            <view class="fileSize">{{item.content.size}}</view>
+        </view>
+        <image src="https://www.qcourse.com/images/downloadIcon.png"></image>
+    </view>
+</template>

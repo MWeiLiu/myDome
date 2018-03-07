@@ -1,0 +1,29 @@
+
+.iAccordion .iAccordionBox {
+    height: 54px;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(159,163,167,.4);
+}
+
+.iAccordion .iAccordionBox:first-child {
+    border-top: 1px solid rgba(159,163,167,.4);
+}
+
+.iAccordion .iAccordionTitle {
+    height: 54px;
+    overflow: hidden;
+    line-height: 54px;
+    letter-spacing: 1.1px;
+    font-weight: 900;
+}
+
+.iAccordion .iAccordionTitle text {
+    float: left;
+}
+
+.iAccordion .iAccordionTitle image {
+    float: right;
+    width: 13px;
+    height: 13px;
+    margin-top:22px;
+}

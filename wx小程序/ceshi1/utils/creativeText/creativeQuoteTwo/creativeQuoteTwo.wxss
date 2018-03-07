@@ -3,4 +3,5 @@
     width: 80px;
     float: left;
     margin-right: 12px;
+    margin-top: 2px;
 }

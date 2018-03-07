@@ -21,7 +21,7 @@
 .contentTitleStyle {
     color: #333333;
 	font-size: 20px;
-    letter-spacing: 1.9px;
+    letter-spacing: 2px;
     line-height: 28px;
     font-weight: 600;
 }
@@ -39,7 +39,7 @@
 .contentTextStyle {
 	color: #333333;
 	font-size: 16px;
-    letter-spacing: 1.2px;
+    letter-spacing: 1.5px;
     line-height: 28px;
 }
 
@@ -65,7 +65,6 @@
     letter-spacing: 6px;
 }
 
-
 .boxsize {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -73,15 +72,17 @@
     box-sizing: border-box;
 }
 
+/*超出文字显示...*/
+.showByStep {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
 .backgroundImageStyle{
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-page {
-    font-size: 16px;
-    color: #333;
 }
 
 swiper {

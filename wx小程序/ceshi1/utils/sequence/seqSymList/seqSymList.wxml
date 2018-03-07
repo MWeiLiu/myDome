@@ -1,4 +1,4 @@
-<!-- 圆序列emplate -->
+<!-- 圆序列template -->
 <template name="seqSymList">
     <view class="seqSymList sequence" style="background-color:{{item.backgroundColor}};padding-top:{{item.marginTop}};padding-bottom:{{item.marginBottom}};">
         <view class="contentTextStyle" wx:for="{{item.content.textLi}}" wx:key="*this">

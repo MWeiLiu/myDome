@@ -1,6 +1,6 @@
 <view class="companyInfo boxsize">
     <view class="shiftTop">
-        <image src="{{dataContent.json.wholeSet.userLogo}}" bindload="imageSize" mode="aspectFit" style="height: {{logoHeight}};"></image>
+        <image src="{{dataContent.json.wholeSet.userLogo}}" mode="aspectFit" style="height: {{logoHeight}};"></image>
     </view>
     <view class="summary">
         <text>{{dataContent.json.wholeSet.summary}}</text>

@@ -1,4 +1,4 @@
-<!-- 方序列emplate -->
+<!-- 方序列template -->
 <template name="seqCheckBoxList">
     <view class="seqCheckBoxList sequence" style="background-color:{{item.backgroundColor}};padding-top:{{item.marginTop}};padding-bottom:{{item.marginBottom}};">
         <view class="contentTextStyle" wx:for="{{item.content.textLi}}" wx:key="*this">

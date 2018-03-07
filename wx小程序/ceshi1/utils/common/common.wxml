@@ -33,3 +33,8 @@
 <import src="../../utils/pageBreaks/pbKeepon/pbKeepon.wxml"/>
 <import src="../../utils/pageBreaks/pbPayOff/pbPayOff.wxml"/>
 <import src="../../utils/pageBreaks/pbSplitter/pbSplitter.wxml"/>
+
+<!--多媒体template-->
+<import src="../../utils/multimedia/mmCode/mmCode.wxml"/>
+<import src="../../utils/multimedia/mmAttachment/mmAttachment.wxml"/>
+
