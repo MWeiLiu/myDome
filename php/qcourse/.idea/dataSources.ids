@@ -883,7 +883,7 @@ subid</columns>
         <comment>S:私有
 P:公开
 F:针对某些人公开</comment>
-        <data-type>enum(&apos;S&apos;, &apos;F&apos;, &apos;P&apos;)</data-type>
+        <data-type>enum(&apos;S&apos;, &apos;F&apos;, &apos;P&apos;, &apos;D&apos;)</data-type>
         <default-expression>&apos;S&apos;</default-expression>
       </column>
       <column id="218" parent="16" name="sharepass">
