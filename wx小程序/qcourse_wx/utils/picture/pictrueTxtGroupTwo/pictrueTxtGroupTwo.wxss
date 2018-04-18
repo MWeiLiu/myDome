@@ -1,0 +1,9 @@
+
+.pictrueTxtGroupTwo {
+    width: 100%;
+    padding: 60rpx 28rpx;
+}
+
+.pictrueTxtGroupTwo text {
+    color: #fff;
+}

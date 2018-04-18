@@ -1,0 +1,10 @@
+<!-- 购买列表 -->
+<view class="purchaseBox">
+    <view class="purchasePname">{{data.purchasePname}}</view>
+    <view class="purchaseInfo">
+        <text class="author">{{data.author}}</text>
+        <view class="endTime">
+            {{data.endTime}}<text>到期</text>
+        </view>
+    </view>
+</view>

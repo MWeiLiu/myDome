@@ -1,0 +1,211 @@
+<import src='../../utils/pageBreaks/pbAward/pbAward.wxml'/>
+<import src='../../utils/pageBreaks/pbKeepon/pbKeepon.wxml'/>
+<import src='../../utils/pageBreaks/pbPayOff/pbPayOff.wxml'/>
+<import src='../../utils/pageBreaks/pbSplitter/pbSplitter.wxml'/>
+<template name="common">
+    <block name='previewContent' wx:for="{{dataList ? dataList : content}}" wx:key="*this">
+        <!--纯文本-->
+        <block wx:if="{{item.dataType == 'title'}}">
+            <view class="contentTextStyle" style="background-color:{{item.backgroundColor}}; padding-top:{{item.marginTop}}; padding-bottom:{{item.marginBottom}};">
+                <title id="title" data="{{item}}"></title>
+            </view>
+        </block>
+        <block wx:elif="{{item.dataType == 'ptTextTitle' || item.dataType == 'titleParagraphGroup'}}">
+            <view style="background-color:{{item.backgroundColor}}; padding-top:{{item.marginTop}}; padding-bottom:{{item.marginBottom}};">
+                <ptTextTitle id="ptTextTitle" data="{{item}}"></ptTextTitle>
+            </view>
+        </block>
+        <block wx:elif="{{item.dataType == 'ptStageTitle' || item.dataType == 'ViceTitle'}}">
+            <view style="background-color:{{item.backgroundColor}}; padding-top:{{item.marginTop}}; padding-bottom:{{item.marginBottom}};">
+                <ptStageTitle id="ptStageTitle" data="{{item}}"></ptStageTitle>
+            </view>
+        </block>
+        <block wx:elif="{{item.dataType == 'ptOnlyTitle'}}">
+            <view style="background-color:{{item.backgroundColor}}; padding-top:{{item.marginTop}}; padding-bottom:{{item.marginBottom}};">
+                <ptOnlyTitle id="ptOnlyTitle" data="{{item}}"></ptOnlyTitle>
+            </view>
+        </block>
+        <block wx:elif="{{item.dataType == 'ptOnlyText'}}">
+            <view style="background-color:{{item.backgroundColor}}; padding-top:{{item.marginTop}}; padding-bottom:{{item.marginBottom}};">
+                <ptOnlyText id="ptOnlyText" data="{{item}}"></ptOnlyText>
+            </view>
+        </block>
+        <block wx:elif="{{item.dataType == 'ptOnlyStageTitle'}}">
+            <view style="background-color:{{item.backgroundColor}}; padding-top:{{item.marginTop}}; padding-bottom:{{item.marginBottom}};">
+                <ptOnlyStageTitle id="ptOnlyStageTitle" data="{{item}}"></ptOnlyStageTitle>
+            </view>
+        </block>
+        <block wx:elif="{{item.dataType == 'ptDoubleCol'}}">
+            <view style="background-color:{{item.backgroundColor}}; padding-top:{{item.marginTop}}; padding-bottom:{{item.marginBottom}};">
+                <ptDoubleCol id="ptDoubleCol" data="{{item}}"></ptDoubleCol>
+            </view>
+        </block>
+
+        <!--创意文本-->
+        <block wx:elif="{{item.dataType == 'creativeDeclareOne'}}">
+            <view style="background-color:{{item.backgroundColor}}; padding-top:{{item.marginTop}}; padding-bottom:{{item.marginBottom}};">
+                <creativeDeclareOne id="creativeDeclareOne" data="{{item}}"></creativeDeclareOne>
+            </view>
+        </block>
+        <block wx:elif="{{item.dataType == 'creativeDeclareTwo'}}">
+            <view style="background-color:{{item.backgroundColor}}; padding-top:{{item.marginTop}}; padding-bottom:{{item.marginBottom}};">
+                <creativeDeclareTwo id="creativeDeclareTwo" data="{{item}}"></creativeDeclareTwo>
+            </view>
+        </block>
+        <block wx:elif="{{item.dataType == 'creativeDeclareThre'}}">
+            <view style="background-color:{{item.backgroundColor}}; padding-top:{{item.marginTop}}; padding-bottom:{{item.marginBottom}};">
+                <creativeDeclareThre id="creativeDeclareThre" data="{{item}}"></creativeDeclareThre>
+            </view>
+        </block>
+        <block wx:elif="{{item.dataType == 'creativeError'}}">
+            <view style="background-color:{{item.backgroundColor}}; padding-top:{{item.marginTop}}; padding-bottom:{{item.marginBottom}};">
+                <creativeError id="creativeError" data="{{item}}"></creativeError>
+            </view>
+        </block>
+        <block wx:elif="{{item.dataType == 'creativeQuoteOne'}}">
+            <view style="background-color:{{item.backgroundColor}}; padding-top:{{item.marginTop}}; padding-bottom:{{item.marginBottom}};">
+                <creativeQuoteOne id="creativeQuoteOne" data="{{item}}"></creativeQuoteOne>
+            </view>
+        </block>
+        <block wx:elif="{{item.dataType == 'creativeQuoteTwo'}}">
+            <view style="background-color:{{item.backgroundColor}}; padding-top:{{item.marginTop}}; padding-bottom:{{item.marginBottom}};">
+                <creativeQuoteTwo id="creativeQuoteTwo" data="{{item}}"></creativeQuoteTwo>
+            </view>
+        </block>
+        <block wx:elif="{{item.dataType == 'creativeTitTxtGroup'}}">
+            <view style="background:{{item.backgroundColor + ' center center / cover no-repeat'}}; margin: 0 24rpx;padding-top:{{item.marginTop}}; padding-bottom:{{item.marginBottom}};">
+                <creativeTitTxtGroup id="creativeTitTxtGroup" data="{{item}}"></creativeTitTxtGroup>
+            </view>
+        </block>
+
+        <!--序列-->
+        <block wx:elif="{{item.dataType == 'seqSymList'}}">
+            <view style="background-color:{{item.backgroundColor}}; padding-top:{{item.marginTop}}; padding-bottom:{{item.marginBottom}};">
+                <seqSymList id="seqSymList" data="{{item}}"></seqSymList>
+            </view>
+        </block>
+        <block wx:elif="{{item.dataType == 'seqNumList'}}">
+            <view style="background-color:{{item.backgroundColor}}; padding-top:{{item.marginTop}}; padding-bottom:{{item.marginBottom}};">
+                <seqNumList id="seqNumList" data="{{item}}"></seqNumList>
+            </view>
+        </block>
+        <block wx:elif="{{item.dataType == 'seqCheckBoxList'}}">
+            <view style="background-color:{{item.backgroundColor}}; padding-top:{{item.marginTop}}; padding-bottom:{{item.marginBottom}};">
+                <seqCheckBoxList id="seqCheckBoxList" data="{{item}}"></seqCheckBoxList>
+            </view>
+        </block>
+
+        <!--流程-->
+        <block wx:elif="{{item.dataType == 'qProcess'}}">
+            <view style="background-color:{{item.backgroundColor}}; padding-top:{{item.marginTop}}; padding-bottom:{{item.marginBottom}};">
+                <qProcess id="qProcess" data="{{item}}"></qProcess>
+            </view>
+        </block>
+
+        <!-- 图像 -->
+        <block wx:elif="{{item.dataType == 'pictrueSingle' || item.dataType == 'publicitysinglePictrue'}}">
+            <view style="background-color:{{item.backgroundColor}}; padding-top:{{item.marginTop}}; padding-bottom:{{item.marginBottom}};">
+                <pictrueSingle id="pictrueSingle" data="{{item}}"></pictrueSingle>
+            </view>
+        </block>
+        <block wx:elif="{{item.dataType == 'pictrueDouble'}}">
+            <view style="background-color:{{item.backgroundColor}}; padding-top:{{item.marginTop}}; padding-bottom:{{item.marginBottom}};">
+                <pictrueDouble id="pictrueDouble" data="{{item}}"></pictrueDouble>
+            </view>
+        </block>
+        <block wx:elif="{{item.dataType == 'pictrueTxtGroupOne'}}">
+            <view style="background-color:{{item.backgroundColor}}; padding-top:{{item.marginTop}}; padding-bottom:{{item.marginBottom}};">
+                <pictrueTxtGroupOne id="pictrueTxtGroupOne" data="{{item}}"></pictrueTxtGroupOne>
+            </view>
+        </block>
+        <block wx:elif="{{item.dataType == 'pictrueTxtGroupTwo'}}">
+            <view style="background-color:{{item.backgroundColor}}; padding-top:{{item.marginTop}}; padding-bottom:{{item.marginBottom}};">
+                <pictrueTxtGroupTwo id="pictrueTxtGroupTwo" data="{{item}}"></pictrueTxtGroupTwo>
+            </view>
+        </block>
+        <block wx:elif="{{item.dataType == 'pictrueTurntable'}}">
+            <view style="background-color:{{item.backgroundColor}}; padding-top:{{item.marginTop}}; padding-bottom:{{item.marginBottom}};">
+                <pictrueTurntable id="pictrueTurntable" data="{{item}}"></pictrueTurntable>
+            </view>
+        </block>
+        
+        <!-- 多媒体 -->
+        <block wx:elif="{{item.dataType == 'mmAttachment'}}">
+            <view style="background-color:{{item.backgroundColor}}; padding-top:{{item.marginTop}}; padding-bottom:{{item.marginBottom}};">
+                <mmAttachment id="mmAttachment" data="{{item}}"></mmAttachment>
+            </view>
+        </block>
+        <block wx:elif="{{item.dataType == 'mmCode'}}">
+            <view style="background-color:{{item.backgroundColor}}; padding-top:{{item.marginTop}}; padding-bottom:{{item.marginBottom}};">
+                <mmCode id="mmCode" data="{{item}}"></mmCode>
+            </view>
+        </block>
+
+        <!-- 互动 -->
+        <block wx:elif="{{item.dataType == 'iAccordion'}}">
+            <view style="background-color:{{item.backgroundColor}}; padding-top:{{item.marginTop}}; padding-bottom:{{item.marginBottom}};">
+                <iAccordion id="iAccordion" data="{{item}}"></iAccordion>
+            </view>
+        </block>
+        <block wx:elif="{{item.dataType == 'iPagetab'}}">
+            <view style="background-color:{{item.backgroundColor}}; padding-top:{{item.marginTop}}; padding-bottom:{{item.marginBottom}};">
+                <iPagetab id="iPagetab" data="{{item}}"></iPagetab>
+            </view>
+        </block>
+        <block wx:elif="{{item.dataType == 'iPageturning'}}">
+            <view style="background-color:{{item.backgroundColor}}; padding-top:{{item.marginTop}}; padding-bottom:{{item.marginBottom}};">
+                <iPageturning id="pbKeepon" data="{{item}}"></iPageturning>
+            </view>
+        </block>
+        <block wx:elif="{{item.dataType == 'iQuizzes'}}">
+            <view style="background-color:{{item.backgroundColor}}; padding-top:{{item.marginTop}}; padding-bottom:{{item.marginBottom}};">
+                <iQuizzes id="iQuizzes" data="{{item}}"></iQuizzes>
+            </view>
+        </block>
+
+        <!-- 分隔符 -->
+        <block wx:elif="{{item.dataType == 'pbKeepon'}}">
+            <view style="background-color:{{item.backgroundColor}}; padding-top:{{item.marginTop}}; padding-bottom:{{item.marginBottom}};">
+                <template is="pbKeepon" data="{{...options, item}}"></template>
+            </view>
+        </block>
+        <block wx:elif="{{item.dataType == 'pbPayOff'}}">
+            <view style="background-color:{{item.backgroundColor}}; padding-top:{{item.marginTop}}; padding-bottom:{{item.marginBottom}};">
+                <template is="pbPayOff" data="{{...options, item}}"></template>
+            </view>
+        </block>
+        <block wx:elif="{{item.dataType == 'pbAward'}}">
+            <view style="background-color:{{item.backgroundColor}}; padding-top:{{item.marginTop}}; padding-bottom:{{item.marginBottom}};">
+                <template is="pbAward" data="{{item}}" data-rewardMoney="{{item.content.rewardMoney}}"></template>
+            </view>
+        </block>
+        <block wx:elif="{{item.dataType == 'pbSplitter'}}">
+            <view style="background-color:{{item.backgroundColor}}; padding-top:{{item.marginTop}}; padding-bottom:{{item.marginBottom}};">
+                <template is="pbSplitter" data="{{item}}"></template>
+            </view>
+        </block>
+
+        <!-- 专题 -->
+        <block wx:elif="{{item.dataType == 'curriculum'}}">
+            <view style="background-color:{{item.backgroundColor}}; padding-top:{{item.marginTop}}; padding-bottom:{{item.marginBottom}};">
+                <curriculum id="curriculum" data="{{item}}"></curriculum>
+            </view>
+        </block>
+        <block wx:elif="{{item.dataType == 'publicityArrange'}}">
+            <view style="background-color:{{item.backgroundColor}}; padding-top:{{item.marginTop}}; padding-bottom:{{item.marginBottom}};">
+                <publicityArrange id="publicityArrange" data="{{item}}"></publicityArrange>
+            </view>
+        </block>
+        <block wx:elif="{{item.dataType == 'publicitylecturer'}}">
+            <view style="background-color:{{item.backgroundColor}}; padding-top:{{item.marginTop}}; padding-bottom:{{item.marginBottom}};">
+                <publicitylecturer id="publicitylecturer" data="{{item}}"></publicitylecturer>
+            </view>
+        </block>
+        <block wx:else="{{item.dataType == 'publicityQRcode'}}">
+            <view style="background-color:{{item.backgroundColor}}; padding-top:{{item.marginTop}}; padding-bottom:{{item.marginBottom}};">
+                <publicityQRcode id="publicityQRcode" data="{{item}}"></publicityQRcode>
+            </view>
+        </block>
+    </block>
+
+</template>

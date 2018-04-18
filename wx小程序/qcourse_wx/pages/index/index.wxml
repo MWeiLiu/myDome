@@ -1,0 +1,59 @@
+<!--index.wxml-->
+<import src='../../components/multimedia/mmAudio/mmAudio.wxml'/>
+  <view class="container">
+    <swiper indicator-dots="{{purchaseList.indicatorDots}}" autoplay="{{purchaseList.autoplay}}" duration="{{purchaseList.duration}}" current="{{purchaseList.current}}">
+      <block wx:for="{{purchaseList.items}}">
+        <swiper-item>
+          <block wx:for="{{item[purchaseList.current]}}" wx:key="*this">
+            <view>
+              <img_text_img id="img_text_img" data="{{item}}" catchtap='gotoPublicity' data-pid='2374'></img_text_img>
+            </view>
+          </block>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="recentlyBrowse boxsize">
+      <view class="recentlyBrowseHeader">最近浏览</view>
+      <block wx:for="{{recentlyBrowseList}}" wx:key="*this">
+        <view>
+          <recentlyBrowseList id="recentlyBrowseList" data="{{item}}" catchtap='gotoPublicity' data-pid='2374'></recentlyBrowseList>
+        </view>
+      </block>
+    </view>
+  </view>
+
+
+
+
+
+
+<view class="container1">
+  <!-- <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view> -->
+  <view>
+    <button bindtap='gotoPublicity' style='margin-bottom:40rpx'>去专题页面</button>
+  </view>
+  <view>
+    <button bindtap='gotoPublicity1'>去专题页面1</button>
+  </view>
+  <block wx:for='{{dataContent.json.content}}' wx:key='*this'>
+    <template is="mmAudio" data="{{item}}"/>
+  </block>
+  
+  <view>
+    <video id="myVideo1" data-vid='1' src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
+    bindplay="videoOnPlay" bindpause="videoOnPause" bindended='videoOnEnd' binderror='videoOnError' bindtimeupdate='videoTimeUpdate'></video>
+  </view>
+  <view>
+    <video id="myVideo2" data-vid='2' src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
+    bindplay="videoOnPlay" bindpause="videoOnPause" bindended='videoOnEnd' binderror='videoOnError'></video>
+  </view>
+</view>

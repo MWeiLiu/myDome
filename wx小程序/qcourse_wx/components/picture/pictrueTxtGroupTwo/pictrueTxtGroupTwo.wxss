@@ -1,0 +1,13 @@
+
+@import "../../../utils/common/common.wxss";
+.pictrueTxtGroupTwo {
+    width: 100%;
+    position: relative;
+}
+
+.pictrueTxtGroupTwo text {
+    position: absolute;
+    top: 0rpx;
+    padding: 48rpx 24rpx;
+    color: #fff;
+}

@@ -1,0 +1,22 @@
+<!-- 年度计划 -->
+<template name="publicityArrange">
+    <view class="publicityArrange">
+        <view class="planTitle arrangeTextStyle">年度课程计划(示例):</view>
+        <view class="planText">
+            <view class="borderRadius"></view>
+            <view class="arrangeTextStyle">年度课程计划1</view>
+        </view>
+        <view class="planText">
+            <view class="borderRadius"></view>
+            <view class="arrangeTextStyle">年度课程计划1</view>
+        </view>
+        <view class="planText">
+            <view class="borderRadius"></view>
+            <view class="arrangeTextStyle">年度课程计划1年度课程计划划年度课程计划1年度课程计划1</view>
+        </view>
+        <view class="planText">
+            <view class="borderRadius"></view>
+            <view class="arrangeTextStyle">年度课程计划1</view>
+        </view>
+    </view>
+</template>

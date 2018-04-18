@@ -1,0 +1,11 @@
+<!-- 引言1template -->
+<template name="creativeQuoteOne">
+    <view class="creativeQuoteOne textAlign_center" style="background-color:{{item.backgroundColor}};padding-top:{{item.marginTop}};padding-bottom:{{item.marginBottom}};">
+        <view class="contentTextStyle">
+            <text>{{item.content.text.textHtml}}</text>
+        </view>
+        <view class="cardUserName">
+            <text>{{item.content.userName.textHtml}}</text>
+        </view>
+    </view>
+</template>

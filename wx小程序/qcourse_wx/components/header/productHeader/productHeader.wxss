@@ -1,0 +1,47 @@
+
+@import "../../../utils/common/common.wxss";
+.header .shade1 {
+    padding: 52rpx 24rpx;
+
+}
+
+.header .changeBox {
+    margin: 0 auto;
+}
+
+.header .changeInfoBoxs {
+    padding-left: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.header .changeInfoBoxs .panme {
+    font-size: 72rpx;
+    letter-spacing: 6rpx;
+    line-height: 100rpx;
+}
+
+.header .changeInfoBoxs .courseSubtitle {
+    font-size: 40rpx;
+    letter-spacing: 3.8px;
+    line-height: 56rpx;
+    margin-bottom: 40rpx;
+}
+
+.header .changeInfoBoxs .userIcoBox {
+    float: left;
+}
+
+.header .changeInfoBoxs .userIcoBox image{
+    width: 54rpx;
+    height: 54rpx;
+    margin-right: 16rpx;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.header .changeInfoBoxs .userIcoBox text{
+    font-size: 28rpx;
+    letter-spacing: 9.34rpx;
+    line-height: 48rpx;
+}

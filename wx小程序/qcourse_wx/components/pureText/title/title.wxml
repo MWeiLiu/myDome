@@ -1,0 +1,28 @@
+<!-- 多样式标题template -->
+
+<template name="title">
+    <view class="title" style="background-color:{{item.backgroundColor}};padding-top:{{item.marginTop}};padding-bottom:{{item.marginBottom}};">
+        <block wx:if="{{item.replaceNumber == '1'}}">
+            <view class="contentTitleStyle" style="text-align: {{item.content.textAlign}};">{{item.content.title}}</view>
+        </block>
+        <block wx:if="{{item.replaceNumber == '2'}}">
+            <view class="replaceNumber2 qFlex qFlexJustifyAround qFlexAlignCenter">
+                <view></view>
+                <view class="contentTitleStyle">{{item.content.title}}</view>
+                <view></view>
+            </view>
+        </block>
+        <block wx:if="{{item.replaceNumber == '3'}}">
+            <view class="replaceNumber3">
+                <view class="contentTitleStyle" style="text-align: {{item.content.textAlign}};">{{item.content.title}}</view>
+            </view>
+        </block>
+        <block wx:if="{{item.replaceNumber == '4'}}">
+            <view class="replaceNumber4 qFlex qFlexJustifyCenter qFlexAlignCenter">
+                <text>~</text>
+                <text class="contentTitleStyle">{{item.content.title}}</text>
+                <text>~</text>
+            </view>
+        </block>
+    </view>
+</template>

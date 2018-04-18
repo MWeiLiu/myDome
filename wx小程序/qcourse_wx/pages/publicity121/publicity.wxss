@@ -1,0 +1,17 @@
+/* pages/publicity/publicity.wxss */
+@import '../../utils/common/common.wxss';
+@import "../../utils/publicity/publicityHeader/publicityHeader.wxss";
+@import "../../utils/publicity/publicityLecturer/publicityLecturer.wxss";
+@import "../../utils/publicity/publicityArrange/publicityArrange.wxss";
+@import "../../utils/publicity/publicityQrcode/publicityQrcode.wxss";
+@import "../../components/iPageturning/iPageturning.wxss";
+@import "../../components/iQuizzes/iQuizzes.wxss";
+
+.pubContentList {
+    margin-top: 72rpx;
+    padding: 0 24rpx;
+}
+
+.pubContentList > view {
+    margin: 40rpx 0;
+}

@@ -1,0 +1,42 @@
+
+
+
+.purchaseBox {
+    margin: 0 12rpx;
+    border-bottom: 2rpx dashed #ddd;
+    overflow: hidden;
+}
+.purchasePname {
+    float: left;
+    width: 390rpx;
+    padding-top: 26rpx;
+    height: 100rpx;
+    font-size: 28rpx;
+    color: #333333;
+    letter-spacing: 3rpx;
+    line-height: 36rpx;
+}
+
+.purchaseInfo {
+    float: right;
+    width: 245rpx;
+    margin-top: 22rpx;
+    text-align: right;
+}
+
+.author {
+    font-size: 28rpx;
+    color: #999999;
+    letter-spacing: 2.4rpx;
+    line-height: 32rpx;
+}
+.endTime {
+    font-size: 24rpx;
+    color: #D23C3C;
+    letter-spacing: 2rpx;
+    line-height: 32rpx;
+}
+
+.endTime text {
+    color: #999999;
+}

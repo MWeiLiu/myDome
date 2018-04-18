@@ -1,0 +1,17 @@
+
+<!--tab页components/iPagetab/iPagetab.wxml-->
+<view class="iPagetab">
+    <view class="qFlex qFlexJustifyAround">
+        <view class="tab boxsize showByStep {{idx == iPagetab.swiperIndex ? 'tabActive' : ''}}" wx:for="{{iPagetab.item.items}}" wx:key="*this" wx:for-index="idx" bindtap="iPagetab" data-index="{{idx}}">{{item.title}}</view>
+    </view>
+    <swiper current="{{iPagetab.swiperIndex}}" class="tabTextBox" indicator-dots="{{iPagetab.indicatorDots}}" autoplay="{{iPagetab.autoplay}}" duration="{{iPagetab.duration}}">    
+        <block wx:for="{{iPagetab.item.items}}" wx:for-index="idx" wx:key="*this">
+            <swiper-item>
+                <view class="tabText boxsize">
+                    <text>{{item.text}}</text>
+                    <image src="{{item.img}}"></image>
+                </view>
+            </swiper-item>
+        </block>
+    </swiper>
+</view>

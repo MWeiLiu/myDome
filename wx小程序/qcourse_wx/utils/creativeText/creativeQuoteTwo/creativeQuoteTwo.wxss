@@ -1,0 +1,7 @@
+
+.userImageBox {
+    width: 160rpx;
+    float: left;
+    margin-right: 24rpx;
+    margin-top: 4rpx;
+}

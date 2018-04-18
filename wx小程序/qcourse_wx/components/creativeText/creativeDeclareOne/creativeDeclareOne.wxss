@@ -1,0 +1,5 @@
+
+@import "../../../utils/common/common.wxss";
+.creativeDeclareOne {
+    font-weight: 700;
+}

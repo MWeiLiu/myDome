@@ -1,0 +1,8 @@
+<!-- 专题作者 -->
+<template name="publicitylecturer">
+    <view class="publicitylecturer">
+        <image src="https://www.qcourse.com/uploads/products/2031/5aa5ee5506009.jpg"></image>
+        <view class="sPersonName">Q博士</view>
+        <view class="sPersonSign">互联网之父，1989年3月他正式提出万维网的设想，他最杰出的成就，是免费把万维网的构想推广到全世界，让万维网科技获得迅速的发展，深深改变了人类的生活面貌。 </view>
+    </view>
+</template>

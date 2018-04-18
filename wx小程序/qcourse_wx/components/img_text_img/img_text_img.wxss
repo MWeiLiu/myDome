@@ -1,0 +1,88 @@
+
+.showByStep {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.img_text_img.listSmall {
+    height: 112rpx;
+    padding: 0 24rpx;
+    line-height: 112rpx;
+}
+
+.img_text_img.listLarge {
+    height: 146rpx;
+    padding: 0 24rpx;
+    line-height: 146rpx;
+}
+
+.listTitle {
+    overflow:hidden;
+    border-bottom: 2rpx dashed #ddd;
+    font-size: 28rpx;
+    color: #333333;
+    letter-spacing: 2.4rpx;
+}
+
+.listSmall .listTitle view {
+    float: left;
+    width: 420rpx;
+}
+
+.listLarge .listTitle view {
+    float: left;
+    width: 390rpx;
+}
+
+.img_text_img .listInto {
+    width: 16rpx;
+    height: 28rpx;
+    float: right;
+}
+
+.img_text_img.listSmall .listInto {
+    margin-top: -72rpx;
+}
+
+.img_text_img.listLarge .listInto {
+    margin-top: -88rpx;
+}
+
+.redText {
+    float: right;
+    margin-right: 24rpx;
+    font-size: 28rpx;
+    color: #D23C3C;
+    letter-spacing: 2.4px;
+    line-height: 32rpx;
+}
+
+.unIcon .redText {
+    margin-right: 0;
+}
+
+.listSmall .redText {
+    margin-top: -74rpx;
+}
+
+.listLarge .redText {
+    margin-top: -90rpx;
+}
+
+.listTitle .small {
+    width: 32rpx;
+    height: 40rpx;
+    margin-top: 36rpx;
+    margin-right: 16rpx;
+    float: left;
+}
+
+.listTitle .large {
+    width: 96rpx;
+    height: 96rpx;
+    border-radius: 50%;
+    margin-top: 26rpx;
+    margin-right: 16rpx;
+    float: left;
+}

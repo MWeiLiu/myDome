@@ -1,0 +1,6 @@
+<!--支付template-->
+<template name="pbPayOff">
+    <view class="pageBreaks boxsize" bindtap="continueNext" data-index="{{pbKeeponIndex}}" data-continuetype="pbPayOff" data-money="{{item.content.payMoney}}" data-payid="{{item.content.pbPayId}}">
+        <text>支付{{item.content.payMoney}}元</text>
+    </view>
+</template>

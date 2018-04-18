@@ -1,0 +1,4 @@
+<!-- 摘抄Atemplate -->
+    <view class="creativeDeclareOne textAlign_center contentTextStyle">
+        <text>{{data.content.text.textHtml}}</text>
+    </view>

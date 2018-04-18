@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "购买的课程",
+    "navigationBarBackgroundColor": "#9EBC2B",
+    "navigationBarTextStyle": "#fff",
+    "usingComponents": {
+      "purchaseList": "/components/purchaseList/purchaseList"
+    }
+  }

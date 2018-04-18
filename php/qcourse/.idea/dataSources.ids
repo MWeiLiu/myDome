@@ -1,0 +1,1840 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - test_ppt_yiyaozg_com@172.18.0.12" uuid="fcaf3b41-661d-4f88-9a4a-749da8fb57e2">
+    <database-info product="MySQL" version="5.7.21-0ubuntu0.16.04.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.45 ( Revision: 9131eefa398531c7dc98776e8a3fe839e544c5b2 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="test_ppt_yiyaozg_com"/>
+      <table id="2" parent="1" name="code">
+        <comment>卡券表</comment>
+      </table>
+      <table id="3" parent="1" name="code_rule">
+        <comment>卡劵规则</comment>
+      </table>
+      <table id="4" parent="1" name="collects"/>
+      <table id="5" parent="1" name="comments"/>
+      <table id="6" parent="1" name="goods">
+        <comment>商品表</comment>
+      </table>
+      <table id="7" parent="1" name="goods_order">
+        <comment>兑换订单表</comment>
+      </table>
+      <table id="8" parent="1" name="invite_record">
+        <comment>邀请卡记录</comment>
+      </table>
+      <table id="9" parent="1" name="invite_reward">
+        <comment>邀请奖励</comment>
+      </table>
+      <table id="10" parent="1" name="invite_rule">
+        <comment>邀请表</comment>
+      </table>
+      <table id="11" parent="1" name="level_rule">
+        <comment>用户级别表</comment>
+      </table>
+      <table id="12" parent="1" name="member"/>
+      <table id="13" parent="1" name="orders"/>
+      <table id="14" parent="1" name="product_author">
+        <comment>产品作者表</comment>
+      </table>
+      <table id="15" parent="1" name="product_card">
+        <comment>作品卡片表</comment>
+      </table>
+      <table id="16" parent="1" name="product_new">
+        <comment>作品基本信息</comment>
+      </table>
+      <table id="17" parent="1" name="product_share">
+        <comment>分享内容设置</comment>
+      </table>
+      <table id="18" parent="1" name="product_stage">
+        <comment>分段标题列表</comment>
+      </table>
+      <table id="19" parent="1" name="products"/>
+      <table id="20" parent="1" name="project"/>
+      <table id="21" parent="1" name="readnums"/>
+      <table id="22" parent="1" name="rewards">
+        <comment>奖励表</comment>
+      </table>
+      <table id="23" parent="1" name="snums">
+        <comment>订阅表</comment>
+      </table>
+      <table id="24" parent="1" name="svg"/>
+      <table id="25" parent="1" name="thumbs"/>
+      <table id="26" parent="1" name="ugroups"/>
+      <table id="27" parent="1" name="upgrade_integral">
+        <comment>升级赠送对应表</comment>
+      </table>
+      <table id="28" parent="1" name="user_info">
+        <comment>用户信息</comment>
+      </table>
+      <table id="29" parent="1" name="users"/>
+      <table id="30" parent="1" name="video"/>
+      <table id="31" parent="1" name="wallet"/>
+      <table id="32" parent="1" name="wallet_records"/>
+      <column id="33" parent="2" name="id">
+        <comment>卡劵ID</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="34" parent="2" name="rule_id">
+        <comment>规则id</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="35" parent="2" name="rule_type">
+        <comment>卡券规则ID</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="36" parent="2" name="uid">
+        <comment>所有者uid</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="37" parent="2" name="ins_uid">
+        <comment>创建者uid</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="38" parent="2" name="amount">
+        <comment>优惠券金额</comment>
+        <data-type>decimal(10,2)</data-type>
+        <default-expression>&apos;0.00&apos;</default-expression>
+      </column>
+      <column id="39" parent="2" name="status">
+        <comment>卡券状态&#xd;
+0：未使用&#xd;
+1：已使用&#xd;
+2：已过期&#xd;
+3：已绑定</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="40" parent="2" name="code_no">
+        <comment>卡券号码</comment>
+        <data-type>varchar(40)</data-type>
+      </column>
+      <column id="41" parent="2" name="use_pid">
+        <comment>可用产品id&#xd;
+0：全部可用</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="42" parent="2" name="orderid">
+        <comment>订单号</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="43" parent="2" name="invalid_time">
+        <comment>失效时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+      </column>
+      <column id="44" parent="2" name="updated_time">
+        <comment>修改时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="45" parent="2" name="created_time">
+        <comment>生成时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <key id="46" parent="2" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="47" parent="3" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="48" parent="3" name="uid">
+        <comment>创建者uid</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="49" parent="3" name="length">
+        <comment>卡券长度</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;25&apos;</default-expression>
+      </column>
+      <column id="50" parent="3" name="code_head">
+        <comment>卡券头</comment>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="51" parent="3" name="num">
+        <comment>卡券数量</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;50&apos;</default-expression>
+      </column>
+      <column id="52" parent="3" name="quota">
+        <comment>限定每人领取个数&#xd;
+0：不限定</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="53" parent="3" name="amount">
+        <comment>卡券金额</comment>
+        <data-type>decimal(10,2)</data-type>
+        <default-expression>&apos;0.00&apos;</default-expression>
+      </column>
+      <column id="54" parent="3" name="type">
+        <comment>卡券类型&#xd;
+1：空间劵&#xd;
+2：脚本设计服务&#xd;
+3：小站自定义服务&#xd;
+4：H5营销设计服务&#xd;
+6：线上营销全案包&#xd;
+7：微博冲榜服务&#xd;
+8：通用优惠券&#xd;
+9：针对产品发放</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="55" parent="3" name="use_pid">
+        <comment>可用作品&#xd;
+0：全部可用</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="56" parent="3" name="status">
+        <comment>规则状态：&#xd;
+0：正常&#xd;
+1：不可领取&#xd;
+</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="57" parent="3" name="name">
+        <comment>规则名称</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="58" parent="3" name="detail">
+        <comment>规则介绍</comment>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="59" parent="3" name="valid_time">
+        <comment>有效日期</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;30&apos;</default-expression>
+      </column>
+      <column id="60" parent="3" name="updated_time">
+        <comment>修改时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="61" parent="3" name="created_time">
+        <comment>创建时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <key id="62" parent="3" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="63" parent="4" name="cid">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="64" parent="4" name="pid">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="65" parent="4" name="cuid">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="66" parent="4" name="ctime">
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <index id="67" parent="4" name="collects_cid_uindex">
+        <columns>cid</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="68" parent="4" name="collects_cid_uindex">
+        <columns>cid</columns>
+        <underlying-index>collects_cid_uindex</underlying-index>
+      </key>
+      <key id="69" parent="4" name="PRIMARY">
+        <columns>cid</columns>
+        <primary>1</primary>
+      </key>
+      <column id="70" parent="5" name="cid">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="71" parent="5" name="pid">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="72" parent="5" name="words">
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="73" parent="5" name="cuid">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="74" parent="5" name="status">
+        <data-type>enum(&apos;N&apos;, &apos;Y&apos;, &apos;S&apos;)</data-type>
+        <default-expression>&apos;N&apos;</default-expression>
+      </column>
+      <column id="75" parent="5" name="ctime">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="76" parent="5" name="fid">
+        <comment>回复id</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="77" parent="5" name="fuid">
+        <comment>被回复者id</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="78" parent="5" name="comments_cid_uindex">
+        <columns>cid</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="79" parent="5" name="comments_uid_pid_cid_pk">
+        <columns>pid
+cid</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="80" parent="5" name="comments_cid_uindex">
+        <columns>cid</columns>
+        <underlying-index>comments_cid_uindex</underlying-index>
+      </key>
+      <key id="81" parent="5" name="comments_uid_pid_cid_pk">
+        <columns>pid
+cid</columns>
+        <underlying-index>comments_uid_pid_cid_pk</underlying-index>
+      </key>
+      <key id="82" parent="5" name="PRIMARY">
+        <columns>cid</columns>
+        <primary>1</primary>
+      </key>
+      <column id="83" parent="6" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="84" parent="6" name="name">
+        <comment>名称</comment>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="85" parent="6" name="explain">
+        <comment>说明</comment>
+        <data-type>text</data-type>
+      </column>
+      <column id="86" parent="6" name="img">
+        <comment>封面图</comment>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="87" parent="6" name="num">
+        <comment>产品数量</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="88" parent="6" name="price">
+        <comment>价格</comment>
+        <data-type>decimal(10,2)</data-type>
+        <default-expression>&apos;0.00&apos;</default-expression>
+      </column>
+      <column id="89" parent="6" name="created_time">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="90" parent="6" name="updated_time">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <key id="91" parent="6" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="92" parent="7" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="93" parent="7" name="uid">
+        <comment>用户ID</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="94" parent="7" name="goods_id">
+        <comment>商品id</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="95" parent="7" name="type">
+        <comment>支付类型&#xd;
+1：积分支付&#xd;
+2：网上支付&#xd;
+3：网上+积分支付</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="96" parent="7" name="integral">
+        <comment>所用积分</comment>
+        <data-type>float(10,2)</data-type>
+      </column>
+      <column id="97" parent="7" name="amount">
+        <comment>所用金额</comment>
+        <data-type>decimal(10,2)</data-type>
+      </column>
+      <column id="98" parent="7" name="status">
+        <comment>订单状态&#xd;
+0：未支付&#xd;
+1：已支付&#xd;
+2：已过期</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="99" parent="7" name="updated_time">
+        <comment>修改时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="100" parent="7" name="created_time">
+        <comment>生成时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <key id="101" parent="7" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="102" parent="8" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="103" parent="8" name="rid">
+        <comment>邀请规则id</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="104" parent="8" name="invite_uid">
+        <comment>邀请者uid</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="105" parent="8" name="uid">
+        <comment>被邀请者uid</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="106" parent="8" name="qrcode">
+        <comment>二维码</comment>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="107" parent="8" name="use_pid">
+        <comment>作品id</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="108" parent="8" name="created_time">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="109" parent="8" name="updated_time">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <key id="110" parent="8" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="111" parent="9" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="112" parent="9" name="record_id">
+        <comment>邀请记录id</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="113" parent="9" name="uid">
+        <comment>用户id</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="114" parent="9" name="rule_id">
+        <comment>邀请规则id</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="115" parent="9" name="order_id">
+        <comment>订单号</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="116" parent="9" name="reward_amount">
+        <comment>奖励金额</comment>
+        <data-type>decimal(10,2)</data-type>
+      </column>
+      <column id="117" parent="9" name="status">
+        <comment>奖励状态：&#xd;
+0：已记录&#xd;
+1：发放中&#xd;
+2：已发放</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="118" parent="9" name="created_time">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="119" parent="9" name="updated_time">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <key id="120" parent="9" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="121" parent="10" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="122" parent="10" name="uid">
+        <comment>创建者uid</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="123" parent="10" name="percent">
+        <comment>分成百分比</comment>
+        <data-type>float</data-type>
+      </column>
+      <column id="124" parent="10" name="use_pid">
+        <comment>可用作品id</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="125" parent="10" name="pname">
+        <comment>作品名称</comment>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="126" parent="10" name="status">
+        <comment>邀请卡状态：&#xd;
+0：开启&#xd;
+1：关闭</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="127" parent="10" name="gname">
+        <comment>公众号名称</comment>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="128" parent="10" name="is_show_info">
+        <comment>是否显示作者信息：&#xd;
+0：显示&#xd;
+1：不显示</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="129" parent="10" name="qrcode">
+        <comment>二维码</comment>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="130" parent="10" name="created_time">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="131" parent="10" name="updated_time">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <key id="132" parent="10" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="133" parent="11" name="id">
+        <comment>级别id</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="134" parent="11" name="level">
+        <comment>对应级别</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="135" parent="11" name="need_exp">
+        <comment>所需经验</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="136" parent="11" name="exchange">
+        <comment>兑换比例</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;3&apos;</default-expression>
+      </column>
+      <column id="137" parent="11" name="updated_time">
+        <comment>修改时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="138" parent="11" name="created_time">
+        <comment>创建时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <key id="139" parent="11" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="140" parent="12" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="141" parent="12" name="mobile">
+        <data-type>char(11)</data-type>
+      </column>
+      <column id="142" parent="12" name="username">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="143" parent="12" name="password">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="144" parent="12" name="created_at">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="145" parent="12" name="updated_at">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <key id="146" parent="12" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="147" parent="13" name="oid">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="148" parent="13" name="orderid">
+        <data-type>char(30)</data-type>
+      </column>
+      <column id="149" parent="13" name="uid">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="150" parent="13" name="puid">
+        <comment>作者id</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="151" parent="13" name="pid">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="152" parent="13" name="pname">
+        <data-type>varchar(40)</data-type>
+      </column>
+      <column id="153" parent="13" name="subid">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="154" parent="13" name="subname">
+        <data-type>varchar(40)</data-type>
+      </column>
+      <column id="155" parent="13" name="price">
+        <data-type>float(10,2)</data-type>
+      </column>
+      <column id="156" parent="13" name="nums">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="157" parent="13" name="discount">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="158" parent="13" name="code_id">
+        <comment>优惠券id</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="159" parent="13" name="code_amount">
+        <comment>优惠券金额</comment>
+        <data-type>float(10,2)</data-type>
+      </column>
+      <column id="160" parent="13" name="amount_discount">
+        <data-type>float(10,2)</data-type>
+      </column>
+      <column id="161" parent="13" name="openid">
+        <data-type>char(32)</data-type>
+      </column>
+      <column id="162" parent="13" name="transaction_id">
+        <data-type>char(32)</data-type>
+      </column>
+      <column id="163" parent="13" name="status">
+        <comment>0:未支付,1:成功,2:失败</comment>
+        <data-type>tinyint(4)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="164" parent="13" name="payed_time">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="165" parent="13" name="order_time">
+        <data-type>datetime</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="166" parent="13" name="trade_type">
+        <comment>1:微信WAP
+2:微信PC
+3:支付宝WAP
+4:支付宝PC</comment>
+        <data-type>tinyint(4)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="167" parent="13" name="channel">
+        <comment>渠道号</comment>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="168" parent="13" name="notify_time">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="169" parent="13" name="invalid_time">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="170" parent="13" name="return_url">
+        <data-type>varchar(250)</data-type>
+      </column>
+      <column id="171" parent="13" name="token">
+        <data-type>varchar(250)</data-type>
+      </column>
+      <index id="172" parent="13" name="orders_oid_uindex">
+        <columns>oid</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="173" parent="13" name="orders_orderid_index">
+        <columns>orderid</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="174" parent="13" name="orders_orderid_uindex">
+        <columns>orderid</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="175" parent="13" name="orders_pid_subid_index">
+        <columns>pid
+subid</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="176" parent="13" name="orders_uid_index">
+        <columns>uid</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="177" parent="13" name="orders_oid_uindex">
+        <columns>oid</columns>
+        <underlying-index>orders_oid_uindex</underlying-index>
+      </key>
+      <key id="178" parent="13" name="orders_orderid_uindex">
+        <columns>orderid</columns>
+        <underlying-index>orders_orderid_uindex</underlying-index>
+      </key>
+      <key id="179" parent="13" name="PRIMARY">
+        <columns>oid</columns>
+        <primary>1</primary>
+      </key>
+      <column id="180" parent="14" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="181" parent="14" name="is_user">
+        <comment>是否是本人0:不是，1是</comment>
+        <data-type>tinyint(4)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="182" parent="14" name="uid">
+        <comment>所属用户</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="183" parent="14" name="name">
+        <comment>作者名</comment>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="184" parent="14" name="img">
+        <comment>作者头像</comment>
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="185" parent="14" name="lecturer">
+        <comment>作者称呼</comment>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="186" parent="14" name="describe">
+        <comment>描述</comment>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="187" parent="14" name="updated_at">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="188" parent="14" name="created_at">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <key id="189" parent="14" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="190" parent="15" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="191" parent="15" name="pid">
+        <comment>作品id</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="192" parent="15" name="type">
+        <comment>卡片类型</comment>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="193" parent="15" name="background">
+        <comment>卡片背景</comment>
+        <data-type>varchar(150)</data-type>
+      </column>
+      <column id="194" parent="15" name="margin_top">
+        <comment>顶部距离</comment>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="195" parent="15" name="margin_bottom">
+        <comment>底部距离</comment>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="196" parent="15" name="title">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="197" parent="15" name="content">
+        <comment>卡片内容</comment>
+        <data-type>text</data-type>
+      </column>
+      <column id="198" parent="15" name="sort">
+        <comment>卡片顺序</comment>
+        <data-type>tinyint(6)</data-type>
+      </column>
+      <column id="199" parent="15" name="created_at">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="200" parent="15" name="updated_at">
+        <data-type>datetime</data-type>
+      </column>
+      <key id="201" parent="15" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="202" parent="16" name="pid">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="203" parent="16" name="uid">
+        <comment>用户id</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="204" parent="16" name="type">
+        <comment>1:课程
+2:专题
+3:小站</comment>
+        <data-type>tinyint(4)</data-type>
+      </column>
+      <column id="205" parent="16" name="pname">
+        <comment>作品名称</comment>
+        <data-type>varchar(80)</data-type>
+      </column>
+      <column id="206" parent="16" name="subtitle">
+        <comment>副标题</comment>
+        <data-type>varchar(80)</data-type>
+      </column>
+      <column id="207" parent="16" name="content">
+        <data-type>longtext</data-type>
+      </column>
+      <column id="208" parent="16" name="tags">
+        <comment>标签</comment>
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="209" parent="16" name="price">
+        <comment>作品价格</comment>
+        <data-type>decimal(10,4)</data-type>
+      </column>
+      <column id="210" parent="16" name="rpid">
+        <comment>关联专题(非专题作品有用)</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="211" parent="16" name="author_id">
+        <comment>作者id</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="212" parent="16" name="company_logo">
+        <comment>公司logo</comment>
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="213" parent="16" name="company_desc">
+        <comment>公司简介</comment>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="214" parent="16" name="theme_color">
+        <comment>主题色</comment>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="215" parent="16" name="share_id">
+        <comment>分享内容id</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="216" parent="16" name="pic">
+        <comment>背景图</comment>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="217" parent="16" name="pstatus">
+        <comment>S:私有
+P:公开
+F:针对某些人公开</comment>
+        <data-type>enum(&apos;S&apos;, &apos;F&apos;, &apos;P&apos;)</data-type>
+        <default-expression>&apos;S&apos;</default-expression>
+      </column>
+      <column id="218" parent="16" name="sharepass">
+        <comment>分享密码</comment>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="219" parent="16" name="readnums">
+        <comment>阅读数</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="220" parent="16" name="thumbs">
+        <comment>点赞数</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="221" parent="16" name="collects">
+        <comment>收藏数</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="222" parent="16" name="snums">
+        <comment>订阅数</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="223" parent="16" name="comments">
+        <comment>评论数</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="224" parent="16" name="is_cooperate">
+        <comment>是否合作
+0：不合作
+1：合作</comment>
+        <data-type>tinyint(4)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="225" parent="16" name="updated_at">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="226" parent="16" name="created_at">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <key id="227" parent="16" name="PRIMARY">
+        <columns>pid</columns>
+        <primary>1</primary>
+      </key>
+      <column id="228" parent="17" name="id">
+        <comment>分享表id</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="229" parent="17" name="pid">
+        <comment>作品id</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="230" parent="17" name="title">
+        <comment>分享标题</comment>
+        <data-type>varchar(80)</data-type>
+      </column>
+      <column id="231" parent="17" name="describe">
+        <comment>描述</comment>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="232" parent="17" name="pic">
+        <comment>分享图片</comment>
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="233" parent="17" name="author">
+        <comment>作者</comment>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="234" parent="17" name="updated_at">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="235" parent="17" name="created_at">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <key id="236" parent="17" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="237" parent="18" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="238" parent="18" name="zpid">
+        <comment>专题id</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="239" parent="18" name="dpid">
+        <comment>作品id</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="240" parent="18" name="tid">
+        <comment>分段标题id</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="241" parent="18" name="title">
+        <comment>分段标题名</comment>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="242" parent="18" name="sort">
+        <comment>排序</comment>
+        <data-type>tinyint(6)</data-type>
+      </column>
+      <column id="243" parent="18" name="class">
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="244" parent="18" name="status">
+        <comment>1:锁,2:试看,3:学习,4:定时</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="245" parent="18" name="color">
+        <comment>背景色</comment>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="246" parent="18" name="uptime">
+        <comment>上线时间</comment>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="247" parent="18" name="created_at">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="248" parent="18" name="updated_at">
+        <data-type>datetime</data-type>
+      </column>
+      <key id="249" parent="18" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="250" parent="19" name="pid">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="251" parent="19" name="uid">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="252" parent="19" name="type">
+        <comment>1:单品,2:课程,3:小站</comment>
+        <data-type>tinyint(4)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="253" parent="19" name="pname">
+        <data-type>varchar(80)</data-type>
+      </column>
+      <column id="254" parent="19" name="price">
+        <data-type>decimal(10,4)</data-type>
+        <default-expression>&apos;0.0000&apos;</default-expression>
+      </column>
+      <column id="255" parent="19" name="pic">
+        <data-type>varchar(250)</data-type>
+      </column>
+      <column id="256" parent="19" name="tags">
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="257" parent="19" name="pages">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="258" parent="19" name="readnums">
+        <comment>阅读数</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="259" parent="19" name="thumbs">
+        <comment>点赞数</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="260" parent="19" name="comments">
+        <comment>评论数</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="261" parent="19" name="json">
+        <data-type>longtext</data-type>
+      </column>
+      <column id="262" parent="19" name="other_json">
+        <data-type>longtext</data-type>
+      </column>
+      <column id="263" parent="19" name="collects">
+        <comment>收藏数</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="264" parent="19" name="pstatus">
+        <comment>状态: 
+  S Self
+  F Friends
+  P Public</comment>
+        <data-type>enum(&apos;S&apos;, &apos;F&apos;, &apos;P&apos;)</data-type>
+        <default-expression>&apos;S&apos;</default-expression>
+      </column>
+      <column id="265" parent="19" name="snums">
+        <comment>订阅数</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="266" parent="19" name="mtime">
+        <comment>修改时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="267" parent="19" name="ctime">
+        <comment>创建时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="268" parent="19" name="sharepass">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="269" parent="19" name="is_cooperate">
+        <comment>是否合作：
+0:不合作
+1:合作</comment>
+        <data-type>tinyint(4)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <index id="270" parent="19" name="product_pid_uindex">
+        <columns>pid</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="271" parent="19" name="PRIMARY">
+        <columns>pid</columns>
+        <primary>1</primary>
+      </key>
+      <key id="272" parent="19" name="product_pid_uindex">
+        <columns>pid</columns>
+        <underlying-index>product_pid_uindex</underlying-index>
+      </key>
+      <column id="273" parent="20" name="pid">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="274" parent="20" name="pname">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="275" parent="20" name="module">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="276" parent="20" name="sub_module">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="277" parent="20" name="function">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="278" parent="20" name="puid">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="279" parent="20" name="create_time">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="280" parent="20" name="last_change_time">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <index id="281" parent="20" name="project_pid_uindex">
+        <columns>pid</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="282" parent="20" name="PRIMARY">
+        <columns>pid</columns>
+        <primary>1</primary>
+      </key>
+      <key id="283" parent="20" name="project_pid_uindex">
+        <columns>pid</columns>
+        <underlying-index>project_pid_uindex</underlying-index>
+      </key>
+      <column id="284" parent="21" name="rid">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="285" parent="21" name="pid">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="286" parent="21" name="ruid">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="287" parent="21" name="is_author">
+        <comment>是否是作者
+0：不是
+1：是</comment>
+        <data-type>tinyint(2)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="288" parent="21" name="channel">
+        <comment>渠道号</comment>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="289" parent="21" name="num">
+        <comment>阅读次数</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="290" parent="21" name="rtime">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="291" parent="21" name="ptype">
+        <comment>作品类型
+1：单品
+2：课程
+3：小站</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <index id="292" parent="21" name="reads_rid_uindex">
+        <columns>rid</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="293" parent="21" name="PRIMARY">
+        <columns>rid</columns>
+        <primary>1</primary>
+      </key>
+      <key id="294" parent="21" name="reads_rid_uindex">
+        <columns>rid</columns>
+        <underlying-index>reads_rid_uindex</underlying-index>
+      </key>
+      <column id="295" parent="22" name="id">
+        <comment>奖励id</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="296" parent="22" name="uid">
+        <comment>用户id</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="297" parent="22" name="type">
+        <comment>奖励类型：&#xd;
+1：升级奖励积分&#xd;
+2：升级奖励服务</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="298" parent="22" name="up_id">
+        <comment>奖励规则id</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="299" parent="22" name="integral">
+        <comment>奖励积分</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="300" parent="22" name="goods_id">
+        <comment>奖励产品id</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="301" parent="22" name="goods_num">
+        <comment>奖励产品数量</comment>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="302" parent="22" name="updated_time">
+        <comment>修改时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="303" parent="22" name="created_time">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <key id="304" parent="22" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="305" parent="23" name="sid">
+        <comment>订阅表id</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="306" parent="23" name="pid">
+        <comment>订阅产品id</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="307" parent="23" name="uid">
+        <comment>订阅用户id</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="308" parent="23" name="invalidtime">
+        <comment>失效时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+      </column>
+      <column id="309" parent="23" name="utime">
+        <comment>修改时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="310" parent="23" name="stime">
+        <comment>订阅时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+      </column>
+      <key id="311" parent="23" name="PRIMARY">
+        <columns>sid</columns>
+        <primary>1</primary>
+      </key>
+      <column id="312" parent="24" name="svgid">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="313" parent="24" name="svgname">
+        <data-type>varchar(180)</data-type>
+      </column>
+      <column id="314" parent="24" name="class">
+        <data-type>varchar(40)</data-type>
+      </column>
+      <column id="315" parent="24" name="class_abbr">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="316" parent="24" name="path">
+        <data-type>varchar(160)</data-type>
+      </column>
+      <column id="317" parent="24" name="effect">
+        <data-type>varchar(40)</data-type>
+      </column>
+      <column id="318" parent="24" name="ename">
+        <data-type>varchar(40)</data-type>
+      </column>
+      <column id="319" parent="24" name="cname">
+        <data-type>varchar(40)</data-type>
+      </column>
+      <column id="320" parent="24" name="shape">
+        <data-type>varchar(40)</data-type>
+      </column>
+      <column id="321" parent="24" name="dynamic">
+        <data-type>varchar(40)</data-type>
+      </column>
+      <column id="322" parent="24" name="flags_type">
+        <data-type>varchar(40)</data-type>
+      </column>
+      <column id="323" parent="24" name="flags">
+        <data-type>varchar(160)</data-type>
+      </column>
+      <column id="324" parent="24" name="addtime">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <index id="325" parent="24" name="svg_svgid_uindex">
+        <columns>svgid</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="326" parent="24" name="svg_svgname_uindex">
+        <columns>svgname</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="327" parent="24" name="PRIMARY">
+        <columns>svgid</columns>
+        <primary>1</primary>
+      </key>
+      <key id="328" parent="24" name="svg_svgid_uindex">
+        <columns>svgid</columns>
+        <underlying-index>svg_svgid_uindex</underlying-index>
+      </key>
+      <key id="329" parent="24" name="svg_svgname_uindex">
+        <columns>svgname</columns>
+        <underlying-index>svg_svgname_uindex</underlying-index>
+      </key>
+      <column id="330" parent="25" name="thid">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="331" parent="25" name="pid">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="332" parent="25" name="thuid">
+        <comment>thumbs-up user id</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="333" parent="25" name="thumbs_thid_uindex">
+        <columns>thid</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="334" parent="25" name="PRIMARY">
+        <columns>thid</columns>
+        <primary>1</primary>
+      </key>
+      <key id="335" parent="25" name="thumbs_thid_uindex">
+        <columns>thid</columns>
+        <underlying-index>thumbs_thid_uindex</underlying-index>
+      </key>
+      <column id="336" parent="26" name="gid">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="337" parent="26" name="gname">
+        <data-type>varchar(40)</data-type>
+      </column>
+      <column id="338" parent="26" name="comments">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <index id="339" parent="26" name="group_gid_uindex">
+        <columns>gid</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="340" parent="26" name="group_gname_uindex">
+        <columns>gname</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="341" parent="26" name="group_gid_uindex">
+        <columns>gid</columns>
+        <underlying-index>group_gid_uindex</underlying-index>
+      </key>
+      <key id="342" parent="26" name="group_gname_uindex">
+        <columns>gname</columns>
+        <underlying-index>group_gname_uindex</underlying-index>
+      </key>
+      <key id="343" parent="26" name="PRIMARY">
+        <columns>gid</columns>
+        <primary>1</primary>
+      </key>
+      <column id="344" parent="27" name="id">
+        <comment>赠送id</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="345" parent="27" name="level_id">
+        <comment>对应级别</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="346" parent="27" name="integral">
+        <comment>赠送的积分</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="347" parent="27" name="serve">
+        <comment>赠送的服务</comment>
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="348" parent="27" name="updated_time">
+        <comment>修改时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="349" parent="27" name="created_time">
+        <comment>创建时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <key id="350" parent="27" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="351" parent="28" name="uid">
+        <comment>用户id</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="352" parent="28" name="level_id">
+        <comment>等级规则id</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="353" parent="28" name="exp">
+        <comment>用户经验</comment>
+        <data-type>float(10,2)</data-type>
+      </column>
+      <column id="354" parent="28" name="integral">
+        <comment>用户积分</comment>
+        <data-type>int(11) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="355" parent="28" name="def_space">
+        <comment>初始空间大小</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;10&apos;</default-expression>
+      </column>
+      <column id="356" parent="28" name="space">
+        <comment>后续空间大小</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="357" parent="28" name="updated_time">
+        <comment>更新时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="358" parent="28" name="created_time">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="359" parent="29" name="uid">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="360" parent="29" name="gid">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="361" parent="29" name="is_wallet">
+        <comment>是否开通钱包：
+1：开通
+2：未开通</comment>
+        <data-type>tinyint(4)</data-type>
+        <default-expression>&apos;2&apos;</default-expression>
+      </column>
+      <column id="362" parent="29" name="email">
+        <data-type>varchar(80)</data-type>
+      </column>
+      <column id="363" parent="29" name="mobile">
+        <data-type>char(11)</data-type>
+      </column>
+      <column id="364" parent="29" name="password">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="365" parent="29" name="nickname">
+        <data-type>varchar(60)</data-type>
+      </column>
+      <column id="366" parent="29" name="gender">
+        <data-type>enum(&apos;M&apos;, &apos;F&apos;)</data-type>
+        <default-expression>&apos;M&apos;</default-expression>
+      </column>
+      <column id="367" parent="29" name="icon">
+        <data-type>varchar(250)</data-type>
+      </column>
+      <column id="368" parent="29" name="qq">
+        <data-type>varchar(60)</data-type>
+      </column>
+      <column id="369" parent="29" name="wechat">
+        <data-type>varchar(60)</data-type>
+      </column>
+      <column id="370" parent="29" name="sina">
+        <data-type>varchar(60)</data-type>
+      </column>
+      <column id="371" parent="29" name="weibo">
+        <data-type>varchar(60)</data-type>
+      </column>
+      <column id="372" parent="29" name="ustatus">
+        <data-type>enum(&apos;Y&apos;, &apos;N&apos;)</data-type>
+        <default-expression>&apos;Y&apos;</default-expression>
+      </column>
+      <column id="373" parent="29" name="birthday">
+        <data-type>date</data-type>
+      </column>
+      <column id="374" parent="29" name="edu">
+        <data-type>enum(&apos;&apos;, &apos;POST&apos;, &apos;DOCTOR&apos;, &apos;MASTER&apos;, &apos;BACHELOR&apos;, &apos;COLLEGE&apos;, &apos;OTHER&apos;)</data-type>
+      </column>
+      <column id="375" parent="29" name="school">
+        <data-type>varchar(80)</data-type>
+      </column>
+      <column id="376" parent="29" name="position">
+        <data-type>varchar(40)</data-type>
+      </column>
+      <column id="377" parent="29" name="province">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="378" parent="29" name="city">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="379" parent="29" name="address">
+        <data-type>varchar(120)</data-type>
+      </column>
+      <column id="380" parent="29" name="channel">
+        <comment>渠道号</comment>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="381" parent="29" name="sign">
+        <comment>签名</comment>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="382" parent="29" name="lsign">
+        <comment>简介</comment>
+        <data-type>text</data-type>
+      </column>
+      <column id="383" parent="29" name="vip">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="384" parent="29" name="followers">
+        <data-type>text</data-type>
+      </column>
+      <column id="385" parent="29" name="products">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="386" parent="29" name="eastatus">
+        <data-type>enum(&apos;Y&apos;, &apos;N&apos;)</data-type>
+        <default-expression>&apos;N&apos;</default-expression>
+      </column>
+      <column id="387" parent="29" name="levelnum">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;70&apos;</default-expression>
+      </column>
+      <column id="388" parent="29" name="eastr">
+        <data-type>char(32)</data-type>
+      </column>
+      <column id="389" parent="29" name="lastlogin">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="390" parent="29" name="regtime">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <index id="391" parent="29" name="user_email_active_str_uindex">
+        <columns>eastr</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="392" parent="29" name="user_email_uindex">
+        <columns>email</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="393" parent="29" name="user_mobile_uindex">
+        <columns>mobile</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="394" parent="29" name="user_nickname_uindex">
+        <columns>nickname</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="395" parent="29" name="user_uid_uindex">
+        <columns>uid</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="396" parent="29" name="PRIMARY">
+        <columns>uid</columns>
+        <primary>1</primary>
+      </key>
+      <key id="397" parent="29" name="user_email_active_str_uindex">
+        <columns>eastr</columns>
+        <underlying-index>user_email_active_str_uindex</underlying-index>
+      </key>
+      <key id="398" parent="29" name="user_email_uindex">
+        <columns>email</columns>
+        <underlying-index>user_email_uindex</underlying-index>
+      </key>
+      <key id="399" parent="29" name="user_mobile_uindex">
+        <columns>mobile</columns>
+        <underlying-index>user_mobile_uindex</underlying-index>
+      </key>
+      <key id="400" parent="29" name="user_nickname_uindex">
+        <columns>nickname</columns>
+        <underlying-index>user_nickname_uindex</underlying-index>
+      </key>
+      <key id="401" parent="29" name="user_uid_uindex">
+        <columns>uid</columns>
+        <underlying-index>user_uid_uindex</underlying-index>
+      </key>
+      <column id="402" parent="30" name="vid">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="403" parent="30" name="sign">
+        <comment>内容MD5值</comment>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="404" parent="30" name="polyv_vid">
+        <comment>保利威视视频id</comment>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="405" parent="30" name="url">
+        <comment>视频地址</comment>
+        <data-type>text</data-type>
+      </column>
+      <column id="406" parent="30" name="img">
+        <comment>封面图</comment>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="407" parent="30" name="uid">
+        <comment>用户id</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="408" parent="30" name="pid">
+        <comment>作品id</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="409" parent="30" name="status">
+        <comment>上传状态&#xd;
+1：未上传&#xd;
+2：已上传</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;3&apos;</default-expression>
+      </column>
+      <column id="410" parent="30" name="use_flow">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="411" parent="30" name="time">
+        <comment>时长</comment>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="412" parent="30" name="created_time">
+        <comment>创建时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <key id="413" parent="30" name="PRIMARY">
+        <columns>vid</columns>
+        <primary>1</primary>
+      </key>
+      <column id="414" parent="31" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned</data-type>
+      </column>
+      <column id="415" parent="31" name="uid">
+        <comment>用户id</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="416" parent="31" name="history_cash">
+        <comment>历史总收入</comment>
+        <data-type>decimal(10,4)</data-type>
+        <default-expression>&apos;0.0000&apos;</default-expression>
+      </column>
+      <column id="417" parent="31" name="valid_cash">
+        <comment>可提现金额</comment>
+        <data-type>decimal(10,4)</data-type>
+        <default-expression>&apos;0.0000&apos;</default-expression>
+      </column>
+      <column id="418" parent="31" name="freeze_cash">
+        <comment>待结算金额</comment>
+        <data-type>decimal(10,4)</data-type>
+        <default-expression>&apos;0.0000&apos;</default-expression>
+      </column>
+      <column id="419" parent="31" name="user_type">
+        <comment>1:普通用户,2:企业用户</comment>
+        <data-type>tinyint(4)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="420" parent="31" name="status">
+        <comment>1:正常,2:冻结</comment>
+        <data-type>tinyint(4)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="421" parent="31" name="withdraw_cash_num">
+        <comment>提现次数</comment>
+        <data-type>tinyint(4)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="422" parent="31" name="created_at">
+        <comment>创建时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="423" parent="31" name="updated_at">
+        <comment>修改时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <key id="424" parent="31" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="425" parent="32" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned</data-type>
+      </column>
+      <column id="426" parent="32" name="uid">
+        <comment>用户id</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="427" parent="32" name="type">
+        <comment>类型 1:主记录,2:子记录</comment>
+        <mandatory>1</mandatory>
+        <data-type>tinyint(4)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="428" parent="32" name="status">
+        <comment>状态：1:成功,2:失败,3:处理中,4:冻结中</comment>
+        <mandatory>1</mandatory>
+        <data-type>tinyint(4)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="429" parent="32" name="record_type">
+        <comment>记录类型 1:写作费,2:提现.3:邀请分成,4:邀请收益,5:平台分成,6:优惠券</comment>
+        <mandatory>1</mandatory>
+        <data-type>tinyint(4)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="430" parent="32" name="cash">
+        <comment>操作金额</comment>
+        <mandatory>1</mandatory>
+        <data-type>decimal(10,4)</data-type>
+        <default-expression>&apos;0.0000&apos;</default-expression>
+      </column>
+      <column id="431" parent="32" name="pid">
+        <comment>作品id</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="432" parent="32" name="order_id">
+        <comment>订单id</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="433" parent="32" name="order_sn">
+        <comment>订单号</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="434" parent="32" name="remark">
+        <comment>备注</comment>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="435" parent="32" name="verifier">
+        <comment>操作人</comment>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="436" parent="32" name="created_at">
+        <comment>创建时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="437" parent="32" name="updated_at">
+        <comment>修改时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <key id="438" parent="32" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>

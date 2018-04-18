@@ -1,0 +1,7 @@
+<!-- 单图template -->
+<view class="pictrueSingle picture">
+    <image src="{{data.content.item[0].backImg.imgSrc || data.content.imageSrc}}"></image>
+    <block wx:if="{{data.content.item[0].label.textHtml || data.content.text}}">
+        <text class="describe text">{{data.content.item[0].label.textHtml || data.content.text}}</text>
+    </block>
+</view>

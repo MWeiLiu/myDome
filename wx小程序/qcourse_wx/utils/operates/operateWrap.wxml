@@ -1,0 +1,10 @@
+<!--components/operates/operateWrap.wxml-->
+<template name='operate'>
+
+  <view class='operate_wrap qFlex qFlexJustifyEnd qFlexDirectionColumn {{operates.status}}' bindtap='{{operates.hideOperateWrap}}'>
+    <view class='operate_title'>{{operates.title}}</view>
+    <block wx:for='{{operates.items}}' wx:key='*this'>
+      <view class='operate_item' catchtap='{{item.bindFn}}'>{{item.name}}</view>
+    </block>
+  </view>
+</template>

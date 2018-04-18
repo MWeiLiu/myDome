@@ -1,0 +1,8 @@
+<!-- 二维码 -->
+<template name="publicityQrcode">
+    <view class="publicityQrcode">
+        <view class="qrCodeTitle">扫码关注微信公众号地方军阀ijf奥i发埃及的判罚哦i售票机的ifai送的积分阿婆i的积分奥i的积分阿婆i地方 </view>
+        <image src="https://www.qcourse.cc/images/Qcode.png"></image>
+        <view class="qrCodeText">今日然后服务分行副经理日代课教师会计法埃里克记得发劳动纠纷安科技的发动机地方；立刻就发立刻搭街坊辣椒粉垃圾分类肯德基附件all覅哦饿哦就</view>
+    </view>
+</template>

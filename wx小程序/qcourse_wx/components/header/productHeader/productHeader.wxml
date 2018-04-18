@@ -1,0 +1,15 @@
+
+<view class="header" style="background: {{background}}">
+    <view class="shade1" style="{{productHeader.pic == '' ? 'background-color: rgba(0, 0, 0, 0);' : 'background-color: rgba(123, 123, 123, 0.3);'}}">
+        <view class="changeBox">
+            <view class="changeInfoBoxs" style="color: {{color}};">
+                <view class="panme">{{productHeader.pname}}</view>
+                <view class="courseSubtitle">{{productHeader.json.wholeSet.subTitle}}</view>
+                <view class="userIcoBox">
+                    <image src="{{productHeader.json.wholeSet.header.headerList[productHeader.json.wholeSet.header.headerON].userImg}}"></image>
+                    <text>{{productHeader.json.wholeSet.header.headerList[productHeader.json.wholeSet.header.headerON].userName}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

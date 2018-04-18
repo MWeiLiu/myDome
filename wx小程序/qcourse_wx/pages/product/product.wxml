@@ -1,0 +1,10 @@
+<import src='../../utils/common/common.wxml'/>
+<view>
+    <productHeader is="productHeader" data="{{dataContent}}"></productHeader>
+    <describe is="describe" data="{{dataContent}}"></describe>
+    <view class="previewContent">
+        <view class="pubContentList">
+            <template is="common" data="{{...dataContent.json, options}}"></template>
+        </view>
+    </view>
+</view>

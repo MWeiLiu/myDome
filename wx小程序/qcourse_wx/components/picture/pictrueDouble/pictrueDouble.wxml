@@ -1,0 +1,7 @@
+<!-- 双图template -->
+    <view class="pictrueDouble picture">
+        <view wx:for="{{data.content.item}}" wx:key="*this">
+            <image src="{{item.backImg.imgSrc}}"></image>
+            <text class="describe text">{{item.label.textHtml}}</text>
+        </view>
+    </view>

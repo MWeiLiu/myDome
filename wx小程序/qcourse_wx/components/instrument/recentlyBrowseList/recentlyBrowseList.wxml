@@ -1,0 +1,13 @@
+<!-- 最近浏览列表 -->
+<view class="recentlyBrowseList">
+    <blcok wx:if="{{item.image}}">
+        <image class="headerImage" src="{{item.image}}"></image>
+    </blcok>
+    <blcok wx:else>
+        <image class="headerImage" src="https://www.qcourse.com/images/defaultHeaderImg.png"></image>
+    </blcok>
+    <view class="recentlyBrowseBody">
+        <view class="recentlyBrowsePname showByStep">{{data.pname}}</view>
+        <view class="recentlyBrowseSubTitle showByStep">{{data.subTitle}}</view>
+    </view>
+</view>

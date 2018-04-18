@@ -1,0 +1,26 @@
+
+
+<import src='../../utils/publicity/publicityHeader/publicityHeader.wxml'/>
+<import src='../../utils/publicity/publicityLecturer/publicityLecturer.wxml'/>
+<import src='../../utils/publicity/publicityArrange/publicityArrange.wxml'/>
+<import src='../../utils/publicity/publicityQrcode/publicityQrcode.wxml'/>
+
+<view>
+    <template is="publicityHeader" data="{{dataContent}}"/>
+    <view class="previewContent">
+        <view class="pubContentList">
+            <template is="publicitylecturer"/>
+            <curriculum id="curriculum"></curriculum>
+            <template is="publicityArrange"></template>
+            <template is="publicityQrcode"></template>
+            <block wx:for="{{dataContent.json.content}}" wx:key="item">
+                <block wx:if="{{item.dataType == 'iPageturning'}}">
+                    <iPageturning id="iPageturning" data="{{item}}" wx:key="item"></iPageturning>
+                </block>
+                <block wx:if="{{item.dataType == 'iQuizzes'}}">
+                    <iQuizzes id="iQuizzes" data="{{item}}" wx:key="item"></iQuizzes>
+                </block>
+            </block>
+        </view>
+    </view>
+</view>

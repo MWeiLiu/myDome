@@ -1,0 +1,6 @@
+
+@import '../../../utils/common/common.wxss';
+.mmCode > view {
+    border: 2rpx solid #cecece;
+    padding: 2rpx;
+}

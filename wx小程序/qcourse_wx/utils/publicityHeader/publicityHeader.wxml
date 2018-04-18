@@ -1,0 +1,38 @@
+<!-- 专题头部 -->
+<template name="publicityHeader">
+    <view class="header" style="{{dataContent.json.wholeSet.pic == '' ? 'background-color: rgba(0, 0, 0, 0);' : 'background-color: rgba(123, 123, 123, 0.3);'}}">
+        <view class="pubHeaderWrap">
+            <view class="title pubTitle">rererererererere</view>
+            <view class="title pubSubTitle">{{dataContent.ctime}}</view>
+            <view class="title athourName">{{dataContent.ctime}}</view>
+        </view>
+        <view class="pubDetailCatalog boxsize">
+            <view class="detailsCatalog">
+                <view class="detailsTab detailsCatalogActive boxsize">详情</view>
+                <view class="catalogTab boxsize">目录</view>
+            </view>
+        </view>
+    </view>
+    <view class="rightAuthor-pubInfo">
+        <view class="authorInforShow boxsize">
+            <image class="pubInfoUpper boxsize" src="https://www.qcourse.com/uploads/products/2031/5aa5ee5506009.jpg"></image>
+        </view>
+        <view class="rightMiddleWrap">
+            <view class="pubPurchaseAmount">
+                <view class="cur_cash">￥4.02</view>
+            </view>
+            <view class="pubcash_Coupon boxsize qFlex">
+                <view class="couponCash qFlex qFlexDirectionColumn qFlexJustifyCenter qFlexAlignCenter">
+                    <text class="cou_cashNum">¥1.12</text>
+                    <text class="couConditionsUse">无门槛使用</text>
+                </view>
+                <view class="pub_couponLine"></view>
+                <view class="couName qFlex qFlexDirectionColumn qFlexJustifyCenter">
+                    <text class="cou_name">双十一庆典</text>
+                    <text class="cou_useTime">2018.03.07至2018.04.04</text>
+                </view>
+                <view class="couponReceive">领取</view>
+            </view>
+        </view>
+    </view>
+</template>

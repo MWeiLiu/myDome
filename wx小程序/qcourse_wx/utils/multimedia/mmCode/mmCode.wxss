@@ -1,0 +1,5 @@
+
+.mmCode > view {
+    border: 2rpx solid #cecece;
+    padding: 2r0px;
+}

@@ -1,0 +1,10 @@
+<!-- 底图引言template -->
+    <view class="creativeTitTxtGroup backgroundImageStyle contentTextStyle contentTextAlign">
+        <view class="creativeBox">
+            <view class="userImageBox cardUserName textAlign_center">
+                <image class="cardUserImage" src="{{data.content.headerImg.imgSrc}}"></image>
+                <text>{{data.content.userName.textHtml}}</text>
+            </view>
+            <text>{{data.content.text.textHtml}}</text>
+        </view>
+    </view>

@@ -1,0 +1,10 @@
+<!-- 图片轮播template -->
+<view class="pictrueTurntable picture">
+    <swiper indicator-dots="{{pictrueTurntable.indicatorDotsTrue}}" indicator-color="{{pictrueTurntable.indicatorColor}}" indicator-active-color="{{pictrueTurntable.indicatorActiveColor}}" duration="{{pictrueTurntable.duration}}">    
+        <block wx:for="{{data.content.slide}}" wx:key="*this">
+            <swiper-item>
+                <image class="pictrueTurntableItem" src="{{item.backImg.imgSrc}}"></image>
+            </swiper-item>
+        </block>
+    </swiper>
+</view>

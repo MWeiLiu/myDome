@@ -1,0 +1,9 @@
+
+{
+    "navigationBarTitleText": "专题页面",
+    "usingComponents": {
+      "curriculum": "/components/curriculum/curriculum",
+      "iPageturning": "/components/iPageturning/iPageturning",
+      "iQuizzes": "/components/iQuizzes/iQuizzes"
+    }
+  }

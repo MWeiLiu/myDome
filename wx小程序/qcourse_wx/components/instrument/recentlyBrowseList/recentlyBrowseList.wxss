@@ -1,0 +1,37 @@
+
+@import '../../../utils/common/common.wxss';
+.recentlyBrowseList {
+    height: 96rpx;
+    padding: 18rpx 0;
+    overflow: hidden;
+}
+
+.headerImage {
+    width: 96rpx;
+    height: 96rpx;
+    border-radius: 50%;
+    float: left;
+    margin-right: 28rpx;
+    box-shadow: 0 0 4px #5e5e5e;
+}
+
+.recentlyBrowseBody {
+    width:538rpx;
+    padding-top: 12rpx;
+    float: left;
+}
+
+.recentlyBrowsePname {
+    margin-bottom: 16rpx;
+    font-size: 28rpx;
+    color: #333333;
+    letter-spacing: 2.4rpx;
+    line-height: 32rpx;
+}
+
+.recentlyBrowseSubTitle {
+    font-size: 24rpx;
+    color: #CCCCCC;
+    letter-spacing: 2.4rpx;
+    line-height: 24rpx;
+}

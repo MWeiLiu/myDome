@@ -1,0 +1,10 @@
+<!-- 引言1template -->
+<import src="../../../wxParse/wxParse.wxml"/>
+<view class="creativeQuoteOne textAlign_center">
+    <view class="contentTextStyle">
+        {{data.content.text.textHtml}}
+    </view>
+    <view class="cardUserName">
+        <text>{{data.content.userName.textHtml}}</text>
+    </view>
+</view>

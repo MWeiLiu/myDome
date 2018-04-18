@@ -1,0 +1,10 @@
+
+{
+  "navigationBarTitleText": "我的",
+  "navigationBarBackgroundColor": "#9EBC2B",
+  "navigationBarTextStyle": "#fff",
+  "backgroundColor": "#F2F2F2",
+  "usingComponents": {
+    "img_text_img": "/components/img_text_img/img_text_img"
+  }
+}

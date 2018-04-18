@@ -1,0 +1,130 @@
+
+@import "../../../utils/common/common.wxss";
+
+.iQuizzesBox {
+    padding: 40rpx 0;
+    border: 1px solid #DDDDDD;
+}
+
+.typeName {
+    width: 150rpx;
+    height: 40rpx;
+    margin: 0 auto 16rpx;
+    font-size: 28rpx;
+    color: #333333;
+    letter-spacing: 1.86rpx;
+}
+
+.typeName image {
+    width: 28rpx;
+    height: 28rpx;
+    margin-right: 8rpx;
+    vertical-align: middle;
+}
+
+.question {
+    padding: 0 32rpx;
+    font-size: 32rpx;
+    color: #333333;
+    letter-spacing: 2.4rpx;
+    line-height: 56rpx;
+}
+
+/* 判断 */
+.judgeItems {
+    width: 264rpx;
+    height: 92rpx;
+    margin: 24rpx auto 0;
+    overflow: hidden;
+
+}
+
+.judgeAnswerItems {
+    width: 88rpx;
+    height: 88rpx;
+    float: left;
+    border: 2rpx solid #DDDDDD;
+    border-radius: 50%;
+    line-height: 88rpx;
+    text-align: center;
+    font-size: 28rpx;
+    color: #333333;
+    letter-spacing: 0;
+}
+
+.judgeAnswerItems:last-child {
+    float: right;
+}
+
+.rightORwrong image{
+    width: 44rpx;
+    height: 44rpx;
+    display: block;
+    margin: 40rpx auto;
+}
+/* 判断 */
+
+/* 多选 */
+
+.multiselectItems > view {
+    overflow: hidden;
+    padding: 0 20rpx;
+    margin-top: 28rpx;
+}
+
+.multiselectItems .selectKey,
+.multiselectItems .selectValue {
+    float: left;
+    color: #333333;
+}
+
+.selectKey {
+    width: 44rpx;
+    height: 44rpx;
+    border: 2rpx solid #DDDDDD;
+    border-radius: 50%;
+    margin-right: 16rpx;
+    font-size: 24rpx;
+    letter-spacing: 0;
+    line-height: 44rpx;
+    text-align: center;
+}
+
+.multiselectItems .selectValue {
+    width: 595rpx;
+    font-size: 28rpx;
+    letter-spacing: 2rpx;
+    line-height: 48rpx;
+}
+
+/* 多选 */
+
+.iQuizzesText {
+    padding: 0 32rpx;
+    font-size: 28rpx;
+    color: #333333;
+    letter-spacing: 2.8rpx;
+    line-height: 48rpx;
+}
+
+.analysis {
+    margin: 18rpx 0 40rpx;
+}
+
+.next {
+    width: 192rpx;
+    height: 72rpx;
+    margin: 0 auto;
+    background: #003989;
+    border-radius: 8rpx;
+    font-size: 28rpx;
+    color: #FFFFFF;
+    letter-spacing: 7.6rpx;
+    line-height: 72rpx;
+    text-align: center;
+}
+
+.selectActive {
+    border: 1px solid #003989;
+    color: #003989;
+}

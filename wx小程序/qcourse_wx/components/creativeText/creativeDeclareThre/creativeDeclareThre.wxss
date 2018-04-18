@@ -1,0 +1,14 @@
+
+@import "../../../utils/common/common.wxss";
+.creativeDeclareThre .hr {
+    width: 4rpx;
+    height: 108rpx;
+    background: #333;
+    float: left;
+    margin-top: 20rpx;
+}
+
+.creativeDeclareThre .creativeList {
+    padding-left: 20rpx;
+    border-left: 4rpx solid #333;
+}

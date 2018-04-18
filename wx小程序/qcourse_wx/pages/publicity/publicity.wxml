@@ -1,0 +1,114 @@
+<!--logs.wxml-->
+
+<import src='../../utils/coupon/coupon.wxml'/>
+<import src="../../utils/common/common.wxml"/>
+<view class='container' style='' animation='{{animationObj.container}}'>
+  <!-- 专题 -->
+  <view class='pub_wrap' animation='{{animationObj.publicity}}' style='background-color:{{baseData.sideTabShow=="true"?"rgba(0,0,0,0)":"#fff"}}'>
+    <view class='pub_precontent {{baseData.inCourse=="true"?"hide":""}}'>
+      <view class='pub_preheader'>
+       <publicityHeader data='{{courseInfo}}'></publicityHeader> 
+        <!-- 金风科技带上了飞机螺丝钉机滤飞机螺丝钉解放了集散地立刻飞机螺丝钉解放螺丝钉 -->
+      </view>
+      <view class="previewContent">
+           <describe data='{{courseInfo}}' ></describe> 
+          <view class="content boxsize">
+             <template is='common' data='{{...courseInfo.json}}'></template>
+          </view>
+      </view>
+    </view>
+    <!-- 课程列表 start -->
+    <view style='' class='side_wrap {{baseData.inCourse=="true"?"":"hide"}}'>
+      <view class='side_header boxsize'>
+        <view class='side_hwrap' catchtap='showCourse'>
+          <view class='side_htitle'>促进用户下单的情绪推拉法</view>
+          <view class='side_hsubtitle'>到底是应该让消费者“冲动下单”还是“理性消费”</view>
+        </view>
+      </view>
+      <view class='side_list'>
+        <view wx:for="{{canSeeCurri}}" wx:key="*this" wx:for-index="dx1" wx:for-item='item1' class='side_item {{(item1.courses&&item1.courses.length>0)?"":"hide"}}'>
+          <view wx:if="{{item1.titleInfo && item1.titleInfo.pname}}" data-citems='{{(item1.courses&&item1.courses.length>0)?item1.courses.length:"0"}}' data-index='{{dx1}}' class='side_itemwrap qFlex qFlexAlignCenter' catchtap='showSubList'>
+            <view class='side_itemicon qFlex qFlexJustifyCenter qFlexAlignCenter'>{{item1.opened=="true"?"－":"＋"}}</view>
+            <view class='side_itemtitle showByStep'>{{item1.titleInfo.pname}}</view>
+          </view>
+          <view class='side_courselist boxsize' style='height:{{item1.listHeight}}rpx;' animation='{{item1.slideAnimation}}'>
+            <block wx:if="{{item1.titleInfo && item1.courses.length>0}}">
+              <view wx:for="{{item1.courses}}" wx:key="*this" wx:for-index="dx2" wx:for-item='item2' class='side_citem showByStep' catchtap='switchCourse' data-pid='{{item2.pid}}'>{{item2.pname}}</view>
+            </block>
+            <view wx:else class='side_citem showByStep' catchtap='switchCourse' data-pid='{{item1.pid}}'>{{item1.pname}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 课程列表 end -->
+    <!-- 弹层结构 start-->
+    <view class='layer_container {{baseData.inCourse=="true"?"hide":""}}'>
+      <view class='publicity_bottom'>
+        <view class='p_bottom_pay qFlex qFlexAlignCenter'>
+          <view class='qFlex qFlexAlignCenter qFlexJustifyCenter pub_b_share' bindtap='showShare'>
+            <image src='{{icon.share}}' class='pub_b_img'></image>
+          </view>
+          <view class='qFlex qFlexAlignCenter pub_b_coupon {{coupon.length>0?"":"hide"}}' bindtap='showReceiveCoupon'>
+            <image src='{{icon.receiveCoupon}}' class='pub_b_img'></image>
+          </view>
+          <view wx:if="{{price.price>0}}" class='pub_b_study' bindtap='pubPay'>
+            <text>订阅：￥</text>
+            <text>{{price.price}}</text>
+          </view>
+          <view wx:else class='pub_b_study' bindtap='pubPay'>
+            开始学习
+          </view>
+        </view>
+      </view>
+      <view class='coupon_mask qFlex qFlexAlignEnd {{baseData.rCouponIsShow}}' bindtap='hideReceiveCoupon' animation='{{animationObj.publicity}}'>
+        <view class='coupon_wrap' catchtap='emptyEvent'>
+          <view class='coupon_close boxsize'><text catchtap='hideReceiveCoupon'>X</text></view>
+          <template is='coupon' data='{{coupon,baseData}}'/>
+          <view class='receiveCoupon' catchtap='receiveCoupon'>领取</view>
+        </view>
+      </view>
+      <view class='mycoupon_mask qFlex qFlexAlignEnd {{baseData.payAreaShow}}' bindtap='hidePayArea'>
+        <view class='mycoupon_wrap' catchtap='emptyEvent'>
+          <view class='mycoupon_close'><text catchtap='hidePayArea'>X</text></view>
+          <template is='coupon' data='{{myCoupon,baseData}}'/>
+          <view class='pub_couponpay' bindtap='pubPayHasCoupon'>支付</view>
+        </view>
+      </view>
+      <view class='share_wrap {{baseData.canvasIsShow=="hide"?"hide":""}}' style=''>
+        <view class='share_close' bindtap='shareClose'>X</view>
+        <canvas class='share_qrcode' id='shareQrcode'></canvas>
+        <canvas class='canvasOne' canvas-id='canvasOne' catchlongtap='showOperates'>
+          
+        </canvas>
+        <view class='sharetip1 qFlex qFlexJustifyCenter qFlexAlignCenter {{inviteInfo.sharePrice>0?"hide":""}}' bindtap='saveImgToAlbum' style='height:{{baseData.shareTipHeight}}px'>长按保存图片，即可分享给好友</view>
+        <view class='sharetip2 qFlex qFlexDirectionColumn qFlexJustifyCenter qFlexAlignCenter {{inviteInfo.sharePrice>0?"":"hide"}}' style='height:{{baseData.shareTipHeight}}px'>
+          <view class='sharetip_price'>分享可得￥{{inviteInfo.sharePrice}}</view>
+          <view class='sharetip sharetip11 qFlex'>
+            <text class='sharetip_ico'></text>
+            <text class='sharetip_text'>长按保存图片，即可分享给好友</text>
+          </view>
+          <view class='sharetip qFlex'>
+            <text class='sharetip_ico'></text>
+            <text class='sharetip_text'>每成功邀请一位好友，即可获得{{inviteInfo.sharePrice}}元奖励，奖励在好友订阅课程3天后发放到您的账户中</text>
+          </view>
+        </view>
+        
+        <import src="../../utils/operates/operateWrap.wxml"/>
+        <template is='operate' data='{{operates}}'></template>
+      </view>
+    </view>
+  </view>
+    <!-- 弹层结构 end -->
+  <!-- 课程 -->
+  <view style='overflow-y:{{baseData.sideTabShow=="false"?"auto":"none"}}' class="box" animation='{{animationObj.course}}'>
+       <productHeader data='{{dataContent}}'></productHeader> 
+      <view class="previewContent">
+           <describe data='{{dataContent}}' ></describe> 
+          <view class="content boxsize">
+             <template is='common' data='{{...dataContent.json,options}}'></template>
+          </view>
+      </view>
+      <view class='box_mask {{baseData.sideTabShow=="false"?"hide":""}}' style='' catchtap='sidetabTarget'></view>
+  </view>
+  <view class='sidetab_target  {{baseData.inCourse=="true"?"":"hide"}}' catchtap='sidetabTarget'>目录</view>
+</view>

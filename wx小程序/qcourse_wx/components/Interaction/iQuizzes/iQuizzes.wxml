@@ -1,0 +1,39 @@
+<!-- 试题 iQuizzes-->
+    <swiper indicator-dots="{{iQuizzes.swiper.indicatorDots}}" autoplay="{{iQuizzes.swiper.autoplay}}" interval="{{iQuizzes.swiper.interval}}" duration="{{iQuizzes.swiper.duration}}">
+        <block wx:for="{{iQuizzes.items}}" wx:key="*this" wx:for-index="idx">
+            <view class="iQuizzes">
+                <swiper-item>
+                    <view class="iQuizzesBox iQuizzesBox + {{idx}}">
+                        <view class="typeName">
+                            <image src="judge.png"></image>
+                            <text>{{item.typeName}}</text>
+                            <text>{{idx + 1}}/{{iQuizzes.items.length}}</text>
+                        </view>
+                        <view class="question">{{item.question}}</view>
+                        <block wx:if="{{item.type == 'judge'}}">
+                            <view class="judgeItems">
+                                <block wx:for="{{item.answerItems}}" wx:key="answerItems" wx:for-index="idxans">
+                                    <view class="judgeAnswerItems {{iQuizzes.items[idx].selectActive[idxans] == 1 ? 'selectActive' : ''}}" bindtap="selectActive" data-type="{{iQuizzes.items[idx].type}}" data-items="{{idx}}" data-index="{{idxans}}">{{item}}</view>
+                                </block>
+                            </view>
+                        </block>
+                        <block wx:else>
+                            <view class="multiselectItems">
+                                <block wx:for="{{item.answerItems}}" wx:key="answerItems" wx:for-index="idxans">
+                                    <view bindtap="selectActive" data-type="{{iQuizzes.items[idx].type}}" data-items="{{idx}}" data-index="{{idxans}}">
+                                        <view class="selectKey {{iQuizzes.items[idx].selectActive[idxans] == 1 ? 'selectActive' : ''}}">{{iQuizzes.select[idxans]}}</view><text class="multiselectAnswerItems selectValue">{{item}}</text>
+                                    </view>
+                                </block>
+                            </view>
+                        </block>
+                        <view class="rightORwrong">
+                            <image class="" src="{{iQuizzes.items[idx].answerSring == iQuizzes.items[idx].answerIndex ? iQuizzes.image[0] : iQuizzes.image[1]}}"></image>
+                            <view class="iQuizzesText" >正确答案：{{item.select}}</view>
+                        </view>
+                        <view class="analysis iQuizzesText">{{item.analysis}}</view>
+                        <view class="next">提交</view>
+                    </view>
+                </swiper-item>
+            </view>
+        </block>
+    </swiper>

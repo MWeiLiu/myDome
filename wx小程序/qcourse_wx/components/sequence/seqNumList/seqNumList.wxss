@@ -1,0 +1,17 @@
+
+@import "../../../utils/common/common.wxss";
+
+.seqNumList .orderName {
+    float: left;
+    width: 36rpx;
+    height: 36rpx;
+    margin-top: 8rpx;
+    margin-left: 12rpx;
+    padding-left: 3rpx;
+    border: 2rpx solid #5e5e5e;
+    border-radius: 50%;
+    font-size: 18rpx;
+    text-align: center;
+    line-height: 33rpx;
+    color: #003989;
+}

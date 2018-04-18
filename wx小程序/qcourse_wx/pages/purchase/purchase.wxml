@@ -1,0 +1,5 @@
+<view class="purchaseBox">
+    <block wx:for="{{purchaseList}}" wx:key="*this">
+        <purchaseList id="purchaseList" data="{{item}}"></purchaseList>
+    </block>
+</view>

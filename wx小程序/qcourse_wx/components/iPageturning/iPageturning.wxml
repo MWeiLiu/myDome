@@ -1,0 +1,27 @@
+<!-- 翻页格 iPageturning-->
+<block wx:for="{{data.content.items}}" wx:key="item" wx:for-index="idx">
+    <view style="background-color:{{data.backgroundColor}}; padding-top:{{data.marginTop}}; padding-bottom:{{data.marginBottom}};">
+        <view class="iPageturning">
+            <view class="hr"></view>
+            <view class="iPageturningBox">
+                <view class="face" animation="{{arry[idx].iPageturningFace}}">
+                    <block wx:if="{{item.face.type == 'text'}}">
+                        <view class="iPageturningText boxsize">{{item.face.text}}</view>
+                    </block>
+                    <block wx:elif="{{item.face.type == 'img'}}">
+                        <image src="{{item.face.img}}" style="{{arry[idx].faceSize}};"></image>
+                    </block>
+                </view>
+                <view class="back" animation="{{arry[idx].iPageturningBack}}">
+                    <block wx:if="{{item.back.type == 'text'}}">
+                        <view class="iPageturningText boxsize">{{item.back.text}}</view>
+                    </block>
+                    <block wx:elif="{{item.back.type == 'img'}}">
+                        <image src="{{item.back.img}}" style="{{arry[idx].backSize}};"></image>
+                    </block>
+                </view>
+            </view>
+            <view class="clickMe boxsize" bindtap="clickMe" data-backface="{{arry[idx].type}}" data-index="{{idx}}">翻</view>
+        </view>
+    </view>
+</block>

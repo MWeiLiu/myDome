@@ -1,0 +1,9 @@
+<!-- 多样式标题template -->
+
+<template name="title">
+    <view class="title" style="background-color:{{item.backgroundColor}};padding-top:{{item.marginTop}};padding-bottom:{{item.marginBottom}};">
+        <view></view>
+        <view class="contentTitleStyle">qweqweqweqweqwe</view>
+        <view></view>
+    </view>
+</template>

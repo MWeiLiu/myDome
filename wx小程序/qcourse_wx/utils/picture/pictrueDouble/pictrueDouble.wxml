@@ -1,0 +1,9 @@
+<!-- 双图template -->
+<template name="pictrueDouble">
+    <view class="pictrueDouble picture" style="background-color:{{item.backgroundColor}};padding-top:{{item.marginTop}};padding-bottom:{{item.marginBottom}};">
+        <view wx:for="{{item.content.item}}" wx:key="*this">
+            <image src="{{item.backImg.imgSrc}}"></image>
+            <text class="describe">{{item.label.textHtml}}</text>
+        </view>
+    </view>
+</template>

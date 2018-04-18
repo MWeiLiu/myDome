@@ -1,0 +1,5 @@
+<!-- 左图右文template -->
+<view class="pictrueTxtGroupOne picture">
+    <image src="{{data.content.backImg.imgSrc}}"></image>
+    <view class="contentTextStyle text">{{data.content.text.textHtml}}</view>
+</view>

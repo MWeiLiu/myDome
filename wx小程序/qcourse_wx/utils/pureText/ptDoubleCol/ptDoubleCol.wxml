@@ -1,0 +1,11 @@
+<!-- 两列template -->
+<template name="ptDoubleCol">
+    <view class="ptDoubleCol" style="background-color:{{item.backgroundColor}};padding-top:{{item.marginTop}};padding-bottom:{{item.marginBottom}};">
+        <view class="contentTextStyle">
+            <text>{{item.content.textContentLeft}}</text>
+        </view>
+        <view class="contentTextStyle">
+            <text>{{item.content.textContentRight}}</text>
+        </view>
+    </view>
+</template>

@@ -1,0 +1,5 @@
+<!-- 摘抄Btemplate -->
+    <view class="creativeDeclareTwo contentTextStyle textAlign_center">
+        <view class="hr"></view>
+        <text>{{data.content.text.textHtml}}</text>
+    </view>

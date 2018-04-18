@@ -1,0 +1,6 @@
+<!-- 专题作者 -->
+    <view class="publicitylecturer">
+        <image src="{{data.content.imageSrc}}"></image>
+        <view class="sPersonName">{{data.content.userName}}</view>
+        <view class="sPersonSign">{{data.content.userSign}}</view>
+    </view>

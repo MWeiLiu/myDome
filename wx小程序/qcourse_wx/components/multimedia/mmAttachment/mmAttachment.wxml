@@ -1,0 +1,10 @@
+<!-- 附件emplate -->
+<block wx:if="{{data.content.size}}">
+    <view class="mmAttachment multimedia">
+        <view class="contentTextStyle">
+            <view class="fileTitle showByStep">{{data.content.text}}</view>
+            <view class="fileSize">{{data.content.size}}</view>
+        </view>
+        <image src="https://www.qcourse.com/images/downloadIcon.png"></image>
+    </view>
+</block>

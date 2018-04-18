@@ -1,0 +1,9 @@
+<!-- 序号序列template -->
+<template name="seqNumList">
+    <view class="seqNumList sequence" style="background-color:{{item.backgroundColor}};padding-top:{{item.marginTop}};padding-bottom:{{item.marginBottom}};">
+        <view class="contentTextStyle" wx:for="{{item.content.textLi}}" wx:key="*this" wx:for-index="index">
+            <view class="orderName boxsize">{{index + 1}}</view>
+            <text>{{item}}</text>
+        </view>
+    </view>
+</template>

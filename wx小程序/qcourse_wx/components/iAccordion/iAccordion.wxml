@@ -1,0 +1,15 @@
+<!-- 折叠栏template -->
+    <view class="iAccordion contentTextStyle textAlign_left">
+        <block wx:for="{{iAccordion.items}}" wx:key="*this" wx:for-index="index">
+            <view class="iAccordionBox" animation="{{item.animate}}">
+                <view class="iAccordionTitle">
+                    <text>{{item.title}}</text>
+                    <image src="{{item.icon}}" bindtap="_iAccordion" data-index="{{index}}" data-type="{{item.type}}"></image>
+                </view>
+                <view class="iAccordionText">
+                    <text>{{item.text}}</text>
+                    <image src="{{item.img}}"></image>
+                </view>
+            </view>
+        </block>
+    </view>

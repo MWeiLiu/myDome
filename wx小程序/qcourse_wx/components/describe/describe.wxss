@@ -1,0 +1,22 @@
+.companyInfo {
+    padding: 120rpx 24rpx;
+}
+
+.companyInfo image{
+    margin-bottom: 80rpx;
+}
+
+.companyInfo .summary{
+    width: 100%;
+    border-bottom: 2rpx solid #DDD;
+    background: #fff;
+    overflow-y: auto;
+    padding-bottom: 12rpx;
+}
+
+.companyInfo .summary text{
+    font-size: 32rpx;
+    color: #333333;
+    letter-spacing:  3rpx;
+    line-height: 48rpx;
+}

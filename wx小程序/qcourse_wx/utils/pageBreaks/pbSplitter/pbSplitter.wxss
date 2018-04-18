@@ -1,0 +1,6 @@
+
+.pbSplitter {
+    height: 2rpx;
+    background-color: #ddd;
+    margin: 50rpx auto;
+}

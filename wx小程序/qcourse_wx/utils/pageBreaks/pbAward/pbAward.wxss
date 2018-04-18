@@ -1,0 +1,14 @@
+.pbAward image{
+    width: 120rpx;
+    height: 120rpx;
+    display: block;
+    margin: 0 auto 28rpx;
+}
+
+.pbAward {
+    font-size: 28rpx;
+    color: #99CC33;
+    letter-spacing: 2.4rpx;
+    line-height: 28rpx;
+    text-align: center;
+}

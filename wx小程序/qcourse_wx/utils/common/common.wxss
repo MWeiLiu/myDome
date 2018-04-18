@@ -1,0 +1,190 @@
+
+
+view,text {
+    letter-spacing: 2.6rpx;
+}
+
+/* 课程标题 */
+.titleStyle {
+    color: #333333;
+    font-size: 72rpx;
+    letter-spacing: 5.8rpx;
+    line-height: 100rpx;
+    font-weight: 600;
+}
+
+/* 课程副标题 */
+.vicTitleStyle {
+	color: #333333;
+    font-size: 40rpx;
+    letter-spacing: 3.8rpx;
+	line-height: 56rpx;
+	
+}
+
+/* 内容标题 */
+.contentTitleStyle {
+    color: #333333;
+	font-size: 40rpx;
+    letter-spacing: 4rpx;
+    line-height: 56rpx;
+    font-weight: 600;
+}
+
+/* 内容副标题 */
+.contentVicTitleStyle {
+    color: #333333;
+	font-size: 36rpx;
+    letter-spacing: 3rpx;
+    line-height: 48rpx;
+    font-weight: 600;
+}
+
+/* 文本 */
+.contentTextStyle {
+	color: #333333;
+	font-size: 32rpx;
+    letter-spacing: 3px;
+    line-height: 56rpx;
+}
+
+.textAlign_center {
+    text-align: center;
+}
+
+.textAlign_left {
+    text-align: left;
+}
+
+.contentTextAlign {
+    text-align: justify;
+}
+
+/** 卡片中的头像 **/
+.cardUserImage {
+    width: 160rpx;
+    height: 160rpx;
+    display: inherit;
+}
+
+/* 序列 */
+.sequence text {
+    display:block;
+    margin-left: 76rpx;
+}
+
+/* 图像 */
+.picture image {
+    width: 100%;
+    display: block;
+}
+
+.describe {
+    display: block;
+    width: 100%;
+    margin: 24rpx auto;
+    border-bottom: 2rpx solid #cdcdcd;
+    background: none;
+    line-height: 56rpx;
+    font-size: 32rpx;
+    color: #212121;
+}
+
+.picture .text {
+    color: #666;
+}
+
+/* 分页 */
+.pageBreaks text {
+    font-size: 36rpx;
+    color: #fff;
+}
+
+/* 作者名称 */
+.cardUserName {
+    color: #003989;
+	font-size: 28rpx;
+    letter-spacing: 12rpx;
+}
+
+.boxsize {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*超出文字显示...*/
+.showByStep {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.backgroundImageStyle{
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+swiper {
+    height: 2000rpx;
+}
+    
+.hide{
+    display:none !important;
+}
+
+/*flex布局*/
+
+.qFlex {
+	display: flex;
+	display: -webkit-flex;
+}
+
+/*竖向*/
+.qFlexDirectionColumn {
+	flex-direction: column;
+	-webkit-flex-direction: column;
+}
+
+.qFlexJustifyStart {
+	justify-content: flex-start;
+	-webkit-justify-content: flex-start;
+}
+
+/*横向剧中*/
+.qFlexJustifyCenter {
+	justify-content: center;
+	-webkit-justify-content: center;
+}
+
+/*横向平均*/
+.qFlexJustifyAround {
+	justify-content: space-around;
+	-webkit-justify-content: space-around;
+}
+
+/*横向左右*/
+.qFlexJustifyBetween {
+	justify-content: space-between;
+	-webkit-justify-content: space-between;
+}
+
+/*横向居右*/
+.qFlexJustifyEnd {
+	justify-content: flex-end;
+	-webkit-justify-content: flex-end;
+}
+
+/*上下居中*/
+.qFlexAlignCenter {
+	align-items: center;
+	-webkit-align-items: center;
+}
+
+/*从下排列*/
+.qFlexAlignEnd {
+	align-items: flex-end;
+	-webkit-align-items: flex-end;
+}

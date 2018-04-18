@@ -1,0 +1,6 @@
+<!-- 代码区template -->
+    <view class="mmCode">
+        <view class="contentTextStyle">
+            <text>{{data.content.text}}</text>
+        </view>
+    </view>

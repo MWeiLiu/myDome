@@ -1,0 +1,45 @@
+<!-- 课程目录 -->
+<view class="curriculumBox">
+    <view class="title">
+        <view class="curriculumTitle">{{data.content.courseDiscrption}}</view>
+    </view>
+    <view class="curriculumContent">
+        <block wx:for="{{data.content.list[0]}}" wx:key="*this" wx:for-index="index">
+            <block wx:if="{{curriculum[index].type == 'text'}}">
+                <view class="subsectionTitle">{{item.pname}}</view>
+            </block>
+            <block wx:else>
+                <view class="curriculumed qFlex qFlexAlignCenter">
+                    <view class="productIco boxsize">
+                        <view></view>
+                        <text>{{curriculum[index].idx}}</text>
+                    </view>
+                    <view class="porcuctTitle">{{item.pname}}</view>
+                    <block wx:if="{{curriculum[index].look == 'true'}}">
+                        <view class="porcuctPubStatus" bindtap="xuexi" data-pid="{{curriculum[index].pid}}">试听</view>
+                    </block>
+
+                    <block wx:else>
+                        <block wx:if="{{curriculum[index].release == 'true'}}">
+                            
+                            <block wx:if="{{curriculum[index].maibumai == 'dengzhe'}}">
+                                <view class="porcuctPubStatus" bindtap="dengzhe" data-timing="{{curriculum[index].timing}}">🔒</view>
+                            </block>
+                            <block wx:elif="{{curriculum[index].maibumai == 'mai'}}">
+                                <view class="porcuctPubStatus" bindtap="mai" data-mailemei="{{priceObj.payed}}">🔒</view>
+                            </block>
+                            <block wx:elif="{{curriculum[index].maibumai == 'xue'}}">
+                                <view class="porcuctPubStatus" bindtap="xuexi" data-pid="{{curriculum[index].pid}}">学习</view>
+                            </block>
+
+                        </block>
+
+                        <block wx:else>
+                            <view class="porcuctPubStatus" bindtap="meishangjia">🔒</view>
+                        </block>
+                    </block>
+                </view>
+            </block>
+        </block>
+    </view>
+</view>

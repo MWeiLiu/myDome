@@ -1,0 +1,5 @@
+<!-- 底图加文字template -->
+    <view class="pictrueTxtGroupTwo backgroundImageStyle picture boxsize">
+        <image src="{{data.content.backImg.imgSrc}}"></image>
+        <text class="contentTextStyle">{{data.content.text.textHtml}}</text>
+    </view>

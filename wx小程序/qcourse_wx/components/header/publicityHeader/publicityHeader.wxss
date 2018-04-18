@@ -1,0 +1,141 @@
+
+@import "../../../utils/common/common.wxss";
+.header {
+    padding: 52rpx 24rpx 6rpx;
+}
+
+.header .pubHeaderWrap{
+    padding-left: 30rpx;
+    overflow: hidden;
+}
+
+.pubTitle {
+    font-size: 72rpx;
+    letter-spacing: 6.2rpx;
+    font-weight: 700;
+}
+
+.pubSubTitle {
+    margin-bottom: 40rpx;
+    font-size: 40rpx;
+    letter-spacing: 4rpx;
+}
+
+.athourName {
+    float: left;
+    margin-bottom: 42rpx;
+    border-bottom: 1px solid #333;
+    font-size: 28rpx;
+    letter-spacing: 12rpx;
+}
+
+.pubDetailCatalog {
+    width: 100%;
+    /* padding: 64rpx 0 0; */
+    margin: 0;
+    left: 0;
+    position: relative;
+}
+
+.detailsCatalog {
+    width: 396rpx;
+    height: 56rpx;
+    margin: 0 auto 280rpx;
+    overflow: hidden;
+    border-radius: 6rpx;
+}
+
+.detailsCatalog > view {
+    width: 180rpx;
+    float: left;
+    background-color: #fff;
+    padding-left: 18rpx;
+    font-size: 24rpx;
+    line-height: 56rpx;
+    color: #5e5e5e;
+    letter-spacing: 13.72rpx;
+    text-align: center;
+}
+
+.detailsCatalog .detailsCatalogActive {
+    background-color: #808080;
+    color: #ffffff;
+}
+
+.rightAuthor-pubInfo {
+    margin: 32rpx auto 0;
+    padding: 0 24rpx;
+}
+
+.authorInforShow image {
+    width: 608rpx;
+    height: 452rpx;
+    display: block;
+    margin: -270rpx auto 72rpx;
+    box-shadow: 0 4rpx 8rpx #b8b8b8;
+}
+
+.pubPurchaseAmount {
+    display: none;
+}
+
+.pubPurchaseAmount .cur_cash {
+    margin-right: 14rpx;
+    font-size: 72rpx;
+    line-height: 100rpx;
+    letter-spacing: 0.46rpx;
+    font-weight: 900;
+    color: #000;
+}
+
+.pubcash_Coupon {
+    height: 164rpx;
+    background-image: url('https://www.qcourse.com/images/coupon.png');
+    background-size: 100% 100%;
+}
+
+.couponCash {
+    width: 200rpx;
+    text-align: center;
+}
+
+.cou_cashNum {
+    margin-bottom: 14rpx;
+    font-size: 48rpx;
+    color: #D23C3C;
+    letter-spacing: 2rpx;
+}
+
+.couConditionsUse {
+    font-size: 28rpx;
+    color: #333333;
+    letter-spacing: 2rpx;
+}
+
+.pub_couponLine {
+    width: 0px;
+    height: 112rpx;
+    margin-top: 20rpx;
+    margin-right: 12rpx;
+}
+
+.cou_name {
+    margin-top: 10rpx;
+    margin-bottom: 30rpx;
+    font-size: 28rpx;
+    color: #333333;
+    letter-spacing: 2rpx;
+}
+
+.cou_useTime {
+    font-size: 24rpx;
+    color: #666666;
+    letter-spacing: 1.72rpx;
+}
+
+.couponReceive {
+    margin: 54rpx 0 0 70rpx;
+    font-size: 40rpx;
+    color: #D23C3C;
+    letter-spacing: 2.6rpx;
+}

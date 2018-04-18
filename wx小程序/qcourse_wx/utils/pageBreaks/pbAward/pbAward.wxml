@@ -1,0 +1,8 @@
+
+<!-- 打赏 -->
+<template name="pbAward">
+    <view class="pbAward" data-rewardMoney="{{itme.content.rewardMoney}}" data-rewardMoneyMethod="{{itme.content.rewardMoneyMethod}}">
+        <image src="https://www.qcourse.com/images/grant.png"></image>
+        <view>您的支持是作者最大的动力</view>
+    </view>
+</template>

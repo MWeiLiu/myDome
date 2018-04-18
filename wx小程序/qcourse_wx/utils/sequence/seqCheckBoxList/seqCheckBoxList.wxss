@@ -1,0 +1,8 @@
+
+.seqCheckBoxList .orderName {
+    float: left;
+    width: 12rpx;
+    height: 12rpx;
+    background-color: rgb(94, 94, 94);
+    margin: 22rpx 0 0 28rpx;
+}

@@ -1,0 +1,9 @@
+<!-- 副标题段落template -->
+    <view class="ptStageTitle">
+        <view class="contentVicTitleStyle">
+            <text>{{data.content.title}}</text>
+        </view>
+        <view class="contentTextStyle">
+            <text>{{data.content.text}}</text>
+        </view>
+    </view>

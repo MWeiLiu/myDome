@@ -1,0 +1,11 @@
+<!-- 标题段落template -->
+<template name="ptTextTitle">
+    <view class="ptTextTitle" style="background-color:{{item.backgroundColor}};padding-top:{{item.marginTop}};padding-bottom:{{item.marginBottom}};">
+        <view class="contentTitleStyle">
+            <text>{{item.content.title}}</text>
+        </view>
+        <view class="contentTextStyle">
+            <text>{{item.content.text}}</text>
+        </view>
+    </view>
+</template>

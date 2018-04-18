@@ -1,0 +1,22 @@
+
+@import "../../../utils/common/common.wxss";
+.creativeError > view {
+    padding: 32rpx;
+    border: 2rpx solid #C63636;
+    overflow: hidden;
+}
+
+.creativeError image {
+    width: 40rpx;
+    height: 40rpx;
+    margin: 6rpx 28rpx 0 0;
+    vertical-align: middle;
+    float: left;
+}
+
+.creativeError text {
+    display: block;
+    margin-left: 68rpx;
+    color: #C63636;
+    letter-spacing: 1.6rpx;
+}

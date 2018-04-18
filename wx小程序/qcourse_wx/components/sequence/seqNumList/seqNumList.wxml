@@ -1,0 +1,7 @@
+<!-- 序号序列template -->
+    <view class="seqNumList sequence">
+        <view class="contentTextStyle" wx:for="{{data.content.textLi}}" wx:key="*this" wx:for-index="index">
+            <view class="orderName boxsize">{{index + 1}}</view>
+            <text>{{item}}</text>
+        </view>
+    </view>

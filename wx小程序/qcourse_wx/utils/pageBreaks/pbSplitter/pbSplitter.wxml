@@ -1,0 +1,4 @@
+<!-- 分屏template -->
+<template name="pbSplitter">
+    <view class="pbSplitter"></view>
+</template>

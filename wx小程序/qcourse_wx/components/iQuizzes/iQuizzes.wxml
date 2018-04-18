@@ -1,0 +1,44 @@
+<!-- 试题 iQuizzes-->
+<block wx:for="{{iQuizzes.items}}" wx:key="*this" wx:for-index="idx">
+    <view class="iQuizzes" style="background-color:#fff; padding-top:{{data.marginTop}}; padding-bottom:{{data.marginBottom}};">
+        <block wx:if="{{item.type == 'judge'}}">
+            <view class="iQuizzesBox">
+                <view class="typeName">
+                    <image src="judge.png"></image>
+                    <text>{{item.typeName}}</text>
+                    <text>{{idx + 1}}/{{iQuizzes.items.length}}</text>
+                </view>
+                <view class="question">{{item.question}}</view>
+                <view class="answerItems">
+                    <block wx:for="{{item.answerItems}}" wx:key="answerItems" wx:for-index="idxans">
+                        <view class="judgeAnswerItems">{{item}}</view>
+                    </block>
+                </view>
+                <view class="rightORwrong">
+                    <image class="" src="https://www.qcourse.com/images/couponSelected.png"></image>
+                    <view class="iQuizzesText">正确答案：错</view>
+                </view>
+                <view class="analysis iQuizzesText">{{item.analysis}}</view>
+                <view class="next">下一题</view>
+            </view>
+        </block>
+        <block wx:elif="{{item.type == 'multiselect'}}">
+            <view class="iQuizzesBox">
+                <view class="typeName">
+                    <image src="multiselect.png"></image>
+                    <text>{{item.typeName}}</text>
+                </view>
+                <view class="question">{{item.question}}</view>
+            </view>
+        </block>
+        <block wx:elif="{{item.type == 'select'}}">
+            <view class="iQuizzesBox">
+                <view class="typeName">
+                    <image src="select.png"></image>
+                    <text>{{item.typeName}}</text>
+                </view>
+                <view class="question">{{item.question}}</view>
+            </view>
+        </block>
+    </view>
+</block>

@@ -1,0 +1,17 @@
+<!--me.wxml-->
+
+<view class="myBox">
+    <view class="meBanner">
+        <image src="../../images/meBanner.png"></image>
+        <view class="userInfo">
+            <image src="../../images/wx_meIcon1.png"></image>
+            <text>LAA~LAA</text>
+        </view>
+    </view>
+    <view class="hr_f2"></view>
+    <view class="meListBox">
+        <block wx:for="{{meList}}" wx:key="*this">
+            <img_text_img id="img_text_img" data="{{item}}" bindtap="toUrl" data-tourl="{{item.toUrl}}"></img_text_img>
+        </block>
+    </view>
+</view>

@@ -1,0 +1,7 @@
+<!-- 摘抄Btemplate -->
+<template name="creativeDeclareTwo">
+    <view class="creativeDeclareTwo contentTextStyle textAlign_center" style="background-color:{{item.backgroundColor}};padding-top:{{item.marginTop}};padding-bottom:{{item.marginBottom}};">
+        <view class="hr"></view>
+        <text>{{item.content.text.textHtml}}</text>
+    </view>
+</template>

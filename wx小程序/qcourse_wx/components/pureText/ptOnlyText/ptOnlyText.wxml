@@ -1,0 +1,4 @@
+<!-- 段落template -->
+    <view class="ptOnlyText contentTextStyle">
+        <text>{{data.content.text}}</text>
+    </view>

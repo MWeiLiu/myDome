@@ -1,0 +1,38 @@
+
+@import '../../../utils/common/common.wxss';
+
+.replaceNumber2 > view:first-child{
+    flex: 1;
+    height: 1px;
+    margin: 0;
+    background: linear-gradient(to right, rgba(204,204,204,0) , rgba(204,204,204,1));
+}
+
+.replaceNumber2 > view:nth-child(2) {
+    padding: 0 20rpx;
+}
+
+.replaceNumber2 > view:last-child{
+    flex: 1;
+    height: 1px;
+    margin: 0;
+    background: linear-gradient(to right, rgba(204,204,204,1) , rgba(204,204,204,0))
+}
+
+.replaceNumber3 {
+    border-top: 2rpx solid #333;
+    border-bottom: 2rpx solid #333;
+    padding: 16rpx 0;
+}
+
+.replaceNumber4 {
+    margin: 0 auto;
+}
+
+.replaceNumber4 > text {
+    float: left;
+}
+
+.replaceNumber4 > text:nth-child(2) {
+    padding: 0 20rpx;
+}

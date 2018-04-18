@@ -1,0 +1,17 @@
+<!-- 课程目录 -->
+<view class="curriculumBox">
+    <view class="title">
+        <view class="curriculumTitle">大数据时代的金融投资思维大数据时代金融</view>
+    </view>
+    <view class="curriculumContent">
+        <view class="subsectionTitle">分段标题大数据时代的金融投资思维大数据时代的金融</view>
+        <view class="curriculumed qFlex qFlexAlignCenter">
+            <view class="productIco boxsize">
+                <view></view>
+                <text>01</text>
+            </view>
+            <view class="porcuctTitle">创意文本修改创意文本修改创意文本修改创意文本修改创意文本修改创意文本修改</view>
+            <view class="porcuctPubStatus">试听</view>
+        </view>
+    </view>
+</view>

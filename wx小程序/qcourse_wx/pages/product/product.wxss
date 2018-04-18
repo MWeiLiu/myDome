@@ -1,0 +1,25 @@
+/* pages/publicity/publicity.wxss */
+
+/** 公共wxss **/
+@import "../../utils/common/common.wxss";
+
+
+/** 分页符 **/
+@import "../../utils/pageBreaks/pbKeepon/pbKeepon.wxss";
+@import "../../utils/pageBreaks/pbSplitter/pbSplitter.wxss";
+@import "../../utils/pageBreaks/pbAward/pbAward.wxss";
+
+@import "../../components/multimedia/mmAudio/mmAudio.wxss";
+
+
+/* 优惠券 */
+@import '../../utils/coupon/coupon.wxss';
+@import '../../utils/operates/operateWrap.wxss';
+
+.pubContentList {
+    margin-top: 72rpx;
+}
+
+.pubContentList > view {
+    padding: 0 24rpx;
+}

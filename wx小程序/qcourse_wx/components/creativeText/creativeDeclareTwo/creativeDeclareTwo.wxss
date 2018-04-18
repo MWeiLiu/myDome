@@ -1,0 +1,8 @@
+
+@import "../../../utils/common/common.wxss";
+.hr {
+    width: 108rpx;
+    height: 4rpx;
+    background: #333;
+    margin: 0 auto;
+}

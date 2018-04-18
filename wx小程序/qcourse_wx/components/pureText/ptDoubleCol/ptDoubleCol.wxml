@@ -1,0 +1,9 @@
+<!-- 两列template -->
+    <view class="ptDoubleCol">
+        <view class="contentTextStyle">
+            <text>{{data.content.textContentLeft}}</text>
+        </view>
+        <view class="contentTextStyle">
+            <text>{{data.content.textContentRight}}</text>
+        </view>
+    </view>

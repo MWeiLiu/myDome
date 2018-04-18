@@ -1,0 +1,51 @@
+
+{
+  "navigationBarTitleText": "专题页面",
+  "usingComponents": {
+    "creativeDeclareOne": "/components/creativeText/creativeDeclareOne/creativeDeclareOne",
+    "creativeDeclareTwo": "/components/creativeText/creativeDeclareTwo/creativeDeclareTwo",
+    "creativeDeclareThre": "/components/creativeText/creativeDeclareThre/creativeDeclareThre",
+    "creativeError": "/components/creativeText/creativeError/creativeError",
+    "creativeQuoteOne": "/components/creativeText/creativeQuoteOne/creativeQuoteOne",
+    "creativeQuoteTwo": "/components/creativeText/creativeQuoteTwo/creativeQuoteTwo",
+    "creativeTitTxtGroup": "/components/creativeText/creativeTitTxtGroup/creativeTitTxtGroup",
+
+    "describe": "/components/describe/describe",
+
+    "productHeader": "/components/header/productHeader/productHeader",
+    "publicityHeader": "/components/header/publicityHeader/publicityHeader",
+    
+    "iAccordion": "/components/Interaction/iAccordion/iAccordion",
+    "iPagetab": "/components/Interaction/iPagetab/iPagetab",
+    "iPageturning": "/components/Interaction/iPageturning/iPageturning",
+    "iQuizzes": "/components/Interaction/iQuizzes/iQuizzes",
+
+    "mmAttachment": "/components/multimedia/mmAttachment/mmAttachment",
+    "mmCode": "/components/multimedia/mmCode/mmCode",
+
+    "pictrueDouble": "/components/picture/pictrueDouble/pictrueDouble",
+    "pictrueSingle": "/components/picture/pictrueSingle/pictrueSingle",
+    "pictrueTurntable": "/components/picture/pictrueTurntable/pictrueTurntable",
+    "pictrueTxtGroupOne": "/components/picture/pictrueTxtGroupOne/pictrueTxtGroupOne",
+    "pictrueTxtGroupTwo": "/components/picture/pictrueTxtGroupTwo/pictrueTxtGroupTwo",
+
+    "curriculum": "/components/publicity/curriculum/curriculum",
+    "publicityArrange": "/components/publicity/publicityArrange/publicityArrange",
+    "publicitylecturer": "/components/publicity/publicitylecturer/publicitylecturer",
+    "publicityQRcode": "/components/publicity/publicityQRcode/publicityQRcode",
+
+    "ptDoubleCol": "/components/pureText/ptDoubleCol/ptDoubleCol",
+    "ptOnlyStageTitle": "/components/pureText/ptOnlyStageTitle/ptOnlyStageTitle",
+    "ptOnlyText": "/components/pureText/ptOnlyText/ptOnlyText",
+    "ptOnlyTitle": "/components/pureText/ptOnlyTitle/ptOnlyTitle",
+    "ptStageTitle": "/components/pureText/ptStageTitle/ptStageTitle",
+    "ptTextTitle": "/components/pureText/ptTextTitle/ptTextTitle",
+    "title": "/components/pureText/title/title",
+
+    "qProcess": "/components/qProcess/qProcess",
+
+    "seqCheckBoxList": "/components/sequence/seqCheckBoxList/seqCheckBoxList",
+    "seqNumList": "/components/sequence/seqNumList/seqNumList",
+    "seqSymList": "/components/sequence/seqSymList/seqSymList"
+  }
+}

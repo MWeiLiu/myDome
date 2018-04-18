@@ -1,0 +1,35 @@
+
+@import "../../../utils/common/common.wxss";
+.iAccordion .iAccordionBox {
+    height: 108rpx;
+    overflow: hidden;
+    border-bottom: 2rpx solid rgba(159,163,167,.4);
+}
+
+.iAccordion .iAccordionBox:first-child {
+    border-top: 2rpx solid rgba(159,163,167,.4);
+}
+
+.iAccordion .iAccordionTitle {
+    height: 108rpx;
+    overflow: hidden;
+    line-height: 108rpx;
+    letter-spacing: 2.2rpx;
+    font-weight: 900;
+}
+
+.iAccordion .iAccordionTitle text {
+    float: left;
+}
+
+.iAccordion .iAccordionTitle image {
+    float: right;
+    width: 26rpx;
+    height: 26rpx;
+    margin-top:44rpx;
+}
+
+.iAccordion .iAccordionText image {
+    margin-top: 16rpx;
+    width: 100%
+}

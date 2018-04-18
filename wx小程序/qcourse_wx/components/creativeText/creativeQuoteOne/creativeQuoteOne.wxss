@@ -1,0 +1,19 @@
+
+@import "../../../utils/common/common.wxss";
+
+.wxParse-a {
+    color: #2400ff;
+    text-decoration: underline;
+}
+
+.wxParse-u {
+    text-decoration: underline;
+}
+
+.wxParse-b {
+    font-weight: 600;
+}
+
+.wxParse-strike {
+    text-decoration: line-through;
+}

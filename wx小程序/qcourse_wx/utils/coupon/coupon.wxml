@@ -1,0 +1,20 @@
+<template name='coupon'>
+<view class='coupon_container'>
+  <view wx:for='{{coupon || myCoupon}}' wx:key='*this'
+    class='qFlex qFlexJustifyCenter qFlexAlignCenter coupon_item' 
+    style='background-image:url({{item.bgImg}});background-size:100% 100%;background-position:center' 
+    catchtap='couponSelect' data-index='{{index}}' data-id='{{item.id}}' data-type='{{levelOne.couponType}}'>
+      <view class='coupon_left qFlex qFlexDirectionColumn qFlexJustifyCenter qFlexAlignCenter'>
+        <view class='coupon_price'>￥{{item.amount}}</view>
+        <view class='coupon_des'>{{item.detail}}</view>
+      </view>
+      <view class='coupon_right qFlex qFlexDirectionColumn qFlexJustifyCenter'>
+        <view class='coupon_info boxsize'>
+          <view class='coupon_title'>{{item.name}}</view>
+          <view class='coupin_term'>{{item.created_time}}-{{item.invalid_time}}</view>
+        </view>
+        <image class='coupon_operate' src='{{item.operateIco}}'></image>
+      </view>
+  </view>
+</view>
+</template>

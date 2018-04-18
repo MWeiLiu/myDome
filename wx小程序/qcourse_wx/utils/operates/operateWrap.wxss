@@ -1,0 +1,28 @@
+/* components/operates/operateWrap.wxss */
+.operate_wrap{
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right:0;
+  background-color: rgba(0,0,0,.42);
+  position: fixed;
+}
+.operate_title{
+  width:100%;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 36rpx;
+  text-align: center;
+  background-color: #fff;
+  padding: 10rpx 0;
+  border-bottom: 2rpx solid #666;
+}
+.operate_item{
+  width: 100%;
+  background-color: #fff;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+}

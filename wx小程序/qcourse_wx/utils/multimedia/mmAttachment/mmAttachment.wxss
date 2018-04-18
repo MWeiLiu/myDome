@@ -1,0 +1,29 @@
+
+.mmAttachment {
+    overflow: hidden;
+}
+
+.mmAttachment > view {
+    float: left;
+    padding-left: 52rpx;
+}
+
+.mmAttachment .fileTitle {
+    width: 500rpx;
+    letter-spacing: 1.92rpx;
+}
+
+.mmAttachment .fileSize {
+    margin-top: 4rpx;
+    font-size: 24rpx;
+    color: #666666;
+    letter-spacing: 2px;
+    line-height: 28rpx;
+}
+
+.mmAttachment image {
+    float: right;
+    margin-right: 52rpx;
+    width: 88rpx;
+    height: 80rpx;
+}

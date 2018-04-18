@@ -1,0 +1,7 @@
+<!-- 圆序列template -->
+    <view class="seqSymList sequence">
+        <view class="contentTextStyle" wx:for="{{data.content.textLi}}" wx:key="*this">
+            <view class="orderName"></view>
+            <text>{{item}}</text>
+        </view>
+    </view>

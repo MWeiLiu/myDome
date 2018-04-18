@@ -1,0 +1,10 @@
+<view class="companyInfo boxsize">
+    <block wx:if="{{describe.json.wholeSet.userLogo != ''}}">
+        <view class="shiftTop">
+            <image src="{{describe.json.wholeSet.userLogo}}" mode="aspectFit" style="height: {{logoHeight}};"></image>
+        </view>
+    </block>
+    <view class="summary">
+        <text>{{describe.json.wholeSet.summary}}</text>
+    </view>
+</view>

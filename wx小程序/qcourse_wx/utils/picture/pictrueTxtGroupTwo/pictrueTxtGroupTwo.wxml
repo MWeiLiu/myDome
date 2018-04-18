@@ -1,0 +1,6 @@
+<!-- 底图加文字template -->
+<template name="pictrueTxtGroupTwo">
+    <view class="pictrueTxtGroupTwo backgroundImageStyle picture boxsize" style="background-image:{{'url(' + item.content.backImg.imgSrc + ')'}};padding-top:{{item.marginTop}};padding-bottom:{{item.marginBottom}};">
+        <text class="contentTextStyle">{{item.content.text.textHtml}}</text>
+    </view>
+</template>

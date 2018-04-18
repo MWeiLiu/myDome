@@ -1,0 +1,23 @@
+
+<view class="walleBox">
+    <view class="walleTop">
+        <view class="Settlement">
+            <view class="jine">￥12.13</view>
+            <text>待结算金额</text>
+        </view>
+        <view class="withdrawals">
+            <view class="jine">￥420.56</view>
+            <view>
+                <text>可提现金额</text>
+                <image src="../../images/doubtIcon.png" bindtap="clickShow"></image>
+            </view>
+        </view>
+    </view>
+    <view class="walleTip" hidden="{{isShow}}">暂不支持提现功能，如要提现，请到微信公众号后台提交申请。</view>
+    <view class="hr_f2"></view>
+    <view class="walleBottom">
+        <block wx:for="{{walle}}" wx:key="*this">
+            <img_text_img id="img_text_img" data="{{item}}"></img_text_img>
+        </block>
+    </view>
+</view>

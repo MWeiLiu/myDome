@@ -1,0 +1,4 @@
+<!-- 副标题template -->
+    <view class="ptOnlyStageTitle contentVicTitleStyle">
+        <text>{{data.content.title}}</text>
+    </view>

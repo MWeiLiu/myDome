@@ -1,0 +1,50 @@
+.coupon_container{
+  width: 100%;
+}
+.coupon_item{
+  width:720rpx;
+  height: 128rpx;
+  margin: 0 auto 16rpx auto;
+  letter-spacing: 1.8rpx;
+}
+.coupon_left{
+  width: 200rpx;
+  height: 100%;
+  /* border-right: 2rpx dached #dedede; */
+}
+.coupon_price,.coupon_des{
+  letter-spacing: 1.8rpx;
+}
+.coupon_price{
+  font-size: 36rpx;
+  color: #D23C3C;
+}
+.coupon_des,.coupon_title{
+  font-size: 12px;
+}
+.coupon_title{
+  margin-top: 8rpx;
+}
+.coupon_des{
+  margin-top: 6rpx;
+}
+.coupon_right{
+  width: 520rpx;
+  height: 100%;
+  position: relative;
+}
+.coupon_info{
+  padding-left:32rpx;
+}
+.coupin_term{
+  font-size: 12px;
+  color: #999;
+  margin-top: 14rpx;
+}
+.coupon_right image{
+  width: 48rpx;
+  height: 48rpx;
+  position: absolute;
+  right: 16rpx;
+  top: 40rpx;
+}

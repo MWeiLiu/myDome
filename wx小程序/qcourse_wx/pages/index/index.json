@@ -1,0 +1,10 @@
+{
+  "backgroundTextStyle": "#333",
+  "navigationBarBackgroundColor": "#9EBC2B",
+  "navigationBarTitleText": "Qcourse小课",
+  "navigationBarTextStyle": "#000",
+  "usingComponents": {
+    "img_text_img": "/components/instrument/img_text_img/img_text_img",
+    "recentlyBrowseList": "/components/instrument/recentlyBrowseList/recentlyBrowseList"
+  }
+}

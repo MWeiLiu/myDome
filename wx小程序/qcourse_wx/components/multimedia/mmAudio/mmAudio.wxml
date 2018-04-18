@@ -1,0 +1,13 @@
+<template name='mmAudio'>
+  <view class='audioOne'>
+    <audio id='audio1' src='{{item.src}}' name='' author=''></audio>
+    <view class='audioControls'>
+      <view class='audioTimeProgress'>
+        <text class='audioCurrent'>{{item.current}}</text>
+        <progress class='audioProgress' percent='{{item.progress}}'></progress>
+        <text class='audioDirection'>{{item.driection}}</text>
+      </view>
+      <image class='audioPlayPause' data-index='{{item.index}}' bindtap='audioPlayPause' src='{{item.playPauseIco}}'></image>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,95 @@
+
+
+@import "../../../utils/common/common.wxss";
+.curriculumBox {
+    width: 100%;
+    padding: 40rpx 0 48rpx;
+    border: 2rpx solid #ddd;
+}
+
+.curriculumBox .title {
+    padding-bottom: 40rpx;
+    border-bottom: 2rpx solid #ddd;
+}
+
+.curriculumTitle {
+    padding: 0 24rpx;
+    font-size: 36rpx;
+    color: #333333;
+    letter-spacing: 5rpx;
+    text-align: center;
+}
+
+.curriculumContent {
+    padding: 0 24rpx;
+}
+
+.subsectionTitle {
+    margin-top: 40rpx;
+    border-bottom: 2rpx dashed #ddd;
+    padding-bottom: 24rpx;
+    font-size: 28rpx;
+    color: #333333;
+    letter-spacing: 3.2rpx;
+    font-weight: 600;
+}
+
+.curriculumed {
+    overflow: hidden;
+    margin-top: 40rpx;
+}
+
+.curriculumed > view {
+    float: left;
+}
+
+.productIco {
+    width: 48rpx;
+    height: 48rpx;
+    padding-left: 2rpx;
+    margin-right: 16rpx;
+    position: relative;
+    background: #5E5E5E;
+    font-size: 24rpx;
+    color: #FFFFFF;
+    letter-spacing: 1.2rpx;
+    text-align: center;
+    line-height: 48rpx;
+}
+
+.productIco view {
+    width: 0;
+    height: 0;
+    border-top: 12.8rpx solid #E6D612;
+    border-right: 12.8rpx solid transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.porcuctTitle {
+    width: 416rpx;
+    margin: 0 24rpx 0 16rpx;
+    font-size: 28rpx;
+    color: #333333;
+    letter-spacing: 4rpx;
+    line-height: 48rpx;
+}
+
+.porcuctPubStatus {
+    width: 152rpx;
+    height: 48rpx;
+    padding-left: 4rpx;
+    border: 2rpx solid #333333;
+    border-radius: 6rpx;
+    line-height: 48rpx;
+    text-align: center;
+    font-size: 12px;
+    color: #333333;
+    letter-spacing: 12rpx;
+}
+
+.porcuctPubStatus.time {
+    height: 94rpx;
+    letter-spacing: 1rpx;
+}

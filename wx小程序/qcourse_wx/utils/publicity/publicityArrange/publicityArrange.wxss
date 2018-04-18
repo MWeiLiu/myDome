@@ -1,0 +1,30 @@
+
+.arrangeTextStyle {
+    position: relative;
+    margin-left: 30rpx;
+    font-size: 32rpx;
+    color: #333333;
+    letter-spacing: 3rpx;
+    line-height: 56rpx;
+}
+
+.planTitle {
+    margin-left: 0;
+}
+
+.planText {
+    overflow: hidden;
+}
+
+.planText > view {
+    float: left;
+}
+
+.planText .borderRadius {
+    width: 10rpx;
+    height: 10rpx;
+    position: absolute;
+    background: black;
+    border-radius: 50%;
+    margin: 25rpx 0 0 0;
+}

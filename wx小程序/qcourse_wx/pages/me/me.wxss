@@ -1,0 +1,41 @@
+
+
+@import "../../utils/common/common.wxss";
+
+@import "../../components/instrument/img_text_img/img_text_img.wxss";
+
+.meBanner {
+    width: 100%;
+    height: 334rpx;
+}
+
+.meBanner > image {
+    width: 100%;
+    height: 180rpx;
+}
+
+.userInfo {
+    width: 100%;
+    position: absolute;
+    top: 90rpx;
+    left: 50%;
+    margin-left: -50%;
+    font-size: 24rpx;
+    color: #333333;
+    letter-spacing: 3.08rpx;
+    text-align: center;
+}
+
+.userInfo image{
+    width: 132rpx;
+    height: 132rpx;
+    display: block;
+    margin: 0 auto 14rpx;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.hr_f2 {
+    height: 16rpx;
+    background: #f2f2f2;
+}

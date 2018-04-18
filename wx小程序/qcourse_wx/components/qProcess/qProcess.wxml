@@ -1,0 +1,26 @@
+<import src="../../wxParse/wxParse.wxml"/>
+
+<!-- 流程 -->
+<view class="qProcess">
+    <view class="qProcessHeader">
+        <blcok wx:for="{{qProcess.items}}" wx:key="*this" wx:for-index="idx">
+            <view class="pOneStep" bindtap="pOneStepActive" style="left: {{qProcess.pOneStepLeftArry[idx]}}rpx" data-pOneStepIndex="{{idx}}">{{idx + 1}}</view>
+        </blcok>
+    </view>
+    <swiper current="{{qProcess.current}}" indicator-dots="{{qProcess.swiper.indicatorDots}}" autoplay="{{qProcess.swiper.autoplay}}" duration="{{qProcess.swiper.duration}}">
+        <block wx:for="{{qProcess.items}}" wx:key="*this" wx:for-index="index">
+            <swiper-item>
+                <view class="qProcessContent">
+                    <view class="qProcessTitle">{{item.title}}</view>
+                    <view class="qProcessText">
+                        <template is="wxParse" data="{{wxParseData:qProcess.WxParse[index].nodes}}"/>
+                    </view>
+                    <view class="qProcessimage">
+                        <image src="{{item.img}}"></image>
+                    </view>
+                    <view class="qProcessaudio"></view>
+                </view>
+            </swiper-item>
+        </block>
+    </swiper>
+</view>

@@ -1,0 +1,8 @@
+<!--继续template-->
+<template name="pbKeepon">
+    <view class="pbKeepon boxsize" bindtap="continueNext" data-index="{{pbKeeponIndex}}" data-continuetype="pbKeepon">
+        <view class="pageBreaks">
+            <text>{{item.content.text}}</text>
+        </view>
+    </view>
+</template>

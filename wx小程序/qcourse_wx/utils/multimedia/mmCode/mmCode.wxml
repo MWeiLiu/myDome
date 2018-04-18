@@ -1,0 +1,8 @@
+<!-- 代码区template -->
+<template name="mmCode">
+    <view class="mmCode multimedia" style="background-color:{{item.backgroundColor}};padding-top:{{item.marginTop}};padding-bottom:{{item.marginBottom}};">
+        <view class="contentTextStyle">
+            <text>{{item.content.text}}</text>
+        </view>
+    </view>
+</template>

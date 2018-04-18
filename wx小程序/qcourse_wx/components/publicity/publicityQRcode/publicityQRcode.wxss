@@ -1,0 +1,13 @@
+
+.publicityQrcode > view {
+    font-size: 32rpx;
+    line-height: 60rpx;
+    text-align: center;
+}
+
+.publicityQrcode image {
+    width: 472rpx;
+    height: 472rpx;
+    display: block;
+    margin: 0 auto;
+}

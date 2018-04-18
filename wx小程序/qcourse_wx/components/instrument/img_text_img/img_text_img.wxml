@@ -1,0 +1,25 @@
+<!-- 图-字-图型式列表 -->
+
+<view class="img_text_img boxsize {{data.imgSize == 'small' ? 'listSmall' : 'listLarge'}}">
+    <view class="listTitle">
+        <blcok wx:if="{{data.image}}">
+            <blcok wx:if="{{data.imgSize == 'small'}}">
+                <image class="small" src="{{data.image}}"></image>
+            </blcok>
+            <blcok wx:if="{{data.imgSize == 'large'}}">
+                <image class="large" src="{{data.image}}"></image>
+            </blcok>
+        </blcok>
+        <blcok wx:if="{{data.title}}">
+            <view class="showByStep">{{data.title}}</view>
+        </blcok>
+    </view>
+    <view class="{{data.icon ? '' : 'unIcon'}}">
+        <blcok wx:if="{{data.icon}}">
+            <image class="listInto" src="{{data.icon}}"></image>
+        </blcok>
+        <blcok wx:if="{{data.tipNumber}}">
+            <text class="redText">{{data.tipNumber}}</text>
+        </blcok>
+    </view>
+</view>

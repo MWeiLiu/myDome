@@ -1,0 +1,7 @@
+<!-- 警告template -->
+    <view class="creativeError boxsize textAlign_left">
+        <view class="boxsize contentTextStyle">
+            <image src="{{data.content.headerImg.imgSrc}}"></image>
+            <text>{{data.content.text.textHtml}}</text>
+        </view>
+    </view>
