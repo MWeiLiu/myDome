@@ -1,0 +1,38 @@
+[BEGIN] 2018/4/20 5:20:17
+[root@izm5ebz1ckaqt66ax65kpsz ~]# ll
+total 12
+drwxr-xr-x 7 root root 4096 Apr 16 12:53 oneinstack
+drwxr-xr-x 2 root root 4096 Apr 19 13:23 project
+-rw-r--r-- 1 root root   65 May  1  2017 ReadMe
+[root@izm5ebz1ckaqt66ax65kpsz ~]# cd /data/
+[root@izm5ebz1ckaqt66ax65kpsz data]# ll
+total 12
+drwxr-xr-x 5 mysql mysql 4096 Apr 16 10:40 mysql
+drwxr-xr-x 2 www   www   4096 Apr 20 03:32 wwwlogs
+drwxr-xr-x 7 www   www   4096 Apr 20 05:36 wwwroot
+[root@izm5ebz1ckaqt66ax65kpsz data]# cd wwwroot/
+[root@izm5ebz1ckaqt66ax65kpsz wwwroot]# ll
+total 20
+drwxr-xr-x 3 www  www  4096 Apr  9 20:56 default
+drwxr-xr-x 6 root root 4096 Apr 20 04:04 liuwei
+drwxr-xr-x 3 root root 4096 Apr 20 05:37 svn
+drwxr-xr-x 5 www  www  4096 Apr 18 00:25 wordpress.mweiliu.com
+drwxr-xr-x 2 www  www  4096 Apr 16 12:43 www.mweiliu.com
+[root@izm5ebz1ckaqt66ax65kpsz wwwroot]# cd svn/
+[root@izm5ebz1ckaqt66ax65kpsz svn]# ll
+total 4
+drwxr-xr-x 6 root root 4096 Apr 20 05:37 aaa
+[root@izm5ebz1ckaqt66ax65kpsz svn]# cd svn
+-bash: cd: svn: No such file or directory
+[root@izm5ebz1ckaqt66ax65kpsz svn]# ll
+total 4
+drwxr-xr-x 6 root root 4096 Apr 20 05:37 aaa
+[root@izm5ebz1ckaqt66ax65kpsz svn]# Connection closing...Socket close.
+
+Connection closed by foreign host.
+
+Disconnected from remote host(mweiliu.com) at 06:01:40.
+
+Type `help' to learn how to use Xshell prompt.
+
+[END] 2018/4/20 6:02:39
