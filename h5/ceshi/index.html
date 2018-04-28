@@ -1,79 +1,81 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>动起来</title>
-	</head>
-	<style>
-		* {
-			margin: 0;
-			padding: 0;
+
+<head>
+	<title>睡你麻痹起来(｡･∀･)ﾉﾞ嗨</title>
+</head>
+
+<body>
+	<canvas></canvas>
+	<!--	https://test.qcourse.cc/canvasClip.html?https://test.qcourse.cc/images/editorHeaderImg1.0.png-->
+	<script src="https://www.qcourse.com/js/base/jquery-1.8.3.js"></script>
+	<script>
+		var r,
+			c = $('canvas')[0],
+			ctx = c.getContext("2d"),
+			width = 104,
+			height = 104,
+			oldImg = new Image,
+			newImg = new Image,
+			images = new Image,
+			formData = new FormData();
+		$('canvas').css({
+			'border-radios': '50%'
+		});
+		c.width = width;
+		c.height = height;
+		oldImg.crossOrigin = 'anonymous';
+		if (location.href.indexOf('?') > 0) {
+			images.src = location.search.substr(1);
+			if (images.src) {
+				images.onload = function() {
+					images.width = width;
+					r = images.width > images.height ? images.height / 2 : images.width / 2;
+					ctx.save();
+					ctx.arc(width / 2, height / 2, r, 0, 2 * Math.PI);
+					ctx.clip();
+					ctx.drawImage(images, 0, 0, width, height);
+					ctx.restore();
+
+					newImg.src = c.toDataURL("image/png");
+					var blobBin = atob(newImg.src.split(',')[1]),
+						array = [];
+					for (var i = 0; i < blobBin.length; i++) {
+						array.push(blobBin.charCodeAt(i));
+					}
+					$('body').append('<img src="' + newImg.src + '"/>');
+					var blob = new Blob([new Uint8Array(array)], {
+						type: 'image/png'
+					});
+					var tmpfile = new File([blob], newImg, {
+						type: 'image/png',
+						lastModified: Date.now()
+					});
+					
+					formData.append('icon', tmpfile);
+					formData.append('fname', 'icon');
+					formData.append('type', 'img');
+					formData.append('fext', 'png');
+
+					$.ajax({
+						type: 'POST',
+						url: 'https://test.qcourse.cc/user/info-icon-upload',
+						type: 'POST',
+						data: formData,
+						processData: false,
+						contentType: false,
+						dataType: 'json',
+						success: function(res) {
+							var url = res.data.host + res.data.src;
+							$('body').append('<span>' + url + '</span>')
+//								.find('canvas').remove();
+						}
+					});
+				}
+			}
 		}
-		html,
-		body {
-			height: 100%;
-		}
-		.box {
-			width: 100%;
-			height: 500px;
-/*
-			display: flex;
-			display: -webkit-flex;
-			justify-content: space-around;
-			-webkit-justify-content: space-around;
-*/
-			background:#f1f1f1;
-		}
-		.div1 {
-			width: 300px;
-			height: 300px;
-			background: #000;
-/*			transform: translate3d(-100%, 0, 0);*/
-			position: relative;
-			float: left;
-			left: -150px;
-/*
-			left: 0;
-			top: 0;
-*/
-		}
-		.div2 {
-			width: 300px;
-			height: 300px;
-			background: #6CE26C;
-/*			transform: translate3d(-40%, 0, 0);*/
-			position: relative;
-			float: left;
-			left: -150px;
-/*			left: -40%;*/
-/*
-			left: 300px;
-			top: -300px;
-*/
-		}
-	</style>
-	<body>
-		<div class="box">
-			<div class="div1"></div>
-			<div class="div2"></div>
-		</div>
-		<script src="js/jquery-1.8.3.js"></script>
-		<script>
-			$('.div2').on('click', function(){
-//				$('.div1').css({
-//					'transform': 'translate3d(0, 0, 0)',
-//					'transition': 'transform .5s'
-//				})
-//				$(this).css({
-//					'transform': 'translate3d(0, 0, 0)',
-//					'transition': 'transform .5s'
-//				})
-				$('.div1').animate({
-					left: 0
-				})
-				$(this).animate({
-					left: '30%'
-				})
-			});
-		</script>
-	</body>
+
+	</script>
+</body>
+
 </html>

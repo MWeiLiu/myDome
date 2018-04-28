@@ -42,14 +42,14 @@
       <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
         <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/fcaf3b41-661d-4f88-9a4a-749da8fb57e2/console.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.9666667">
+            <state vertical-scroll-proportion="0.0">
               <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_ppt_yiyaozg_com.product_stage" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test_ppt_yiyaozg_com.product_stage" pinned="false" current-in-tab="false">
         <entry file="dbDummy://dbtable:/c0b6d2e8/fcaf3b41-661d-4f88-9a4a-749da8fb57e2/test_ppt_yiyaozg_com.product_stage">
           <provider editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
@@ -63,6 +63,116 @@
                 <filter text="zpid=3891" />
                 <filter text="zpid=3890" />
                 <filter text="pid=3890" />
+              </filtering>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_ppt_yiyaozg_com.product_author" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/c0b6d2e8/fcaf3b41-661d-4f88-9a4a-749da8fb57e2/test_ppt_yiyaozg_com.product_author">
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true">
+                <filter text="uid=100000064" />
+                <filter text="author_id=1307" />
+                <filter text="uid00000064" />
+                <filter text="author_id=1306" />
+                <filter text="nickname=刘威" />
+                <filter text="id=1218" />
+              </filtering>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_ppt_yiyaozg_com.code" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/c0b6d2e8/fcaf3b41-661d-4f88-9a4a-749da8fb57e2/test_ppt_yiyaozg_com.code">
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_ppt_yiyaozg_com.product_new" pinned="false" current-in-tab="true">
+        <entry file="dbDummy://dbtable:/c0b6d2e8/fcaf3b41-661d-4f88-9a4a-749da8fb57e2/test_ppt_yiyaozg_com.product_new">
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true">
+                <filter text="uid=100000064" />
+                <filter text="pid=3806" />
+                <filter text="pid=3905" />
+                <filter text="pid=3787" />
+                <filter text="pid=3837" />
+              </filtering>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_ppt_yiyaozg_com.collects" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/c0b6d2e8/fcaf3b41-661d-4f88-9a4a-749da8fb57e2/test_ppt_yiyaozg_com.collects">
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_ppt_yiyaozg_com.users" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/c0b6d2e8/fcaf3b41-661d-4f88-9a4a-749da8fb57e2/test_ppt_yiyaozg_com.users">
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true">
+                <filter text="uid=100000064" />
+                <filter text="nickname=刘" />
+                <filter text="nickname=刘威" />
+                <filter text="mobile=18368453728" />
+              </filtering>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_ppt_yiyaozg_com.user_info" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/c0b6d2e8/fcaf3b41-661d-4f88-9a4a-749da8fb57e2/test_ppt_yiyaozg_com.user_info">
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true">
+                <filter text="nickname=刘" />
               </filtering>
             </state>
           </provider>
@@ -89,8 +199,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="180" />
-    <option name="y" value="41" />
+    <option name="x" value="329" />
+    <option name="y" value="27" />
     <option name="width" value="1400" />
     <option name="height" value="1006" />
   </component>
@@ -111,7 +221,7 @@
     <ConfirmationsSetting value="0" id="移除" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -124,33 +234,10 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scratches" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="qcourse" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="qcourse" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="qcourse" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../空灵触动/文档/phpStudy/WWW/svnphp" />
+    <property name="last_opened_file_path" value="C:/wamp/www/99pursey" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RunManager">
@@ -198,8 +285,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="180" y="41" width="1400" height="1006" extended-state="0" />
-    <editor active="false" />
+    <frame x="329" y="27" width="1400" height="1006" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25298506" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -208,8 +295,8 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3202312" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13880597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -240,6 +327,73 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="dbDummy://dbtable:/c0b6d2e8/fcaf3b41-661d-4f88-9a4a-749da8fb57e2/test_ppt_yiyaozg_com.product_author">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/c0b6d2e8/fcaf3b41-661d-4f88-9a4a-749da8fb57e2/test_ppt_yiyaozg_com.users">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true">
+            <filter text="uid=100000064" />
+            <filter text="nickname=刘" />
+            <filter text="nickname=刘威" />
+            <filter text="mobile=18368453728" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/c0b6d2e8/fcaf3b41-661d-4f88-9a4a-749da8fb57e2/test_ppt_yiyaozg_com.user_info">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true">
+            <filter text="nickname=刘" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/fcaf3b41-661d-4f88-9a4a-749da8fb57e2/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/c0b6d2e8/fcaf3b41-661d-4f88-9a4a-749da8fb57e2/test_ppt_yiyaozg_com.product_stage">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/fcaf3b41-661d-4f88-9a4a-749da8fb57e2/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -644,32 +798,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/c0b6d2e8/fcaf3b41-661d-4f88-9a4a-749da8fb57e2/test_ppt_yiyaozg_com.user_info">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/c0b6d2e8/fcaf3b41-661d-4f88-9a4a-749da8fb57e2/test_ppt_yiyaozg_com.users">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true">
-            <filter text="mobile=18368453728" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/c0b6d2e8/fcaf3b41-661d-4f88-9a4a-749da8fb57e2/test_ppt_yiyaozg_com.wallet_records">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -701,38 +829,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/c0b6d2e8/fcaf3b41-661d-4f88-9a4a-749da8fb57e2/test_ppt_yiyaozg_com.product_new">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true">
-            <filter text="pid=3806" />
-            <filter text="pid=3905" />
-            <filter text="pid=3787" />
-            <filter text="pid=3837" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/c0b6d2e8/fcaf3b41-661d-4f88-9a4a-749da8fb57e2/test_ppt_yiyaozg_com.product_author">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true">
-            <filter text="uid=100000064" />
-            <filter text="id=1218" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/c0b6d2e8/fcaf3b41-661d-4f88-9a4a-749da8fb57e2/test_ppt_yiyaozg_com.product_card">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -755,7 +851,7 @@
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/fcaf3b41-661d-4f88-9a4a-749da8fb57e2/console.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.9666667">
+        <state vertical-scroll-proportion="0.0">
           <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
           <folding />
         </state>
@@ -774,6 +870,104 @@
             <filter text="zpid=3891" />
             <filter text="zpid=3890" />
             <filter text="pid=3890" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/c0b6d2e8/fcaf3b41-661d-4f88-9a4a-749da8fb57e2/test_ppt_yiyaozg_com.user_info">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true">
+            <filter text="nickname=刘" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/c0b6d2e8/fcaf3b41-661d-4f88-9a4a-749da8fb57e2/test_ppt_yiyaozg_com.users">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true">
+            <filter text="uid=100000064" />
+            <filter text="nickname=刘" />
+            <filter text="nickname=刘威" />
+            <filter text="mobile=18368453728" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/c0b6d2e8/fcaf3b41-661d-4f88-9a4a-749da8fb57e2/test_ppt_yiyaozg_com.product_author">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true">
+            <filter text="uid=100000064" />
+            <filter text="author_id=1307" />
+            <filter text="uid00000064" />
+            <filter text="author_id=1306" />
+            <filter text="nickname=刘威" />
+            <filter text="id=1218" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/c0b6d2e8/fcaf3b41-661d-4f88-9a4a-749da8fb57e2/test_ppt_yiyaozg_com.collects">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/c0b6d2e8/fcaf3b41-661d-4f88-9a4a-749da8fb57e2/test_ppt_yiyaozg_com.code">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/c0b6d2e8/fcaf3b41-661d-4f88-9a4a-749da8fb57e2/test_ppt_yiyaozg_com.product_new">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true">
+            <filter text="uid=100000064" />
+            <filter text="pid=3806" />
+            <filter text="pid=3905" />
+            <filter text="pid=3787" />
+            <filter text="pid=3837" />
           </filtering>
         </state>
       </provider>
