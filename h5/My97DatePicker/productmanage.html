@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/ptcManager.css">
+    <link rel="stylesheet" type="text/css" href="css/adminCommon.css">
+    <link rel="stylesheet" type="text/css" href="js/My97DatePicker/skin/WdatePicker.css">
+
+</head>
+<body>
+    <div class="productManage">
+         <div class="productSearch">
+        作品名：<input type="text" name="" class="proName">
+        用户名：<input type="text" name="">
+        昵称：<input type="text" name="">
+        发布状态：<select name="" id="">
+                    <option value="">全部</option>
+                    <option value="">发布</option>
+                    <option value="">未发布</option>
+                  </select>
+        标签：<input type="text" name="">
+        <div class="proCreatDate">
+            创建时间：<input id="startMtime" type="text" class="Wdate proCreatTime1" onfocus="WdatePicker({skin:'whyGreen',dateFmt: 'yyyy-MM-dd', maxDate:'%y-%M-%d', readOnly:true})" />
+                <span>至</span>
+                <input id="endMtime" type="text" class="Wdate proCreatTime2" onfocus="WdatePicker({skin:'whyGreen', dateFmt: 'yyyy-MM-dd',minDate:'#F{$dp.$D(\'startMtime\')}',maxDate:'%y-%M-%d', readOnly:true})" />
+        </div>
+        <div class="proSearchBtn">
+            <span>重置</span>
+            <span>搜索</span>
+        </div>
+    </div>
+    <div class="productSerList">
+        <table cellspacing="0" cellpadding="0">
+            <caption></caption>
+            <thead>
+                <tr>
+                    <th class="proListFirTh">首图</th>
+                    <th>作品名</th>
+                    <th>用户名</th>
+                    <th>昵称</th>
+                    <th>版本</th>
+                    <th>创建时间</th>
+                    <th>修改时间</th>
+                    <th>发布状态</th>
+                    <th>发布时间</th>
+                    <th>标签</th>
+                    <th>阅读</th>
+                    <th>点赞</th>
+                    <th>评论</th>
+                    <th>收藏</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody id="proManageTbody">
+               <!--  <tr>
+                    <td class="proListFirTh">1</td>
+                    <td>作品名</td>
+                    <td>用户名</td>
+                    <td>昵称</td>
+                    <td>版本</td>
+                    <td>创建时间</td>
+                    <td>修改时间</td>
+                    <td>发布状态</td>
+                    <td>发布时间</td>
+                    <td>标签</td>
+                    <td>阅读</td>
+                    <td>点赞</td>
+                    <td>评论</td>
+                    <td>收藏</td>
+                    <td class="proListLastTd">
+                        <span>详情</span>
+                        <span>失效</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="proListFirTh">2</td>
+                    <td>作品名</td>
+                    <td>用户名</td>
+                    <td>昵称</td>
+                    <td>版本</td>
+                    <td>创建时间</td>
+                    <td>修改时间</td>
+                    <td>发布状态</td>
+                    <td>发布时间</td>
+                    <td>标签</td>
+                    <td>阅读</td>
+                    <td>点赞</td>
+                    <td>评论</td>
+                    <td>收藏</td>
+                    <td class="proListLastTd">
+                        <span>详情</span>
+                        <span>失效</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="proListFirTh">3</td>
+                    <td>作品名</td>
+                    <td>用户名</td>
+                    <td>昵称</td>
+                    <td>版本</td>
+                    <td>创建时间</td>
+                    <td>修改时间</td>
+                    <td>发布状态</td>
+                    <td>发布时间</td>
+                    <td>标签</td>
+                    <td>阅读</td>
+                    <td>点赞</td>
+                    <td>评论</td>
+                    <td>收藏</td>
+                    <td class="proListLastTd">
+                        <span>详情</span>
+                        <span>失效</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="proListFirTh">4</td>
+                    <td>作品名</td>
+                    <td>用户名</td>
+                    <td>昵称</td>
+                    <td>版本</td>
+                    <td>创建时间</td>
+                    <td>修改时间</td>
+                    <td>发布状态</td>
+                    <td>发布时间</td>
+                    <td>标签</td>
+                    <td>阅读</td>
+                    <td>点赞</td>
+                    <td>评论</td>
+                    <td>收藏</td>
+                    <td class="proListLastTd">
+                        <span>详情</span>
+                        <span>失效</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="proListFirTh">5</td>
+                    <td>作品名</td>
+                    <td>用户名</td>
+                    <td>昵称</td>
+                    <td>版本</td>
+                    <td>创建时间</td>
+                    <td>修改时间</td>
+                    <td>发布状态</td>
+                    <td>发布时间</td>
+                    <td>标签</td>
+                    <td>阅读</td>
+                    <td>点赞</td>
+                    <td>评论</td>
+                    <td>收藏</td>
+                    <td class="proListLastTd">
+                        <span>详情</span>
+                        <span>失效</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="proListFirTh">6</td>
+                    <td>作品名</td>
+                    <td>用户名</td>
+                    <td>昵称</td>
+                    <td>版本</td>
+                    <td>创建时间</td>
+                    <td>修改时间</td>
+                    <td>发布状态</td>
+                    <td>发布时间</td>
+                    <td>标签</td>
+                    <td>阅读</td>
+                    <td>点赞</td>
+                    <td>评论</td>
+                    <td>收藏</td>
+                    <td class="proListLastTd">
+                        <span>详情</span>
+                        <span>失效</span>
+                    </td>
+                </tr> -->
+            </tbody>
+             <tfoot>
+                <tr>
+                    <td colspan="100">
+                        <div class="footer">
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tfoot>
+                                    <tr>
+                                        <td>共 <span class="TotalRows">0</span> 条</td>
+
+
+                                        <td><a href="javascript:void(0);" class="prevPage btn">&lt;</a></td>
+
+
+                                        <td class="pageNumbers">
+                                            <a href="javascript:void(0);" class="btn">1</a>
+                                            <a href="javascript:void(0);" class="btn">2</a>
+                                            <a href="javascript:void(0);" class="btn">3</a>
+                                        </td>
+
+
+                                        <td><a href="javascript:void(0);" class="nextPage btn">&gt;</a></td>
+
+
+                                        <td>第 <span class="PageIndex">1/3</span> 页</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+ </div>
+<script src="js/jquery-1.8.3.js"></script>
+<script src="https://cdn.bootcss.com/handlebars.js/3.0.3/handlebars.min.js"></script>
+<script src="js/pcbCommand.js"></script>
+<script src="js/My97DatePicker/WdatePicker.js"></script>
+ <script id="proTbaleList" type="text/x-handlebars-template">
+  {{#each this}}
+        <tr>
+            <td class="proListFirTh">
+                <img src="{{pic}}" alt="">
+            </td>
+            <td>{{pname}}</td>
+            <td>用户名</td>
+            <td>昵称</td>
+            <td>版本</td>
+            <td>{{ctime}}</td>
+            <td>{{mtime}}</td>
+            <td>{{pstatus}}</td>
+            <td>发布时间</td>
+            <td>标签</td>
+            <td>{{readnums}}</td>
+            <td>{{thumbs}}</td>
+            <td>{{comments}}</td>
+            <td>{{collects}}</td>
+            <td class="proListLastTd">
+                <span data-singlePage = {{pid}}>详情</span>
+                <span class="productLost" data-pstatus={{pstatus}}>失效</span>
+            </td>
+        </tr>
+  {{/each}}
+</script>
+<script>
+  // $(function(){
+    function template(){
+      $.ajax({
+              url:'http://ppt.yiyaozg.com/admin/product-list',
+              headers:{
+                  QCTKA:''
+              },
+              type:'post',
+              success:function(res){
+                  if(res){
+                    // console.log(res);
+                    var data = JSON.parse(res);
+                    console.log(data);
+                    var productList=data.data;
+                    $('.TotalRows').html(productList.length);
+                    var productList=data.data;
+                    var template=Handlebars.compile($('#proTbaleList').html());
+                    // $('#proManageTbody').html(template(productList));
+                  }
+              }
+          })
+      };
+    template();
+// })
+    // $('.productLost').on('click',function(){
+    //     ($(this).html()=='失效')? $(this).html('启用'):$(this).html('失效')
+    //     var pid = $(this).prev('span').attr('data-singlePage'),
+    //         pstatus = $(this).attr('data-pstatus');
+    //     $.ajax({
+    //         url:'http://ppt.yiyaozg.com/admin/product-edit',
+    //         headers:{
+    //             QCTKA:''
+    //         },
+    //         type:'post',
+    //         data:{
+    //             pid:pid,
+    //             pstatus:pstatus
+    //         },
+    //         success:function(res){
+    //             if(res){
+    //                 var data = JSON.parse(res);
+    //                 if(data.code ==1) {
+
+    //                     alert('成功')
+    //                 };
+    //                 if(data.code==-1){
+
+    //                     alert('失败')
+    //                 }
+    //             }
+    //         }
+
+    //     })
+    // });
+
+
+
+
+  // function page(num){
+
+  //   $.ajax({
+
+
+  //       success:function(res){
+  //           if(res){
+  //               var data = JSON.parse(res);
+  //               var length = data.data.length; //总数
+  //               var n = Math.ceil(length/num); //页数
+
+
+  //           }
+  //       }
+  //   })
+  // }
+</script>
+
+</body>
+</html>

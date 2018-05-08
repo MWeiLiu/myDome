@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>柱状图</title>
+  </head>
+  <body>
+    <!-- 创建图表容器 -->
+    <div id="c1"></div>
+    <div id="c2"></div>
+	<script src="js/jquery-1.8.3.js"></script>
+    <!-- 引入 G2 文件 -->
+	<script src="js/g2.js"></script>
+    <script>
+//	  三层 canvas 分别对应 chart 对象的如下三个属性：
+//    frontCanvas 最上层 canvas，图例 legend、提示信息 tooltip、和 text tag html 这三种类型的辅助标记 guide 在这一层绘制；
+//    canvas 中间层，绘制图表的主体内容几何标记 geom；
+//    backCanvas 最下层 canvas，坐标轴 axis 和 line image rect arc 这四种类型的辅助标记 guide 在这一层绘制。
+//	  通过 chart.get('frontCanvas') 方式即可获取这些 canvas 对象。
+		
+		// G2 对数据源格式的要求，仅仅是 JSON 数组，数组的每个元素是一个标准 JSON 对象。
+		
+		
+		//JSON数组数据格式
+		var data = [
+				{genre: 'Sports',sold: 275},
+				{genre: 'Strategy',sold: 115},
+				{genre: 'Action',sold: 120},
+				{genre: 'Shooter',sold: 350},
+				{genre: 'Other',sold: 150,color:'#f80'},
+			];
+			
+		
+		
+			var chart = new G2.Chart({
+				id:'c1',											//指定图表容器 ID
+				forceFit:true,										//图表跟随图表容器响应式[ default: false ]
+//				syncXYScales:true,									//统一所有视图的 X 和 Y 度量[ default: false ]
+//				width:600,											//指定图表宽度
+				height:300, 										//指定图表高度
+				animate:true, 										//关闭图表动画[ default: true ]
+				plotCfg:{
+					border:{										//边框设置 图形属性
+						stroke:'red', 								//边框颜色
+						strokeOpacity:0.4, 							//边框的透明度设置，0 至 1 范围的数据
+						lineWidth:1, 								//边框粗细
+						fill:'#ff8800',								//设置整个容器的背景色
+						fillOpacity:0.4, 							//背景色的透明度设置，0 至 1 范围的数据
+						radius:5 									//边框的圆角
+					},
+					background:{									//绘图区域背景设置
+						stroke:'red', 								//边颜色
+						strokeOpacity:0.4, 							//边框的透明度设置，0 至 1 范围的数据
+						lineWidth:1, 								//边框粗细
+						fill:'#efefef', 							//背景色
+						fillOpacity:0.4,							//背景色的透明度设置，0 至 1 范围的数据
+						radius:30 									//圆角设置
+					},
+//					margin:[10,10,10,10]							//边距设置，接受参数同 css 的 margin
+				}
+//				plotRange:{											//该属性包含整个图表的绘图区域范围内各个关键坐标点的信息。 通过调用 chart.get('plotRange') 获取。
+//				  'start': {'x':100,'y':320}, 						//绘图区域起始点坐标，可以理解为坐标系原点
+//				  'end': {'x':720,'y':40}, 	  						//绘图区域结束点坐标
+//				  'tl': {'x':100,'y':40}, 	  						//绘图区域左上角点坐标，top-left
+//				  'tr': {'x':720,'y':40}, 	  						//绘图区域右上角点坐标，top-right
+//				  'bl': {'x':100,'y':320}, 	  						//绘图区域左下角点坐标，bottom-left
+//				  'br': {'x':720,'y':320}, 	  						//绘图区域右下角点坐标，bottom-right
+//				  'cc': {'x':410,'y':180} 	  						//绘图区域中心店坐标
+//				}
+				
+			});
+		// 创建图形语法，绘制柱状图，由 genre 和 sold 两个属性决定图形位置，genre 映射至 x 轴，sold 映射至 y 轴
+			chart.source(data, {									//配置图表的数据以及相关的列定义信息。chart.source(data[, colDefs, namesArr])
+																	//data: Array数据源数据，标准的 JSON 数组。
+																	//colDefs: Object【可选】，用于数据字段的列定义，如设置数据的类型，显示别名，时间类型的展示格式等，不同的数字类型的配置项不同，详情参考。
+																	//namesArr: Array作为附加字段，用于补全数据源包含的数据字段，常用于数据源含有不同数据字段的记录。
+
+				genre: {			   								//X轴
+					type:'cat', 									//声明 type 字段为分类类型
+//    				values:['A','B','C'], 							//重新显示的值								
+					alias:'游戏种类' 								 //列定义，定义该属性显示的别名
+				},
+				sold: {												//Y轴
+					alias: '销售量'
+				},
+			},['color']);
+			
+			chart.axis('genre',{
+				position: 'bottom', 									//设置坐标轴的显示位置，可取值 top bottom left right
+//				formatter: function(dimValue) {							// 回调函数，用于格式化坐标轴上显示的文本信息
+//					return (dimValue / 1000).toFixed(0) + 'k';
+//				}, 														
+			 	line: {													// 设置坐标轴线的样式，如果值为 null，则不显示坐标轴线 图形属性
+					lineWidth:5, 										//设置轴线的宽度
+					stroke:'#ff0000' 									//设置线的颜色
+			  	}, 
+			  	labels: {
+					label: {											//设置坐标轴文本的显示样式，如果值为 null，则不显示坐标轴文本
+				  		textAlign:'center', 							//文本对齐方向，可取值为： start middle end
+				  		fill:'#ffffff', 								//文本的颜色
+				  		fontSize:'16', 									//文本大小
+				  		fontWeight:'bold', 								//文本粗细
+				  		rotate:30*Math.PI/180, 							//文本旋转 30 度，需要将 30 度转化为弧度，2.3.0 及以上版本只支持弧度设置
+				  		textBaseline:'top' 								//文本基准线，可取 top middle bottom，默认为middle
+					}, 
+					autoRotate: true 									//是否需要自动旋转
+			  	},
+			  	title: {												//坐标轴标题设置，如果值为 null，则不显示标题
+					fontSize:'12',
+					textAlign:'center',
+					fill:'#ff0000',
+					fontWeight:'bold'
+			  	},
+			  	tickLine: {												//坐标轴刻度线配置
+					lineWidth:5, 										//刻度线宽
+					stroke:'#000', 										//刻度线的颜色
+					value:5, 											//刻度线的长度
+			  	}, 
+			  	titleOffset:10, 										//设置标题 title 距离坐标轴线的距离
+			  	labelOffset:30, 										//设置坐标轴文本 label 距离坐标轴线的距离
+			  	grid: {													//坐标轴栅格线的配置信息，默认只有左边的坐标轴带有栅格线，null 为不显示。
+					type: 'polygon', //用于极坐标下网格线样式的配置
+					odd: {//奇数项背景样式设置
+				  		fill: '#ccc',
+				  		opacity: 0.3,
+				  		stroke: '#999'
+					}, 
+					even: {//偶数项背景样式设置
+				  		fill: '#ccc',
+				 		opacity: 0.3,
+				  		stroke: '#999'
+					}, 
+					line: {												//设置坐标轴网格线，如果 grid: null 则代表不绘制网格线
+				  		stroke: '#000000', 								//网格线的颜色
+				  		lineWidth: 1, 									//网格线的宽度
+				  		lineDash: [5, 2] 								//网格线的虚线配置，第一个参数描述虚线的实部占多少像素，第二个参数描述虚线的虚部占多少像素
+					} 
+				}, 
+			  	gridAlign: 'start'										//栅格的位置跟坐标轴刻度线(tickLine)的对齐方式，当前仅支持 start 和 middle
+			});
+			
+			chart.legend({
+			  	position:'right', 										//图例的显示位置，有 'top','left','right','bottom'四种位置，默认是'right'。
+			  	leaveChecked:true, 										//是否保留一项不能取消勾选，默认为 false，即不能取消勾选。
+			  	mode:'multiple'||'single'||false, //设置图例筛选模式，默认为 'multiple' 多选，'single' 表示单选，false 表示禁用筛选
+//			  title:'top', 												//是否展示图例的标题，null 为不展示，默认 top bottom 两个位置的图例不展示标题。
+			  	spacingX:10, // 用于 position 为 top 或者 bottom 时调整子项之间的水平距离
+				spacingY:12, // 用于 position 为 left 或者 right 时调整子项之间的垂直距离
+			  	unChecked:'#000', 										//未选中时 marker 的颜色
+			  	wordSpaceing:2,  // marker 和文本之间的距离
+				dx:-10,  													//整个图例的水平偏移距离
+				dy:10, 													//整个图例的垂直偏移距离
+				itemWrap:false, // 是否自动换行，默认为 false，true 为自动换行
+				word: {													//图例各个子项文本的颜色
+				fill: 'blue',
+				fontSize: 14
+				}, 
+				back: {//图例外边框和背景的配置信息
+				fill: 'red'
+			 }, 
+//			  formatter:  function(val) {								//格式化图例项的文本显示
+//				return val + '%';
+//			  }, 
+			 marker: 'square' 											//配置 marker 的显示形状'circle', 'square', 'bowtie', 'diamond', 'hexagon', 'triangle', 'triangle-down', 'hollowCircle', 'hollowSquare', 'hollowBowtie', 'hollowDiamond', 'hollowHexagon', 'hollowTriangle', 'hollowTriangle-down', 'cross', 'tick', 'plus', 'hyphen', 'line' 
+			});
+			
+//			chart.coord().rotate(180).scale(1.5,1).transpose();
+			//rotate(angle): 坐标系旋转，angle 为旋转的角度，是一个度数值。
+			//scale(sx, sy): 坐标系缩放，sx 代表 x 方向缩放比例，sy 代表 y 方向缩放比例。
+			//reflect(): 坐标系转置，将 x 或者 y 的起始、结束值倒置
+			//transpose(): 将坐标系 x 轴和 y 轴转置。
+			
+//			chart.facet(dimArray, cfg);设置分面的切割维度和配置信息。
+		
+			chart.tooltip(true,{
+			  	title: true, 											//用于控制是否显示 tooltip 框内的 title,可自定义
+				map: { // 用于指定 tooltip 内显示内容同原始数据字段的映射关系复制代码
+					title: '数据字段名或者常量1', 						  //为数据字段名时则显示该字段名对应的数值，常量则显示常量
+					name: '数据字段名或者常量2', 						  //为数据字段名时则显示该字段名对应的数值，常量则显示常量
+					value: '数据字段名' 									 //为数据字段名时则显示该字段名对应的数值
+			  	},
+			  	offset:25, 												//偏移量，设置 tooltip 显示位置距离 x 轴方向上的偏移
+			  	crosshairs: true, 										//是否展示 tooltip 的辅助线，默认为 false，不展示
+				crossLine: {											//crosshairs 为 true 时，为辅助线设置样式
+					stroke: '#666', 									//辅助线的颜色
+					lineWidth: 2, 										//辅助线的宽度
+					lineDash: [2, 3] 									//设置虚线样式
+			  	},
+				padding: [10, 10, 10, 10], 								//提示框内边距
+			});
+			
+//		chart.filter('sold', [100, 200]);								//过滤数据，如果存在对应的图例，则过滤掉的字段置灰。
+			
+		chart.setMode('select'); 										//用于开启和关闭图表交互模式,开启框选模式
+		chart.select('rangeX'); 										//使用 X 轴范围的框选
+//		chart.select('rangeY'); 										//使用 Y 轴范围的框选
+//		chart.select('rangeXY');										//使用 X 和 Y 轴的框选
+		
+		chart.interval().position('genre*sold').color('genre');//渲染图表
+		
+		chart.render();													//最后一步，绘制图表，当调用这个方法后，图表即可被渲染绘制出来。
+		
+//		chart.destroy();												//销毁图表，删除生成的图表对象。
+			
+//		chart.repaint();												//图表重绘。
+		
+//		chart.changeData(data);											//用于修改图表的数据源，注意这里 data 的数据结构需要同原始的数据结构保持一致。
+		
+//		chart.changeSize(100, 100);										//更改图表的大小。
+//		chart.downloadImage();											//提供图表下载功能，同时返回 image 数据。 
+		
+		chart.on('plotclick', function(ev) {
+			
+			var data = [
+					{genre: 'Sports',sold: 275},
+					{genre: 'Strategy',sold: 115},
+					{genre: 'Action',sold: 120},
+					{genre: 'Shooter',sold: 350},
+					{genre: 'Other',sold: 150,color:'#f80'},
+				];
+		  	var point = {
+				x:ev.x,
+				y:ev.y,
+				shape:ev.shape,
+				views:ev.views,
+				geom:ev.geom,
+				data:ev.data
+			};  
+			var dataname=point.shape.id.split(' ')[1];//获取当前点击的数据名
+			for(var i in data){
+				if(data[i].genre==dataname){		  //获取当前点击的数据
+					console.log(data[i].sold);
+//					var d=chart.getPosition(data[i])；
+//					console.log(d);
+				}
+			}
+			
+//			var tooltip=chart.getTooltipItems({
+//				x:point.x,
+//				y:point.y
+//			})
+			var itmes=chart.getSnapRecords(point);
+			var config={
+				Y:Math.min.apply(null,itmes[0].y),
+				x:itmes[0].x,
+				y:itmes[0].y[0],
+				size:itmes[0].size
+			}
+//			var str=
+//				'<div style="width:5px;height:5px;background:#000;position:absolute;top:'++';left:;"></div>'+
+//				'<div></div>'+
+//				'<div></div>'+
+//				'<div></div>';
+//			$('#c1').append(str);
+			
+			console.log(itmes);
+		});
+		
+		//根据传入的坐标点 point，获取逼近的该坐标点的所有 shape 的绘制数据，point 的格式如下，表示的是画布坐标：
+//		var point= {
+//		  x: 100,
+//		  y: 200
+//		}
+//		chart.getSnapRecords(point)
+//		var Shape = G2.Shape;
+//		var shapeObj = Shape.registShape('geomType', 'shapeName', { 
+//			getShapePoints: function(pointInfo) {
+//				// 获取每种 shape 绘制的关键点
+//			},
+//			drawShape: function(cfg, container) {
+//				// 自定义最终绘制的逻辑
+//			}
+//		});
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		//Frame对象数据格式
+		var data = [
+		  {"time":"2015-11-19","start":8.18,"max":8.33,"min":7.98,"end":8.32},
+		  {"time":"2015-11-18","start":8.37,"max":8.6,"min":8.03,"end":8.09},
+		  {"time":"2015-11-17","start":8.7,"max":8.78,"min":8.32,"end":8.37},
+		  {"time":"2015-11-16"
+
+		,"start":8.18,"max":8.69,"min":8.05,"end":8.62},
+		  {"time":"2015-11-13","start":8.01,"max":8.75,"min":7.97,"end":8.41}
+		];
+		var Frame = G2.Frame;
+		var frame = new Frame(data);
+		frame.addCol('trend', function(obj) {
+		  return (obj.start <= obj.end) ? 0 : 1;
+		});
+		console.log(frame.colNames()); // ["time", "start", "max", "min", "end", "trend"]
+		var chart = new G2.Chart({
+		  id: 'c2',
+		  forceFit: true, // 图表自适应宽度
+		  height: 350
+		});
+		chart.source(frame, {
+		  'trend': {
+			type: 'cat',
+			alias: '趋势',
+			values: ['上涨','下跌']
+		  },
+		  'time': {
+			type: 'timeCat',
+			mask: 'mm-dd',
+		  },
+		});
+		chart.schema().position('time*(start+end+max+min)').color('trend', ['#C00000','#19B24B']).shape('candle').tooltip('start*end*max*min').size(20);
+		chart.render();
+    </script>
+  </body>
+</html>

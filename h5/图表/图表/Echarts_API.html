@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>图表</title>
+	</head>
+	<body>
+		<div id="main" style="width: 600px;height:400px;"></div>
+		<script src="js/jquery-1.8.3.js"></script>
+		<script src="js/echarts.js"></script>
+		<script>
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+		option = {
+			title:{													//标题
+				show:true,                 						    //是否显示标题[ default: true ] 
+				text:'刘威',                 						   //主标题[ default: '' ] 
+				link:'www.baidu.com',								//主标题超链接[ default: '' ] 
+				target:'blank',										//指定窗口打开[ default: 'blank' ] 
+				textStyle:{											//主标题样式
+					color:'#ff0000',								//颜色[ default: '#333' ] 
+					fontStyle:'normal',								//字体风格[ default: 'normal' ] 
+					fontWeight:'bolder',							//字体粗细[ default: 'bolder' ] 
+					fontFamily:'sans-serif',						//字体[ default: 'sans-serif' ] 
+					fontSize:'20'									//大小[ default: 18 ] 
+				}													//
+//				textAlign:'left',									//标题位置、水平对齐
+//				textBaseline:'',									//垂直对齐
+//				subtext:'',											//副标题[ default: '' ] 
+//				sublink:'',											//副标题超链接[ default: '' ] 
+//				subtarget:'',										//[ default: 'blank' ] 
+//				subtextStyle:{										//
+//					color:'',										//[ default: '#aaa' ] 
+//					fontStyle:'',									//[ default: normal ] 
+//					fontWeight:'',									//[ default: normal ] 
+//					fontFamily:'',									//[ default: 'sans-serif' ] 
+//					fontSize:'',									//[ default: 12 ] 
+//				},													//
+//				padding:[5],										//标题内边距，单位px，[ default: 5 ] 
+//				itemGap:15,											//主副标题之间的间距[ default: 10 ] 
+//				zlevel:'',											//canvas分层,zlevel 大的 Canvas 会放在 zlevel 小的 Canvas 的上面[ default: 0 ] 
+//				z:2,												//控制图形的前后顺序。z值小的图形会被z值大的图形覆盖。[ default: 2 ] ,z相比zlevel优先级更低，而且不会创建新的 Canvas。
+//				left:'auto',										//grid 组件离容器左侧的距离。[ default: 'auto' ] 
+//				top:50,												//grid 组件离容器上侧的距离。[ default: 'auto' ] 
+//				right:'10%',										//grid 组件离容器右侧的距离。[ default: 'auto' ] 
+//				bottom:'left',										//grid 组件离容器下侧的距离。[ default: 'auto' ] 
+//				backgroundColor:'#000',								//标题背景[ default: 'transparent' ] rgba或#
+//				borderColor:'',										//标题的边框颜色[ default: '#ccc' ] 
+//				borderWidth:'',										//标题的边框线宽。[ default: 0 ] 
+//				shadowColor:'rgba(0, 0, 0, 0.5)',					//阴影颜色。
+//				shadowBlur:10,										//图形阴影的模糊大小.此配置项生效的前提是，设置了 show: true
+//				shadowOffsetX:10,									//阴影水平方向上的偏移距离。[ default: 0 ] 
+//				shadowOffsetY:10,									//阴影垂直方向上的偏移距离[ default: 0 ] 
+			},
+			xAxis : [												//直角坐标系X轴
+				{
+					type : 'category',
+					data : ['周一','周二','周三','周四','周五','周六','周日']
+				}
+			],
+			yAxis : [												//直角坐标系Y轴
+				{
+					type : 'value'
+				}
+			],
+			legend: {												//图例。展示不同的标记
+				data:['直接访问','邮件营销','联盟广告','视频广告','搜索引擎','百度','谷歌','必应','其他']
+			},
+			grid: {													//直角坐标系内绘制网格
+				left: '3%',
+				right: '4%',
+				bottom: '3%',
+				containLabel: true
+			},
+//			porlar:{												//极坐标系用于散点图和折线图
+//				
+//			},
+//			radiusAxis:{											//极坐标系的径向轴。
+//				
+//			},
+//			angleAxis:{												//极坐标系的角度轴。
+//				
+//			},
+//			radar:{													//雷达图坐标系
+//				
+//			},
+//			dataZoom:[												//区域缩放组件
+//				
+//			],
+//			visualMap:[												//视觉映射组件
+//				
+//			],
+			tooltip : {												//提示框组件
+				trigger: 'axis',
+				axisPointer : {            							// 坐标轴指示器，坐标轴触发有效
+					type : 'shadow'        							// 默认为直线，可选为：'line' | 'shadow'
+				}
+			},
+//			axisPointer:{											//坐标轴指示器（axisPointer）的全局公用设置。
+//				
+//			},
+//			toolbox:{												//工具栏。内置有导出图片，数据视图，动态类型切换，数据区域缩放，重置五个工具。
+//				show:true,											//是否显示工具栏组件。[ default: true ] 
+//				orient:'horizontal',								//工具栏 icon 的布局朝向。[ default: 'horizontal' ] 
+//				itemSize:20,										//工具栏 icon 的大小。[ default: 15 ] 
+//				itemGap:20,											//工具栏 icon 每项之间的间隔[ default: 10 ] 
+//				showTitle:true,										//是否在鼠标 hover 的时候显示每个工具 icon 的标题。[ default: true ] 
+//				feature:{											//自定义工具按钮
+//					myTool1: {
+//						show: true,
+//						title: '自定义扩展方法1',
+//						icon: '',
+//						onclick: function (){
+//							
+//						}
+//					},
+//					myTool2: {
+//						show: true,
+//						title: '自定义扩展方法2',
+//						icon: '',
+//						onclick: function (){
+//							
+//						}
+//					}
+//					
+//					
+//				}
+//				
+//				
+//			},
+//			brush:{													//区域选择组件，用户可以选择图中一部分数据，从而便于向用户展示被选中数据，或者他们的一些统计计算结果
+//				
+//			},
+//			geo:{													//地理坐标系组件,用于地图的绘制，支持在地理坐标系上绘制散点图，线集。
+//				
+//			},
+//			parallel:{												//平行坐标系
+//				
+//			},
+//			parallelAxis:{											//平行坐标系中的坐标轴。
+//			
+//			},
+//			singleAxis:{											//单轴。可以被应用到散点图中展现一维数据
+//				
+//			},
+//			timeline:{												//提供了在多个 ECharts option 间进行切换、播放等操作的功能。
+//				
+//			},
+//			graphic:{												//原生图形元素组件，如：制作水印、文本块、拖拽、缩放
+//				
+//			},
+//			calendar:{												//日历坐标系组件。
+//				
+//			},
+			series : [												//系列列表。每个系列通过 type 决定自己的图表类型
+				{
+					name:'直接访问',
+					type:'bar',
+					data:[320, 332, 301, 334, 390, 330, 320]
+				},
+				{
+					name:'邮件营销',
+					type:'bar',
+					stack: '广告',
+					data:[120, 132, 101, 134, 90, 230, 210]
+				},
+				{
+					name:'联盟广告',
+					type:'bar',
+					stack: '广告',
+					data:[220, 182, 191, 234, 290, 330, 310]
+				},
+				{
+					name:'视频广告',
+					type:'bar',
+					stack: '广告',
+					data:[150, 232, 201, 154, 190, 330, 410]
+				},
+				{
+					name:'搜索引擎',
+					type:'bar',
+					data:[862, 1018, 964, 1026, 1679, 1600, 1570],
+					markLine : {
+						lineStyle: {
+							normal: {
+								type: 'dashed'
+							}
+						},
+						data : [
+							[{type : 'min'}, {type : 'max'}]
+						]
+					}
+				},
+				{
+					name:'百度',
+					type:'bar',
+					barWidth : 5,
+					stack: '搜索引擎',
+					data:[620, 732, 701, 734, 1090, 1130, 1120]
+				},
+				{
+					name:'谷歌',
+					type:'bar',
+					stack: '搜索引擎',
+					data:[120, 132, 101, 134, 290, 230, 220]
+				},
+				{
+					name:'必应',
+					type:'bar',
+					stack: '搜索引擎',
+					data:[60, 72, 71, 74, 190, 130, 110]
+				},
+				{
+					name:'其他',
+					type:'bar',
+					stack: '搜索引擎',
+					data:[62, 82, 91, 84, 109, 110, 120]
+				}
+			]
+//			color:[												//调色盘颜色列表。如果系列没有设置颜色，则会依次循环从该列表中取颜色作为系列颜色['#c23531','#2f4554', '#61a0a8', '#d48265', '#91c7ae','#749f83',  '#ca8622', '#bda29a','#6e7074', '#546570', '#c4ccd3']
+//				
+//			],
+//			backgroundColor:'',									//背景色，默认无背景
+//			textStyle:{											//全局的字体样式
+//				
+//			},
+//			animation:2000,										//是否开启动画[ default: true ]
+//			animationThreshold:2000,							//是否开启动画的阈值，当单个系列显示的图形数量大于这个阈值时会关闭动画。[ default: 2000 ]
+//			animationDuration: function (idx) {					//初始动画的时长，支持回调函数，可以通过每个数据返回不同的 delay 时间实现更戏剧的初始动画效果[ default: 1000 ]
+//				// 越往后的数据延迟越大
+//				return idx * 100;
+//			},
+//			animationEasing:'cubicOut',							//初始动画的缓动效果[ default: cubicOut ]
+//			animationDelay:function (idx) {						//初始动画的延迟，支持回调函数，可以通过每个数据返回不同的 delay 时间实现更戏剧的初始动画效果[ default: 0 ]
+//				// 越往后的数据延迟越大
+//				return idx * 100;
+//			},
+//			animationDurationUpdate: function (idx) {			//数据更新动画的时长。支持回调函数，可以通过每个数据返回不同的 delay 时间实现更戏剧的更新动画效果[ default: 300 ]
+//				// 越往后的数据延迟越大
+//				return idx * 100;
+//			},
+//			animationEasingUpdate:'cubicOut',					//数据更新动画的缓动效果。[ default: cubicOut ]
+//			animationDelayUpdate:function (idx) {				//数据更新动画的延迟，支持回调函数，可以通过每个数据返回不同的 delay 时间实现更戏剧的更新动画效果[ default: 0 ]
+//				// 越往后的数据延迟越大
+//				return idx * 100;
+//			},
+//			progressive:400,									//渐进式渲染时每一帧绘制图形数量，设为 0 时不启用渐进式渲染，支持每个系列单独配置。[ default: 400 ]
+//			progressiveThreshold:3000,							//启用渐进式渲染的图形数量阈值，在单个系列的图形数量超过该阈值时启用渐进式渲染。[ default: 3000 ]
+//			blendMode:'source-over',							//图形的混合模式[ default: source-over ]
+//			hoverLayerThreshold:3000,							//图形数量阈值，决定是否开启单独的 hover 层，在整个图表的图形数量大于该阈值时开启单独的 hover 层[ default: 300 ]
+//			useUTC:true											//是否使用 UTC 时间[ default: false ]	
+		};
+			
+			
+			
+		// 使用刚指定的配置项和数据显示图表。
+//		myChart.setOption(option);
+//		// 处理点击事件并且跳转到相应的百度搜索页面
+//		myChart.on('click', function (params) {
+//			window.open('https://www.baidu.com/s?wd=' + encodeURIComponent(params.name));
+//		});
+//		params:{
+//			// 当前点击的图形元素所属的组件名称，
+//			// 其值如 'series'、'markLine'、'markPoint'、'timeLine' 等。
+//			componentType: string,
+//			// 系列类型。值可能为：'line'、'bar'、'pie' 等。当 componentType 为 'series' 时有意义。
+//			seriesType: string,
+//			// 系列在传入的 option.series 中的 index。当 componentType 为 'series' 时有意义。
+//			seriesIndex: number,
+//			// 系列名称。当 componentType 为 'series' 时有意义。
+//			seriesName: string,
+//			// 数据名，类目名
+//			name: string,
+//			// 数据在传入的 data 数组中的 index
+//			dataIndex: number,
+//			// 传入的原始数据项
+//			data: Object,
+//			// sankey、graph 等图表同时含有 nodeData 和 edgeData 两种 data，
+//			// dataType 的值会是 'node' 或者 'edge'，表示当前点击在 node 还是 edge 上。
+//			// 其他大部分图表中只有一种 data，dataType 无意义。
+//			dataType: string,
+//			// 传入的数据值
+//			value: number|Array
+//			// 数据图形的颜色。当 componentType 为 'series' 时有意义。
+//			color: string
+//		}
+		
+			
+			
+		//区分鼠标点击到了哪里：
+//		myChart.on('click', function (params) {
+//			if (params.componentType === 'markPoint') {
+//				// 点击到了 markPoint 上
+//				if (params.seriesIndex === 5) {
+//					// 点击到了 index 为 5 的 series 的 markPoint 上。
+//				}
+//			}
+//			else if (params.componentType === 'series') {
+//				if (params.seriesType === 'graph') {
+//					if (params.dataType === 'edge') {
+//						// 点击到了 graph 的 edge（边）上。
+//					}
+//					else {
+//						// 点击到了 graph 的 node（节点）上。
+//					}
+//				}
+//			}
+//		});
+			
+			
+//		拖拽功能：用 graphic 组件，在每个点上面，覆盖一个隐藏的可拖拽的圆点。(折线图)
+//		myChart.setOption({
+//			// 声明一个 graphic component，里面有若干个 type 为 'circle' 的 graphic elements。
+//			// 这里使用了 echarts.util.map 这个帮助方法，其行为和 Array.prototype.map 一样，但是兼容 es5 以下的环境。
+//			// 用 map 方法遍历 data 的每项，为每项生成一个圆点。
+//			graphic: echarts.util.map(data, function (dataItem, dataIndex) {
+//				return {
+//					// 'circle' 表示这个 graphic element 的类型是圆点。
+//					type: 'circle',
+//
+//					shape: {
+//						// 圆点的半径。
+//						r: symbolSize / 2
+//					},
+//					// 用 transform 的方式对圆点进行定位。position: [x, y] 表示将圆点平移到 [x, y] 位置。
+//					// 这里使用了 convertToPixel 这个 API 来得到每个圆点的位置，下面介绍。
+//					position: myChart.convertToPixel('grid', dataItem),
+//
+//					// 这个属性让圆点不可见（但是不影响他响应鼠标事件）。
+//					invisible: true,
+//					// 这个属性让圆点可以被拖拽。
+//					draggable: true,
+//					// 把 z 值设得比较大，表示这个圆点在最上方，能覆盖住已有的折线图的圆点。
+//					z: 100,
+//					// 此圆点的拖拽的响应事件，在拖拽过程中会不断被触发。下面介绍详情。
+//					// 这里使用了 echarts.util.curry 这个帮助方法，意思是生成一个与 onPointDragging
+//					// 功能一样的新的函数，只不过第一个参数永远为此时传入的 dataIndex 的值。
+//					ondrag: echarts.util.curry(onPointDragging, dataIndex)
+//				};
+//			})
+//		});
+//		接下来要为每个点，加上拖拽响应的事件：
+// 		拖拽某个圆点的过程中会不断调用此函数。
+// 		此函数中会根据拖拽后的新位置，改变 data 中的值，并用新的 data 值，重绘折线图，从而使折线图同步于被拖拽的隐藏圆点。
+//		function onPointDragging(dataIndex) {
+//			// 这里的 data 就是本文最初的代码块中声明的 data，在这里会被更新。
+//			// 这里的 this 就是被拖拽的圆点。this.position 就是圆点当前的位置。
+//			data[dataIndex] = myChart.convertFromPixel('grid', this.position);
+//			// 用更新后的 data，重绘折线图。
+//			myChart.setOption({
+//				series: [{
+//					id: 'a',
+//					data: data
+//				}]
+//			});
+//		}
+//		最后，为了使 dom 尺寸改变时，图中的元素能自适应得变化，加上这些代码：
+//		window.addEventListener('resize', function () {
+//			// 对每个拖拽圆点重新计算位置，并用 setOption 更新。
+//			myChart.setOption({
+//				graphic: echarts.util.map(data, function (item, dataIndex) {
+//					return {
+//						position: myChart.convertToPixel('grid', item)
+//					};
+//				})
+//			});
+//		});
+//		想要更进一步得实时看到拖拽过程中，被拖拽的点的 data 值的变化状况，我们可以使用 tooltip 组件来实时显示这个值。但是，tooltip 有其默认的『显示』『隐藏』触发规则，在我们拖拽的场景中并不适用，所以我们还要手动定制 tooltip 的『显示』『隐藏』行为。
+//
+//		在上述代码中分别添加如下定义：
+//
+//		myChart.setOption({
+//			...,
+//			tooltip: {
+//				// 表示不使用默认的『显示』『隐藏』触发规则。
+//				triggerOn: 'none',
+//				formatter: function (params) {
+//					return 'X: ' + params.data[0].toFixed(2) + '<br>Y: ' + params.data[1].toFixed(2);
+//				}
+//			}
+//		});
+//
+//		myChart.setOption({
+//			graphic: echarts.util.map(data, function (item, dataIndex) {
+//				return {
+//					type: 'circle',
+//					...,
+//					// 在 mouseover 的时候显示，在 mouseout 的时候隐藏。
+//					onmousemove: echarts.util.curry(showTooltip, dataIndex),
+//					onmouseout: echarts.util.curry(hideTooltip, dataIndex),
+//				};
+//			})
+//		});
+//
+//		function showTooltip(dataIndex) {
+//			myChart.dispatchAction({
+//				type: 'showTip',
+//				seriesIndex: 0,
+//				dataIndex: dataIndex
+//			});
+//		}
+//
+//		function hideTooltip(dataIndex) {
+//			myChart.dispatchAction({
+//				type: 'hideTip'
+//			});
+//		}
+			
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+		</script>
+	</body>
+</html>
