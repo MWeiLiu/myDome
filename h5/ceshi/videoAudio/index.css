@@ -1,0 +1,152 @@
+/*
+* author: liu wei
+* createtime: 2018/5/16 16:42
+* description:
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.nav ul,
+.nav ul li {
+    width: 300px;
+    height: 150px;
+}
+
+/*
+音视频上传弹层
+*/
+
+.videoUploadMask,
+.audioUploadMask {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    background: rgba(0, 0, 0, 0.42);
+}
+
+.videoUpLoadBox,
+.audioUpLoadBox {
+    width: 460px;
+    height: 234px;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -117px 0 0 -250px;
+    background: #FFFFFF;
+    border-radius: 4px;
+}
+
+.audioUpLoadBox {
+    height: 168px;
+    margin-top: -84px;
+}
+
+.videoUpLoadBox .header,
+.audioUpLoadBox .header {
+    margin-bottom: 20px;
+}
+
+.videoUpLoadBox .header .title,
+.audioUpLoadBox .header .title {
+    cursor: default;
+}
+
+.videoUpLoadBox .close,
+.audioUpLoadBox .close {
+    cursor: pointer;
+}
+
+.videoUpLoadBox .upLoadBox .upLoadVideoBox,
+.videoUpLoadBox .upLoadBox .upLoadPicBox,
+.audioUpLoadBox .upLoadBox .upLoadAudioBox {
+    margin: 0 24px 20px 34px;
+    line-height: 30px;
+    letter-spacing: 1.2px;
+}
+
+.videoUpLoadBox .upLoadBox .upLoadPicBox {
+    margin-bottom: 0;
+}
+
+.videoUpLoadBox .upLoadBox .upLoadVideo,
+.videoUpLoadBox .upLoadPicBox .upLoadPic,
+.audioUpLoadBox .upLoadBox .upLoadAudio {
+    width: 100px;
+    height: 30px;
+    background: #666666;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #FFFFFF;
+    text-align: center;
+    cursor: pointer;
+}
+
+.videoUpLoadBox .upLoadPicBox .upLoadPic {
+    margin-right: 20px;
+}
+
+.videoUpLoadBox .upLoadBox .fileName,
+.videoUpLoadBox .upLoadBox .fileProgress,
+.audioUpLoadBox .upLoadBox .fileName,
+.audioUpLoadBox .upLoadBox .fileProgress {
+    height: 30px;
+    font-size: 16px;
+    color: #4A90E2;
+    cursor: default;
+}
+
+.videoUpLoadBox .upLoadBox .fileProgress,
+.audioUpLoadBox .upLoadBox .fileProgress {
+    margin: 0 20px;
+}
+
+.videoUpLoadBox .upLoadPicBox .unUpLoadPic {
+    background: #999999;
+}
+
+.videoUpLoadBox .upLoadPicBox .picTip {
+    font-size: 16px;
+    color: #CCCCCC;
+    cursor: default;
+}
+
+.videoUpLoadBox .upLoadBox .fileTip {
+    height: 20px;
+    margin-top: 14px;
+    line-height: 19px;
+}
+
+.audioUpLoadBox .upLoadBox .fileTip {
+    margin-left: 30px;
+}
+
+.videoUpLoadBox .upLoadBox .videoOk,
+.audioUpLoadBox .upLoadBox .audioOk {
+    width: 100px;
+    height: 30px;
+    margin: 20px auto 0;
+    background: #3884FF;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #FFFFFF;
+    line-height: 30px;
+    letter-spacing: 1.2px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.audioUpLoadBox .audioTitle {
+    width: 300px;
+    height: 26px;
+    border: 0;
+    margin-left: 34px;
+    border-bottom: 1px solid #CCCCCC;
+    font-size: 16px;
+    color: #999999;
+    outline: none;
+}

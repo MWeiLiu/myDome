@@ -1,0 +1,118 @@
+/*
+* author: liu wei
+* createtime: 2018/5/16 16:42
+* description:
+*/
+
+.polyv_video {
+    height: 100%;
+}
+
+.polyv_audio {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+.polyv_audio > div {
+    height: 120px;
+}
+
+.polyv_audio .audioPlay {
+    width: 120px;
+    height: 100%;
+    position: relative;
+}
+
+.polyv_audio .audioPlayIcon {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -15px 0 0 -15px;
+    z-index: 1;
+}
+
+.polyv_audio .audioPic {
+    position: absolute;
+}
+
+.polyv_audio .audioPic img,
+.polyv_audio .audioPlayIcon img {
+    width: 100%;
+}
+
+.polyv_audio .autioInfo {
+    width: 620px;
+}
+
+.polyv_audio .autioInfo > div {
+    width: 100%;
+}
+
+.polyv_audio .autioInfo .autioTitle input {
+    margin-top: 9px;
+    border: none;
+    font-size: 16px;
+    color: #333333;
+    line-height: 16px;
+}
+
+.polyv_audio .autioInfo .autioProgress {
+    height: 10px;
+    margin: 30px 0;
+    background: #F2F2F2;
+    border-radius: 100px;
+    position: relative;
+}
+
+.polyv_audio .autioProgress > div {
+    height: 100%;
+}
+
+.polyv_audio .autioProgress .progress {
+    width: 0px;
+    background: #3884FF;
+    border-radius: 100px;
+    position: absolute;
+    z-index: 2;
+}
+
+.polyv_audio .autioProgress .progressBg {
+    width: 0px;
+    background: #CCE6FF;
+    border-radius: 100px;
+    position: absolute;
+    z-index: 1;
+}
+
+.polyv_audio .autioProgress .progressDot {
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    background: #FFFFFF;
+    box-shadow: 0 0 4px 0 #CCCCCC;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    left: -2.5%;
+    z-index: 3;
+}
+
+.polyv_audio .autioProgress .progressDot div {
+    width: 100%;
+    height: 100%;
+    background: #3884FF;
+    border-radius: 50%;
+}
+
+.polyv_audio .autioTime .audioCurrent {
+    font-size: 16px;
+    color: #3884FF;
+    letter-spacing: 1.2px;
+}
+
+.polyv_audio .autioTime .audio_separator {
+    margin: 0 8px;
+}

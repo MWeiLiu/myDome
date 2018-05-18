@@ -1,0 +1,116 @@
+
+body {
+    font-family: PingFangSC-Regular;
+}
+
+/*flex布局*/
+
+.qFlex {
+    display: flex;
+    display: -webkit-flex;
+}
+
+.qFlexDirectionColumn {
+    flex-direction: column;
+    -webkit-flex-direction: column;
+}
+
+.qFlexJustifyCenter {
+    justify-content: center;
+    -webkit-justify-content: center;
+}
+
+.qFlexJustifyAround {
+    justify-content: space-around;
+    -webkit-justify-content: space-around;
+}
+
+.qFlexJustifyBetween {
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+}
+
+.qFlexJustifyEnd {
+    justify-content: flex-end;
+    -webkit-justify-content: flex-end;
+}
+
+.qFlexAlignCenter {
+    align-items: center;
+    -webkit-align-items: center;
+}
+
+.qFlexAlignEnd {
+    align-items: flex-end;
+    -webkit-align-items: flex-end;
+}
+
+/*boxsize*/
+
+.boxsize {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+}
+
+/*超出文字显示...*/
+
+.showByStep {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/*card*/
+.card {
+    width: 800px;
+    height: 400px;
+    margin: 20px auto;
+}
+
+.card[data-cardType="video"] {
+    height: 400px;
+}
+
+.card[data-cardType="audio"] {
+    height: 160px;
+    background: #FFFFFF;
+    box-shadow: 0 0 6px 2px #CCCCCC;
+    border-radius: 4px;
+}
+
+.card .assemblyBox {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.card .toolBox {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(51, 51, 51, 0.5);
+    z-index: 2;
+    display: none;
+}
+
+.card .toolBox > div {
+    width: 320px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+.card .toolBox .toolBtn {
+    width: 40px;
+    height: 40px;
+    margin: 0 15px;
+}
+
+.card .toolBox .toolBtn img {
+    width: 100%;
+}
+
+.card .cardContent {
+    height: 100%;
+}

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>音视频</title>
+	<link rel="stylesheet" href="common.css">
+	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="video.css">
+	<link rel="stylesheet" href="audio.css">
+</head>
+
+<body>
+	<div class="nav">
+		<div class="itemBox">
+			<span>音视频</span>
+		</div>
+		<ul>
+			<li>视频转载</li>
+			<li class="videoCard">
+				视频
+			</li>
+			<li class="audioCard">
+				音频
+			</li>
+		</ul>
+	</div>
+	<div class="qeditor">
+
+<!--
+		<div class="videoUploadMask"></div>
+		<div class="videoUpLoadBox">
+			<div class="header qFlex qFlexJustifyBetween">
+				<span class="title">视频</span>
+				<span class="close">×</span>
+			</div>
+			<div class="upLoadBox" data-type="video">
+				<div class="upLoadVideoBox">
+					<input type="file" style="display: none;" />
+					<div class="upLoadVideo">上传视频</div>
+					<div class="fileTip qFlex qFlexJustifyStart">
+						<div class="fileName showByStep">False King.mp4</div>
+						<div class="fileProgress">89%</div>
+						<div class="close">×</div>
+					</div>
+				</div>
+				<div class="upLoadPicBox">
+					<input type="file" style="display: none;" />
+					<div class="qFlex qFlexJustifyStart">
+						<div class="upLoadPic unUpLoadPic">上传封面</div>
+						<div class="picTip">图片小于2M，支持jpg、png格式</div>
+					</div>
+					<div class="fileTip qFlex qFlexJustifyStart">
+						<div class="fileName showByStep">False King.mp4</div>
+						<div class="fileProgress">89%</div>
+						<div class="close">×</div>
+					</div>
+				</div>
+				<div class="videoOk">确认</div>
+			</div>
+		</div>
+-->
+		<!--<div class="audioUploadMask"></div>-->
+		<!--<div class="audioUpLoadBox">-->
+			<!--<div class="header qFlex qFlexJustifyBetween">-->
+				<!--<span class="title">音频</span>-->
+				<!--<span class="close">×</span>-->
+			<!--</div>-->
+			<!--<div class="upLoadBox" data-type="video">-->
+				<!--<div class="upLoadAudioBox qFlex qFlexJustifyBetween">-->
+					<!--<input type="file" style="display: none;" />-->
+					<!--<div class="upLoadAudio">上传音频</div>-->
+					<!--<div class="fileName showByStep">False King.mp4</div>-->
+					<!--<div class="fileProgress">89%</div>-->
+					<!--<div class="close">×</div>-->
+				<!--</div>-->
+				<!--<div>-->
+					<!--<input class="audioTitle" type="text" maxlength="12" placeholder="输入标题"/>-->
+				<!--</div>-->
+				<!--<div class="audioOk">确认</div>-->
+			<!--</div>-->
+		<!--</div>-->
+
+		<!--card template-->
+		<!--<div class="card">
+			<div class="assemblyBox">
+				<div class="toolBox">
+					<div class="qFlex qFlexJustifyBetween">
+						<div class="toolBtn editorTool">
+							<img alt="编辑" title="编辑" src="https://www.qcourse.com/images/editIcon1.0.png"/>
+						</div>
+						<div class="toolBtn cloneTool">
+							<img alt="复制" title="复制" src="https://www.qcourse.com/images/cloneIcon1.0.png"/>
+						</div>
+						<div class="toolBtn toAfterTool">
+							<img alt="下移" title="下移" src="https://www.qcourse.com/images/downIcon.png"/>
+						</div>
+						<div class="toolBtn toPrevTool">
+							<img alt="上移" title="上移" src="https://www.qcourse.com/images/upIcon.png"/>
+						</div>
+						<div class="toolBtn deleteTool">
+							<img alt="删除" title="删除" src="https://www.qcourse.com/images/deleteIcon1.0.png"/>
+						</div>
+					</div>
+				</div>
+				<div class="cardContent">
+
+				</div>
+			</div>
+		</div>-->
+
+		<!--<div class="card" data-cardType="video">-->
+			<!--<div class="assemblyBox">-->
+				<!--<div class="toolBox">-->
+					<!--<div class="qFlex qFlexJustifyBetween">-->
+						<!--<div class="toolBtn editorTool">-->
+							<!--<img alt="编辑" title="编辑" src="https://www.qcourse.com/images/editIcon1.0.png"/>-->
+						<!--</div>-->
+						<!--<div class="toolBtn cloneTool">-->
+							<!--<img alt="复制" title="复制" src="https://www.qcourse.com/images/cloneIcon1.0.png"/>-->
+						<!--</div>-->
+						<!--<div class="toolBtn toAfterTool">-->
+							<!--<img alt="下移" title="下移" src="https://www.qcourse.com/images/downIcon.png"/>-->
+						<!--</div>-->
+						<!--<div class="toolBtn toPrevTool">-->
+							<!--<img alt="上移" title="上移" src="https://www.qcourse.com/images/upIcon.png"/>-->
+						<!--</div>-->
+						<!--<div class="toolBtn deleteTool">-->
+							<!--<img alt="删除" title="删除" src="https://www.qcourse.com/images/deleteIcon1.0.png"/>-->
+						<!--</div>-->
+					<!--</div>-->
+				<!--</div>-->
+				<!--<div class="cardContent">-->
+					<!--<div class="polyv_video" data-id="" data-play=""></div>-->
+				<!--</div>-->
+			<!--</div>-->
+		<!--</div>-->
+
+		<!--<div class="card" data-cardType="video">-->
+			<!--<div class="assemblyBox">-->
+				<!--<div class="toolBox">-->
+					<!--<div class="qFlex qFlexJustifyBetween">-->
+						<!--<div class="toolBtn editorTool">-->
+							<!--<img alt="编辑" title="编辑" src="https://www.qcourse.com/images/editIcon1.0.png"/>-->
+						<!--</div>-->
+						<!--<div class="toolBtn cloneTool">-->
+							<!--<img alt="复制" title="复制" src="https://www.qcourse.com/images/cloneIcon1.0.png"/>-->
+						<!--</div>-->
+						<!--<div class="toolBtn toAfterTool">-->
+							<!--<img alt="下移" title="下移" src="https://www.qcourse.com/images/downIcon.png"/>-->
+						<!--</div>-->
+						<!--<div class="toolBtn toPrevTool">-->
+							<!--<img alt="上移" title="上移" src="https://www.qcourse.com/images/upIcon.png"/>-->
+						<!--</div>-->
+						<!--<div class="toolBtn deleteTool">-->
+							<!--<img alt="删除" title="删除" src="https://www.qcourse.com/images/deleteIcon1.0.png"/>-->
+						<!--</div>-->
+					<!--</div>-->
+				<!--</div>-->
+				<!--<div class="cardContent">-->
+					<!--<div class="polyv_video" data-id="" data-play=""></div>-->
+				<!--</div>-->
+			<!--</div>-->
+		<!--</div>-->
+
+
+		<div class="card" data-cardType="audio">
+			<div class="assemblyBox">
+				<div class="toolBox">
+					<div class="qFlex qFlexJustifyBetween">
+						<div class="toolBtn editorTool">
+							<img alt="编辑" title="编辑" src="https://www.qcourse.com/images/editIcon1.0.png"/>
+						</div>
+						<div class="toolBtn cloneTool">
+							<img alt="复制" title="复制" src="https://www.qcourse.com/images/cloneIcon1.0.png"/>
+						</div>
+						<div class="toolBtn toAfterTool">
+							<img alt="下移" title="下移" src="https://www.qcourse.com/images/downIcon.png"/>
+						</div>
+						<div class="toolBtn toPrevTool">
+							<img alt="上移" title="上移" src="https://www.qcourse.com/images/upIcon.png"/>
+						</div>
+						<div class="toolBtn deleteTool">
+							<img alt="删除" title="删除" src="https://www.qcourse.com/images/deleteIcon1.0.png"/>
+						</div>
+					</div>
+				</div>
+				<div class="cardContent">
+					<div class="polyv_audio polyv_audio0 boxsize" data-id="" data-play="">
+						<div class="qFlex qFlexJustifyBetween">
+							<div class="audioPlay">
+								<div class="audioPlayIcon">
+									<img src="https://www.qcourse.com/images/playIcon.png" title="" alt=""/>
+								</div>
+								<div class="audioPic">
+									<img src="https://www.qcourse.com/images/author_zhu.png" title="" alt=""/>
+								</div>
+							</div>
+							<div class="autioInfo">
+								<div class="autioTitle">
+									<input type="text" placeholder="音频标题"/>
+								</div>
+								<div class="autioProgress">
+									<div class="progress"></div>
+									<div class="progressBg"></div>
+									<div class="progressDot">
+										<div></div>
+									</div>
+								</div>
+								<div class="autioTime qFlex qFlexJustifyEnd">
+									<span class="audioCurrent">00:00</span>
+									<span class="audio_separator">/</span>
+									<span class="audioLength">00:00</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="audio_player0"></div>
+
+				</div>
+			</div>
+		</div>
+
+
+		<div class="card" data-cardType="audio">
+			<div class="assemblyBox">
+				<div class="toolBox">
+					<div class="qFlex qFlexJustifyBetween">
+						<div class="toolBtn editorTool">
+							<img alt="编辑" title="编辑" src="https://www.qcourse.com/images/editIcon1.0.png"/>
+						</div>
+						<div class="toolBtn cloneTool">
+							<img alt="复制" title="复制" src="https://www.qcourse.com/images/cloneIcon1.0.png"/>
+						</div>
+						<div class="toolBtn toAfterTool">
+							<img alt="下移" title="下移" src="https://www.qcourse.com/images/downIcon.png"/>
+						</div>
+						<div class="toolBtn toPrevTool">
+							<img alt="上移" title="上移" src="https://www.qcourse.com/images/upIcon.png"/>
+						</div>
+						<div class="toolBtn deleteTool">
+							<img alt="删除" title="删除" src="https://www.qcourse.com/images/deleteIcon1.0.png"/>
+						</div>
+					</div>
+				</div>
+				<div class="cardContent">
+					<div class="polyv_audio polyv_audio1 boxsize" data-id="" data-play="">
+						<div class="qFlex qFlexJustifyBetween">
+							<div class="audioPlay">
+								<div class="audioPlayIcon">
+									<img src="https://www.qcourse.com/images/playIcon.png" title="" alt=""/>
+								</div>
+								<div class="audioPic">
+									<img src="https://www.qcourse.com/images/author_zhu.png" title="" alt=""/>
+								</div>
+							</div>
+							<div class="autioInfo">
+								<div class="autioTitle">
+									<input type="text" placeholder="音频标题"/>
+								</div>
+								<div class="autioProgress">
+									<div class="progress"></div>
+									<div class="progressBg"></div>
+									<div class="progressDot">
+										<div></div>
+									</div>
+								</div>
+								<div class="autioTime qFlex qFlexJustifyEnd">
+									<span class="audioCurrent">00:00</span>
+									<span class="audio_separator">/</span>
+									<span class="audioLength">00:00</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="audio_player1"></div>
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<!--<script>-->
+		<!--var videoArry = [-->
+			<!--'e8888b74d1229efec6b4712e17cb6b7a_e',-->
+			<!--'6c76f7ae8c7a092c03d7f35cfafd82d3_6',-->
+			<!--'accb9f485b10c10478651a4e61d49425_a'-->
+		<!--]-->
+		<!--var player1 = polyvPlayer({-->
+			<!--wrap: $('.polyv_video1')[0],-->
+			<!--width: '100%',-->
+			<!--height: '100%',-->
+			<!--vid: arry[0],-->
+		<!--});-->
+		<!--var player2 = polyvPlayer({-->
+			<!--wrap: $('.polyv_video2')[0],-->
+			<!--width: '100%',-->
+			<!--height: '100%',-->
+			<!--vid: arry[1],-->
+		<!--});-->
+		<!--var player3 = polyvObject('#audio').videoPlayer({-->
+			<!--width: '1',-->
+			<!--height: '1',-->
+			<!--vid: arry[2],-->
+			<!--useAudio: false,-->
+			<!--ban_ui: true,-->
+			<!--hidePlayBtn: true,-->
+			<!--forceHTML5: true-->
+		<!--});-->
+		<!--var polyvAudioObj = $('.polyv_audio').polyvAudio({-->
+			<!--player: player3-->
+		<!--});-->
+	<!--</script>-->
+	<script src="../js/jquery-1.8.3.js"></script>
+	<script src="//player.polyv.net/script/player.js"></script>
+	<script src="//player.polyv.net/script/polyvplayer.min.js"></script>
+	<script src="index.js"></script>
+	<script src="upload.js"></script>
+	<script src="audio.js"></script>
+	<script src="videoAudio.js"></script>
+</body>
+
+</html>
