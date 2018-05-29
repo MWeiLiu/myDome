@@ -12,40 +12,40 @@
             var that = this,
                 i = 0,
                 j = 0;
-            //$('.qeditor .card').each(function(index, item){
-            //    if($(item).attr('data-cardType') == 'video'){
-            //        var pDom = $(item).find('.polyv_video')[0],
-            //            playerVideo = polyvPlayer({
-            //                width: '100%',
-            //                height: '100%',
-            //                wrap: pDom,
-            //                vid: that.videoArry[i],
-            //            });
-            //        qcourse.editVideo.videoBox[that.videoArry[i]] = playerVideo;
-            //        i++
-            //    }
-            //});
-
-            $('.qeditor .card').each(function (index, item) {
-                if ($(item).attr('data-cardType') == 'audio') {
-                    var pDom = $(item).find('.polyv_audio' + j),
-                        playerAudio = polyvObject('.audio_player' + j).videoPlayer({
-                            width: '1',
-                            height: '1',
-                            vid: that.audioArry[j],
-                            useAudio: true,
-                            ban_ui: false,
-                            hidePlayBtn: true,
-                            forceHTML5: true
-                        }),
-                        polyvAudioObj = pDom.polyvAudio({
-                            player: playerAudio
+            $('.qeditor .card').each(function(index, item){
+                if($(item).attr('data-cardType') == 'video'){
+                    var pDom = $(item).find('.polyv_video')[0],
+                        playerVideo = polyvPlayer({
+                            width: '100%',
+                            height: '100%',
+                            wrap: pDom,
+                            vid: that.videoArry[i],
                         });
-                    qcourse.editVideo.videoBox[that.audioArry[j]] = playerAudio;
-                    console.log(qcourse.editVideo.videoBox)
-                    j++
+                    qcourse.editVideo.videoBox[that.videoArry[i]] = playerVideo;
+                    i++
                 }
             });
+
+//            $('.qeditor .card').each(function (index, item) {
+//                if ($(item).attr('data-cardType') == 'audio') {
+//                    var pDom = $(item).find('.polyv_audio' + j),
+//                        playerAudio = polyvObject('.audio_player' + j).videoPlayer({
+//                            width: '1',
+//                            height: '1',
+//                            vid: that.audioArry[j],
+//                            useAudio: true,
+//                            ban_ui: false,
+//                            hidePlayBtn: true,
+//                            forceHTML5: true
+//                        }),
+//                        polyvAudioObj = pDom.polyvAudio({
+//                            player: playerAudio
+//                        });
+//                    qcourse.editVideo.videoBox[that.audioArry[j]] = playerAudio;
+//                    console.log(qcourse.editVideo.videoBox)
+//                    j++
+//                }
+//            });
         },
     }
 
