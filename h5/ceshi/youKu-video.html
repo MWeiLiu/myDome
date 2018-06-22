@@ -1,0 +1,24 @@
+<html>
+
+<head>
+</head>
+
+<body>
+	<div id="aaa"></div>
+	<p></p>
+	<div id="bbb"></div>
+	<script type="text/javascript" src="http://player1.youku1.com/jsapi">
+		function showVideo(domid, vid) {
+			player = new YKU.Player(domid, {
+				client_id: 'd0804b7294e1597a',
+				vid: vid,
+				show_related: false
+			});
+		}
+		showVideo('aaa', 'XNjM2MTg1ODIw');
+		showVideo('bbb', 'XNTc5Nzk3MDE2');
+
+	</script>
+</body>
+
+</html>
