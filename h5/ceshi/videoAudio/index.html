@@ -28,7 +28,7 @@
 	</div>
 	<div class="qeditor">
 
-<!--
+		<!--
 		<div class="videoUploadMask"></div>
 		<div class="videoUpLoadBox">
 			<div class="header qFlex qFlexJustifyBetween">
@@ -61,7 +61,7 @@
 			</div>
 		</div>
 -->
-<!--
+		<!--
 		<div class="audioUploadMask"></div>
 		<div class="audioUpLoadBox">
 			<div class="header qFlex qFlexJustifyBetween">
@@ -112,24 +112,59 @@
 			</div>
 		</div>-->
 
-		<div class="card" data-cardType="video">
+		<style>
+			.hide{
+				display: none;
+			}
+			.box{
+				width: 300px;
+				height: 200px;
+				background: #333;
+			}
+			.mask {
+
+				width: 100%;
+				height: 100%;
+				position: fixed;
+				top: 0;
+				background: rgba(0, 0, 0, 0.42);
+			}
+
+			.card {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin: -200px 0 0 -400px
+			}
+			.close{
+				position: absolute;
+				top: -50px;
+				right: -40px;
+				font-size: 40px;
+				cursor: pointer;
+			}
+		</style>
+		<div class='box'>视频</div>
+		<div class="mask hide"></div>
+		<div class="card hide" data-cardType="video">
+			<div class="close">×</div>
 			<div class="assemblyBox">
 				<div class="toolBox">
 					<div class="qFlex qFlexJustifyBetween">
 						<div class="toolBtn editorTool">
-							<img alt="编辑" title="编辑" src="https://www.qcourse.com/images/editIcon1.0.png"/>
+							<img alt="编辑" title="编辑" src="https://www.qcourse.com/images/editIcon1.0.png" />
 						</div>
 						<div class="toolBtn cloneTool">
-							<img alt="复制" title="复制" src="https://www.qcourse.com/images/cloneIcon1.0.png"/>
+							<img alt="复制" title="复制" src="https://www.qcourse.com/images/cloneIcon1.0.png" />
 						</div>
 						<div class="toolBtn toAfterTool">
-							<img alt="下移" title="下移" src="https://www.qcourse.com/images/downIcon.png"/>
+							<img alt="下移" title="下移" src="https://www.qcourse.com/images/downIcon.png" />
 						</div>
 						<div class="toolBtn toPrevTool">
-							<img alt="上移" title="上移" src="https://www.qcourse.com/images/upIcon.png"/>
+							<img alt="上移" title="上移" src="https://www.qcourse.com/images/upIcon.png" />
 						</div>
 						<div class="toolBtn deleteTool">
-							<img alt="删除" title="删除" src="https://www.qcourse.com/images/deleteIcon1.0.png"/>
+							<img alt="删除" title="删除" src="https://www.qcourse.com/images/deleteIcon1.0.png" />
 						</div>
 					</div>
 				</div>
@@ -138,35 +173,38 @@
 				</div>
 			</div>
 		</div>
+		
+		
 
 		<!--<div class="card" data-cardType="video">-->
-			<!--<div class="assemblyBox">-->
-				<!--<div class="toolBox">-->
-					<!--<div class="qFlex qFlexJustifyBetween">-->
-						<!--<div class="toolBtn editorTool">-->
-							<!--<img alt="编辑" title="编辑" src="https://www.qcourse.com/images/editIcon1.0.png"/>-->
-						<!--</div>-->
-						<!--<div class="toolBtn cloneTool">-->
-							<!--<img alt="复制" title="复制" src="https://www.qcourse.com/images/cloneIcon1.0.png"/>-->
-						<!--</div>-->
-						<!--<div class="toolBtn toAfterTool">-->
-							<!--<img alt="下移" title="下移" src="https://www.qcourse.com/images/downIcon.png"/>-->
-						<!--</div>-->
-						<!--<div class="toolBtn toPrevTool">-->
-							<!--<img alt="上移" title="上移" src="https://www.qcourse.com/images/upIcon.png"/>-->
-						<!--</div>-->
-						<!--<div class="toolBtn deleteTool">-->
-							<!--<img alt="删除" title="删除" src="https://www.qcourse.com/images/deleteIcon1.0.png"/>-->
-						<!--</div>-->
-					<!--</div>-->
-				<!--</div>-->
-				<!--<div class="cardContent">-->
-					<!--<div class="polyv_video" data-id="" data-play=""></div>-->
-				<!--</div>-->
-			<!--</div>-->
+		<!--<div class="assemblyBox">-->
+		<!--<div class="toolBox">-->
+		<!--<div class="qFlex qFlexJustifyBetween">-->
+		<!--<div class="toolBtn editorTool">-->
+		<!--<img alt="编辑" title="编辑" src="https://www.qcourse.com/images/editIcon1.0.png"/>-->
+		<!--</div>-->
+		<!--<div class="toolBtn cloneTool">-->
+		<!--<img alt="复制" title="复制" src="https://www.qcourse.com/images/cloneIcon1.0.png"/>-->
+		<!--</div>-->
+		<!--<div class="toolBtn toAfterTool">-->
+		<!--<img alt="下移" title="下移" src="https://www.qcourse.com/images/downIcon.png"/>-->
+		<!--</div>-->
+		<!--<div class="toolBtn toPrevTool">-->
+		<!--<img alt="上移" title="上移" src="https://www.qcourse.com/images/upIcon.png"/>-->
+		<!--</div>-->
+		<!--<div class="toolBtn deleteTool">-->
+		<!--<img alt="删除" title="删除" src="https://www.qcourse.com/images/deleteIcon1.0.png"/>-->
+		<!--</div>-->
+		<!--</div>-->
+		<!--</div>-->
+		<!--<div class="cardContent">-->
+		<!--<div class="polyv_video" data-id="" data-play=""></div>-->
+		<!--</div>-->
+		<!--</div>-->
 		<!--</div>-->
 
 
+		<!--
 		<div class="card" data-cardType="audio">
 			<div class="assemblyBox">
 				<div class="toolBox">
@@ -281,38 +319,39 @@
 				</div>
 			</div>
 		</div>
+-->
 
 	</div>
 	<!--<script>-->
-		<!--var videoArry = [-->
-			<!--'e8888b74d1229efec6b4712e17cb6b7a_e',-->
-			<!--'6c76f7ae8c7a092c03d7f35cfafd82d3_6',-->
-			<!--'accb9f485b10c10478651a4e61d49425_a'-->
-		<!--]-->
-		<!--var player1 = polyvPlayer({-->
-			<!--wrap: $('.polyv_video1')[0],-->
-			<!--width: '100%',-->
-			<!--height: '100%',-->
-			<!--vid: arry[0],-->
-		<!--});-->
-		<!--var player2 = polyvPlayer({-->
-			<!--wrap: $('.polyv_video2')[0],-->
-			<!--width: '100%',-->
-			<!--height: '100%',-->
-			<!--vid: arry[1],-->
-		<!--});-->
-		<!--var player3 = polyvObject('#audio').videoPlayer({-->
-			<!--width: '1',-->
-			<!--height: '1',-->
-			<!--vid: arry[2],-->
-			<!--useAudio: false,-->
-			<!--ban_ui: true,-->
-			<!--hidePlayBtn: true,-->
-			<!--forceHTML5: true-->
-		<!--});-->
-		<!--var polyvAudioObj = $('.polyv_audio').polyvAudio({-->
-			<!--player: player3-->
-		<!--});-->
+	<!--var videoArry = [-->
+	<!--'e8888b74d1229efec6b4712e17cb6b7a_e',-->
+	<!--'6c76f7ae8c7a092c03d7f35cfafd82d3_6',-->
+	<!--'accb9f485b10c10478651a4e61d49425_a'-->
+	<!--]-->
+	<!--var player1 = polyvPlayer({-->
+	<!--wrap: $('.polyv_video1')[0],-->
+	<!--width: '100%',-->
+	<!--height: '100%',-->
+	<!--vid: arry[0],-->
+	<!--});-->
+	<!--var player2 = polyvPlayer({-->
+	<!--wrap: $('.polyv_video2')[0],-->
+	<!--width: '100%',-->
+	<!--height: '100%',-->
+	<!--vid: arry[1],-->
+	<!--});-->
+	<!--var player3 = polyvObject('#audio').videoPlayer({-->
+	<!--width: '1',-->
+	<!--height: '1',-->
+	<!--vid: arry[2],-->
+	<!--useAudio: false,-->
+	<!--ban_ui: true,-->
+	<!--hidePlayBtn: true,-->
+	<!--forceHTML5: true-->
+	<!--});-->
+	<!--var polyvAudioObj = $('.polyv_audio').polyvAudio({-->
+	<!--player: player3-->
+	<!--});-->
 	<!--</script>-->
 	<script src="../js/jquery-1.8.3.js"></script>
 	<script src="//player.polyv.net/script/player.js"></script>
@@ -321,6 +360,20 @@
 	<script src="upload.js"></script>
 	<script src="audio.js"></script>
 	<script src="videoAudio.js"></script>
+	<script>
+		$('body').on('click', '.box', function(){
+			$('.mask,.card').removeClass('hide');
+		}).on('click', '.card .close', function(){
+			var vid = $('.card').attr('data-vid');
+			
+			if (qcourse.video.HTML5 == false) {
+				qcourse.video.flash.j2s_pauseVideo();
+			} else {
+				qcourse.video.j2s_pauseVideo();
+			}
+			$('.mask,.card').addClass('hide');
+		})
+	</script>
 </body>
 
 </html>

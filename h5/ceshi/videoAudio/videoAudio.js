@@ -22,6 +22,9 @@
                             vid: that.videoArry[i],
                         });
                     qcourse.editVideo.videoBox[that.videoArry[i]] = playerVideo;
+					$(item).attr({
+						'data-vid': that.videoArry[i]
+					})
                     i++
                 }
             });
@@ -52,13 +55,13 @@
     $(function () {
 
         options.videoArry = [
-            'e8888b74d1229efec6b4712e17cb6b7a_e',
+//            'e8888b74d1229efec6b4712e17cb6b7a_e',
             '6c76f7ae8c7a092c03d7f35cfafd82d3_6'
         ]
-        options.audioArry = [
-            'accb9f485b10c10478651a4e61d49425_a',
-            'accb9f485b180ec89afd18f9c8756bc2_a'
-        ]
+//        options.audioArry = [
+//            'accb9f485b10c10478651a4e61d49425_a',
+//            'accb9f485b180ec89afd18f9c8756bc2_a'
+//        ]
         options.polyvsInit();
 
     })
