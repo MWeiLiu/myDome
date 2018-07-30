@@ -39,14 +39,42 @@ def heart_beat():
     r = requests.get('https://www.qcourse.com/user/register', params = payload);
     '''
 
-    
+    '''
     #新建
     payload = {'uid':'100000001'};
     jsonData = json.dumps(payload);
     r = requests.post('https://api.qcourse.com/product-couadd', params = payload);
     print(r.json());
     pid = json.loads(r.json())['data'];
-    
+    '''
+
+    '''
+    #信息
+    #2374 古希腊
+    #2649 创业者的海外起家录
+    payload = {'uid': '100001234','pid': '2374'};
+    jsonData = json.dumps(payload);
+    r = requests.get('https://api.qcourse.com/product-info', params = payload);
+    print(r.text);
+    '''
+
+    '''
+    #信息
+    payload = {};
+    jsonData = json.dumps(payload);
+    #课程
+    #print('课程');
+    #r = requests.get('http://la.qcourse.cc/works-details-5959.html', params = payload);
+    #专题
+    print('专题');
+    r = requests.get('http://la.qcourse.cc/special-details-5961.html', params = payload);
+    print(r.text);
+    '''
+    payload={}
+    payload = {'uid': '100001947', '_token': 'v5VxNAlWob4DGU1Eb8ZvyKyAGu3SrD4XFjjmssiO', 'type': '1'};
+    r = requests.get('http://la.qcourse.cc/user/info', params = payload);
+    print(r.text);
+
 
     '''
     #修改
