@@ -5,17 +5,29 @@
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script></head>
 <body>
-    
+    <a href="javascript:;" class="user">user</a>
     <script>
         
         $.ajax({
-            url: 'http://127.0.0.1:5000/index',
+            url: 'http://127.0.0.1:8888/',
             type: 'get',
             data: {'asd': '123', 'qwe': '234'},
             dataType: 'json',
             success: function(res){
                 console.log(res)
             }
+        });
+
+        $('.user').click(function(){
+            $.ajax({
+                url: 'http://127.0.0.1:8888/user',
+                type: 'get',
+                data: {'username': '123', 'sex': '0'},
+                dataType: 'json',
+                success: function(res){
+                    console.log(res)
+                }
+            });
         })
         
     </script>

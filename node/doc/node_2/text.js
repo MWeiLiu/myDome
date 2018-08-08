@@ -38,4 +38,4 @@ module.exports = {
     //用户
     USER_PASSWORD_ERROR     :       new BaseResult(101,'用户名或密码错误',{}),
     USER_CAPTCHA_ERROR      :       new BaseResult(102,'验证码错误',{})
-}
+};

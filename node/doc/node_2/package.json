@@ -4,7 +4,8 @@
   "description": "关于node方法的路由",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "nodejs-websocket": "^1.7.1"
   },
   "devDependencies": {},
   "scripts": {
