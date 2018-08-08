@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script></head>
+<body>
+    
+    <script>
+        
+        $.ajax({
+            url: 'http://127.0.0.1:5000/index',
+            type: 'get',
+            data: {'asd': '123', 'qwe': '234'},
+            dataType: 'json',
+            success: function(res){
+                console.log(res)
+            }
+        })
+        
+    </script>
+</body>
+</html>
