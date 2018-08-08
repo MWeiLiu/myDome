@@ -1,5 +1,7 @@
+<!--
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>无标题文档</title>
@@ -20,29 +22,466 @@
 				el.setSelectionRange(pos, pos + 5); //设光标 
 			}
 		}
+
 	</script>
-	
-	
+
+
 	<div contenteditable='true' id="selectable" onclick="selectText('selectable')">http://example.com/page.htm</div>
-    
-    <script type="text/javascript">
-        function selectText(containerid) {
-            if (document.selection) {
-                var range = document.body.createTextRange();
-                range.moveToElementText(document.getElementById(containerid));
-                range.select();
+
+	<script type="text/javascript">
+		function selectText(containerid) {
+			if (document.selection) {
+				var range = document.body.createTextRange();
+				range.moveToElementText(document.getElementById(containerid));
+				range.select();
 				console.log(1)
-            } else if (window.getSelection) {
-                var range = document.createRange();
-                range.selectNodeContents(document.getElementById(containerid));
-                window.getSelection().removeAllRanges();
-                window.getSelection().addRange(range);
-				window.getSelection().setSelectionRange(2,4)
+			} else if (window.getSelection) {
+				var range = document.createRange();
+				range.selectNodeContents(document.getElementById(containerid));
+				window.getSelection().removeAllRanges();
+				window.getSelection().addRange(range);
+				window.getSelection().setSelectionRange(2, 4)
 				console.log(2)
-            }
-        }
-    </script>
-	
-	
+			}
+		}
+
+	</script>
+
+
 </body>
+
+</html>
+-->
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		#edit {
+			height: 500px;
+			width: 500px;
+			border: 1px solid red;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div id="edit" contenteditable></div>
+	<input type="text" id="emojiInput">
+	<button id="sendEmoji">发送表情</button>
+
+	<script>
+		var sendEmoji = document.getElementById('sendEmoji')
+
+		// 定义最后光标对象
+		var lastEditRange;
+
+		// 编辑框点击事件
+		document.getElementById('edit').onclick = function() {
+			// 获取选定对象
+			var selection = getSelection()
+			// 设置最后光标对象
+			lastEditRange = selection.getRangeAt(0)
+		}
+
+		// 编辑框按键弹起事件
+		document.getElementById('edit').onkeyup = function() {
+			// 获取选定对象
+			var selection = getSelection()
+			// 设置最后光标对象
+			lastEditRange = selection.getRangeAt(0)
+		}
+
+		// 表情点击事件
+		document.getElementById('sendEmoji').onclick = function() {
+			// 获取编辑框对象
+			var edit = document.getElementById('edit')
+			// 获取输入框对象
+			var emojiInput = document.getElementById('emojiInput')
+			// 编辑框设置焦点
+			edit.focus()
+			// 获取选定对象
+			var selection = getSelection()
+			// 判断是否有最后光标对象存在
+			if (lastEditRange) {
+				// 存在最后光标对象，选定对象清除所有光标并添加最后光标还原之前的状态
+				selection.removeAllRanges()
+				selection.addRange(lastEditRange)
+			}
+			// 判断选定对象范围是编辑框还是文本节点
+			if (selection.anchorNode.nodeName != '#text') {
+				// 如果是编辑框范围。则创建表情文本节点进行插入
+				var emojiText = document.createTextNode(emojiInput.value)
+
+				if (edit.childNodes.length > 0) {
+					// 如果文本框的子元素大于0，则表示有其他元素，则按照位置插入表情节点
+					for (var i = 0; i < edit.childNodes.length; i++) {
+						if (i == selection.anchorOffset) {
+							edit.insertBefore(emojiText, edit.childNodes[i])
+						}
+					}
+				} else {
+					// 否则直接插入一个表情元素
+					edit.appendChild(emojiText)
+				}
+				// 创建新的光标对象
+				var range = document.createRange()
+				// 光标对象的范围界定为新建的表情节点
+				range.selectNodeContents(emojiText)
+				// 光标位置定位在表情节点的最大长度
+				range.setStart(emojiText, emojiText.length)
+				// 使光标开始和光标结束重叠
+				range.collapse(true)
+				// 清除选定对象的所有光标对象
+				selection.removeAllRanges()
+				// 插入新的光标对象
+				selection.addRange(range)
+			} else {
+				// 如果是文本节点则先获取光标对象
+				var range = selection.getRangeAt(0)
+				// 获取光标对象的范围界定对象，一般就是textNode对象
+				var textNode = range.startContainer;
+				// 获取光标位置
+				var rangeStartOffset = range.startOffset;
+				// 文本节点在光标位置处插入新的表情内容
+				textNode.insertData(rangeStartOffset, emojiInput.value)
+				// 光标移动到到原来的位置加上新内容的长度
+				range.setStart(textNode, rangeStartOffset + emojiInput.value.length)
+				// 光标开始和光标结束重叠
+				range.collapse(true)
+				// 清除选定对象的所有光标对象
+				selection.removeAllRanges()
+				// 插入新的光标对象
+				selection.addRange(range)
+			}
+			// 无论如何都要记录最后光标对象
+			lastEditRange = selection.getRangeAt(0)
+		}
+
+	</script>
+</body>
+
+</html>
+-->
+
+<!--
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>div contenteditable光标测试</title>
+	<style type="text/css">
+		.div {
+			width: 600px;
+			height: 200px;
+			border: 1px solid #CCC
+		}
+
+	</style>
+	<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(e) {
+			$('.aclick').click(function() {
+				$('.div-label').html("回复[潇sdfsdfssssssssssssssdfsdf潇]:");
+				$('.div').focus();
+				set_focus($('.div'))
+				getC($('.div'))
+			})
+		});
+
+		function getC(that) {
+			if (document.all) {
+				that.range = document.selection.createRange();
+				that.range.select();
+				that.range.moveStart("character", -1);
+			} else {
+				that.range = window.getSelection().getRangeAt(0);
+				//				that.range.setStart(that.range.startContainer, 3);
+			}
+		}
+
+		function set_focus(el) {
+			el = el[0];
+			el.focus();
+			if ($.browser.msie) {
+				var rng;
+				el.focus();
+				rng = document.selection.createRange();
+				rng.moveStart('character', -el.innerText.length);
+				var text = rng.text;
+				for (var i = 0; i < el.innerText.length; i++) {
+					if (el.innerText.substring(0, i + 1) == text.substring(text.length - i - 1, text.length)) {
+						result = i + 1;
+					}
+				}
+			} else {
+				var range = document.createRange();
+				range.selectNodeContents(el);
+				range.collapse(false);
+				var sel = window.getSelection();
+				sel.removeAllRanges();
+				sel.addRange(range);
+			}
+			
+//            if (window.getSelection) {//ie11 10 9 ff safari
+//                obj.focus(); //解决ff不获取焦点无法定位问题
+//                var range = window.getSelection();//创建range
+//                range.selectAllChildren(obj);//range 选择obj下所有子内容
+//                range.collapseToEnd();//光标移至最后
+//            }
+//            else if (document.selection) {//ie10 9 8 7 6 5
+//                var range = document.selection.createRange();//创建选择对象
+//                //var range = document.body.createTextRange();
+//                range.moveToElementText(obj);//range定位到obj
+//                range.collapse(false);//光标移至最后
+//                range.select();
+//            }
+		}
+
+	</script>
+</head>
+
+<body>
+	<a href="#" class="aclick">回复潇潇</a>
+	<div class="div" contenteditable="true">
+		<label contenteditable="false" class="div-label">回复标题：</label>
+	</div>
+</body>
+
+</html>
+-->
+
+<!--光标位置-->
+<!--
+<html>
+
+<head>
+	<title>光标测试</title>
+	<style>
+		p {
+			display: flex;
+			flex-direction: row;
+		}
+
+		.btn {
+			height: 24px;
+			margin: 0 10px;
+		}
+
+		.edit-div {
+			display: inline-block;
+			width: 225px;
+			border: 1px solid #decdcd;
+		}
+
+	</style>
+	<script>
+		function getCursortPosition(e) {
+			var eleP = e.target.parentNode; //获取父级元素
+			var pos = 0;
+			if (e.target.nodeName == "DIV") {
+				pos = getDivPosition(e.target);
+			} else {
+				pos = getPosition(e.target);
+			}
+
+			var spanEle = (eleP.childNodes)[7];
+			spanEle.innerText = pos;
+		}
+
+		//可编辑div获取坐标
+		const getDivPosition = function(element) {
+			var caretOffset = 0;
+			var doc = element.ownerDocument || element.document;
+			var win = doc.defaultView || doc.parentWindow;
+			var sel;
+			if (typeof win.getSelection != "undefined") { //谷歌、火狐
+				sel = win.getSelection();
+				if (sel.rangeCount > 0) { //选中的区域
+					var range = win.getSelection().getRangeAt(0);
+					var preCaretRange = range.cloneRange(); //克隆一个选中区域
+					preCaretRange.selectNodeContents(element); //设置选中区域的节点内容为当前节点
+					preCaretRange.setEnd(range.endContainer, range.endOffset); //重置选中区域的结束位置
+					caretOffset = preCaretRange.toString().length;
+				}
+			} else if ((sel = doc.selection) && sel.type != "Control") { //IE
+				var textRange = sel.createRange();
+				var preCaretTextRange = doc.body.createTextRange();
+				preCaretTextRange.moveToElementText(element);
+				preCaretTextRange.setEndPoint("EndToEnd", textRange);
+				caretOffset = preCaretTextRange.text.length;
+			}
+			return caretOffset;
+		}
+
+		//输入框获取光标
+		const getPosition = function(element) {
+			let cursorPos = 0;
+			if (document.selection) { //IE
+				var selectRange = document.selection.createRange();
+				selectRange.moveStart('character', -element.value.length);
+				cursorPos = selectRange.text.length;
+			} else if (element.selectionStart || element.selectionStart == '0') {
+				cursorPos = element.selectionStart;
+			}
+			return cursorPos;
+		}
+
+	</script>
+</head>
+
+<body>
+	<p>
+		<label>输入框测试:</label>
+		<input type="text" style="width:220px" onclick="getCursortPosition(event);" />
+		<span>光标位置:</span>
+		<span></span>
+	</p>
+	<p>
+		<label>文本框测试:</label>
+		<textarea rows="5" style="width:220px" onclick="getCursortPosition(event);"></textarea>
+		<span>光标位置:</span>
+		<span></span>
+	</p>
+	<div>
+		<label>可编辑div:</label>
+		<div contenteditable="true" class="edit-div" onclick="getCursortPosition(event);"></div>
+		<span>光标位置:</span>
+		<span></span>
+	</div>
+</body>
+
+</html>
+-->
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>无标题文档</title>
+</head>
+
+<body>
+
+
+
+	<script type="text/javascript">
+		function setCaret(textObj) {
+			if (textObj.createTextRange) {
+				textObj.caretPos = document.selection.createRange().duplicate();
+			}
+		}
+
+		function insertAtCaret(textObj, textFeildValue) {
+			if (document.all) {
+				if (textObj.createTextRange && textObj.caretPos) {
+					var caretPos = textObj.caretPos;
+					caretPos.text = caretPos.text.charAt(caretPos.text.length - 1) == '   ' ? textFeildValue + '   ' : textFeildValue;
+				} else {
+					textObj.value = textFeildValue;
+				}
+			} else {
+				if (textObj.setSelectionRange) {
+					var rangeStart = textObj.selectionStart;
+					var rangeEnd = textObj.selectionEnd;
+					var tempStr1 = textObj.value.substring(0, rangeStart);
+					var tempStr2 = textObj.value.substring(rangeEnd);
+					textObj.value = tempStr1 + textFeildValue + tempStr2;
+				} else {
+					alert("This   version   of   Mozilla   based   browser   does   not   support   setSelectionRange");
+				}
+			}
+		}
+
+		//var cbd = e.originalEvent.clipboardData,
+		//    ua = win.navigator.userAgent;
+		//
+		//// 如果是 Safari 直接 return
+		//if ( !(e.originalEvent.clipboardData && e.originalEvent.clipboardData.items) ) {
+		//    return;
+		//}
+		//
+		//// Mac平台下Chrome49版本以下 复制Finder中的文件的Bug Hack掉
+		//if(cbd.items && cbd.items.length === 2 && cbd.items[0].kind === "string" && cbd.items[1].kind === "file" &&
+		//    cbd.types && cbd.types.length === 2 && cbd.types[0] === "text/plain" && cbd.types[1] === "Files" &&
+		//    ua.match(/Macintosh/i) && Number(ua.match(/Chrome\/(\d{2})/i)[1]) < 49){
+		//    return;
+		//}
+		//
+		//var items = e.originalEvent.clipboardData.items;
+		//for(var i = 0; i < items.length; i++){
+		//    var itemsi = items[i];
+		//    if(itemsi.kind == 'file'){
+		//        return;
+		//    }
+		//    if(itemsi.kind == 'string'){
+		//        if(itemsi.type == 'text/plain'){
+		//            itemsi.getAsString(function (str) {})
+		//        }else if(itemsi.type == 'text/html'){
+		//            itemsi.getAsString(function (str) {
+		//                //if(str.indexOf('font-size') > -1){
+		//                //    str = str.split(';');
+		//                //    for(var i = 0; i < str.length; i++){
+		//                //        var stri = str[i];
+		//                //        if(stri.indexOf('font-size') > -1){
+		//                //            str.splice(i, 1);
+		//                //        }
+		//                //    }
+		//                //    console.log(str);
+		//                //    str = str.join(';');
+		//                //}
+		//
+		//                console.log(str);
+		//                str.replace(request.reg.removeAttr, '<$1>');
+		//                console.log(str);
+		//                var copyBox = $(str);
+		//                console.log(copyBox);
+		//
+		//                copyBox.each(function(i, v){
+		//                    var $v = $(v);
+		//                    if(!$v.nodeName){
+		//                        if($v.localName == 'ul' || $v.localName == 'ol'){
+		//
+		//                        }else{
+		//
+		//                        }
+		//                    }
+		//                });
+		//                console.log(copyBox);
+		//
+		//
+		//            })
+		//        }else if(itemsi.type == 'Files'){
+		//            return;
+		//            var blob = itemsi.getAsFile();
+		//            if (blob.size === 0) {
+		//                return;
+		//            }
+		//        }
+		//    }
+		//}
+
+	</script>
+
+	<form id="form1" action="" onsubmit="" method="post" enctype="text/plain">
+		<p>
+			<textarea name="tarea" rows="" cols="" style="width:300px;height:120px;" onselect="setCaret(this);" onclick="setCaret(this);" onkeyup="setCaret(this);">例子例子例子例子例子</textarea>
+			<br/><br/>
+			<input type="text" name="textfield" style="width:220px;" value="插入FireFox" />
+			<br/>
+			<input type="button" value="插入" onclick="insertAtCaret(this.form.tarea,this.form.textfield.value);" />
+		</p>
+	</form>
+
+
+	<div id="box" contenteditable="true" style="border:1px solid #ccc; width:300px; height:200px;">sljfldjfldf</div>
+
+</body>
+
 </html>
