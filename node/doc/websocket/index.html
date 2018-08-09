@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <style>
+        .kuang {
+            width: 600px;
+            min-height: 50px;
+            max-height: 296px;
+            border: 1px solid;
+            float: left;
+            display: block;
+            position: relative;
+            overflow-y: scroll;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="jumbotron  bg-dark">
+            <h1 class="jumbotron-heading">WebSocket chat,欢迎使用:</h1>
+        </div>
+        <div class="input-group text-left">
+            <label>输入用户名：</label>
+            <input type="text" id="name" />
+            <button id="conn">连接</button>
+            <button id="close">断开</button>
+        </div>
+        <div class="input-group text-muted">
+            <div class="kuang" id="mess"></div>
+        </div>
+        <hr class="featurette-divider">
+        <div class="input-group text-left">
+            <input type="text" class="value" id="value1" />
+            <button id="send">发送</button>
+        </div>
+    </div>
+</div>
+<script src="view/js/index.js"></script>
+</body>
+
+</html>

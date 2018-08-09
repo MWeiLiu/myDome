@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="efef6de0-1d39-46fd-90ad-ca337ef76e75" name="websocket" url="http://47.104.213.34">
+        <fileTransfer host="47.104.213.34" port="22" rootFolder="/data/wwwroot/default/websocket" accessType="SFTP" username="root">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
