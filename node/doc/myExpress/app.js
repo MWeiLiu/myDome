@@ -2,6 +2,7 @@
 var express = require('express');
 var BaseResult = require('/doc/dome/practiceDome/node/doc/myexpress/public/js/text.js');
 var app = express();
+app.set('view engine', 'jade');
 // var BaseResult = require(dirname + '/text.js');
 
 BaseResult.SUCCESS.setData({a:10,b:[{c:20,d:30},{e:40,f:50}]});
@@ -9,6 +10,10 @@ BaseResult.SUCCESS.setData({a:10,b:[{c:20,d:30},{e:40,f:50}]});
 // 对网站首页的访问返回 "Hello World!" 字样
 app.get('/index', function (req, res) {
     res.send(BaseResult.SUCCESS);
+});
+
+app.get('/indexJade', function (req, res) {
+    res.render('public/views/index', {title: 'Hey', message: 'hello there!'})
 });
   
   // 网站首页接受 POST 请求
