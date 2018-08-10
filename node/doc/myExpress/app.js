@@ -12,8 +12,9 @@ app.get('/index', function (req, res) {
     res.send(BaseResult.SUCCESS);
 });
 
-app.get('/indexJade', function (req, res) {
-    res.render('public/views/index', {title: 'Hey', message: 'hello there!'})
+app.get('/indexJade', function (req, res, next) {
+    res.render('index', {title: 'Hey', message: 'hello there!'});
+    next();
 });
   
   // 网站首页接受 POST 请求
@@ -53,4 +54,3 @@ var server = app.listen(4000, function(){
     var port = server.address().port;
     console.log('Example app listening at http://%s:%s', host, port);
 });
-
