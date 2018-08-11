@@ -1,14 +1,26 @@
 {
-  "name": "node",
+  "name": "express",
   "version": "1.0.0",
-  "description": "关于node的api",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "express": "^4.16.3"
-  }
+    "cookie-parser": "~1.4.3",
+    "csurf": "^1.9.0",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.0",
+    "mysql": "^2.16.0",
+    "nodejs-websocket": "^1.7.1",
+    "serve-favicon": "^2.5.0",
+    "xss": "^1.0.3"
+  },
+  "keywords": [
+    "Lv2955501"
+  ],
+  "author": "MWeiLiu",
+  "license": "ISC"
 }

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="334e3148-318b-4345-a09a-6edde7392fc5" name="express" url="http://47.104.213.34/express">
+        <fileTransfer host="47.104.213.34" port="22" rootFolder="/data/wwwroot/default/express" accessType="SFTP" username="root">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
