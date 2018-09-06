@@ -1,0 +1,161 @@
+<import src="../../toast/toast.wxml" />
+<template is="toast" data='{{..._toast_}}' />
+
+<view class="page">
+  <!-- 侧滑栏 -->
+  <view class="page_tab">
+    <view class='i_left_top'>
+      <view class='i_left_sign'>
+        <view class='iconfont icon-qiandao'></view>
+        <view>签到</view>
+      </view>
+      <view class='i_left_head'>
+        <image src='../../images/ban1.jpg' />
+        <view class='i_left_login'>
+          <!-- <p>请登录</p>
+          <view class='iconfont icon-right'></view> -->
+          <view class="i_left_name">你是卡片</view>
+        </view>
+        <!--  -->
+      </view>
+    </view>
+    <view class="i_userList">
+      <block wx:for="{{userList}}" wx:key="">
+        <navigator url="{{item.url}}" hover-class="none">
+          <view class="iconfont {{item.icon}}"></view>
+          <view>{{item.name}}</view>
+        </navigator>
+      </block>
+    </view>
+    <view class="i_left_list">
+      <block wx:for="{{infoList}}" wx:key="">
+        <view class='i_left_contact' wx:if="{{index == 5}}">
+          <button class="cs_button" open-type="contact" session-from="weapp">
+            <span class="iconfont {{item.icon}}"></span>
+            <b>{{item.name}}</b>
+          </button> 
+        </view>
+        <view class='i_left_cont' wx:else>
+          <span class="iconfont {{item.icon}}"></span>
+          <b>{{item.name}}</b>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class="i_shade" bindtap='hideview' style='display:{{display}};'></view>
+  <!-- 主页 -->
+  <view class="home" style="{{translate}}">
+    <!--头部-->
+    <view class='i_head overhiden'>
+      <view bindtap='showview' class="fl iconfont icon-my"></view>
+      <view class='i_head_adr'>
+        <view class="iconfont icon-weizhi"></view>
+        <text>郑州市二七万达广场</text>
+        <view class="iconfont icon-right"></view>
+      </view>
+      <view bindtap='GoSearch' class="fr iconfont icon-search"></view>
+    </view>
+    <!--轮播图-->
+    <view class='i_swiper_img'>
+      <swiper class="swiper_box" indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+        <block wx:for="{{imgList}}" wx:key="">
+          <swiper-item>
+            <navigator url='' class='i_swiper_url' hover-class='none'>
+              <image src="{{item.img}}" class="slide-image" mode='aspectFill' />
+            </navigator>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <!--card-->
+    <view class='i_card overhiden'>
+      <block wx:for="{{cardList}}" wx:key="">
+        <navigator url='../vipDivision/vipDivision?name={{item.name}}' hover-class='none'>
+          <image src='{{item.img}}'></image>
+          <text>{{item.name}}</text>
+        </navigator>
+      </block>
+    </view>
+    <view class="swiper-tab">
+      <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">推荐</view>
+      <view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">附近</view>
+      <view class="swiper-tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="clickTab">新店</view>
+      <view class="swiper-tab-item {{currentTab==3?'active':''}}" data-current="3" bindtap="clickTab">专题</view>
+    </view>
+
+    <view class='i_swiper_list'>
+      <view class='{{currentTab == 0?"show":"hide"}}'>
+        <view class='i_recmend i_item' style='background:url(../../images/ban1.jpg) no-repeat;'>
+          <view class='i_listBG'></view>
+          <view class='i_list'>
+            <view class='i_list_rigth'>1.7km</view>
+            <view class='i_list_rigth i_list_img'>
+              <image src='../../images/ban2.jpg'></image>
+            </view>
+            <view class='i_list_cont'>新用户冲500送100 冲1000送300</view>
+            <view class='i_list_header'>
+              <image src='../../images/ban3.jpg'></image>
+              <span>五谷鱼粉（花园路店）</span>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='{{currentTab == 1?"show":"hide"}}'>
+        <view class='i_nearby i_item' style='background:url(../../images/ban1.jpg) no-repeat;'>
+          <view class='i_listBG'></view>
+          <view class='i_list'>
+            <view class='i_list_tit'>
+              <span>五谷鱼粉（花园路店）</span>
+              <image src='../../images/ban2.jpg'></image>
+            </view>
+            <view class='i_list_foot'>
+              <view>门店地址：郑州市陇海路花园路向西100米</view>
+              <view>1.7km</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='{{currentTab == 2?"show":"hide"}}'>
+        <view class='i_nearby i_item' style='background:url(../../images/ban1.jpg) no-repeat;'>
+          <view class='i_listBG'></view>
+          <view class='i_list'>
+            <view class='i_list_tit'>
+              <span>五谷鱼粉（花园路店）</span>
+              <image src='../../images/ban2.jpg'></image>
+            </view>
+            <view class='i_list_foot'>
+              <view>门店地址：郑州市陇海路花园路向西100米</view>
+              <view>1.7km</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='{{currentTab == 3?"show":"hide"}}'>
+        <view class='i_nearby i_item' style='background:url(../../images/ban1.jpg) no-repeat;'>
+          <view class='i_listBG'></view>
+          <view class='i_list'>
+            <view class='i_list_tit'>
+              <span>文章标题 今天你想吃什么？</span>
+              <image src='../../images/ban2.jpg'></image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='p_shade'></view>
+<view class='p_tag'>
+  <view class='p_tag_tit'>跳过</view>
+  <view class='p_tag_desc'>选选你喜欢吃什么？</view>
+  <view class='p_tag_canvas'>
+    <canvas canvas-id='myCanvas'></canvas>
+  </view>
+  <view class='p_tag_btn'>选好了</view>
+</view>
+<!-- <view class='model_bg' hidden='{{loginHidden}}'></view>
+<view class='author_login' hidden='{{loginHidden}}'>
+  <view class='author'>微信授权</view>
+  <view class='author_detail'>请点击下方按钮进行授权</view>
+  <button open-type='getUserInfo' bindgetuserinfo="bindGetUserInfo" hover-class='none'>确定</button>
+</view> -->

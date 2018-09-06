@@ -1,0 +1,14 @@
+<import src="../../toast/toast.wxml" />
+<template is="toast" data='{{..._toast_}}' />
+
+<view class="page">
+  <view class='i_code_tit'>使用说明</view>
+  <view class='i_code'>
+    <image src='../../images/code.jpg'></image>
+    <view class='refresh'>
+      <span class="iconfont icon-shuaxin"></span>
+      <b>刷新二维码</b>
+    </view>
+  </view>
+  <view class='i_code_foot'>如果付款失败，请尝试刷新二维码</view>
+</view>

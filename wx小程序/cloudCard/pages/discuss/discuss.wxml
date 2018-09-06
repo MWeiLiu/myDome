@@ -1,0 +1,44 @@
+<import src="../../toast/toast.wxml" />
+<template is="toast" data='{{..._toast_}}' />
+
+<view class="page">
+  <view class='d_tab'>
+  <!-- {{currentNavtab==idx ? 'd_tab_active' : 'd_tab_tit'}}" -->
+    <view wx:for="{{navTab}}" data-idx="{{index}}" class="{{currentIdx==index ? 'd_tab_tit d_tab_active' : 'd_tab_tit'}}" bindtap="switchTab">{{item}}(96)</view>
+  </view>
+  <scroll-view bindscroll="srcoll" class="d_list" scroll-y="true" style="height: {{winHeight}}">
+    <view class='m_list'>
+      <view class='m_list_top'>
+        <view class='m_list_name'>
+          <image src='../../images/ban1.jpg'></image>
+          <span>吃货12211</span>
+        </view>
+        <view class='m_list_star'>
+          <block wx:for="{{num}}" wx:key="{{item}}">
+            <image class='star_icon' data-id='{{item+1}}' src="{{curStarIndex<(item+1)?'../../images/star_gray.png':'../../images/star_light.png'}}"></image>
+          </block>
+        </view>
+      </view>
+      <view class='m_list_date'>
+        <span>2018-11-20 12:00</span>
+        <b>新人专享套餐</b>
+      </view>
+      <view class='m_list_desc'>
+        评价内容：服务热情，很不错 好评好评好评，干净卫生 味道好，以后会经常光顾的
+      </view>
+      <view class='m_list_tag'>
+        <span>态度热情</span>
+        <span>味道好</span>
+        <span>舒适</span>
+      </view>
+      <view class='m_list_img'>
+        <image src='../../images/ban1.jpg'></image>
+        <image src='../../images/ban1.jpg'></image>
+        <image src='../../images/ban1.jpg'></image>
+      </view>
+      <view class='m_list_reply'>
+        商家回复:感谢您的支持，期待下次光临~
+      </view>
+    </view>
+  </scroll-view>
+</view>

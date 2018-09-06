@@ -1,0 +1,49 @@
+<import src="../../toast/toast.wxml" />
+<template is="toast" data='{{..._toast_}}' />
+
+<view class='i_recmend i_item' style='background:url(../../images/ban1.jpg) no-repeat;'>
+  <view class='i_listBG'></view>
+  <view class='i_list'>
+    <view class='i_list_cont'>新用户冲500送100 冲1000送300</view>
+    <view class='i_list_header'>
+      <image src='../../images/ban3.jpg'></image>
+      <span>五谷鱼粉（花园路店）</span>
+    </view>
+  </view>
+</view>
+<view class='m_note'>
+  <view class='m_note_tit'>购买须知</view>
+  <view class='m_note_desc'>
+    <view>1、会员卡可与其他优惠券同享</view>
+    <view>1、会员卡可与其他优惠券同享</view>
+    <view>1、会员卡可与其他优惠券同享</view>
+  </view>
+</view>
+<view class=''>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell">
+        <view class="weui-cell__bd">充值金额</view>
+        <view class="weui-cell__ft">￥888元</view>
+    </view>
+    <view class="weui-cell">
+        <view class="weui-cell__bd">订单编号</view>
+        <view class="weui-cell__ft">2011185111  </view>
+    </view>
+    <view class="weui-cell weui-cell_access">
+        <view class="weui-cell__bd">店铺优惠</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access">无可用优惠券</view>
+    </view>
+    <view class="weui-cell weui-cell_access">
+        <view class="weui-cell__bd">平台折扣</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access">无折扣</view>
+    </view>
+    <view class="weui-cell">
+        <view class="weui-cell__bd">购买数量</view>
+        <view class="weui-cell__ft co_num">
+          <icon class='iconfont icon-jian'></icon>
+          <input type='text' value='1' />
+          <icon class='iconfont icon-jia'></icon>
+        </view>
+    </view>
+  </view>
+</view>

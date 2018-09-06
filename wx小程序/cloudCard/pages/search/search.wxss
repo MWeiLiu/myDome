@@ -1,0 +1,42 @@
+.i_search{
+  padding: 10px;
+  position: relative;
+}
+.i_search input{
+  height: 35px;
+  min-height: 35px;
+  line-height: 35px;
+  border: solid 1px #e5e5e5;
+  border-radius: 5px;
+  padding: 0 35px 0 10px;
+}
+.i_search .icon-search{
+  position: absolute;
+  right: 11px;
+  top: 13px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 20px;
+}
+.s_record{
+  padding: 0 10px;
+}
+.s_record .s_record_tit{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: solid 1px #e5e5e5;
+}
+.s_record .s_record_list{
+  overflow: hidden;
+  margin-top: 10px;
+}
+.s_record .s_record_list .s_list_name{
+  padding: 3px 6px;
+  background: #eee;
+  float: left;
+  margin: 0 10px 10px 0;
+  border-radius: 5px;
+}

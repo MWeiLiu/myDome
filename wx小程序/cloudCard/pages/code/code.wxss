@@ -1,0 +1,26 @@
+.i_code_tit{
+  text-align: right;
+  padding: 10px 10px 0; 
+}
+.i_code{
+  width: 80%;
+  margin: 0 auto;
+  background: #eee;
+  text-align: center;
+  padding: 20px 0 0;
+  margin-top: 20px;
+}
+.i_code image{
+  width: 400rpx;
+  height: 400rpx;
+}
+.i_code .refresh{
+  padding: 20px 0;
+}
+.i_code .refresh b{
+  margin-left: 5px;
+}
+.i_code_foot{
+  text-align: center;
+  padding: 10px 0;
+}

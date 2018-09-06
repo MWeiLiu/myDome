@@ -1,0 +1,61 @@
+.page{
+  padding: 0 10px;
+}
+.m_top{
+  padding: 10px 0;
+}
+.m_top span{
+  margin-right: 10px;
+}
+.m_top_desc{
+  background: #eee;
+  border: solid 1px #e5e5e5;
+  padding: 20px 10px;
+  text-align: center;
+  font-size: 16px;
+}
+.m_note{
+  margin: 10px 0;
+}
+.m_note .m_note_tit{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+.m_note .m_note_tit a{
+  display: block;
+}
+.m_note .m_note_tit a .icon-rank{
+  font-size: 22px;
+}
+.m_note .m_note_desc view{
+  font-size: 12px;
+  margin-bottom: 10px;
+  color: #999;
+}
+.m_store .m_store_tit{
+  font-size: 16px;
+}
+.m_store .m_store_middle{
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+.m_store .m_store_middle image{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.m_store_foot{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.m_store_foot a{
+  display: block;
+}
+.m_store_foot a .icon-phone{
+  font-size: 20px;
+}

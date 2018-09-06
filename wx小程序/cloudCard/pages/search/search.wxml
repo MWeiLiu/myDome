@@ -1,0 +1,30 @@
+<import src="../../toast/toast.wxml" />
+<template is="toast" data='{{..._toast_}}' />
+
+<view class='page'>
+  <view class='i_search'>
+    <input type='text' placeholder='请输入商家名称' />
+    <view class='iconfont icon-search'></view>
+  </view>
+
+  <view class='s_record'>
+    <view class='s_record_tit'>
+      <span>搜索记录</span>
+      <view bindtap='emptyRecord'>
+        <b class="iconfont icon-qingchu"></b>
+        <p>清除记录</p>
+      </view>
+    </view>
+    <view class='s_record_list'>
+      <navigator class='s_list_name' hover-class='none'>火锅</navigator>
+      <navigator class='s_list_name' hover-class='none'>火锅火锅火锅</navigator>
+      <navigator class='s_list_name' hover-class='none'>火锅</navigator>
+      <navigator class='s_list_name' hover-class='none'>火锅火锅</navigator>
+      <navigator class='s_list_name' hover-class='none'>火锅</navigator>
+      <navigator class='s_list_name' hover-class='none'>火锅火锅</navigator>
+      <navigator class='s_list_name' hover-class='none'>火锅</navigator>
+      <navigator class='s_list_name' hover-class='none'>火锅</navigator>
+      <navigator class='s_list_name' hover-class='none'>火锅火锅火锅火锅</navigator>
+    </view>
+  </view>
+</view>

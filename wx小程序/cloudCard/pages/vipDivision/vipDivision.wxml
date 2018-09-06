@@ -1,0 +1,32 @@
+<import src="../../toast/toast.wxml" />
+<template is="toast" data='{{..._toast_}}' />
+
+<view class='page'>
+  <view class='vip_ban'>
+    <image src='../../images/ban1.jpg'></image>
+  </view>
+  <view class='i_swiper_list'>
+    <view class='i_recmend i_item' bindtap='GoMeal' style='background:url(../../images/ban1.jpg) no-repeat;'>
+      <view class='i_listBG'></view>
+      <view class='i_list'>
+        <view class='i_list_rigth'>1.7km</view>
+        <view class='i_list_cont'>新用户冲500送100 冲1000送300</view>
+        <view class='i_list_header'>
+          <image src='../../images/ban3.jpg'></image>
+          <span>五谷鱼粉（花园路店）</span>
+        </view>
+      </view>
+    </view>
+    <view class='i_recmend i_item' style='background:url(../../images/ban1.jpg) no-repeat;'>
+      <view class='i_listBG'></view>
+      <view class='i_list'>
+        <view class='i_list_rigth'>1.7km</view>
+        <view class='i_list_cont'>新用户冲500送100 冲1000送300</view>
+        <view class='i_list_header'>
+          <image src='../../images/ban3.jpg'></image>
+          <span>五谷鱼粉（花园路店）</span>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

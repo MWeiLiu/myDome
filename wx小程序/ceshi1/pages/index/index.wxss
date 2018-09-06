@@ -19,3 +19,21 @@
 .usermotto {
   margin-top: 200px;
 }
+
+
+.box{
+    width: 90%;
+    height: 800rpx;
+    margin: 0 auto;
+    position: relative;
+    border: 2rpx solid #333;
+}
+
+.box > view {
+    width: 150rpx;
+    height: 150rpx;
+    border: 2rpx solid #ff0fff;
+    border-radius: 50%;
+    padding: 4rpx;
+    position: absolute;
+}

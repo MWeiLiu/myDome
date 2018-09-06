@@ -1,27 +1,27 @@
 <!--index.wxml-->
-<view class="container">
+<!-- <view class="container">
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
-  </view>
+  </view> -->
 
-  <!-- 数据绑定 -->
-  <view>
+<!-- 数据绑定 -->
+<!-- <view>
     <text>{{thisPrototype}}</text>
-  </view>
+  </view> -->
 
-  <!-- 列表渲染 -->
-  <!-- 使用 wx:for-item 可以指定数组当前元素的变量名，
+<!-- 列表渲染 -->
+<!-- 使用 wx:for-item 可以指定数组当前元素的变量名，
   使用 wx:for-index 可以指定数组当前下标的变量名： -->
-  <view wx:for="{{array}}" wx:key="*this">
+<!-- <view wx:for="{{array}}" wx:key="*this">
     <text>{{item}}</text>
-  </view>
+  </view> -->
 
-  <!-- 模板 -->
-  <template name="staffName">
+<!-- 模板 -->
+<!-- <template name="staffName">
     <view>
       FirstName: {{firstName}}, LastName: {{lastName}}
     </view>
@@ -33,7 +33,7 @@
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>
-</view>
+</view> -->
 
 
 <!-- 绑定事件<view bindtap="事件名"> WEBVIEW </view> -->
@@ -51,3 +51,11 @@
 <!--  -->
 <!--  -->
 <!--  -->
+
+<!-- <view class="box">
+    <block wx:for="{{listObj.list}}" wx:key="id" wx:for-index="idx" wx:for-item="item">
+        <view style="top:{{item.top}};left:{{item.left}};width:{{item.width}};height:{{item.height}};">{{item.name}}</view>
+    </block>
+</view> -->
+
+<rich-text nodes="{{nodes}}" bindtap="tap"></rich-text>

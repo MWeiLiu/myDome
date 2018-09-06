@@ -1,0 +1,4 @@
+.vip_ban,.vip_ban image{
+  width: 100%;
+  height: 400rpx;
+}

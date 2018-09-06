@@ -1,0 +1,25 @@
+.m_note{
+  padding: 0 10px;
+}
+.weui-cells::after,.weui-cells::before{
+  border: none !important;
+}
+.weui-cell::before{
+  left: 0;
+}
+.weui-cell:last-child{
+  border-bottom: solid 1px #e5e5e5; 
+}
+.co_num{
+  display: inline-flex;
+  align-items: center;
+}
+.co_num input{
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  min-height: 25px;
+  border: solid 1px #e5e5e5;
+  text-align: center;
+  margin: 0 10px;
+}

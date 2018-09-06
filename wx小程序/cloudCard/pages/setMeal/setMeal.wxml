@@ -1,0 +1,101 @@
+<import src="../../toast/toast.wxml" />
+<template is="toast" data='{{..._toast_}}' />
+
+<view class='page'>
+  <view class='m_top'>
+    <span class="iconfont icon-dianpu"></span>
+    <b>蜀天宏火锅</b>
+  </view>
+  <view class='m_top_desc'>冲1000送300 分6个月返还</view>
+  <view class='m_note'>
+    <view class='m_note_tit'>
+      <view>购买须知</view>
+      <a>
+        <view class='iconfont icon-rank'></view>
+        <!-- <view class='iconfont icon-xingxing'></view> -->
+      </a>
+    </view>
+    <view class='m_note_desc'>
+      <view>1、会员卡可与其他优惠券同享</view>
+      <view>1、会员卡可与其他优惠券同享</view>
+      <view>1、会员卡可与其他优惠券同享</view>
+      <view>1、会员卡可与其他优惠券同享</view>
+      <view>1、会员卡可与其他优惠券同享</view>
+    </view>
+  </view>
+  <view class='m_store'>
+    <view class='m_store_tit'>门店介绍</view>
+    <view class='m_store_middle'>
+      <image src='../../images/ban1.jpg'></image>
+      <view class='m_store_desc'>
+        <view class='m_store_desc_tit'>蜀天宏火锅</view>
+        <view class='m_list_tag'>
+          <span>实惠</span>
+          <span>服务热情</span>
+          <span>舒适</span>
+          <span>干净</span>
+        </view>
+        <view class='m_store_date'>营业时间：
+          <span>9:00-20:00</span>
+        </view>
+      </view>
+    </view>
+    <view class='m_store_foot'>
+      <view>
+        <span class='iconfont icon-weizhi'></span>
+        <b>1.6km</b>
+        <p>郑州市金水区凯旋国际广场</p>
+      </view>
+      <a>
+        <view class='iconfont icon-phone'></view>
+      </a>
+    </view>
+  </view>
+</view>
+<view class='m_discuss'>
+  <view class='m_discuss_tit'>
+    <span>商家评价</span>
+    <a bindtap="GoDiscuss">
+      <b>共5条评论</b>
+      <p class="iconfont icon-right"></p>
+    </a>
+  </view>
+  <view class='m_list'>
+    <view class='m_list_top'>
+      <view class='m_list_name'>
+        <image src='../../images/ban1.jpg'></image>
+        <span>吃货12211</span>
+      </view>
+      <view class='m_list_star'>
+        <block wx:for="{{num}}" wx:key="{{item}}">
+          <image class='star_icon' data-id='{{item+1}}' src="{{curStarIndex<(item+1)?'../../images/star_gray.png':'../../images/star_light.png'}}"></image>
+        </block>
+      </view>
+    </view>
+    <view class='m_list_date'>
+      <span>2018-11-20 12:00</span>
+      <b>新人专享套餐</b>
+    </view>
+    <view class='m_list_desc'>
+      评价内容：服务热情，很不错 好评好评好评，干净卫生 味道好，以后会经常光顾的
+    </view>
+    <view class='m_list_tag'>
+      <span>态度热情</span>
+      <span>味道好</span>
+      <span>舒适</span>
+    </view>
+    <view class='m_list_img'>
+      <image src='../../images/ban1.jpg'></image>
+      <image src='../../images/ban1.jpg'></image>
+      <image src='../../images/ban1.jpg'></image>
+    </view>
+    <view class='m_list_reply'>
+      商家回复:感谢您的支持，期待下次光临~
+    </view>
+  </view>
+  <view class='m_list_all'>
+    <span>查看全部评价</span>
+    <b class="iconfont icon-right"></b>
+  </view>
+</view>
+<view class='m_foot'>立即充值</view>

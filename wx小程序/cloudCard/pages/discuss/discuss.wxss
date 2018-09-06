@@ -1,0 +1,16 @@
+.d_tab{
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: solid 1px #e5e5e5;
+}
+.d_tab .d_tab_tit{
+  margin-right: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: solid 1px #e5e5e5;
+}
+.d_tab_active{
+  background: #d81e06;
+  color: #fff;
+}

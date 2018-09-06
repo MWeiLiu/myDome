@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/trad/trad",
+    "pages/couponCenter/couponCenter",
+    "pages/confirmOrder/confirmOrder",
+    "pages/searchCity/searchCity",
+    "pages/shopDetail/shopDetail",
+    "pages/discuss/discuss",
+    "pages/vipDivision/vipDivision",
+    "pages/setMeal/setMeal",
+    "pages/code/code",
+    "pages/search/search"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#d81e06",
+    "navigationBarTitleText": "卡商城",
+    "navigationBarTextStyle": "#fff"
+  },
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "selectedColor": "#d81e06",
+    "borderStyle": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "卡商城",
+        "iconPath": "images/icon_mall.png",
+        "selectedIconPath": "images/icon_mallActive.png"
+      },
+      {
+        "pagePath": "pages/code/code",
+        "text": "付款码",
+        "iconPath": "images/icon_code.png",
+        "selectedIconPath": "images/icon_codeActive.png"
+      },
+      {
+        "pagePath": "pages/trad/trad",
+        "text": "卡交易",
+        "iconPath": "images/icon_trad.png",
+        "selectedIconPath": "images/icon_tradActive.png"
+      }
+    ]
+  }
+}

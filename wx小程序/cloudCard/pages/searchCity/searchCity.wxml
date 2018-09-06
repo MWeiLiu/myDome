@@ -1,0 +1,83 @@
+<import src="../../toast/toast.wxml" />
+<template is="toast" data='{{..._toast_}}' />
+<scroll-view scroll-y style='width:100%;height:100%' scroll-with-animation scroll-into-view='{{cityListId}}'>
+<view class="weui-search-bar">
+    <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+            <view class='s_tit'>
+              <span class="">郑州</span>
+              <icon class='iconfont icon-right'></icon>
+            </view>
+            <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+            <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+            <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                <icon type="clear" size="14"></icon>
+            </view>
+        </view>
+        <!-- <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+            <icon class="weui-icon-search" type="search" size="14"></icon>
+            <view class="weui-search-bar__text">搜索</view>
+        </label> -->
+    </view>
+</view>
+<view class='city_box' hidden='{{cityBox}}'>
+  <view class='city_left'>
+      <view class='city_locate' data-types='locate'>
+        <view class='s_auto' catchtap='cityTap'>
+          <text class='city_locate_title'>当前城市</text>
+          <text class='city_locate_text' style='{{!locateCity&&"color:#33b9ff;"}}'>{{locateCity||'点击定位'}}</text>
+        </view>
+        <view class='s_anew' bindtap='anewAdr'>重新定位</view>
+      </view>
+      <!-- <view class='national' data-types='national' catchtap='cityTap'>全国</view> -->
+      <!-- <view class='new_city'>
+        <view class='new_city_title'>热门城市</view>
+        <view class='new_city_box'>
+          <text class='new_city_text' wx:for='{{newcity}}' wx:key='this' data-types='new' catchtap='cityTap' data-val='{{item}}'>{{item}}</text>
+        </view>
+      </view> -->
+      <view class='city_list_box'>
+        <block wx:for='{{citylist}}' wx:key='' wx:for-item='letterItem' wx:for-index='letterIndex'>
+          <view class='city_first_letter' id='{{letterItem.letter}}'>{{letterItem.letter}}</view>
+          <text class='city_name' wx:for='{{letterItem.data}}' wx:key='' catchtap='cityTap' data-index='{{index}}' data-val='{{item}}'>{{item.cityName}}</text>
+        </block>
+      </view>
+    
+  </view>
+  <view class='city_right'>
+    <text class='letter_item' wx:for='{{letter}}' wx:key='' catchtap='letterTap' data-item='{{item}}'>{{item}}</text>
+  </view>
+</view>
+
+<view class='s_nearby' hidden='{{nearby}}'>
+  <view class='city_locate' data-types='locate'>
+    <view class='s_auto' catchtap='cityTap'>
+      <text class='city_locate_title'>当前城市</text>
+      <text class='city_locate_text' style='{{!locateCity&&"color:#33b9ff;"}}'>{{locateCity||'点击定位'}}</text>
+    </view>
+    <view class='s_anew' bindtap='anewAdr'>重新定位</view>
+  </view>
+  <view class='s_more'>
+    <view class='s_more_tit'>更多地点:</view>
+    <view class='s_more_list'>
+      <view class='s_more_adr'>
+        <span>郑州二七广场(二七店)</span>
+        <b>7km</b>
+      </view>
+      <view class='s_more_desc'>
+        郑州市二七区金水路23号
+      </view>
+    </view>
+    <view class='s_more_list'>
+      <view class='s_more_adr'>
+        <span>郑州二七广场(二七店)</span>
+        <b>7km</b>
+      </view>
+      <view class='s_more_desc'>
+        郑州市二七区金水路23号
+      </view>
+    </view>
+  </view>
+</view>
+</scroll-view>
+

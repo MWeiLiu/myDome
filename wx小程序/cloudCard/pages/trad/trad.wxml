@@ -1,0 +1,131 @@
+<import src="../../toast/toast.wxml" />
+<template is="toast" data='{{..._toast_}}' />
+
+<view class="page">
+  <!-- 侧滑栏 -->
+  <view class="page_tab">
+    <view class='i_left_top'>
+      <view class='i_left_sign'>
+        <view class='iconfont icon-qiandao'></view>
+        <view>签到</view>
+      </view>
+      <view class='i_left_head'>
+        <image src='../../images/ban1.jpg' />
+        <view class='i_left_login'>
+          <!-- <p>请登录</p>
+          <view class='iconfont icon-right'></view> -->
+          <view class="i_left_name">你是卡片</view>
+        </view>
+        <!--  -->
+      </view>
+    </view>
+    <view class="i_userList">
+      <block wx:for="{{userList}}" wx:key="">
+        <navigator url="{{item.url}}" hover-class="none">
+          <view class="iconfont {{item.icon}}"></view>
+          <view>{{item.name}}</view>
+        </navigator>
+      </block>
+    </view>
+    <view class="i_left_list">
+      <block wx:for="{{infoList}}" wx:key="">
+        <view class='i_left_contact' wx:if="{{index == 5}}">
+          <button class="cs_button" open-type="contact" session-from="weapp">
+            <span class="iconfont {{item.icon}}"></span>
+            <b>{{item.name}}</b>
+          </button> 
+        </view>
+        <view class='i_left_cont' wx:else>
+          <span class="iconfont {{item.icon}}"></span>
+          <b>{{item.name}}</b>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class="i_shade" bindtap='hideview' style='display:{{display}};'></view>
+  <!-- 主页 -->
+  <view class="home" style="{{translate}}">
+    <!--头部-->
+    <view class='i_head overhiden'>
+      <view bindtap='showview' class="fl iconfont icon-my"></view>
+      <view class='i_search'>
+        <input type='text' placeholder='搜索商家、商品名称' />
+        <view class="fr iconfont icon-search"></view>
+      </view>
+    </view>
+    <view class='t_sort'>
+      <view class='t_sort_top'>
+        <view bindtap='AllSort'>
+          <span>综合排序</span>
+          <icon class='iconfont icon-bottom'></icon>
+        </view>
+        <view class='t_sort_list' hidden='{{sortHidden}}'>
+          <view class='t_sort_name'>综合排序</view>
+          <view class='t_sort_name'>最新发布</view>
+          <view class='t_sort_name'>离我最近</view>
+          <view class='t_sort_name'>价格从高到低</view>
+          <view class='t_sort_name'>价格从低到高</view>
+        </view>
+      </view>
+      <view class='t_sort_top'>
+        <view bindtap='AllGenre'>
+          <span>类型</span>
+          <icon class='iconfont icon-bottom'></icon>
+        </view>
+        <view class='t_sort_list' hidden='{{genreHidden}}'>
+          <view class='t_sort_name'>满减卡</view>
+          <view class='t_sort_name'>折扣卡</view>
+        </view>
+      </view>
+      <view class='t_sort_top'>
+        <view bindtap='AllArea'>
+          <span>区域</span>
+          <icon class='iconfont icon-bottom'></icon>
+        </view>
+      </view>
+      <view class='t_sort_area' hidden='{{areaHidden}}'>
+        <view class='t_sort_city'>不限区域</view>
+        <view class='t_sort_city'>登封</view>
+        <view class='t_sort_city'>二七区</view>
+        <view class='t_sort_city'>高新区</view>
+        <view class='t_sort_city'>巩义市</view>
+        <view class='t_sort_city'>管城回族区</view>
+        <view class='t_sort_city'>航空港区</view>
+        <view class='t_sort_city'>惠济区</view>
+      </view>
+    </view>
+    <view class='t_list'>
+      <view class='t_list_cont'>
+        <view class='t_list_top'>
+          <view class='t_list_name'>
+            <image src='../../images/ban1.jpg'></image>
+            <span>吃货12221</span>
+          </view>
+          <view class='t_list_date'>10分钟</view>
+        </view>
+        <view class='t_list_price'>
+          <span>转让价</span>
+          <b>￥980.5</b>
+        </view>
+        <view class='t_list_desc'>
+          充值卡购于2018年5月20日，需要的联系
+        </view>
+        <view class='t_list_card'>
+          <image src='../../images/ban1.jpg'></image>
+          <view class='t_list_card_desc'>
+            <view>土大力（花园路店）</view>
+            <view>余额<span>￥950.98</span></view>
+            <view class='t_list_card_adr'>门店地址：郑州市金水区金水街道万达广场</view>
+            <view class='t_list_card_ft'>有效期至：2020年10月12日</view>
+          </view>
+        </view>
+        <view class='t_list_adr'>1.6km</view>
+        <view class='t_list_foot'>
+          <icon class='iconfont'></icon>
+          <span>转让</span>  
+        </view>
+      </view>
+    </view>
+    <view class='t_btn'>发布</view>
+  </view>
+</view>
