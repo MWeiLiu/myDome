@@ -1,61 +1,69 @@
-/*
- *
- * 信息管理
- * 
- * */
-			var Message=(function(){
-				//防止消息队列暴露篡改
-				var _message={};
-				return {
-					//注册消息
-					regist:function(type,fn){},
-					//广播消息
-					fire:function(type,args){},
-					//移除消息
-					remove:function(type,fn){}
-				}
-			})();
-			Message.regist('测试',function(e){
-				console.log(e.type,e.args.msg)
-			});
-			Message.fire('测试',{msg:'传递参数'})
-			
+'use strict'
+class EmitterEvent {
+	constructor() {
+		//构造器。实例上创建一个事件池
+		this._event = {}
+	}
+	//on 订阅
+	on(eventName, handler) {
+		// 根据eventName，事件池有对应的事件数组，就push添加， 没有就新建一个。
+		// 严谨一点应该判断handler的类型，是不是function
+		if (this._event[eventName]) {
+			this._event[eventName].push(handler)
+		} else {
+			this._event[eventName] = [handler]
+		}
+	}
+	emit(eventName) {
+		// 根据eventName找到对应数组
+		var events = this._event[eventName];
+		// 取一下传进来的参数，方便给执行的函数
+		var otherArgs = Array.prototype.slice.call(arguments, 1)
+		var that = this
+		if (events) {
+			events.forEach((event) => {
+				event.apply(that, otherArgs)
+			})
+		}
+	}
+	// 解除订阅
+	off(eventName, handler) {
+		var events = this._event[eventName]
+		if (events) {
+			this._event[eventName] = events.filter((event) => {
+				return event !== handler
+			})
+		}
+	}
+	// 订阅以后，emit 发布执行一次后自动解除订阅
+	once(eventName, handler) {
+		var that = this
 
-
-/*
- * 
- * 模块间解耦
- * 
- * */
-
-var Student=function(result){
-	this.result=result;
-};
-Student.prototype.answer=function(question){
-	var that=this;
-	Message.regist(question,function(e){
-		console.log(e);
-		console.log(that.result);
-	});
+		function func() {
+			var args = Array.prototype.slice.call(arguments, 0)
+			handler.apply(that, args)
+			this.off(eventName, func)
+		}
+		this.on(eventName, func)
+	}
 }
-var student1=new Student('学生1回答问题');
-var student2=new Student('学生2回答问题');
+var event = new EmitterEvent()
 
-student1.answer('什么是设计模式')
-student1.answer('简述观察者模式')
-student2.answer('JavaScript起源')
-student2.answer('简述观察者模式')
-student2.answer('简述观察者模式')
-
-var Teacher=function(){};
-Teacher.prototype.ask=function(question){
-	console.log('问题是：'+question);
-	Message.fire(question)
+function a(something) {
+	console.log(something, 'aa-aa')
+	console.log(event)
 }
 
-var teacher=new Teacher();
-teacher.ask('JavaScript起源')
-var headmaster=new Teacher();
-headmaster.ask('简述观察者模式')
-
-
+function b(something) {
+	console.log(something)
+}
+event.once('dosomething', a)
+event.emit('dosomething', 'chifan')
+event.emit('dosomething')
+event.on('dosomething', a)
+event.on('dosomething', b)
+event.emit('dosomething', 'chifan')
+//event.off('dosomething', a)
+setTimeout(() => {
+	event.emit('dosomething', 'hejiu')
+}, 2000)

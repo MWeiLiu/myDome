@@ -1,3 +1,5 @@
+
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -7,10 +9,11 @@ var controller = require('./routes/controller');
 
 var app = express();
 
-// view engine setup
+// 模板开始
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
+// 载入中间件
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -31,20 +34,24 @@ app.use(express.static(path.join(__dirname, 'public')));
 /**
  * ==================================================================
  */
-
+//配置路由
 /**
  * 前台
  */
 app.use('/', controller.views.index);
 app.use('/index', controller.views.index);
-app.use('/user', controller.views.user);
 app.use('/about', controller.views.about);
+var users = require('./routes/home/user');
+app.post('/user', function(req, res, next){
+  users(req, res, next);
+});
 
 
 /**
  * 后台
  */
 app.use('/admin', controller.admin.index);
+
 
 
 /**
