@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+    <script src="/js/jquery-1.8.3.js"></script>
+    <script src="/js/index.js"></script>
+	</head>
+<body>
+<div id="message">messages</div>
+<div id="token">token:<%= _token %></div>
+<script>
+
+    $('#message').click(function(){
+        $.ajax({
+            url: 'http://127.0.0.1:3000/user',
+            type: 'POST',
+            data: {
+                '_csrf': $('#token').html().split(':')[1],
+                'username': 'liuwei',
+                'password': 'ahahahaha'
+            },
+            dataType: 'json',
+            success: function(res){
+            	console.log(res);
+            }
+        });
+    });
+
+    $('#token').click(function(){
+        $.ajax({
+            url: 'http://127.0.0.1:3000/gethtml',
+            type: 'GET',
+            data: {
+                'url1': 'http://www.feemoo.com/yythems_ajax.php',
+                'url2': 'http://www.qq.com/'
+            },
+            dataType: 'json',
+            success: function(res){
+                console.log(res);
+            }
+        });
+    });
+
+</script>
+</body>
+</html>

@@ -71,9 +71,15 @@ def heart_beat():
     print(r.text);
     '''
     payload={}
-    payload = {'uid': '100001947', '_token': 'v5VxNAlWob4DGU1Eb8ZvyKyAGu3SrD4XFjjmssiO', 'type': '1'};
-    r = requests.get('http://la.qcourse.cc/user/info', params = payload);
-    print(r.text);
+    payload = {'action': 'load_down_addr_svip','file_id': '2473499'};
+    r = requests.post('https://www.feemoo.com/yythems_ajax.php', params = payload);
+    print(r.json());
+
+    #http://s.d28.ihuolong.net/dl.php?Nzg5M0hFN0RIQWpDR21pMGVrMHNjRHdQbzJEcFBsWmowaW1XTmdFWG45ZHZqRmNyZlJaY0k1dG9XS2p2K3dIeEpFK0lCQXhTRVpsUzVnZ2h4cmRGZVloMlRmK0gwYXgxeGh4dlFuUjQzaDkyUmQ3VEF6OEl3eXNpeVVSTExYWk90cXNpdU5wbUFxU2pxMHB0QmtZdFhiUU1vUGxGVy93SWRBMGIwVWluZkRGcnB2OGwycExVbFg2d2FhejlBbkR0NUMyTnl4UVNaMkhKc29aak9IbWtidHNVbWJPQVg2Y1lnMXFzK2xkUmhLVlc2c0RUYVA2ZDRWVWV4UmMzejVr
+    #http://s.d28.ihuolong.net/dl.php?NzEwY3EzYW9Ca0MrMW9ZbzZTSmQvdHVBZVp3bjdINzVVeTZmYU9lV2RUQ0EzNTlCQUxHVGsxZXBTaDVHOW9HTFFOV3ZoYk5zYW9KM2dMUHpmUGFlZzNZTnl4dzRaTGFpY0ROR3JPLzBmZGU3YTJqR09TcitsdTU3NmZrVnJvSkxXNE16Ymp6eS9JdG5RMFVuZ3lJS2tHcThxSm5BNUE4SFh6bmdJY0kzTkNZZjZCaFJ0Y2plY1VPby9aT2UrM3R6Q2syaUwzaXliMVZadUlyUXp3bDQrQUhRb0d1U0pnOTdlTUh4eEdDQ2ZFdHFteFVtRUhkZHgyeFU3RFdkR3R6Zm1B
+
+    #http://www.ffhou.life/?m=vod-index-pg-2.html
+    #/?m=vod-detail-id-5819.html
 
 
     '''

@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title><%= title %></title>
     <script src="/js/jquery-1.8.3.js"></script>
 	</head>
 <body>
 <div id="message">message</div>
+<div>{{csrfToken}}</div>
 <script>
 
     $('#message').click(function(){
