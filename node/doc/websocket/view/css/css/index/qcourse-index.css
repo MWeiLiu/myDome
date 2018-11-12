@@ -1,0 +1,12 @@
+#rec66447866{padding-top:30px!important;padding-bottom: 30px!important;}
+.t-container{position: relative;}
+.img-wrap{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -50px 0 0 50px;
+}
+.img-wrap img{width: 100%;}
+.paddingSp{padding-left: 0!important;max-width: 100%!important;float:none!important;display: block!important;padding-right: 140px!important;box-sizing: border-box;}

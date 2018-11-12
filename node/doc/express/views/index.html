@@ -13,7 +13,7 @@
 
     $('#message').click(function(){
         $.ajax({
-            url: 'http://127.0.0.1:3000/user',
+            url: 'http://127.0.0.1:8000/login',
             type: 'POST',
             data: {
                 '_csrf': $('#token').html().split(':')[1],

@@ -1,0 +1,590 @@
+.login-layer {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 200;
+}
+
+.registerClose {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    font-size: 40px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.registerClose img {
+    width: 100%;
+    height: 100%;
+}
+
+.loginBox .fr {
+    float: right;
+}
+
+.loginBox .fl {
+    float: left;
+}
+
+.loginBox {
+    width: 100%;
+    height: 530px;
+    background: #FFFFFF;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.02);
+    border-radius: 10px;
+}
+
+.loginBox .loginBoxTitle {
+    width: 220px;
+    height: 110px;
+    padding-top: 52px;
+    margin: 0 auto 0;
+    text-align: center;
+}
+
+.loginBox .loginBoxTitle span {
+    font-size: 36px;
+    color: #212121;
+    letter-spacing: 1px;
+    font-family: SourceHanSansCN-Light;
+}
+
+.loginBox .loginBoxTitle p {
+    color: #212121;
+    height: 20px;
+    margin: 12px auto 39px;
+    font-size: 14px;
+    letter-spacing: 0;
+}
+
+.loginBox .loginBoxTitle p a {
+    color: #1582FF;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.loginBox .inBox {
+    height: 335px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.loginBox .inBox .inBoxLeft {
+    float: left;
+    width: 300px;
+    height: 265px;
+    /* padding-right: 37.5px; */
+    margin-left: 75px;
+    margin-top: 5px;
+}
+
+.loginBox .inBoxLeft div:nth-child(3) {
+    margin-top: 30px;
+    height: 42px;
+}
+
+.loginBox .inBoxLeft > div:nth-child(3),
+#regIpt4,
+.ModifyYan {
+    margin-top: 30px;
+    height: 42px;
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 8px;
+    position: relative;
+    text-align: center;
+}
+
+#regIpt4 {
+    padding: 0;
+    box-sizing: content-box;
+}
+
+.loginBox .inBoxLeft .HK,
+#regIpt4 .HK,
+.ModifyYan .HK {
+    width: 62px;
+    height: 40px;
+    /*	background: #FFFFFF;*/
+    /*	box-shadow: inset 0 0 3px 0 rgba(185, 185, 185, 0.50);*/
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    z-index: 10;
+    cursor: pointer;
+    background: #666666;
+}
+
+.loginBox .inBoxLeft .HK .hkChecke,
+#regIpt4 .HK .hkChecke,
+.ModifyYan .HK .hkChecke {
+    padding-top: 10px;
+    line-height: 30px;
+}
+
+.loginBox .inBoxLeft .HK .hkChecke img,
+#regIpt4 .HK .hkChecke img,
+.ModifyYan .HK .hkChecke img {
+    display: inline-block;
+    width: 12px;
+    height: 20px;
+    margin-left: 0px;
+    position: static;
+}
+
+.loginBox .inBoxLeft .HK .checkEnd,
+#regIpt4 .HK .checkEnd,
+.ModifyYan .HK .checkEnd {
+    display: none;
+    margin: 0;
+}
+
+.loginBox .inBoxLeft .HK .checkEnd img,
+#regIpt4 .HK .checkEnd img,
+.ModifyYan .HK .checkEnd img {
+    width: 18px;
+    height: 18px;
+    margin: 11px auto;
+    display: block;
+    position: static;
+}
+
+.loginBox .inBoxLeft .heikuai,
+#regIpt4 .heikuai,
+.ModifyYan .heikuai {
+    width: 62px;
+    height: 38px;
+    margin-top: 0;
+    /*	background: rgba(255, 255, 255, 0.8);*/
+    position: absolute;
+    top: 1px;
+    left: 100px;
+    display: none;
+    background: #DEDEDE;
+    border: 1px solid #DEDEDE;
+    box-shadow: inset 0 0 10px 0 #666666;
+    -webkit-box-shadow: inset 0 0 10px 0 #666666;
+    -moz-box-shadow: inset 0 0 10px 0 #666666;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+}
+
+.HK .move {
+    width: 62px;
+    height: 42px;
+    position: absolute;
+    z-index: 10;
+}
+
+
+.loginBox .inBoxLeft div:nth-child(3) .refresh {
+    height: 42px;
+    width: 100px;
+    float: right;
+    margin-top: -12px;
+}
+
+.loginBox .inBox .inBoxLine {
+    background: #c8c7cc;
+    height: 236px;
+    float: left;
+    width: 1px;
+    margin-top: 20px;
+}
+
+.inBox .inBoxLeft > div {
+    width: 200px;
+    height: 35px;
+    margin-top: 26px;
+    position: relative;
+}
+
+.inBox .inBoxLeft > div .prompt {
+    padding-left: 5px;
+    color: #F9593A;
+    font-size: 12px;
+}
+
+.inBox .inBoxLeft > div input {
+    width: 100%;
+    height: 30px;
+    border-bottom: 1px solid #C8C7CC;
+    text-indent: 5px;
+    outline: none;
+}
+
+.inBox .inBoxLeft > div label {
+    font-size: 18px;
+    color: #212121;
+    letter-spacing: -0.16px;
+    position: absolute;
+    left: 4px;
+    top: 5px;
+    color: #8E8E93;
+}
+
+.inBox .inBoxLeft > div .loginCheck {
+    position: absolute;
+    right: -20px;
+    top: -30px;
+}
+
+.inBox .inBoxLeft > div .loginCheck .correct {
+    width: 18px;
+    margin-top: 8px;
+    display: none;
+}
+
+.inBox .inBoxLeft > div .loginCheck .error {
+    display: block;
+    color: red;
+    line-height: 35px;
+    display: none;
+}
+
+.inBox .inBoxLeft > div:nth-child(3) input {
+    width: 194px;
+}
+
+.inBox .inBoxLeft > div:nth-child(3) .renovateCode {
+    vertical-align: bottom;
+}
+
+.inBox .inBoxLeft > div:nth-child(4) {
+    height: 20px;
+    margin-top: 24px;
+}
+
+.inBox .inBoxLeft > div:nth-child(4) span {
+    color: #8E8E93;
+    cursor: pointer;
+}
+
+.inBox .inBoxLeft > div:nth-child(4) img {
+    vertical-align: top;
+    cursor: pointer;
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+}
+
+.inBox .inBoxLeft > div:nth-child(5) {
+    width: 160px;
+    height: 38.7px;
+    border: 1px solid #5e5e5e;
+    border-radius: 100px;
+    margin: 25px 0 0 20px;
+    font-size: 18px;
+    color: #5e5e5e;
+    letter-spacing: -0.08px;
+    line-height: 16px;
+    text-align: center;
+    line-height: 38.7px;
+    cursor: pointer;
+}
+
+.inBox .inBoxLeft > div:nth-child(5):hover {
+    background-color: #5e5e5e;
+    color: #fff;
+}
+
+.loginBox .inBox .inBoxRight {
+    float: left;
+    width: 194px;
+    height: 280px;
+    margin-left: 95px;
+
+}
+
+.inBox .inBoxRight > div {
+    width: 162px;
+    height: 65px;
+    /* padding-left: 7px; */
+    line-height: 65px;
+    font-size: 18px;
+    color: #212121;
+    letter-spacing: -0.1px;
+    cursor: pointer;
+}
+
+.inBox .inBoxRight > div img {
+    width: 31px;
+    margin-right: 22px;
+    vertical-align: middle;
+}
+
+.inBox .inBoxRight > div:nth-child(1) {
+    border-bottom: 1px dashed #C8C7CC;
+}
+
+.inBox .inBoxRight > div:nth-child(1) span {
+    color: #1582FF;
+}
+
+.inBox .inBoxRight > div:hover {
+    border-bottom: 1px dashed #C8C7CC;
+}
+
+.inBox .inBoxRight > div:hover span {
+    color: #1582FF;
+}
+
+.loginBox .inBoxBottom {
+    text-align: center;
+    line-height: 25px;
+    color: #212121;
+    letter-spacing: 1px;
+}
+
+.loginBox .inBoxBottom a {
+    color: #1582FF;
+    letter-spacing: -0.08px;
+    line-height: 17px;
+    cursor: pointer;
+}
+
+
+
+/*寰俊*/
+
+.wxBox {
+    width: 100%;
+    height: 100%;
+    background: rgba(37, 37, 37, 0.55);
+    position: relative;
+    z-index: 300;
+    display: none;
+}
+
+.wx {
+    width: 356px;
+    height: 440px;
+    padding: 34px 34px 0 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -270px 0 0 -178px;
+}
+
+.wxClose {
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    top: 0;
+    right: 0px;
+}
+
+.wxClose img {
+    width: 100%;
+}
+
+.wxLogin {
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.02);
+    border-radius: 10px;
+    padding: 44px 0 70px;
+}
+
+.wxLogin .wxtit {
+    margin: 0;
+    text-align: center;
+    font-family: 'SourceHanSansCN-Regular';
+    font-size: 20px;
+    color: #212121;
+    margin-bottom: 44px;
+}
+
+.wxLogin .wxImgBox {
+    width: 224px;
+    height: 224px;
+    margin: 0 auto;
+    border: 1px solid #979797;
+}
+
+.wxLogin .wxImg {
+    width: 220px;
+    height: 220px;
+    margin: 2px;
+}
+
+.wxLogin .wxsao {
+    margin: 0;
+    text-align: center;
+    font-family: 'SourceHanSansCN-Regular';
+    font-size: 14px;
+    color: #8E8E93;
+    margin-top: 24px;
+}
+
+/*寰俊缁戝畾*/
+
+.wxBindBox {
+    width: 100%;
+    height: 100%;
+    background: rgba(37, 37, 37, 0.55);
+    position: relative;
+    z-index: 400;
+    display: none;
+}
+
+.wxBind {
+    width: 356px;
+    height: 440px;
+    padding: 34px 34px 0 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -220px 0 0 -178px;
+}
+
+.wxBindClose {
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    top: 0;
+    right: 0px;
+}
+
+.wxBindClose img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.wxBindLogin {
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.02);
+    border-radius: 10px;
+    padding: 30px 0;
+    overflow: hidden;
+}
+
+.wxBindLogin .wxHeadImg {
+    width: 100px;
+    height: 100px;
+    background: #D8D8D8;
+    border: 1px solid #979797;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.wxBindLogin .wxHeadImg img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.wxBindLogin .touxiang {
+    width: 48px;
+    font-family: 'SourceHanSansCN-Regular';
+    font-size: 16px;
+    color: #212121;
+    text-align: center;
+    letter-spacing: 8px;
+    margin: 16px 0 20px 156px;
+}
+
+.wxBindLogin > div {
+    width: 268px;
+    height: 62px;
+    margin: 0 44px 0;
+    position: relative;
+}
+
+.wxBindLogin > div input {
+    float: right;
+    width: 200px;
+    height: 28px;
+    background: #FFFFFF;
+    border: 1px solid #EFEFEF;
+    margin-left: 18px;
+    text-indent: 10px;
+    font-family: 'PingFangSC-Regular';
+    font-size: 14px;
+    color: #8E8E93;
+    letter-spacing: 0;
+}
+
+.wxBindLogin > div span {
+    float: left;
+    margin-top: 5px;
+    font-family: 'SourceHanSansCN-Regular';
+    font-size: 16px;
+    color: #212121;
+}
+
+.wxBindLogin > div font {
+    top: 8px;
+    left: -10px;
+    position: absolute;
+    color: #FF4487;
+}
+
+.wxBindLogin > div p {
+    margin: 0;
+    position: absolute;
+    bottom: 14px;
+    left: 67px;
+    font-family: 'PingFangSC-Regular';
+    font-size: 12px;
+    color: #FF4487;
+    letter-spacing: 0;
+    display: none;
+}
+
+.wxBindLogin .wxqueren {
+    width: 124px;
+    height: 36px;
+    margin: 0 auto;
+    border: 1px solid #0EBAC5;
+    border-radius: 100px;
+    text-align: center;
+    line-height: 36px;
+    font-family: SourceHanSansCN-Normal;
+    font-size: 16px;
+    color: #0EBAC5;
+    cursor: pointer;
+}
+
+.wxBindLogin #wxCode {
+    float: left;
+    width: 108px;
+}
+
+.wxBindLogin .wxMobileCode {
+    float: right;
+    width: 92px;
+    height: 30px;
+    background: #0EBAC5;
+    border-radius: 0 3px 3px 0;
+    font-family: 'PingFangSC-Regular';
+    font-size: 12px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 30px;
+    font-weight: 100;
+    cursor: pointer;
+}
+
+.passwdRule{
+    font-size: 14px;
+    color:#5e5e5e;
+    padding-left: 6px;
+}

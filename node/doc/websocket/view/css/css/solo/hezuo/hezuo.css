@@ -1,0 +1,1893 @@
+.qcourseClass {
+	width: 1000px;
+	height: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+	cursor: default;
+	/*	font-family: Heiti SC-Medium;*/
+}
+
+.qcourseClass > div {
+	width: 100%;
+}
+
+.pos_a {
+	position: absolute;
+}
+
+.boxsize {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+}
+
+a,
+a:link {
+	color: #333;
+	cursor: pointer;
+}
+
+p span,
+span span {
+	color: #FA9C01;
+}
+
+h6 {
+	margin: 0;
+	font-weight: inherit;
+}
+
+.polyv_video {
+	width: 100%;
+	height: 100%;
+}
+
+/*1*/
+
+.qcourseClass .header {
+	width: 100%;
+	height: 60px;
+	background: #4983F8;
+	line-height: 60px;
+	color: #fff;
+	text-align: center;
+	font-size: 18px;
+	color: #FFFFFF;
+}
+
+.qcourseClass .header a {
+	color: #FFFFFF;
+}
+
+.qcourseClass .header .logo {
+	float: left;
+	width: 148px;
+	margin: 19px 0 0 14px;
+	cursor: pointer;
+}
+
+.qcourseClass .header .logo img {
+	width: 100%;
+	float: left;
+}
+
+.qcourseClass .header ul {
+	float: right;
+	margin-right: 56px;
+}
+
+.qcourseClass .header ul li {
+	float: left;
+	width: 80px;
+	letter-spacing: 1.2px;
+	cursor: pointer;
+}
+
+.qcourseClass .header .contactMe {
+	float: right;
+	width: 100px;
+	background: #FA9C01;
+	letter-spacing: 0.9px;
+	cursor: pointer;
+}
+
+.qcourseClass .header .contactMe:hover {
+	background: #CCE6FF;
+	color: #4983F8;
+}
+
+/*2*/
+
+.qcourseClass .headerVideo {
+	height: 562px;
+	/*	background: #D8D8D8;*/
+}
+
+/*3*/
+
+.qcourseClass .contact {
+	padding-top: 111px;
+	text-align: center;
+	font-size: 24px;
+	letter-spacing: 1.2px;
+}
+
+.qcourseClass .contact h1 {
+	font-size: 24px;
+	margin: 0;
+	color: #666666;
+	letter-spacing: 1.2px;
+	cursor: default;
+}
+
+.qcourseClass .contact > div {
+	width: 200px;
+	height: 50px;
+	margin: 49px auto 0;
+	background: #FA9C01;
+	border-radius: 100px;
+	line-height: 50px;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+
+.qcourseClass .contact a {
+	color: #fff;
+}
+
+.qcourseClass .contact > div:hover {
+	background: #4983F8;
+
+}
+
+.qcourseClass .contact ul {
+	margin-top: 69px;
+	overflow: hidden;
+}
+
+.qcourseClass .contact ul li {
+	width: 25%;
+	float: left;
+	color: #4983F8;
+}
+
+.qcourseClass .contact ul li img {
+	display: block;
+	margin: 0 auto 18px;
+}
+
+.qcourseClass .contact ul li .contact1 {
+	width: 123px;
+	height: 152px;
+}
+
+.qcourseClass .contact ul li .contact2 {
+	width: 145px;
+	height: 111px;
+	margin-top: 10px;
+	margin-bottom: 49px;
+}
+
+.qcourseClass .contact ul li .contact3 {
+	width: 135px;
+	height: 139px;
+	margin-top: 5px;
+	margin-bottom: 26px;
+}
+
+.qcourseClass .contact ul li .contact4 {
+	width: 121px;
+	height: 133px;
+	margin-top: 5px;
+	margin-bottom: 32px;
+}
+
+/*4 流程*/
+
+.qcourseClass .process {
+	padding-top: 101px;
+	text-align: center;
+}
+
+.qcourseClass .process h2 {
+	font-size: 24px;
+	color: #666666;
+	letter-spacing: 1.2px;
+}
+
+.qcourseClass .processBox {
+	height: 678px;
+	position: relative;
+}
+
+.qcourseClass .processBox .processM,
+.qcourseClass .processBox .silde {
+	display: none;
+}
+
+.qcourseClass .processBox a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	color: #fff;
+}
+
+.qcourseClass .processBox .line {
+	height: 3px;
+	background: url('https://test.qcourse.cc/home/indexImages/line.png') no-repeat center center;
+}
+
+/*.qcourseClass .process1,*/
+
+.qcourseClass .process2,
+.qcourseClass .process3,
+.qcourseClass .process4,
+.qcourseClass .process5 {
+	height: 100%;
+	display: none;
+}
+
+/*
+.qcourseClass .process4{
+	display: block;
+}
+*/
+
+/*----------1----------*/
+
+.process1 .processa {
+	width: 100px;
+	height: 100px;
+	background: #FFFFFF;
+	border: 4px solid #FA9C01;
+	font-size: 18px;
+}
+
+.process1 .processa a {
+	color: #4983F8;
+}
+
+.process1 > div,
+.process2 > div,
+.process3 > div,
+.process4 > div,
+.process5 > div {
+	border-radius: 50%;
+	text-align: center;
+	line-height: 92px;
+	letter-spacing: 0.75px;
+}
+
+.process1 .process1_0,
+.process2 .process1_0,
+.process3 .process1_0,
+.process4 .process1_0,
+.process5 .process1_0 {
+	top: 322px;
+	left: 50%;
+	width: 140px;
+	height: 140px;
+	margin: 0 0 0 -70px;
+	background: #4983F8;
+	font-size: 30px;
+	color: #FFFFFF;
+	line-height: 140px;
+	z-index: 10;
+}
+
+.process1 .process1_1 {
+	top: 253px;
+	left: 200px;
+	transition: transform .5s;
+	transform: translate(0, 0);
+}
+
+.process1 .process1_1.jin {
+	transition-delay: 75ms;
+	transform: translate(250px, 88px);
+}
+
+.process1 .process1_2 {
+	top: 558px;
+	left: 284px;
+	transition: transform .5s;
+	transform: translate(0, 0);
+}
+
+.process1 .process1_2.jin {
+	transition-delay: 75ms;
+	transform: translate(166px, -217px);
+}
+
+.process1 .process1_3 {
+	top: 558px;
+	left: 600px;
+	transition: transform .5s;
+	transform: translate(0, 0);
+}
+
+.process1 .process1_3.jin {
+	transition-delay: 75ms;
+	transform: translate(-150px, -217px);
+}
+
+.process1 .process1_4 {
+	top: 253px;
+	left: 698px;
+	transition: transform .5s;
+	transform: translate(0, 0);
+}
+
+.process1 .process1_4.jin {
+	transition-delay: 75ms;
+	transform: translate(-247px, 88px);
+}
+
+.process1 .process1_5 {
+	top: 60px;
+	left: 50%;
+	margin-left: -60px;
+	transition: transform .5s;
+	transform: translate(0, 0);
+}
+
+.process1 .process1_5.jin {
+	transition-delay: 75ms;
+	transform: translate(11px, 283px);
+}
+
+.process1 .process1_1 .line1_1 {
+	width: 210px;
+	transform: rotate(-38deg);
+	top: -55px;
+	left: 60px
+}
+
+.process1 .process1_1 .line1_2 {
+	width: 400px;
+	top: 45px;
+	left: 95px
+}
+
+.process1 .process1_1 .line1_3 {
+	width: 145px;
+	transform: rotate(20deg);
+	top: 85px;
+	left: 90px
+}
+
+.process1 .process1_1 .line1_4 {
+	width: 400px;
+	transform: rotate(38deg);
+	top: 200px;
+	left: 50px
+}
+
+.process1 .process1_1 .line1_5 {
+	width: 210px;
+	transform: rotate(75deg);
+	top: 195px;
+	left: -10px
+}
+
+.process1 .process1_2 .line1_1 {
+	width: 230px;
+	top: 45px;
+	left: 95px
+}
+
+.process1 .process1_2 .line1_2 {
+	width: 420px;
+	transform: rotate(-73deg);
+	top: -200px;
+	left: -80px
+}
+
+.process1 .process1_2 .line1_3 {
+	width: 150px;
+	transform: rotate(-55deg);
+	top: -52px;
+	left: 50px
+}
+
+.process1 .process1_2 .line1_4 {
+	width: 430px;
+	transform: rotate(-38deg);
+	top: -110px;
+	left: 50px
+}
+
+.process1 .process1_3 .line1_1 {
+	width: 135px;
+	transform: rotate(55deg);
+	top: -55px;
+	left: -90px
+}
+
+.process1 .process1_3 .line1_2 {
+	width: 420px;
+	transform: rotate(72deg);
+	top: -210px;
+	left: -240px
+}
+
+.process1 .process1_3 .line1_3 {
+	width: 240px;
+	transform: rotate(-70deg);
+	top: -120px;
+	left: -25px
+}
+
+.process1 .process1_4 .line1_1 {
+	width: 140px;
+	transform: rotate(-20deg);
+	top: 85px;
+	left: -140px
+}
+
+.process1 .process1_4 .line1_2 {
+	width: 230px;
+	transform: rotate(38deg);
+	top: -55px;
+	left: -200px;
+}
+
+.processBox .tit span {
+	display: block;
+	width: 34px;
+	height: 44px;
+	line-height: 22px;
+	letter-spacing: 0.75px;
+}
+
+/*----------1----------*/
+
+/*----------2----------*/
+
+.process2 .processa,
+.process3 .processa,
+.process4 .processa,
+.process5 .processa {
+	width: 80px;
+	height: 80px;
+	font-size: 16px;
+	color: #333333;
+	letter-spacing: 0.86px;
+}
+
+.process2 .process1_0,
+.process3 .process1_0,
+.process4 .process1_0,
+.process5 .process1_0 {
+	font-size: 24px;
+	line-height: 30px;
+}
+
+.process2 .process1_0 a,
+.process3 .process1_0 a,
+.process4 .process1_0 a,
+.process5 .process1_0 a {
+	padding-top: 55px
+}
+
+.process2 .process1_0 span,
+.process3 .process1_0 span,
+.process4 .process1_0 span,
+.process5 .process1_0 span {
+	font-size: 12px;
+}
+
+.process2 .process1_1,
+.process5 .process1_1 {
+	top: 240px;
+	left: 210px;
+	transform: translate(0, 0);
+	transition: transform .5s;
+}
+
+.process2 .process1_1.jin,
+.process5 .process1_1.jin {
+	transition-delay: 75ms;
+	transform: translate(270px, 110px);
+}
+
+.process2 .process1_2,
+.process5 .process1_2 {
+	top: 462px;
+	left: 210px;
+	transform: translate(0, 0);
+	transition: transform .5s;
+}
+
+.process2 .process1_2.jin,
+.process5 .process1_2.jin {
+	transition-delay: 75ms;
+	transform: translate(275px, -110px);
+}
+
+.process2 .process1_3,
+.process5 .process1_3 {
+	top: 598px;
+	left: 50%;
+	margin-left: -40px;
+	transform: translate(0, 0);
+	transition: transform .5s;
+}
+
+.process2 .process1_3.jin,
+.process5 .process1_3.jin {
+	transition-delay: 75ms;
+	transform: translate(-25px, -245px);
+}
+
+.process2 .process1_4,
+.process5 .process1_4 {
+	top: 462px;
+	left: 710px;
+	transform: translate(0, 0);
+	transition: transform .5s;
+}
+
+.process2 .process1_4.jin,
+.process5 .process1_4.jin {
+	transition-delay: 75ms;
+	transform: translate(-270px, -111px);
+}
+
+.process2 .process1_5,
+.process5 .process1_5 {
+	top: 240px;
+	left: 710px;
+	transform: translate(0, 0);
+	transition: transform .5s;
+}
+
+.process2 .process1_5.jin,
+.process5 .process1_5.jin {
+	transition-delay: 75ms;
+	transform: translate(-270px, 111px);
+}
+
+.process2 .process1_6,
+.process5 .process1_6 {
+	top: 101px;
+	left: 50%;
+	margin-left: -40px;
+	transform: translate(0, 0);
+	transition: transform .5s;
+}
+
+.process2 .process1_6.jin,
+.process5 .process1_6.jin {
+	transition-delay: 75ms;
+	transform: translate(-25px, 252px);
+}
+
+.process2 .process1_1 span,
+.process5 .process1_1 span {
+	top: 20px;
+	left: -45px;
+}
+
+.process2 .process1_2 span,
+.process5 .process1_2 span {
+	top: 20px;
+	left: -45px;
+}
+
+.process2 .process1_3 span,
+.process5 .process1_3 span {
+	top: 20px;
+	left: 90px;
+}
+
+.process2 .process1_4 span,
+.process5 .process1_4 span {
+	top: 20px;
+	left: 90px;
+}
+
+.process2 .process1_5 span,
+.process5 .process1_5 span {
+	top: 20px;
+	left: 90px;
+}
+
+.process2 .process1_6 span,
+.process5 .process1_6 span {
+	top: 20px;
+	left: 90px;
+}
+
+.process2 .process1_1 .line1_1,
+.process5 .process1_1 .line1_1 {
+	width: 205px;
+	transform: rotate(-30deg);
+	top: -30px;
+	left: 65px;
+	display: none;
+}
+
+.process2 .process1_1 .line1_2,
+.process5 .process1_1 .line1_2 {
+	width: 420px;
+	top: 38px;
+	left: 80px;
+	display: none;
+}
+
+.process2 .process1_1 .line1_3,
+.process5 .process1_1 .line1_3 {
+	width: 165px;
+	transform: rotate(25deg);
+	top: 85px;
+	left: 70px;
+	display: none;
+}
+
+.process2 .process1_1 .line1_4,
+.process5 .process1_1 .line1_4 {
+	width: 360px;
+	transform: rotate(55deg);
+	top: 220px;
+	left: -15px;
+	display: none;
+}
+
+.process2 .process1_1 .line1_5,
+.process5 .process1_1 .line1_5 {
+	width: 140px;
+	transform: rotate(90deg);
+	top: 150px;
+	left: -30px;
+	display: none;
+}
+
+.process2 .process1_2 .line1_1,
+.process5 .process1_2 .line1_1 {
+	width: 370px;
+	transform: rotate(-55deg);
+	top: -140px;
+	left: -20px;
+	display: none;
+}
+
+.process2 .process1_2 .line1_2,
+.process5 .process1_2 .line1_2 {
+	width: 170px;
+	transform: rotate(-25deg);
+	top: -10px;
+	left: 65px;
+	display: none;
+}
+
+.process2 .process1_2 .line1_3,
+.process5 .process1_2 .line1_3 {
+	width: 420px;
+	top: 38px;
+	left: 80px;
+	display: none;
+}
+
+.process2 .process1_2 .line1_4,
+.process5 .process1_2 .line1_4 {
+	width: 200px;
+	transform: rotate(30deg);
+	top: 110px;
+	left: 60px;
+	display: none;
+}
+
+.process2 .process1_3 .line1_1,
+.process5 .process1_3 .line1_1 {
+	width: 135px;
+	transform: rotate(90deg);
+	top: -70px;
+	left: -28px;
+	display: none;
+}
+
+.process2 .process1_3 .line1_2,
+.process5 .process1_3 .line1_2 {
+	width: 370px;
+	transform: rotate(-55deg);
+	top: -140px;
+	left: -20px;
+	display: none;
+}
+
+.process2 .process1_3 .line1_3,
+.process5 .process1_3 .line1_3 {
+	width: 200px;
+	transform: rotate(-30deg);
+	top: -20px;
+	left: 70px;
+	display: none;
+}
+
+.process2 .process1_4 .line1_1,
+.process5 .process1_4 .line1_1 {
+	width: 165px;
+	transform: rotate(25deg);
+	top: -10px;
+	left: -150px;
+	display: none;
+}
+
+.process2 .process1_4 .line1_2,
+.process5 .process1_4 .line1_2 {
+	width: 360px;
+	transform: rotate(55deg);
+	top: -140px;
+	left: -265px;
+	display: none;
+}
+
+.process2 .process1_4 .line1_3,
+.process5 .process1_4 .line1_3 {
+	width: 140px;
+	transform: rotate(90deg);
+	top: -70px;
+	left: -30px;
+	display: none;
+}
+
+.process2 .process1_5 .line1_1,
+.process5 .process1_5 .line1_1 {
+	width: 165px;
+	transform: rotate(-25deg);
+	top: 90px;
+	left: -155px;
+	display: none;
+}
+
+.process2 .process1_5 .line1_2,
+.process5 .process1_5 .line1_2 {
+	width: 205px;
+	transform: rotate(30deg);
+	top: -35px;
+	left: -185px;
+	display: none;
+}
+
+.process2 .process1_6 .line1_1,
+.process5 .process1_6 .line1_1 {
+	width: 140px;
+	transform: rotate(90deg);
+	top: 150px;
+	left: -28px;
+	display: none;
+}
+
+/*----------2----------*/
+
+/*----------3----------*/
+
+.process3 .process1_1 {
+	top: 300px;
+	left: 616px;
+	transform: translate(0, 0);
+	transition: transform .5s;
+}
+
+.process3 .process1_1.jin {
+	transition-delay: 75ms;
+	transform: translate(-174px, 52px);
+}
+
+.process3 .process1_2 {
+	top: 486px;
+	left: 642px;
+	transform: translate(0, 0);
+	transition: transform .5s;
+}
+
+.process3 .process1_2.jin {
+	transition-delay: 75ms;
+	transform: translate(-200px, -135px);
+}
+
+.process3 .process1_1 .line1_1 {
+	width: 50px;
+	transform: rotate(-20deg);
+	top: 60px;
+	left: -50px;
+	display: none;
+}
+
+.process3 .process1_1 span {
+	top: 30px;
+	left: 90px;
+}
+
+.process3 .process1_2 span {
+	top: 20px;
+	left: 90px;
+}
+
+.process3 .process1_2 .line1_1 {
+	width: 120px;
+	transform: rotate(40deg);
+	top: -20px;
+	left: -97px;
+	display: none;
+}
+
+.process3 .process1_2 .line1_2 {
+	width: 110px;
+	transform: rotate(80deg);
+	top: -54px;
+	left: -26px;
+	display: none;
+}
+
+/*----------5----------*/
+
+.process4 .process1_1 {
+	top: 149px;
+	left: 261px;
+	transform: translate(0, 0);
+	transition: transform .5s;
+}
+
+.process4 .process1_1.jin {
+	transition-delay: 75ms;
+	transform: translate(217px, 202px);
+}
+
+.process4 .process1_1 span {
+	top: 20px;
+	left: -43px;
+}
+
+.process4 .process1_2 {
+	top: 551px;
+	left: 261px;
+	transform: translate(0, 0);
+	transition: transform .5s;
+}
+
+.process4 .process1_2.jin {
+	transition-delay: 75ms;
+	transform: translate(217px, -200px);
+}
+
+.process4 .process1_2 span {
+	top: 20px;
+	left: -43px;
+}
+
+.process4 .process1_3 {
+	top: 551px;
+	left: 642px;
+	transform: translate(0, 0);
+	transition: transform .5s;
+}
+
+.process4 .process1_3.jin {
+	transition-delay: 75ms;
+	transform: translate(-203px, -200px);
+}
+
+.process4 .process1_3 span {
+	top: 20px;
+	left: 90px;
+}
+
+.process4 .process1_4 {
+	top: 149px;
+	left: 642px;
+	transform: translate(0, 0);
+	transition: transform .5s;
+}
+
+.process4 .process1_4.jin {
+	transition-delay: 75ms;
+	transform: translate(-203px, 205px);
+}
+
+.process4 .process1_4 span {
+	top: 20px;
+	left: 90px;
+}
+
+.process4 .process1_1 .line1_1 {
+	width: 300px;
+	top: 40px;
+	left: 80px;
+	display: none;
+}
+
+.process4 .process1_1 .line1_2 {
+	width: 175px;
+	transform: rotate(45deg);
+	top: 130px;
+	left: 40px;
+	display: none;
+}
+
+.process4 .process1_1 .line1_3 {
+	width: 330px;
+	transform: rotate(90deg);
+	top: 240px;
+	left: -125px;
+	display: none;
+}
+
+.process4 .process1_2 .line1_1 {
+	width: 175px;
+	transform: rotate(-45deg);
+	top: -50px;
+	left: 40px;
+	display: none;
+}
+
+.process4 .process1_2 .line1_2 {
+	width: 300px;
+	top: 40px;
+	left: 80px;
+	display: none;
+}
+
+.process4 .process1_3 .line1_1 {
+	width: 175px;
+	transform: rotate(45deg);
+	top: -50px;
+	left: -120px;
+	display: none;
+}
+
+.process4 .process1_3 .line1_2 {
+	width: 330px;
+	transform: rotate(90deg);
+	top: -165px;
+	left: -125px;
+	display: none;
+}
+
+.process4 .process1_4 .line1_1 {
+	width: 170px;
+	transform: rotate(-45deg);
+	top: 130px;
+	left: -120px;
+	display: none;
+}
+
+/*----------5----------*/
+
+.qcourseClass .majorDesign {
+	width: 100%;
+	height: 500px;
+	margin-top: 82px;
+	background: url(https://test.qcourse.cc/home/indexImages/majorDesign1.jpg) no-repeat center center;
+	position: relative;
+}
+
+.majorDesign .majorDesignText {
+	width: 424px;
+	height: 185px;
+	padding: 14px 22px;
+	background: rgba(51, 51, 51, 0.42);
+	border-radius: 4px;
+	position: absolute;
+	top: 30px;
+	left: 30px;
+	color: #FFFFFF;
+	letter-spacing: 1.2px;
+}
+
+.majorDesign .majorDesignText h2 {
+	margin: 0 0 4px 0;
+	font-size: 24px;
+}
+
+.majorDesign .majorDesignText p {
+	font-size: 14px;
+	line-height: 30px;
+}
+
+.qcourseClass .caseAnalysis {
+	margin-top: 100px;
+	position: relative;
+}
+
+.qcourseClass .caseAnalysis .caseAnalysisImg {
+	width: 453px;
+	display: block;
+	margin: 0 0 59px 16px;
+}
+
+.caseAnalysis .items {
+	width: 3000px;
+	height: 500px;
+	position: relative;
+}
+
+.qcourseClass .caseAnalysis #gallery-top h3 {
+	display: block;
+	min-width: 450px;
+	height: 62px;
+	padding: 0 15px;
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	background: rgba(51, 51, 51, 0.42);
+	border-radius: 4px;
+	text-align: center;
+	line-height: 62px;
+	color: #fff;
+	letter-spacing: 1.2px;
+	z-index: 1000;
+}
+
+.qcourseClass .caseAnalysis #gallery-thumbs h3 {
+	max-width: 305px;
+	height: 30px;
+	padding: 0 15px;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	background: rgba(51, 51, 51, 0.42);
+	border-radius: 4px;
+	text-align: center;
+	line-height: 30px;
+	font-size: 12px;
+	color: #fff;
+	letter-spacing: 1.2px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.qcourseClass .caseAnalysis #gallery-thumbs .active-nav h3 {
+	bottom: 6px;
+}
+
+.caseAnalysis .swiper-wrapper > div {
+	width: 1000px;
+	height: 100%;
+	float: left;
+	position: relative;
+	cursor: pointer;
+	border-radius: 4px;
+}
+
+.caseAnalysis #gallery-thumbs .active-nav,.current_native {
+	border: 4px solid #4983F8;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+}
+.border_radius_img {
+    border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+}
+.current_native {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+}
+.caseAnalysis #gallery-thumbs .swiper-slide img {
+	width: 100%;
+	height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.caseAnalysis .swiper-container {
+	width: 100%;
+	height: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+}
+
+.caseAnalysis .swiper-slide {
+	background-size: 100% 100%;
+	/*	background-position: center;*/
+}
+
+.caseAnalysis #gallery-top {
+	height: 562px;
+	width: 100%;
+}
+
+.caseAnalysis #gallery-top .swiper-slide .videoMask {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10000;
+}
+
+.caseAnalysis #gallery-thumbs {
+	height: 200px;
+}
+
+/*
+.caseAnalysis #gallery-thumbs .swiper-slide {
+	width: 25%;
+	height: 100%;
+	opacity: 0.4;
+}
+
+.caseAnalysis #gallery-thumbs .swiper-slide-active {
+	opacity: 1;
+}
+*/
+
+.caseAnalysis .sideLeft,
+.caseAnalysis .sideRight {
+	width: 128px;
+	height: 200px;
+	position: absolute;
+	bottom: 0;
+	cursor: pointer;
+	z-index: 1;
+}
+
+.caseAnalysis .sideRight {
+	right: 0;
+}
+
+.caseAnalysis .sideLeft .maskLeft,
+.caseAnalysis .sideRight .maskRight {
+	width: 100%;
+	height: 100%;
+}
+
+.caseAnalysis .sideLeft .playLeft {
+	width: 30px;
+	position: absolute;
+	top: 50%;
+	left: 50px;
+	margin-top: -15px;
+	z-index: 10;
+	cursor: pointer;
+}
+
+.caseAnalysis .sideRight .playRight {
+	width: 30px;
+	position: absolute;
+	top: 50%;
+	right: 50px;
+	margin-top: -15px;
+	z-index: 10;
+	cursor: pointer;
+}
+
+.qcourseClass .ourTeam {
+	width: 100%;
+	height: 535px;
+	margin-top: 60px;
+	position: relative;
+}
+
+.ourTeam .ourTeamImg {
+	float: right;
+}
+
+.ourTeam .synopsis {
+	width: 498px;
+	height: 392px;
+	border: 5px solid #4983F8;
+	float: left;
+	padding: 61px 236px 61px 38px;
+	margin-top: 65px;
+	font-size: 16px;
+	color: #666666;
+	letter-spacing: 1.2px;
+	line-height: 30px;
+	text-align: left;
+}
+
+.ourTeam .box {
+	width: 700px;
+	height: 400px;
+	/*	background: #D8D8D8;*/
+	border-radius: 2px;
+	position: absolute;
+	top: 135px;
+	left: 293px;
+}
+
+.ourTeam .box img {
+	width: 100%;
+}
+
+.heZuoHuoBan {
+	width: 100%;
+	height: 320px;
+	margin: 60px 0 68px;
+}
+
+.heZuoHuoBan .heZuoHuoBanImg {
+	width: 98px;
+	height: 320px;
+	margin: 0 39px 0 13px;
+}
+
+.heZuoHuoBan .heZuoHuoBanText {
+	margin-top: 49px;
+}
+
+.heZuoHuoBan .heZuoHuoBanText h6:nth-child(1) {
+	margin-top: 0;
+}
+
+.heZuoHuoBan .heZuoHuoBanText h6 {
+	margin: 24px 0 14px 0;
+	font-size: 24px;
+	color: #666666;
+	letter-spacing: 1.2px;
+}
+
+.heZuoHuoBan .heZuoHuoBanText p {
+	font-size: 18px;
+	color: #666666;
+	letter-spacing: 1.2px;
+	line-height: 30px;
+}
+
+.qcourseClass .contactUs {
+	width: 100%;
+	margin-top: 60px;
+	font-size: 16px;
+	color: #666666;
+	letter-spacing: 1.3px;
+	line-height: 30px;
+}
+
+.qcourseClass .contactUs .contactUsImg {
+	width: 370px;
+	display: block;
+	margin: 0 auto 60px;
+}
+
+.qcourseClass .contactUs p {
+	width: 812px;
+	margin: 0 auto;
+	text-align: justify;
+}
+
+.qcourseClass .contactUs > div {
+	width: 400px;
+	margin: 60px auto 0;
+}
+
+.qcourseClass .contactUs input,
+.qcourseClass .contactUs textarea {
+	width: 100%;
+	height: 40px;
+	margin-bottom: 30px;
+	background: #E6F2FF;
+	border-radius: 4px;
+	letter-spacing: 0.8px;
+	text-indent: 14px;
+	font-size: 16px
+}
+
+.qcourseClass .contactUs textarea {
+	border: none;
+	padding: 9px 14px;
+	height: 120px;
+	text-indent: 0;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+	color: #767779;
+}
+
+.qcourseClass .contactUs .ok {
+	width: 101px;
+	height: 30px;
+	margin: 0 auto;
+	background: #FA9C01;
+	border-radius: 4px;
+	text-align: center;
+	color: #fff;
+	cursor: pointer;
+}
+
+.qcourseClass .contactUs .ok:hover {
+	background: #4983F8;
+}
+
+.qcourseClass .contactInfo {
+	width: 760px;
+	height: 120px;
+	margin: 60px auto 0;
+	font-size: 16px;
+	color: #4983F8;
+	letter-spacing: 0.8px;
+	line-height: 22px;
+}
+
+.qcourseClass .contactInfo a{
+	color: #4983F8;
+}
+
+.qcourseClass .contactInfo .items {
+	float: left;
+}
+
+.qcourseClass .contactInfo .items > div:nth-child(2) {
+	margin: 14px 0;
+}
+
+.qcourseClass .contactInfo .items img {
+	width: 30px;
+	margin-right: 23px;
+	vertical-align: middle
+}
+
+.qcourseClass .contactInfo .qrcode {
+	width: 120px;
+	float: right;
+}
+
+.qcourseClass .contactInfo .qrcode img {
+	width: 100%;
+}
+
+/*
+.qcourseClass hr {
+	width: 800px;
+	height: 2px;
+	margin: 61px auto 0;
+	background: #4983F8;
+}
+*/
+
+.qcourseClass .footer {
+	width: 880px;
+	display: block;
+	margin: 61px auto 10px;
+}
+
+hr {
+	width: 808px;
+	height: 2px;
+	margin: 61px auto 45px;
+	;
+	background: #d3e1fe;
+	border: none;
+}
+
+.indexFoot {
+	height: 105px;
+}
+
+.indexFoot > div {
+	width: 880px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.indexFoot .indexFootLeft {
+	width: 95px;
+}
+
+.indexFoot .indexFootLeft img {
+	width: 93px;
+	float: right;
+	margin-bottom: 5px;
+}
+
+.indexFoot .indexFootLeft div {
+	width: 100%;
+	height: 2px;
+	margin: 0.08rem 0 0.09rem;
+	float: right;
+	background: -webkit-linear-gradient(left, #fff, #9a9a9a);
+	background: -o-linear-gradient(right, #fff, #9a9a9a);
+	background: -moz-linear-gradient(right, #fff, #9a9a9a);
+	background: linear-gradient(to right, #fff, #9a9a9a);
+}
+
+.indexFoot .indexFootLeft span {
+	float: right;
+	font-size: 14px;
+	color: #999999;
+	letter-spacing: 1.8px;
+	text-align: left;
+}
+
+.indexFoot .indexFootCenter {
+	width: auto;
+	height: 50px;
+	margin-top: -6px;
+	margin-left: 70px;
+	text-align: center;
+	font-size: 14px;
+	color: #333333;
+	letter-spacing: 2px;
+}
+
+.indexFoot .footer1 {
+	display: block;
+}
+
+.indexFoot .footer2 {
+	display: none;
+}
+
+.indexFoot .indexFootRight {
+	width: 175px;
+	float: right;
+	/* margin-top: 0.07rem; */
+}
+
+.indexFoot .indexFootRight img {
+	width: 45px;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.indexFoot .indexFootRight img:nth-child(2) {
+	margin: 0 14px;
+}
+
+
+.qcourse {
+	padding: 10px;
+	background: rgba(51, 51, 51, 0.5);
+	text-align: center;
+	font-size: 14px;
+	color: #fff;
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: none;
+}
+
+@media screen and (max-width: 768px) {
+
+	.qcourseClass {
+		width: 100%;
+	}
+
+	.qcourseClass .header {
+		width: 100%;
+		height: 44px;
+		background: #4983F8;
+		line-height: 44px;
+		font-size: 12px;
+	}
+
+	.qcourseClass .header .logo {
+		width: 5rem;
+		max-width: 115px;
+		height: 20px;
+		margin: 14px 0 0 14px;
+	}
+
+	.qcourseClass .header .contactMe {
+		width: 80px;
+	}
+
+	.qcourseClass .header ul {
+		margin-right: 14px;
+	}
+
+	.qcourseClass .header ul li {
+		width: 2rem;
+		max-width: 40px;
+	}
+
+	.qcourseClass .headerVideo {
+		height: 200px;
+	}
+
+	.qcourseClass .contact {
+		padding-top: 60px;
+		font-size: 12px;
+		letter-spacing: 0.6px;
+	}
+
+	.qcourseClass .contact h1 {
+		font-size: 15px;
+		letter-spacing: 0.6px;
+		line-height: 15px;
+	}
+
+	.qcourseClass .contact > div {
+		width: 100px;
+		height: 30px;
+		margin: 14px auto 0;
+		line-height: 30px;
+	}
+
+	.qcourseClass .contact ul {
+		margin-top: 60px;
+	}
+
+	.qcourseClass .contact ul li img {
+		margin: 0 auto 5px;
+	}
+
+	.qcourseClass .contact ul li .contact1 {
+		width: 44px;
+		height: 53px;
+	}
+
+	.qcourseClass .contact ul li .contact2 {
+		width: 51px;
+		height: 43px;
+		margin-top: 10px;
+		margin-bottom: 5px;
+	}
+	.qcourseClass .contact ul li .contact3 {
+		width: 50px;
+		height: 50px;
+		margin-top: 5px;
+		margin-bottom: 3px;
+	}
+	.qcourseClass .contact ul li .contact4 {
+		width: 45px;
+		height: 48px;
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+
+	.qcourseClass .processBox {
+		height: 410px;
+	}
+
+	.qcourseClass .processBox .processM,
+	.qcourseClass .processBox .silde {
+		display: block;
+	}
+
+	.qcourseClass .process {
+		padding-top: 60px;
+	}
+
+	.qcourseClass .process h2 {
+		width: 350px;
+		margin: 0 auto 14px;
+		font-size: 15px;
+		letter-spacing: 0.6px;
+		line-height: 20px;
+	}
+
+	.qcourseClass .process1 {
+		display: none;
+	}
+
+	.qcourseClass .processM img {
+		min-width: 100%;
+		height: 380px;
+		position: absolute;
+		left: 0;
+		cursor: pointer;
+	}
+
+	.processBox .silde {
+		width: 100%;
+		position: relative;
+	}
+
+	.processBox .silde > div {
+		width: 14px;
+		height: 14px;
+		border: 3px solid #f2f2f2;
+		background: #dedede;
+		border-radius: 50%;
+		cursor: pointer;
+		position: absolute;
+		top: 394px;
+		left: 50%;
+	}
+
+	.processBox .silde > div:nth-child(1) {
+		margin-left: -35px;
+	}
+
+	.processBox .silde > div:nth-child(2) {
+		margin-left: -7px;
+	}
+
+	.processBox .silde > div:nth-child(3) {
+		margin-left: 21px;
+	}
+	.processBox .silde .active {
+		border: 3px solid #CCE6FF;
+		background: #4983f8;
+	}
+
+	.qcourseClass .majorDesign {
+		height: 200px;
+		margin-top: 60px;
+		background: url(https://test.qcourse.cc/home/indexImages/majorDesign1.jpg) no-repeat center center;
+	}
+
+	.majorDesign .majorDesignText {
+		width: 100%;
+		height: auto;
+		padding: 9px 20px;
+		border-radius: 0;
+		top: 50%;
+		left: 0;
+		margin-top: -60px;
+		text-align: center;
+	}
+
+	.majorDesign .majorDesignText h6 {
+		margin: 0;
+		font-size: 14px;
+	}
+	/*
+	
+	.majorDesign .majorDesignText .text1{
+		display: none;
+	}
+*/
+	/*
+	.majorDesign .majorDesignText .text2{
+		display: block;
+	}
+*/
+	.majorDesign .majorDesignText p {
+		font-size: 14px;
+		line-height: 20px;
+	}
+
+	.qcourseClass .caseAnalysis {
+		margin-top: 60px;
+	}
+
+	.qcourseClass .caseAnalysis .caseAnalysisImg {
+		display: block;
+		width: 173px;
+		margin: 0 0 30px 16px;
+	}
+	.caseAnalysis #gallery-top {
+		height: 220px;
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	.caseAnalysis #gallery-thumbs {
+		height: 78px;
+	}
+	.qcourseClass .caseAnalysis #gallery-top h3 {
+		min-width: 220px;
+		padding: 0 10px;
+		height: 31px;
+		top: 15px;
+		right: 15px;
+		font-size: 12px;
+		line-height: 31px;
+	}
+
+	.qcourseClass .caseAnalysis #gallery-thumbs h3 {
+		display: none;
+	}
+
+	.caseAnalysis .sideLeft,
+	.caseAnalysis .sideRight {
+		display: none;
+	}
+	.caseAnalysis .sideLeft .playLeft,
+	.caseAnalysis .sideRight .playRight {
+		display: none;
+	}
+
+	.qcourseClass .ourTeam {
+		height: auto;
+	}
+	.ourTeam .ourTeamImg {
+		width: 114px;
+		margin-right: 14px;
+	}
+	.ourTeam .synopsis {
+		width: 100%;
+		height: auto;
+		border: none;
+		padding: 0;
+		float: none;
+		margin: 30px 0 0 0;
+		font-size: 12px;
+		line-height: 20px;
+	}
+	.ourTeam .synopsis p {
+		float: left;
+		padding: 0 15px;
+		margin: 30px 0;
+		font-size: 14px;
+	}
+	.ourTeam .box {
+		width: 100%;
+		height: auto;
+		position: static;
+		clear: both;
+	}
+	.heZuoHuoBan {
+		height: auto;
+		margin: 30px 0 0 0;
+		overflow: hidden;
+	}
+	.heZuoHuoBan .heZuoHuoBanImg {
+		width: 40px;
+		height: 131px;
+		margin: 29px 12.8px 0 14px
+	}
+	.heZuoHuoBan .heZuoHuoBanText {
+		padding-right: 10px;
+		margin-top: 0px;
+	}
+	.heZuoHuoBan .heZuoHuoBanText h6 {
+		margin: 15px 0 0 0;
+		font-size: 16px;
+		letter-spacing: 0.7px;
+	}
+	.heZuoHuoBan .heZuoHuoBanText p {
+		font-size: 14px;
+		line-height: 20px;
+	}
+	.qcourseClass .contactUs .contactUsImg {
+		width: 141px;
+		margin: 0 auto 30px;
+	}
+	.qcourseClass .contactUs {
+		margin-top: 30px;
+		font-size: 12px;
+		letter-spacing: 1.2px;
+		line-height: 20px;
+	}
+	.qcourseClass .contactUs p {
+		width: 100%;
+		padding: 0 15px;
+		box-sizing: border-box;
+		-o-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		font-size: 14px;
+	}
+	.qcourseClass .contactUs > div {
+		width: 100%;
+		margin: 30px auto 0;
+		padding: 0 40px;
+		box-sizing: border-box;
+		-o-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+	}
+	.qcourseClass .contactUs input,
+	.qcourseClass .contactUs textarea {
+		height: 44px;
+		margin-bottom: 14px;
+		font-size: 12px;
+		color: #999999;
+		letter-spacing: 0.6px;
+	}
+	.qcourseClass .contactUs textarea {
+		height: 80px;
+		margin-bottom: 30px;
+	}
+	.qcourseClass .contactUs .ok {
+		line-height: 30px;
+		font-size: 14px;
+		letter-spacing: 0.7px;
+	}
+	.qcourseClass .contactInfo {
+		width: 100%;
+		padding: 0 16px;
+		box-sizing: border-box;
+		-o-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		font-size: 12px;
+		letter-spacing: 0.2px;
+	}
+	.qcourseClass .contactInfo .items {
+		margin-top: 13px;
+		font-size: 14px;
+		font-weight: 600;
+	}
+	.qcourseClass .contactInfo .items img {
+		width: 20px;
+		margin-right: 9px;
+		margin-top: -1px;
+	}
+	.qcourseClass .contactInfo .qrcode {
+		width: 118px;
+	}
+	.qcourseClass .footer {
+		width: 100%;
+		padding: 0 15px;
+		margin: 60px auto 10px;
+		box-sizing: border-box;
+		-o-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+	}
+	hr {
+		width: 305px;
+		height: 1px;
+		margin: 60px auto 20px;
+		background: #d3e1fe;
+		border: none;
+	}
+	.indexFoot {
+		height: auto;
+	}
+	.indexFoot > div {
+		width: 95%;
+		margin-bottom: 10px;
+	}
+	.indexFoot .indexFootLeft {
+		width: 4rem;
+	}
+	.indexFoot .indexFootLeft img {
+		width: 3.1rem;
+		margin-bottom: 10px;
+	}
+	.indexFoot .indexFootLeft div {
+		width: 3.1rem;
+	}
+	.indexFoot .indexFootLeft span {
+		font-size: 14px;
+	}
+	.indexFoot .footer1 {
+		display: none;
+	}
+	.indexFoot .footer2 {
+		display: block;
+		margin: 0;
+		width: 100%;
+		height: 90px;
+		font-size: 12px;
+		letter-spacing: 1.71px;
+		line-height: 28px;
+	}
+	.indexFoot .indexFootRight {
+		width: 55%;
+		margin-top: 10px;
+	}
+	.indexFoot .indexFootRight img {
+		float: right;
+		width: 20%;
+		margin: 0 10px;
+	}
+	.indexFoot .indexFootRight img:nth-child(2) {
+		margin: 0 0.1rem;
+	}
+	.qcourse {
+		width: 100%;
+		/* height:800px; */
+		padding: 0;
+		position: fixed;
+		top: 0;
+		bottom: 0;
+	}
+	.qcourse img {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: -100px 0 0 -100px;
+
+	}
+	.qcourse a {
+		padding: 20px;
+		background: #fff;
+		color: #333;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: -35px 0 0 -94px;
+
+	}
+}

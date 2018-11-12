@@ -1,59 +1,136 @@
+(function (win, $, doc, undefined) {
+    $(function () {
 
-var input = document.getElementById("name");
-var conn = document.getElementById("conn");
-var close = document.getElementById("close");
-var mess = document.getElementById("mess");
-var value1 = document.getElementById("value1");
-var pattern = /^[\u4e00-\u9fa5]{2,10}$/;
-close.disabled = true;
-if (window.WebSocket) {
-    conn.onclick = function () {
-        if (!pattern.test(input.value)) {
-            alert("名称不能为空且必须为中文");
-            return;
-        }
-        var ws = new WebSocket('ws://127.0.0.1:8888');
-        conn.disabled = true;
-        close.disabled = false;
-        ws.onopen = function (e) {
-            console.log("连接服务器成功");
-            ws.send(input.value);
-            input.setAttribute("readOnly", 'true');
-            value1.setAttribute("readOnly", 'true');
-        }
-        ws.onmessage = function (e) {
-            value1.removeAttribute("readOnly");
-            var time = new Date();
-            mess.innerHTML += time.toUTCString() + ":" + e.data + "<br>";
-            document.getElementById("send").onclick = function (e) {
-                ws.send(input.value + "说:" + value1.value);
-                value1.value = " ";
-            }
-            document.onkeydown = function (e) {
-                e = e || window.event;
-                if (e.keyCode == 13) {
-                    document.getElementById("send").onclick();
-                    return false;
+
+        var saveData = function () {};
+        var ws = new WebSocket('ws://127.0.0.1:8888')
+
+        saveData.prototype = {
+
+            /**
+             * 获取数据
+             */
+            getData: function () {
+                var productInfo = [{
+                        id: '0',
+                        pid: '1',
+                        title: '2',
+                        type: '3',
+                        content: {
+                            type: 'text',
+                            html: $('.container').val().trim(),
+                            margin: '',
+                            quote: '',
+                            style: ''
+                        },
+                        background: '',
+                        updated_at: new Date('YY-MM-DD hh:mm:ss')
+                    },
+                    {
+                        id: '1',
+                        pid: '2',
+                        title: '3',
+                        type: '4',
+                        content: {
+                            type: 'text',
+                            html: $('.container').val().trim(),
+                            margin: '',
+                            quote: '',
+                            style: ''
+                        },
+                        background: '',
+                        updated_at: new Date('YY-MM-DD hh:mm:ss')
+                    }
+                ];
+                return productInfo
+            },
+            /**
+             * 普通接口保存方法
+             */
+            save: function () {
+
+                var request = new Request();
+                request.save({
+                    data: {
+                        productInfo: JSON.stringify(this.getData())
+                    },
+                    success: function (res) {
+                        console.log(res)
+                    },
+                    error: function (fail) {
+                        console.log(fail)
+                    },
+                    complete: function (complete) {}
+                })
+            },
+
+            /**
+             * socket保存方法
+             */
+            socket: function () {
+                var that = this;
+
+                ws.onopen = function (e) {
+                    console.log("连接服务器成功");
+                    ws.send('Liu');
                 }
+
+                ws.onmessage = function (e) {
+                    var time = new Date();
+                    // $('textarea').val(e.data);
+                    // console.log(e.data);
+                    try {
+                        var data = JSON.parse(e.data);
+                        $('textarea').val(data[0].content.html);
+                    } catch (error) {
+                        $('textarea').val(e.data);
+                    }
+                    // console.log(data)
+                    $('body').on('input', 'textarea', function () {
+                        ws.send(JSON.stringify(that.getData()));
+                    });
+                    // console.log(e)
+                }
+
             }
         }
+
+        var SaveData = new saveData(),
+            interval = null,
+            intervalSave = function () {
+                interval = setInterval(function () {
+                    SaveData.save();
+                }, 5000);
+            }
+
+        if (window.WebSocket) {
+            SaveData.socket();
+        } else {
+            intervalSave();
+        }
+
         ws.onclose = function (e) {
             console.log("服务器关闭");;
             var time = new Date();
-            mess.innerHTML += time.toUTCString() + ":服务器关闭";
         }
+
         ws.onerror = function () {
             console.log("连接出错");
             var time = new Date();
-            mess.innerHTML += time.toUTCString() + ":连接出错";
         }
 
-        close.onclick = function () {
+        $('body').on('click', '#save', function () {
+            clearInterval(interval);
+            SaveData.save();
+            intervalSave()
+        });
+
+        $('body').on('click', '#close', function () {
+            ws.send('close');
             ws.onclose();
-            ws.send(input.value + 'close' + "了连接");
-            input.removeAttribute("readOnly");
-            conn.disabled = false;
-            close.disabled = true;
-        }
-    }
-}
+            intervalSave();
+            console.log('停止')
+        });
+    })
+
+})(window, jQuery, document)

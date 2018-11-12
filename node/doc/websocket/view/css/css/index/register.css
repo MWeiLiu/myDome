@@ -1,0 +1,1128 @@
+.stF3BB3A {
+    fill: #F3BB3A
+}
+
+.stFFFFFF {
+    fill: #FFFFFF
+}
+
+
+.hidden {
+    display: none;
+}
+
+.correct {
+    position: absolute;
+}
+
+.error {
+    position: absolute;
+    color: #ff0000;
+}
+
+input {
+    background: transparent
+}
+
+/*椤堕儴logo*/
+.login-layer {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+
+}
+
+.registerwBox {
+    max-width: 800px;
+    width: 100%;
+    height: 700px;
+    padding-top: 50px;
+    padding-right: 50px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -375px;
+    margin-top: -325px;
+}
+
+.regSmsBox {
+    width: 100%;
+    height: 530px;
+    padding: 60px 0 0 0;
+    box-sizing: border-box;
+    -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.02);
+    -moz-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.02);
+    -ms-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.02);
+    -o-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.02);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    background: #FFF;
+}
+
+.regSmsBox form {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.registerwBox .register {
+    height: 600px;
+    padding-top: 70px;
+}
+
+.login-layer .regNewAccont {
+    height: 36px;
+    text-align: center;
+    font-family: SourceHanSansCN-Light;
+    font-size: 36px;
+    line-height: 36px;
+    color: #212121;
+    margin: 0 auto;
+    letter-spacing: 1.3px;
+}
+
+.login-layer .regAccontTips {
+    font-family: SourceHanSansCN-Light;
+    font-size: 18px;
+    line-height: 18px;
+    color: #8E8E93;
+    text-align: center;
+    letter-spacing: 1px;
+    margin: 30px 0 10px;
+}
+
+.login-layer .regSmsBox .regNewAccont {}
+
+.register div > input {
+    width: 100%;
+    height: 30px;
+    border: none;
+    padding-left: 5px;
+    border-bottom: 1px solid #C8C7CC;
+    box-shadow: inset 0 0 0 0 #C8C7CC;
+    box-sizing: border-box;
+    background-color: transparent;
+
+}
+
+.regIpt {
+    padding-top: 30px;
+    height: 60px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.regIpt > input {
+    font-family: SourceHanSansCN-Light;
+    font-size: 16px;
+    color: #212121;
+}
+
+.register div:nth-child(4) {
+    height: 82px;
+}
+
+.regIpt .errorIco {
+    font-size: 25px;
+    color: #F9593A;
+    position: absolute;
+    left: 378px;
+    top: 34px;
+    display: none;
+}
+
+.regIpt label {
+    font-family: SourceHanSansCN-Light;
+    font-size: 18px;
+    letter-spacing: -0.08px;
+    position: absolute;
+    top: 30px;
+    left: 5px;
+    color: #8E8E93;
+}
+
+.register div:nth-child(4) label {
+    top: 30px;
+}
+
+.register div .correct {
+    width: 18px;
+    position: absolute;
+    left: 315px;
+    top: 38px;
+    display: none;
+}
+
+.placeIpt {
+    font-size: 50px;
+}
+
+.register div:nth-child(3) .error,
+.register div:nth-child(4) .error,
+.register div:nth-child(5) .error {
+    margin-left: 5px;
+    display: block;
+    font-size: 12px;
+    text-align: center;
+}
+
+.register .emailExists {
+    margin-left: 5px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #F9593A;
+}
+
+.register div:nth-child(6) span:last-child {
+    position: absolute;
+    left: 5px;
+    bottom: -15px;
+    font-size: 14px;
+    color: #F9593A;
+}
+
+/*閬洊IE9涓璛鍙�*/
+
+.register div:nth-child(2) input::after,
+.register div:nth-child(3) input::after,
+.register div:nth-child(4) input::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 55px;
+    background-color: #fff;
+    position: absolute;
+    left: 470px;
+    top: 3px;
+}
+
+.register div:nth-child(4) .regIptTips {
+    display: block;
+    font-family: SourceHanSansCN-Light;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-left: 5px;
+    color: #BDBDBD;
+    letter-spacing: 0;
+}
+
+.register div:nth-child(6) {
+    height: 64px;
+    margin-bottom: 35px;
+}
+
+#regIpt4 .regCharCode {
+    float: left;
+    width: 113px;
+    height: 44px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: -15px;
+}
+
+.register div:nth-child(6) img {
+    width: 100%;
+    height: 100%;
+}
+
+.register div:nth-child(6) input {
+    float: left;
+    width: 125px;
+}
+
+.register div:nth-child(6) .refresh {
+    float: right;
+    width: 113px;
+    height: 44px;
+    line-height: 44px;
+    margin-top: -44px;
+    text-align: center;
+    background: #1582FF;
+    font-family: SourceHanSansCN-Light;
+    font-size: 14px;
+    color: #FFFFFF;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.16);
+    -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.16);
+    -ms-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.16);
+    -o-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.16);
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
+    -ms-border-radius: 2px;
+
+}
+
+.register div:nth-child(7) {
+    padding-left: 5px;
+    margin-bottom: 26px;
+    position: relative;
+}
+
+.register div:nth-child(7) .agree {
+// font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #2C2C2C;
+    letter-spacing: 0.45px;
+    vertical-align: top;
+    margin-left: 11px;
+}
+
+.register div:nth-child(7) .notAgree {
+    color: #F9593A;
+    font-size: 14px;
+    position: absolute;
+    top: 25px;
+    left: 5px;
+}
+
+.register div:nth-child(8) {
+    width: 158px;
+    height: 38px;
+    line-height: 38px;
+    margin: 0 auto 26px;
+    text-align: center;
+}
+
+.register div:nth-child(8) a {
+    display: block;
+    width: 158px;
+    height: 38px;
+    line-height: 38px;
+    font-size: 18px;
+    border: 1px solid #5e5e5e;
+    color: #5e5e5e;
+    letter-spacing: 2px;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+}
+
+.register div:nth-child(8) a:hover {
+    background-color: #5e5e5e;
+    color: #fff;
+}
+
+.register div:nth-child(9) {
+    text-align: center;
+    color: #0ebac6; // font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #212121;
+    letter-spacing: 0.17px;
+}
+
+.register div:nth-child(9) a {
+// font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #40a3ec;
+    letter-spacing: 0.17px;
+    line-height: 17px;
+}
+
+.register div:nth-child(10) {
+    position: absolute;
+    bottom: 125px;
+    left: 260px;
+    color: red;
+}
+
+.boxsizing {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+}
+
+/*蹇樿瀵嗙爜*/
+
+.loginBackImg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/BgPersonal.jpg);
+    background-size: 100% 100%;
+    background-color: rgba(36, 36, 36, 0.5);
+    z-index: 200;
+}
+
+.loginBackImg > img {
+    width: 100%;
+    height: 100%;
+}
+
+.loginModifyBox {
+    width:100%;
+    max-width: 800px;
+    height: 580px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -325px;
+    margin-left: -375px;
+    padding-top: 50px;
+    padding-right: 50px;
+    display: none;
+}
+
+.loginModifyBox .registerClose {
+    width: 50px;
+    height: 50px;
+    border: none;
+    top: 0;
+    right: 0;
+}
+
+.loginModifyBox .registerClose > img {
+    width: 50px;
+    height: 50px;
+}
+
+.loginModifyBox .back-login {
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #5e5e5e;
+    position: absolute;
+    bottom: 60px;
+}
+
+.loginModifyBox .back-login span {
+    cursor: pointer;
+}
+
+.login-modify {
+    width: 100%;
+    height: 530px;
+    background: #FFFFFF;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.02);
+    -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.02);
+    -moz-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.02);
+    -ms-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.02);
+    border-radius: 10px;
+    position: relative;
+}
+
+.login-modify input {
+    display: block;
+    outline: none;
+    width: 390px;
+    height: 42px;
+    padding-left: 5px;
+    border-bottom: 1px solid #cccccc;
+}
+
+.login-modify .errorIco {
+    color: rgb(249, 89, 58);
+    position: absolute;
+    right: -25px;
+    top: 18px;
+    display: none;
+}
+
+.login-modify .loginModifyLabel {
+    font-size: 18px;
+    color: #8E8E93;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+}
+
+.login-modify-steps {
+    position: relative;
+    height: 62px;
+    width: 100%;
+}
+
+.login-modify-steps > div {
+    float: left;
+    line-height: 43px;
+    color: #FFFDFE;
+    font-size: 18px;
+    letter-spacing: 1.3px;
+}
+
+.login-modify-steps .modifySteps {
+    position: relative;
+    height: 48px;
+    width: 48px;
+    line-height: 48px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    background-color: #EAEAEA;
+    text-align: center;
+    z-index: 2;
+}
+
+.login-modify-steps .firstStep {
+    background-color: #5e5e5e;
+    color: #fff;
+}
+
+.login-modify-steps .secondStep,
+.login-modify-steps .thirdStep,
+.login-modify-steps .fouthStep {
+    margin-left: 322.5px;
+}
+
+.login-modify-steps .line {
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    background-color: #EAEAEA;
+}
+
+.login-modify-steps .line > span {
+    position: absolute;
+    height: 4px;
+    width: 25%;
+    background-color: #5e5e5e;
+}
+
+/*绗竴姝�*/
+
+.login-modify-one {
+    margin: 0 auto;
+    width: 390px;
+    font-size: 16px;
+}
+
+.login-modify-one > div,
+.login-modify-two > div .login-modify-three > div .login-modify-fore > div {
+    position: relative;
+}
+
+.login-modify-one .iptEmailTips {
+    text-align: center;
+    letter-spacing: 0;
+    height: 24px;
+    margin: 60px 0 34px;
+    font-size: 24px;
+    line-height: 24px;
+    color: #2E2E2E;
+}
+
+.loginModifyBox div input::-webkit-input-placeholder,
+.loginModifyBox div input::-moz-placeholder,
+.loginModifyBox div input:-ms-input-placeholder {
+    font-size: 16px;
+    color: #D4D4D4;
+    letter-spacing: 0;
+}
+
+.login-modify-one div:nth-child(2) {
+    position: relative;
+}
+
+.login-modify-one span {
+    line-height: 25px;
+    font-size: 18px;
+    color: #2E2E2E;
+}
+
+.login-modify-one div:nth-child(2) img {
+    width: 18px;
+    position: absolute;
+    right: -40px;
+    top: 20px;
+    display: none;
+}
+
+.login-modify-one div:nth-child(3) {
+    margin: 30px 0 60px;
+}
+
+.login-modify-one div:nth-child(3) .loChartCode {
+    width: 160px;
+    float: left;
+}
+
+.login-modify-one div:nth-child(3) img {
+    width: 100px;
+    height: 42px;
+    vertical-align: top;
+    margin-left: 10px;
+}
+
+.login-modify-one div:nth-child(3) a {
+    float: right;
+    width: 110px;
+    height: 42px;
+    text-align: center;
+    line-height: 42px;
+    vertical-align: middle;
+    -webkit-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    background: #FFFFFF;
+    border: 1px solid #5e5e5e;
+    font-size: 14px;
+    color: #5e5e5e;
+}
+
+.login-modify-one div:nth-child(3) a:hover {
+    background-color: #5e5e5e;
+    color: #fff;
+}
+
+/*椤甸潰涓嬩竴姝ユ寜閽�*/
+
+.login-modify-one .loginModifyNextBtn,
+.login-modify-two .loginModifyNextBtn,
+.login-modify-three .loginModifyNextBtn {
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    position: absolute;
+    left: 50%;
+    margin-left: -60px;
+    border: 1px solid #5e5e5e;
+    -webkit-border-radius: 45px;
+    -moz-border-radius: 45px;
+    -ms-border-radius: 45px;
+    -o-border-radius: 45px;
+    border-radius: 45px;
+}
+
+.login-modify-one .loginModifyNextBtn a,
+.login-modify-two .loginModifyNextBtn a,
+.login-modify-three .loginModifyNextBtn a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    color: #5e5e5e;
+    cursor: pointer;
+}
+
+/*绗簩姝�*/
+
+.login-modify-two div {
+    color: #2E2E2E;
+    font-size: 16px;
+}
+
+.login-modify-two p {
+    height: 48px;
+    text-align: center;
+    margin: 70px 0 60px;
+    font-size: 16px;
+    color: #2E2E2E;
+    line-height: 24px;
+}
+
+.login-modify-two div:nth-child(1) {
+    width: 100%;
+    height: 44px;
+    margin: 0 auto 90px;
+    text-align: center;
+}
+
+.login-modify-two div:nth-child(2) {
+    width: 360px;
+    height: 42px;
+    margin: 0 auto 60px;
+    position: relative;
+}
+
+.login-modify-two div:nth-child(2) input {
+    width: 240px;
+}
+
+.login-modify-two div:nth-child(2) a {
+    display: block;
+    float: right;
+    width: 110px;
+    height: 42px;
+    margin-top: -42px;
+    text-align: center;
+    line-height: 42px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    font-size: 14px;
+    color: #5e5e5e;
+    background: #FFFFFF;
+    border: 1px solid #5e5e5e;
+}
+
+.login-modify-two div:nth-child(2) a:hover {
+    background-color: #5e5e5e;
+    color: #fff;
+}
+
+/*绗笁姝�*/
+
+.login-modify-three {
+    font-size: 16px;
+}
+
+.login-modify-three .correct {
+    width: 18px;
+    display: inline-block;
+    position: absolute;
+    right: -40px;
+    top: 15px;
+    display: none;
+}
+
+.login-modify-three div:nth-child(1) {
+    width: 253px;
+    margin: 60px auto 28px;
+    text-align: center;
+    font-size: 24px;
+    color: #2E2E2E;
+}
+
+.login-modify-three .ltPassword {
+    width: 390px;
+    height: 42px;
+    margin: 0 auto;
+    margin-top: 27px;
+    position: relative;
+}
+
+.login-modify-three .ltPasswordConfir {
+    margin-bottom: 55px;
+}
+
+.login-modify-three .ltPassword input {}
+
+/*绗洓姝�*/
+
+.login-modify-fore {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.login-modify-fore .lfModifyTips {
+    margin: 200px auto 96px;
+}
+
+.login-modify-fore .lfModifyTips > span {
+    display: block;
+    font-family: SourceHanSansCN-Regular;
+    font-size: 24px;
+    color: #313537;
+    letter-spacing: 0;
+    line-height: 36px;
+}
+
+.login-modify-fore div:last-child {
+    font-size: 16px;
+    color: #F9593A;
+    letter-spacing: 0;
+}
+
+/*閿欒淇℃伅鎻愮ず璇�*/
+
+.login-modify-one .LoginModifyerror,
+.login-modify-two .LoginModifyerror,
+.login-modify-three .LoginModifyerror {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    color: #F9593A;
+    letter-spacing: 0;
+    z-index: 0;
+    display: none;
+}
+
+.login-modify-one .LoginModifyerror {
+    font-size: 14px;
+    left: 5px;
+    top: 42px;
+}
+
+.login-modify-two .LoginModifyerror {
+    font-size: 14px;
+    left: 5px;
+    top: 44px;
+}
+
+.login-modify-three .LoginModifyerror {
+    font-size: 14px;
+    left: 5px;
+    top: 45px;
+}
+
+.stepBackgroundColor {
+    background-color: #4489fe;
+}
+
+.login-modify-three .newPassErrorTips,
+.login-modify-three .newPassConErrorTips {
+    font-size: 14px;
+    position: absolute;
+    left: 5px;
+    top: 45px;
+    color: #F9593A;
+
+}
+
+/*.back-login{position: absolute;top:400px;width:100%;text-align:center;color:#fff;}
+*/
+
+/*
+@media screen and (max-width:640px){
+	.login-layer>div{width:100%;left:0;margin-left:0;}
+	.login-mail>div:nth-child(3) img{width:30%;}
+	.login-layer .login-user>div:nth-child(2) .login-mail{margin-left:20%;}
+	.login-layer .login-user>div:nth-child(2) ul li img{width:35%;margin-bottom:1%;}
+
+	.login-layer .nav-top>li:nth-child(1){width:10%}
+	.login-layer .nav-top>li:nth-child(2){display: none}
+	.login-layer .nav-top>li:nth-child(3){display: none}
+	.login-layer .nav-top>li:nth-child(4){width:13.5%}
+	.login-layer .nav-top>li:nth-child(5){width:13.5%}
+	.login-layer .nav-top>li:nth-child(6){width:26.5%}
+	.login-layer .nav-top>li:nth-child(7){width:28.5%}
+}
+*/
+
+/*鐭俊鐧诲綍*/
+
+.mobileNumBox .telBox {
+    height: 67px;
+    width: 358px;
+    margin: 8px auto 0;
+    padding-top: 32px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.mobileNumBox .telBox > input {
+    width: 358px;
+    font-family: SourceHanSansCN-Light;
+    font-size: 16px;
+    color: #212121;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    box-sizing: border-box;
+    letter-spacing: -0.11px;
+    border-bottom: 1px solid #C8C7CC;
+    box-shadow: inset 0 0 0 0 #C8C7CC;
+}
+
+.mobileNumBox .smsyan input {
+    margin-bottom: 12px;
+    width: 211px;
+}
+
+.mobileNumBox .telBox > label {
+    position: absolute;
+    top: 30px;
+    left: 5px;
+    font-family: SourceHanSansCN-Light;
+    font-size: 18px;
+    color: #8E8E93;
+    letter-spacing: -0.08px;
+}
+
+.mobileNumBox .smsyan #Send_code {
+    float: right;
+    width: 136px;
+    height: 42px;
+    line-height: 42px;
+    margin-top: -16px;
+    text-align: center;
+    background: #1582FF;
+    font-family: SourceHanSansCN-Light;
+    font-size: 14px;
+    color: #FFFFFF;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.16);
+    -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.16);
+    -ms-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.16);
+    -o-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.16);
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
+    -ms-border-radius: 2px;
+    cursor: pointer;
+}
+
+.smsLogin .smsLoginTips,
+.smsLogin .smsLoginCodeTips {
+    padding-left: 5px;
+    font-family: SourceHanSansCN-Light;
+    font-size: 12px;
+    color: #F9593A;
+    letter-spacing: 0.5px;
+}
+
+.mobileNumBox div:nth-child(1) > img {
+    width: 18px;
+    position: absolute;
+    bottom: 15px;
+    right: -28px;
+}
+
+.mobileNumBox div:nth-child(1) .errorIco {
+    position: absolute;
+    bottom: 0;
+    right: -28px;
+    font-size: 25px;
+    color: #F9593A;
+    display: none;
+}
+
+.mobileNumBox .ok {
+    width: 158px;
+    height: 38px;
+    line-height: 38px;
+    margin: 76px auto 72px;
+    text-align: center;
+}
+
+.mobileNumBox .ok .quicklogin {
+    width: 158px;
+    height: 38px;
+    border: 1px solid #5e5e5e;
+    font-size: 18px;
+    color: #5e5e5e;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+}
+
+.mobileNumBox .ok .quicklogin:hover {
+    background-color: #5e5e5e;
+    color: #fff;
+}
+
+.mNumLogin {
+    text-align: center;
+}
+
+.mobileNumBox .mNumLogin > a {
+    font-size: 14px;
+    color: #212121;
+    letter-spacing: 1.3px;
+}
+
+
+.upcaseTips {
+    /* // width: 150px;
+    // height: 25px;
+    // line-height:25px;
+    // text-align: center;
+    // // border: 1px solid #000;
+    // background-color:#ddd;
+    // position: absolute;
+    // z-index:2; */
+    position: absolute;
+}
+
+.upcaseTips > div {
+    width: 150px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    /* // border: 1px solid #000; */
+    background-color: #DDDDDD;
+    position: absolute;
+    z-index: 2;
+    color: #fff;
+}
+
+.upcaseTips span {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: -5px;
+    left: 15px;
+    transform: rotate(45deg);
+    background-color: #DDDDDD;
+    z-index: 1;
+}
+
+
+.smsLogin.regSmsBox .close,
+.mobileNumBox .telBox.hdyz {
+    display: none;
+}
+
+
+@media screen and (max-width: 767px) {
+
+    .login-layer .registerwBox {
+        width: 264px;
+        height: 273px;
+        margin-left: -132px;
+        margin-top: -136px;
+        padding: 0px;
+    }
+    .smsLogin.regSmsBox .close {
+        display: block;
+        position: absolute;
+        top: -10px;
+        right: 5px;
+        font-size: 40px;
+        cursor: pointer;
+    }
+    .smsLogin.regSmsBox {
+        width: 100%;
+        height: 100%;
+        padding: 24px 20px 24px 24px;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        -ms-border-radius: 0px;
+        -o-border-radius: 0px;
+    }
+    .smsLogin.regSmsBox .regNewAccont {
+        font-size: 24px;
+        color: #333333;
+        letter-spacing: 2.4px;
+    }
+    .smsLogin.regSmsBox .regAccontTips {
+        display: none;
+    }
+    .smsLogin.regSmsBox .login-layer .regNewAccont {
+        font-size: 32px;
+    }
+    .smsLogin.regSmsBox .login-layer .regAccontTips {
+        font-size: 17px;
+    }
+    .smsLogin.regSmsBox .mobileNumBox .telBox {
+        width: auto;
+        height: 36px;
+        padding-top: 0;
+        margin-top: 12px;
+    }
+    .smsLogin.regSmsBox .mobileNumBox .telBox > label {
+        position: absolute;
+        top: 5px;
+    }
+    .smsLogin.regSmsBox .mobileNumBox .telBox.smsyan {
+        display: none;
+        font-size: 16px;
+        color: #999999;
+        letter-spacing: 1.6px;
+    }
+    .smsLogin.regSmsBox .mobileNumBox .telBox > input {
+        width: 100%;
+        height: 26px;
+        margin-top: 7px;
+    }
+    .smsLogin.regSmsBox .mobileNumBox .telBox #sendcode {
+        width: 82px;
+        height: 31px;
+    }
+    .smsLogin.regSmsBox .mobileNumBox .smsyan #Send_code {
+        width: 130px;
+        height: 32px;
+        margin-top: -11px;
+        border: 1px solid #1581FF;
+        border-radius: 100px;
+        margin-top: 3px;
+        line-height: 32px;
+        background: #fff;
+        font-size: 14px;
+        color: #1581FF;
+        letter-spacing: 3.5px;
+    }
+    .smsLogin.regSmsBox .mobileNumBox div:nth-child(1) > img {
+        bottom: 6px;
+        right: 0;
+    }
+    .smsLogin.regSmsBox .mobileNumBox .ok {
+        width: 120px;
+        height: 36px;
+        margin: 40px auto 0;
+        line-height: 36px;
+    }
+    .smsLogin.regSmsBox .mobileNumBox .ok div {
+        width: 120px;
+        height: 36px;
+        background: #999999;
+        border: 1px solid #999999;
+        border-radius: 4px;
+        color: #fff;
+    }
+    .smsLogin.regSmsBox .mobileNumBox .hdyz {
+        width: auto;
+        height: 36px;
+        background: #FFFFFF;
+        border: 1px solid #DDDDDD;
+        border-radius: 4px;
+        padding: 0;
+        margin-top: 24px;
+        position: relative;
+        display: block;
+    }
+    .smsLogin.regSmsBox .mobileNumBox .hdyz .HK {
+        width: 52px;
+        height: 32px;
+        position: absolute;
+        top: 1px;
+        left: 1px;
+        /*		background: #FFFFFF;*/
+        /*		box-shadow: inset 0 0 3px 0 rgba(185, 185, 185, 0.50);*/
+        border-radius: 4px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        background: #666666;
+        z-index: 2;
+    }
+    .smsLogin.regSmsBox .mobileNumBox .hdyz .HK .hkChecke {
+        width: 100%;
+        height: 100%;
+        line-height: 32px;
+        text-align: center;
+    }
+    .smsLogin.regSmsBox .mobileNumBox .hdyz .HK .hkChecke img {
+        width: 8px;
+    }
+    .smsLogin.regSmsBox .mobileNumBox .hdyz .HK .checkEnd {
+        text-align: center;
+        display: none;
+    }
+    .smsLogin.regSmsBox .mobileNumBox .hdyz .HK .checkEnd img {
+        width: 20px;
+    }
+    .smsLogin.regSmsBox .mobileNumBox .hdyz .heikuai {
+        position: absolute;
+        top: 0px;
+        width: 54px;
+        height: 32px;
+        /*		border: 2px solid #DDDDDD;*/
+        border-radius: 8px;
+        display: none;
+        background: #DEDEDE;
+        border: 1px solid #DEDEDE;
+        box-shadow: inset 0 0 10px 0 #666666;
+        -webkit-box-shadow: inset 0 0 10px 0 #666666;
+        -moz-box-shadow: inset 0 0 10px 0 #666666;
+        border-radius: 4px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+    }
+}

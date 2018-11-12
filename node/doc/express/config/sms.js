@@ -12,7 +12,7 @@ function SmsCode() {
             mobile: "13691511467",
             content: txt
         };
-        data = require('querystring').stringify(data);
+        data = querystring.stringify(data);
         console.log(data);
         // {
         //     "date": "Mon, 17 Sep 2018 09:42:57 GMT",

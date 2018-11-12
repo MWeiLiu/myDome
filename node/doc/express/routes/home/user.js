@@ -199,7 +199,7 @@ function user(req, res, next) {
     // sms.send(req, res);
 
     res.header("Content-Type", "application/json; charset=utf-8");
-    return res.json(Msg('110000', Code.public['110000'], result));
+    return res.json(Msg('110000', Code.public['110000'], Array()));
   });
 }
 
