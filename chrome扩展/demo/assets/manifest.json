@@ -1,16 +1,17 @@
 {
-    "manifest_version": 2,
     "name": "One-click Kittens",
-    "description": "This extension demonstrates a browser action with kittens.",
     "version": "1.0",
+    "manifest_version": 2,
+    "description": "This extension demonstrates a browser action with kittens.",
     "background": {
         "scripts": ["index.js"]
     },
     "permissions": [
-        "http://www.17k.com/"
+        "webRequest",
+        "webRequestBlocking"
     ],
     "browser_action": {
-        "default_icon": "icon.png",
+        "default_icon": "images/icon.jpg",
         "default_popup": "popup.html"
     }
 }
