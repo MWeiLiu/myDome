@@ -1,0 +1,93 @@
+/*
+ * @Author: MWeiLiu 
+ * @Date: 2019-01-02 14:07:59 
+ * @Last Modified by: MWeiLiu
+ * @Last Modified time: 2019-01-04 17:28:39
+ */
+
+@import '../base/rest';
+
+.systemNewsInfo {
+  padding: .907895rem .526316rem 0;
+
+  .top {
+
+    .title {
+      border-bottom: 1px solid rgba(227, 227, 227, 1);
+      padding-left: 1.657895rem;
+      margin-bottom: .407895rem;
+
+      h1 {
+        height: .315789rem;
+        line-height: .302632rem;
+        font-size: 24px;
+        font-family: FZLTZHK--GBK1-0;
+        font-weight: 600;
+        color: rgba(102, 102, 102, 1);
+      }
+
+      .time {
+        margin: .289474rem 0 .236842rem;
+        height: .184211rem;
+        line-height: .184211rem;
+        font-size: 14px;
+        font-family: MicrosoftYaHeiLight;
+        font-weight: 300;
+        color: rgba(102, 102, 102, 1);
+
+        span {
+          padding: 0 10px;
+        }
+      }
+    }
+  }
+
+  .content {
+    width: 10.552632rem;
+    padding-left: 1.657895rem;
+    margin-bottom: 111px;
+
+
+    .title {
+      margin-bottom: .263158rem;
+      font-family: MicrosoftYaHei-Bold;
+      font-weight: Bold;
+      color: rgba(102, 102, 102, 1);
+      font-size: 18px;
+    }
+
+    .text {
+      font-family: MicrosoftYaHeiLight;
+      font-weight: Light;
+      color: rgba(102, 102, 102, 1);
+      font-size: 14px;
+    }
+
+    .orange {
+      color: rgba(255, 96, 0, 1);
+      font-weight: bold;
+    }
+
+    img {
+      width: 100%;
+      margin: .368421rem 0 .421053rem;
+    }
+
+    .zhixie {
+      height: 72px;
+      font-size: 18px;
+      font-family: MicrosoftYaHei-Bold;
+      font-weight: bold;
+      color: rgba(102, 102, 102, 1);
+      line-height: 30px;
+    }
+
+    .shuming {
+      font-size: 18px;
+      font-family: MicrosoftYaHei-Bold;
+      color: rgba(102, 102, 102, 1);
+      line-height: 30px;
+      text-align: right;
+    }
+  }
+}

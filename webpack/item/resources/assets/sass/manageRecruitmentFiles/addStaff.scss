@@ -1,0 +1,72 @@
+/*
+ * @Author: MWeiLiu 管理招聘档案页->添加新员工
+ * @Date: 2018-12-27 13:09:12 
+ * @Last Modified by: MWeiLiu
+ * @Last Modified time: 2019-01-04 11:50:52
+ */
+
+@import '../base/rest';
+@import '../base/topBtn';
+
+.addStaff {
+	.topLeftBtn {
+		h1 {
+			margin: .171053rem 0 0 .25rem;
+			height: .223684rem;
+			line-height: .223684rem;
+			font-size: 16px;
+			font-family: MicrosoftYaHei;
+			font-weight: bold;
+			color: rgba(102, 102, 102, 1);
+		}
+	}
+
+	.box {
+		width: 5.921053rem;
+		margin: 44px auto 0;
+
+		.item {
+			label {
+
+				font-size: 18px;
+				font-family: MicrosoftYaHeiLight;
+				font-weight: 300;
+				color: rgba(102, 102, 102, 1);
+				line-height: .5rem;
+			}
+
+			input {
+				width: 4.473684rem;
+				height: .5rem;
+				border: 0;
+				border-bottom: 1px solid rgba(238, 238, 238, 1);
+				font-size: 18px;
+				font-family: MicrosoftYaHeiLight;
+				font-weight: 300;
+
+				&::placeholder {
+					font-size: 18px;
+					font-family: MicrosoftYaHeiLight;
+					font-weight: 300;
+					color: rgba(210, 210, 210, 1);
+				}
+			}
+		}
+
+		.submit {
+			margin: .302632rem auto .947368rem;
+			width: 1.315789rem;
+			height: .473684rem;
+			background: rgba(255, 255, 255, 1);
+			border: 1px solid rgba(210, 210, 210, 1);
+			border-radius: 4px;
+			font-size: 14px;
+			font-family: MicrosoftYaHei;
+			font-weight: 400;
+			color: rgba(210, 210, 210, 1);
+			line-height: .473684rem;
+			text-align: center;
+			cursor: pointer;
+		}
+	}
+}

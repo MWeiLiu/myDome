@@ -1,0 +1,124 @@
+/*
+ * @Author: MWeiLiu 
+ * @Date: 2018-12-24 17:20:27 
+ * @Last Modified by: MWeiLiu
+ * @Last Modified time: 2019-01-03 14:44:00
+ */
+ 
+.hide {
+  display: none !important;
+}
+
+.qFlex {
+  display: flex;
+  display: -webkit-flex;
+}
+
+/*竖向*/
+.qFlexDirectionColumn {
+  flex-direction: column;
+  -webkit-flex-direction: column;
+}
+
+/* 横向 */
+.qFlexJustifyStart {
+  justify-content: flex-start;
+  -webkit-justify-content: flex-start;
+}
+
+/*横向剧中*/
+.qFlexJustifyCenter {
+  justify-content: center;
+  -webkit-justify-content: center;
+}
+
+/*横向平均*/
+.qFlexJustifyAround {
+  justify-content: space-around;
+  -webkit-justify-content: space-around;
+}
+
+/*横向左右*/
+.qFlexJustifyBetween {
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+}
+
+/*横向居右*/
+.qFlexJustifyEnd {
+  justify-content: flex-end;
+  -webkit-justify-content: flex-end;
+}
+
+/*上下居中*/
+.qFlexAlignCenter {
+  align-items: center;
+  -webkit-align-items: center;
+}
+
+/*从下排列*/
+.qFlexAlignEnd {
+  align-items: flex-end;
+  -webkit-align-items: flex-end;
+}
+
+.showByStep {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.showByStep2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.backgroundStyle,
+.backgroundStyle[data-v-0d169be5] {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+html ::-webkit-scrollbar,
+body ::-webkit-scrollbar {
+  width: 5px;
+  background-color: #f2f2f2;
+}
+
+html ::-moz-scrollbar,
+body ::-moz-scrollbar {
+  width: 5px;
+  background-color: #f2f2f2;
+}
+
+html ::-o-scrollbar,
+body ::-o-scrollbar {
+  width: 5px;
+  background-color: #f2f2f2;
+}
+
+html ::-webkit-scrollbar-track,
+body ::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 0 rgba(0, 0, 0, .1);
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+html ::-webkit-scrollbar-thumb,
+body ::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  box-shadow: inset 10px 0 0 rgba(0, 0, 0, 0.1);
+  background-color: #999;
+}
+
+.shuxian {
+  display: block;
+  width: 1px;
+  height: 10px;
+  background: rgba(208, 208, 208, 1);
+  padding: .092105rem 0;
+}

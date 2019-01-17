@@ -33,6 +33,9 @@
     <Compile Include="class2.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="class3.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="configURL.py">
       <SubType>Code</SubType>
     </Compile>

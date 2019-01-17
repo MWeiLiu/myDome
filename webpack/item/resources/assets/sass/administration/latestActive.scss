@@ -1,0 +1,125 @@
+/*
+ * @Author: MWeiLiu 最新活跃页
+ * @Date: 2018-12-24 17:21:25 
+ * @Last Modified by: MWeiLiu
+ * @Last Modified time: 2019-01-04 10:10:35
+ */
+
+@import '../base/rest';
+@import '../base/pagination';
+@import '../base/topBtn';
+
+.latestActive {
+	height: .394737rem;
+
+	.latestActiveContent {
+		height: 1.302632rem;
+		margin-top: .131579rem;
+		cursor: default;
+
+		.item {
+			padding-bottom: .25rem;
+			border-bottom: 1px solid rgba(242, 242, 242, 1);
+
+			.headImage {
+				width: .789474rem;
+				height: .789474rem;
+				border-radius: 50%;
+				margin-top: .263158rem;
+				margin-right: .276316rem;
+				margin-left: .25rem;
+
+				img {
+					width: 100%;
+				}
+			}
+
+			.info {
+				width: 4.026316rem;
+				margin-top: .328947rem;
+
+				.name {
+					margin-right: .263158rem;
+					font-size: .210526rem;
+					font-family: MicrosoftYaHei;
+					font-weight: 400;
+					color: rgba(102, 102, 102, 1);
+				}
+
+				.salary {
+					font-size: .210526rem;
+					font-family: MicrosoftYaHei;
+					font-weight: 400;
+					color: rgba(63, 178, 232, 1);
+				}
+
+				.oneselfInfo {
+					height: .171053rem;
+					margin-top: .131579rem;
+					line-height: .171053rem;
+					color: rgba(102, 102, 102, 1);
+
+					.workingHours {
+						padding-right: .052632rem;
+					}
+
+					.education {
+						padding: 0 .052632rem;
+						border-left: 1px solid rgba(227, 227, 227, 1);
+					}
+
+					.tags {
+						&>div {
+							padding: 0 .052632rem;
+							border-left: 1px solid rgba(227, 227, 227, 1);
+						}
+					}
+				}
+			}
+
+			.text {
+				width: 8.210526rem;
+
+				&>div:first-child {
+					margin: .266842rem 0 .171053rem;
+					font-size: .210526rem;
+					font-family: MicrosoftYaHei;
+					font-weight: 400;
+					color: rgba(63, 178, 232, 1);
+				}
+				&>div:last-child {
+					font-size: .157895rem;
+					font-family: MicrosoftYaHei;
+					font-weight: 400;
+					color: rgba(153, 153, 153, 1);
+				}
+			}
+			.lastTime {
+				width: 1.315789rem;
+				&.newTime {
+					width: 1.315789rem;
+					height: .473684rem;
+					margin: .421053rem .960526rem 0 0;
+					background: rgba(63, 178, 232, 1);
+					border-radius: 4px;
+					font-size: .184211rem;
+					font-family: MicrosoftYaHei;
+					font-weight: 400;
+					color: rgba(255, 255, 255, 1);
+					line-height: .473684rem;
+					text-align: center;
+					cursor: pointer;
+				}
+				&.oldTime {
+					margin: .407895rem 1.263158rem 0 0;
+					font-size: .184211rem;
+					font-family: MicrosoftYaHeiLight;
+					font-weight: 300;
+					color: rgba(153, 153, 153, 1);
+					line-height: .473684rem;
+					text-align: center;
+				}
+			}
+		}
+	}
+}

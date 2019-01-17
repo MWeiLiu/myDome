@@ -1,0 +1,423 @@
+/*
+ * @Author: MWeiLiu 首页
+ * @Date: 2018-12-27 15:19:40 
+ * @Last Modified by: MWeiLiu
+ * @Last Modified time: 2019-01-03 20:45:38
+ */
+
+@import '../base/rest';
+@import url("//unpkg.com/element-ui/lib/theme-chalk/index.css");
+
+.content {
+	width: 1690px;
+	margin: 0 auto;
+}
+
+.height_100 {
+	height: 200px;
+}
+
+.index {
+	.indexTop {
+		height: .921053rem;
+		padding: .210526rem 0 .171053rem;
+		background: rgba(63, 178, 232, 1);
+
+		.topleft {
+			.logo {
+				width: 2.368421rem;
+				height: .539474rem;
+				margin: 0 .868421rem 0 0;
+
+				img {
+					width: 100%
+				}
+			}
+
+			.nav {
+				div {
+					margin: 0 .263158rem;
+					font-size: .210526rem;
+					line-height: .539474rem;
+					font-family: MicrosoftYaHei;
+					font-weight: 400;
+					color: rgba(255, 255, 255, 1);
+					cursor: pointer;
+				}
+			}
+		}
+
+		.topright {
+			// .xinxiang {}
+
+			.userimg {
+				width: .526316rem;
+				height: .526316rem;
+				margin: 0 0 0 .328947rem;
+				border-radius: 50%;
+				-webkit-border-radius: 50%;
+				-moz-border-radius: 50%;
+				-ms-border-radius: 50%;
+				-o-border-radius: 50%;
+
+				img {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	.banner {
+		height: 3.947368rem;
+		background-image: url('/assets/images/index/banner.png');
+	}
+
+	.indexBox {
+		background: rgba(247, 247, 247, 1);
+		padding-bottom: 49px;
+
+		.boxTitle {
+			margin: .25rem 0 1px 0;
+			padding-bottom: .092105rem;
+			border-bottom: 1px solid rgba(238, 238, 238, 1);
+
+			h1 {
+				height: .25rem;
+				font-size: .236842rem;
+				font-family: MicrosoftYaHei;
+				font-weight: 400;
+				color: rgba(102, 102, 102, 1);
+				line-height: .25rem;
+			}
+
+			span {
+				height: .184211rem;
+				font-size: 14px;
+				font-family: MicrosoftYaHeiLight;
+				font-weight: 300;
+				color: rgba(102, 102, 102, 1);
+				line-height: .35rem;
+			}
+		}
+
+		.item {
+			position: relative;
+
+		}
+
+		.activity {
+			.box:hover {
+				.item {
+					background: #3FB2E8;
+					color: #fff;
+					border-color: #fff;
+					// animation: activeToBegin 0.5 infinite;
+					// -webkit-animation: activeToBegin 0.5 infinite;
+
+
+					top: -5px;
+					transform: scale(1.05);
+					-webkit-transform: scale(1.05);
+					-moz-transform: scale(1.05);
+					-ms-transform: scale(1.05);
+					-o-transform: scale(1.05);
+
+					.top {
+
+						.recruit {
+							color: #fff;
+						}
+
+						.companyInfo {
+							color: #fff;
+
+							.shuxian {
+								background: #fff;
+							}
+						}
+
+						.demand {
+
+							div {
+								border-color: #fff;
+								color: #fff;
+							}
+						}
+					}
+
+					.bottom {
+						.info {
+							color: #fff;
+						}
+					}
+				}
+			}
+		}
+
+		.activity {
+			.item {
+				margin: .131579rem 0;
+				background: rgba(255, 255, 255, 1);
+				transition: top 0.3s, transform 0.3s;
+				-webkit-transition: top 0.3s, transform 0.3s;
+				-moz-transition: top 0.3s, transform 0.3s;
+				-ms-transition: top 0.3s, transform 0.3s;
+				-o-transition: top 0.3s, transform 0.3s;
+
+				.top {
+					padding: .25rem .223684rem 9px .210526rem;
+					border-bottom: 1px solid rgba(238, 238, 238, 1);
+
+					.recruit {
+						color: rgba(63, 178, 232, 1);
+
+						div {
+							height: 20px;
+							line-height: 20px;
+							font-size: 18px;
+							font-family: MicrosoftYaHei;
+							font-weight: bold;
+						}
+					}
+
+					.companyInfo {
+						height: 18px;
+						line-height: 18px;
+						margin: 10px 0;
+						font-size: 16px;
+						font-family: MicrosoftYaHeiLight;
+						font-weight: 300;
+						color: rgba(102, 102, 102, 1);
+
+						.shuxian {
+							height: 15px;
+							margin: 2px 10px 0;
+							background: #666666;
+							padding: 0;
+
+						}
+					}
+
+					.demand {
+						div {
+							line-height: .157895rem;
+							padding: 3px 12px;
+							border: 1px solid rgba(63, 178, 232, 1);
+							margin-right: .065789rem;
+							border-radius: 2px;
+							font-size: 12px;
+							font-family: MicrosoftYaHeiLight;
+							font-weight: 300;
+							color: rgba(63, 178, 232, 1);
+						}
+
+					}
+				}
+
+				.bottom {
+					padding: .131579rem .223684rem .276316rem .210526rem;
+
+					.imgBox {
+						position: relative;
+						width: .5rem;
+						height: .5rem;
+						border-radius: 50%;
+						-webkit-border-radius: 50%;
+						-moz-border-radius: 50%;
+						-ms-border-radius: 50%;
+						-o-border-radius: 50%;
+						margin-right: .171053rem;
+
+						.headimg {
+							width: 100%;
+							height: 100%;
+							border-radius: 50%;
+							-webkit-border-radius: 50%;
+							-moz-border-radius: 50%;
+							-ms-border-radius: 50%;
+							-o-border-radius: 50%;
+						}
+
+						.sex {
+							width: .118421rem;
+							height: .118421rem;
+							position: absolute;
+							bottom: 2px;
+							right: 2px;
+						}
+					}
+
+					.info {
+						height: .184211rem;
+						line-height: .184211rem;
+						font-size: 14px;
+						font-family: MicrosoftYaHeiLight;
+						font-weight: 300;
+						color: rgba(102, 102, 102, 1);
+
+					}
+				}
+			}
+		}
+
+		.darkHorse {
+			.item {
+				margin: .131579rem 0;
+				background: rgba(255, 255, 255, 1);
+
+				.top {
+					padding: .210526rem .210526rem 0 .157895rem;
+
+					.imgBox {
+						width: .986842rem;
+						height: .986842rem;
+						position: relative;
+						margin-right: .171053rem;
+						border-radius: 50%;
+						-webkit-border-radius: 50%;
+						-moz-border-radius: 50%;
+						-ms-border-radius: 50%;
+						-o-border-radius: 50%;
+
+						.headimg {
+							width: 100%;
+							height: 100%;
+							border-radius: 50%;
+							-webkit-border-radius: 50%;
+							-moz-border-radius: 50%;
+							-ms-border-radius: 50%;
+							-o-border-radius: 50%;
+						}
+
+						.sex {
+							width: .289474rem;
+							height: .289474rem;
+							position: absolute;
+							bottom: 2px;
+							right: 2px;
+						}
+					}
+
+					.jobInfoName {
+						float: left;
+						height: .20rem;
+						line-height: .20rem;
+						font-size: 18px;
+						font-family: MicrosoftYaHei;
+						font-weight: bold;
+						color: rgba(63, 178, 232, 1);
+					}
+
+					.name {
+						height: .18rem;
+						margin: .144737rem 0 .118421rem;
+						line-height: .18rem;
+						font-size: 18px;
+						font-family: MicrosoftYaHei;
+						font-weight: 400;
+						color: rgba(102, 102, 102, 1);
+					}
+
+					.jobInfo {
+						height: .16rem;
+						line-height: .16rem;
+						font-size: 14px;
+						font-family: MicrosoftYaHei;
+						font-weight: 400;
+						color: rgba(153, 153, 153, 1);
+
+						.shuxian {
+							height: .12rem;
+							margin: 2px 10px 0;
+							background: #666666;
+							padding: 0;
+						}
+					}
+
+					.fraction {
+						float: right;
+						height: .20rem;
+						line-height: .20rem;
+						font-size: 18px;
+						font-family: MicrosoftYaHei;
+						font-weight: bold;
+						color: rgba(63, 178, 232, 1);
+					}
+				}
+
+				.text {
+					margin: 29px 0;
+					padding: 0 .328947rem 0 .236842rem;
+					font-size: 18px;
+					font-family: MicrosoftYaHei;
+					font-weight: 400;
+					color: rgba(102, 102, 102, 1);
+					line-height: 27px;
+				}
+
+				.bottom {
+					padding: 0 0 .263158rem .236842rem;
+
+					div {
+						margin-right: .144737rem;
+						padding: 2px 11px;
+						border: 1px solid rgba(63, 178, 232, 1);
+						border-radius: 2px;
+						font-size: 12px;
+						font-family: MicrosoftYaHei;
+						font-weight: 400;
+						color: rgba(63, 178, 232, 1);
+					}
+				}
+			}
+		}
+	}
+
+	.indexBottom {
+		background: rgba(234, 234, 234, 1);
+
+		.tags {
+			height: 16px;
+			line-height: 16px;
+			margin: 10px 0 11px;
+			font-size: 14px;
+			font-family: PingFangSC-Regular;
+			font-weight: 400;
+			color: rgba(102, 102, 102, 1);
+
+			.shuxian {
+				height: 12px;
+				margin: 2px 0.5263rem 0;
+				background: #666666;
+				padding: 0;
+			}
+		}
+
+		.Copyright {
+			margin-bottom: 7px;
+			font-size: 14px;
+			font-family: PingFangSC-Regular;
+			font-weight: 400;
+			color: rgba(102, 102, 102, 1);
+			text-align: center;
+		}
+	}
+}
+
+@media screen and (max-width: 1680px) {
+	.content {
+		width: 1480px;
+	}
+}
+
+@media screen and (max-width: 1480px) {
+	.content {
+		width: 1200px;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.content {
+		width: 90%;
+	}
+}

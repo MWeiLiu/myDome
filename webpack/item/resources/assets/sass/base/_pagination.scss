@@ -1,0 +1,90 @@
+/*
+ * @Author: MWeiLiu 
+ * @Date: 2018-12-24 17:20:34 
+ * @Last Modified by: MWeiLiu
+ * @Last Modified time: 2019-01-03 11:23:54
+ */
+ 
+.pagination {
+  margin: .921053rem auto 0;
+  font-size: .184211rem;
+  font-family: MicrosoftYaHei;
+  font-weight: 400;
+  color: rgba(63, 178, 232, 1);
+  text-align: center;
+  line-height: .371579rem;
+}
+
+.pagination .firstPage {
+  width: .684211rem;
+  height: .381579rem;
+  border: 1px solid rgba(63, 178, 232, 1);
+  border-radius: 4px;
+	margin-right: .105263rem;
+	cursor: pointer;
+}
+
+.pagination .prevPage {
+  width: .947368rem;
+  height: .381579rem;
+  border: 1px solid rgba(63, 178, 232, 1);
+  border-radius: 4px;
+  margin-right: .105263rem;
+	cursor: pointer;
+}
+
+.pagination .pageList {
+  margin-right: .105263rem;
+}
+
+.pagination .pageList>div {
+  width: .421053rem;
+  height: .381579rem;
+  border: 1px solid rgba(63, 178, 232, 1);
+  border-radius: 4px;
+  margin-right: .105263rem;
+	cursor: pointer;
+}
+
+.pagination .pageList>div:last-child {
+  margin-right: 0;
+}
+
+.pagination .nextPage {
+	width: .947368rem;
+  height: .381579rem;
+  border: 1px solid rgba(63, 178, 232, 1);
+  border-radius: 4px;
+  margin-right: .105263rem;
+	cursor: pointer;
+}
+
+.pagination .lastPage {
+	width: .684211rem;
+  height: .381579rem;
+  border: 1px solid rgba(63, 178, 232, 1);
+  border-radius: 4px;
+  margin-right: .25rem;
+	cursor: pointer;
+}
+
+.pagination .pages {
+	color: rgba(153, 153, 153, 1);
+	margin-right: .236842rem;
+	cursor: default;
+}
+
+.pagination .pages span {
+	padding: 0 .039474rem;
+	color: rgba(63, 178, 232, 1);
+}
+
+.pagination .sizes {
+	color: rgba(153, 153, 153, 1);
+	cursor: default;
+}
+
+.pagination .sizes span {
+	padding: 0 .039474rem;
+	color: rgba(63, 178, 232, 1);
+}

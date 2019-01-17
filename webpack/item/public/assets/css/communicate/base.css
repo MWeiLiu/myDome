@@ -1,0 +1,169 @@
+@charset "UTF-8";
+
+/*
+ * @Author: MWeiLiu 沟通
+ * @Date: 2018-12-24 17:10:33
+ * @Last Modified by: MWeiLiu
+ * @Last Modified time: 2019-01-03 11:26:37
+ */
+
+/*
+ * @Author: MWeiLiu
+ * @Date: 2018-12-24 17:10:10
+ * @Last Modified by: MWeiLiu
+ * @Last Modified time: 2018-12-24 18:11:49
+ */
+
+.communicate .left {
+  width: 3.710526rem;
+  background: white;
+}
+
+.left .seach {
+  width: 100%;
+  height: .486842rem;
+}
+
+.left .cascader {
+  width: 110px;
+  height: 100%;
+}
+
+.seach .seachInput {
+  width: 2.657895rem;
+  height: 100%;
+  border: none;
+  position: relative;
+  font-size: .210526rem;
+}
+
+.seachInput input {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.seachInput i {
+  position: absolute;
+  right: .171053rem;
+  top: 50%;
+  margin-top: -0.131579rem;
+  font-size: .263158rem;
+}
+
+.left .chatList {
+  padding-bottom: 1.013158rem;
+}
+
+.defaultClass > div:hover {
+  background: #f7f7f7;
+}
+
+.chatList .chatItem,
+.otherClass {
+  height: .894737rem;
+  padding-right: .171053rem;
+  padding-left: .25rem;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.chatItem .check {
+  width: .263158rem;
+  height: .263158rem;
+  margin-right: .25rem;
+}
+
+.headimg {
+  position: relative;
+}
+
+.headimg .blackhorse {
+  width: .184211rem;
+  height: .184211rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.chatItem .headimg,
+.otherClass .chatHeadimg {
+  width: .565789rem;
+  height: .565789rem;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin-top: .157895rem;
+  margin-right: .105263rem;
+}
+
+.chatItem .chatHeadimg {
+  width: 100%;
+}
+
+.chatItem .chatInfo,
+.otherClass .classInfo {
+  width: 1.552632rem;
+  margin-top: .263158rem;
+}
+
+.chatInfo .chatName,
+.classInfo .chatName {
+  width: 100%;
+  height: .184211rem;
+  line-height: .184211rem;
+  font-size: 14px;
+  font-family: MicrosoftYaHei;
+  font-weight: 400;
+  color: #666666;
+}
+
+.chatInfo .chatText,
+.classInfo .chatText {
+  width: 100%;
+  height: .171053rem;
+  line-height: .171053rem;
+  font-size: 12px;
+  font-family: MicrosoftYaHei;
+  font-weight: 400;
+  color: #999999;
+}
+
+.news {
+  width: .263158rem;
+  height: .263158rem;
+  margin-left: .328947rem;
+  background: #fa485b;
+  border-radius: 50%;
+  font-size: 12px;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: white;
+  line-height: .263158rem;
+  text-align: center;
+}
+
+.otherClass .chatHeadimg {
+  margin-left: .513158rem;
+  border: 1px solid #989898;
+}
+
+.otherClass .chatHeadimg img {
+  display: block;
+  margin: 0 auto;
+}
+
+.otherClass .classInfo {
+  width: 2.026316rem;
+}
+
+.communicate {
+  height: 100%;
+  background: #f7f7f7;
+}
+
+.communicate .right {
+  width: 12.078947rem;
+}
+

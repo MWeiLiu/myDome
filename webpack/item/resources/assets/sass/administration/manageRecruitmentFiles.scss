@@ -1,0 +1,218 @@
+/*
+ * @Author: MWeiLiu 管理招聘档案
+ * @Date: 2018-12-24 17:21:34 
+ * @Last Modified by: MWeiLiu
+ * @Last Modified time: 2019-01-05 10:27:49
+ */
+
+@import '../base/rest';
+@import '../base/pagination';
+@import '../base/topBtn';
+
+.topBtn {
+	position: relative;
+	height: .513158rem;
+	border-bottom: 1px solid rgba(247, 247, 247, 1);
+}
+
+.topRightBtn div {
+	position: absolute;
+	top: -.684211rem;
+	right: .5rem;
+	width: 1.315789rem;
+	height: .473684rem;
+	background: rgba(63, 178, 232, 1);
+	border-radius: 4px;
+	font-size: .184211rem;
+	font-family: MicrosoftYaHei;
+	font-weight: 400;
+	color: rgba(255, 255, 255, 1);
+	line-height: .473684rem;
+	text-align: center;
+	cursor: pointer;
+}
+
+table {
+	border: none;
+	margin-top: .381579rem;
+	text-align: center;
+}
+
+table .shuxian {
+	float: right;
+	text-align: right;
+	margin-top: .039474rem;
+}
+
+table .allCheckBtn {
+	width: .263158rem;
+}
+
+.allCheckBtn img {
+	display: block;
+	margin-left: .25rem;
+	cursor: pointer;
+}
+
+.checkBtn img {
+	display: block;
+	margin-left: .25rem;
+	cursor: pointer;
+}
+
+thead td {
+	height: .460526rem;
+}
+
+tbody td {
+	height: 1.355263rem;
+}
+
+table .jobInfoBtn {
+	width: 2.328947rem;
+}
+
+table .jobInfo {
+	text-align: left;
+}
+
+tbody tr.active td {
+	background: rgba(177, 177, 177, .1);
+}
+
+.jobInfo>div {
+	padding-left: .223684rem;
+}
+
+.jobInfo .name {
+	font-size: .210526rem;
+	font-family: MicrosoftYaHei;
+	font-weight: bold;
+	color: rgba(63, 178, 232, 1);
+}
+
+.jobInfo .tags>div {
+	padding: 0 .105263rem;
+	font-family: MicrosoftYaHeiLight;
+	font-weight: bold;
+	color: rgba(153, 153, 153, 1);
+}
+
+.jobInfo .tags>div:first-child {
+	padding-left: 0;
+}
+
+.jobInfo .tags>div:last-child {
+	padding-right: 0;
+}
+
+table .releaseStateBtn {
+	width: 2rem;
+}
+
+table .releaseState {
+	font-size: 12px;
+	font-family: MicrosoftYaHei;
+	font-weight: 400;
+	color: rgba(255, 255, 255, 1);
+}
+
+.releaseState>div {
+	width: .789474rem;
+	height: .236842rem;
+	margin: 0 auto;
+	border-radius: 3px;
+}
+
+table .matchingDegreeBtn {
+	width: 5.513158rem;
+}
+
+table .matchingDegree {
+	font-size: 14px;
+	font-family: MicrosoftYaHei-Bold;
+	font-weight: bold;
+	color: rgba(102, 102, 102, 1);
+}
+
+.matchingDegree>div {
+	width: 4.092105rem;
+	margin: 0 auto;
+}
+
+.matchingDegree span {
+	border-bottom: 1px solid rgba(102, 102, 102, 1);
+}
+
+.matchingDegree .num {
+	font-size: 18px;
+}
+
+.matchingDegree .active {
+	border-bottom: 1px solid rgba(63, 178, 232, 1);
+	color: rgba(63, 178, 232, 1);
+}
+
+.matchingDegree .shuxian {
+	margin-top: .092105rem;
+}
+
+table {
+	width: 100%;
+}
+
+table .releaseTimeBtn {
+	width: 2.894737rem;
+}
+
+table .releaseTime {
+	font-size: 16px;
+	font-family: MicrosoftYaHei;
+	font-weight: 400;
+	color: rgba(153, 153, 153, 1);
+}
+
+table .operationBtn {
+	width: 2.184211rem;
+}
+
+tbody tr .operation div {
+	width: 1.315789rem;
+	margin: 0 auto;
+}
+
+tbody tr.active .operation div {
+	width: 1.315789rem;
+	height: .473684rem;
+	background: rgba(63, 178, 232, 1);
+	margin: 0 auto;
+	border-radius: 4px;
+	font-size: 14px;
+	font-family: MicrosoftYaHei;
+	font-weight: 400;
+	color: rgba(255, 255, 255, 1);
+	line-height: .473684rem;
+}
+
+.pagination {
+	margin-top: .394737rem;
+}
+
+.deleteBtn {
+	margin: .368421rem 0 0 .263158rem;
+	cursor: pointer;
+}
+
+.deleteBtn img {
+	width: 18px;
+	height: 24px;
+	margin-right: .276316rem;
+}
+
+.deleteBtn span {
+	font-size: .210526rem;
+	font-family: MicrosoftYaHei;
+	font-weight: 400;
+	vertical-align: super;
+	color: rgba(238, 238, 238, 1);
+}

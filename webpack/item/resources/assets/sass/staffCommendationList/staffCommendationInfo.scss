@@ -1,0 +1,175 @@
+/*
+ * @Author: MWeiLiu 员工奖惩列表页->员工嘉奖详情
+ * @Date: 2018-12-24 17:23:26 
+ * @Last Modified by: MWeiLiu
+ * @Last Modified time: 2019-01-04 17:27:33
+ */
+
+@import '../base/rest';
+
+.staffCommendationInfo {
+  h1 {
+    margin: 0 0 0 .25rem;
+    padding-top: .171053rem;
+    font-size: .210526rem;
+    font-family: MicrosoftYaHei;
+    font-weight: 400;
+    color: rgba(102, 102, 102, 1);
+  }
+
+  .infoBox {
+    width: 969px;
+    margin: 1.092105rem auto 0;
+
+    .info {
+      .staffImage {
+        width: 1.315789rem;
+        height: 1.315789rem;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        margin-right: .276316rem;
+      }
+
+      .staffname {
+        margin-bottom: .289474rem;
+        height: .315789rem;
+        line-height: .289474rem;
+        font-size: 24px;
+        font-family: MicrosoftYaHei;
+        font-weight: 400;
+        color: rgba(102, 102, 102, 1);
+      }
+
+      .staffInfo {
+        font-size: .236842rem;
+        font-family: MicrosoftYaHeiLight;
+        font-weight: 300;
+        color: rgba(153, 153, 153, 1);
+
+        .bianju {
+          margin: 0 .486842rem .184211rem 0;
+          height: .263158rem;
+          line-height: .263158rem;
+        }
+      }
+    }
+
+    .operation {
+      margin-top: .5rem;
+      border-bottom: 1px solid rgba(238, 238, 238, 1);
+
+      &>div {
+        width: 1.315789rem;
+        margin: 0 .828947rem;
+        padding-bottom: .157895rem;
+        text-align: center;
+        font-size: .184211rem;
+        font-family: MicrosoftYaHei;
+        font-weight: 400;
+        color: rgba(153, 153, 153, 1);
+        cursor: pointer;
+
+        &.active {
+          border-bottom: 2px solid rgba(63, 178, 232, 1);
+        }
+
+        img {
+          display: block;
+          margin: 0 auto .157895rem;
+        }
+      }
+
+      .operation0 {
+        width: .394737rem;
+        height: .368421rem;
+        margin-top: .065789rem;
+      }
+
+      .operation1 {
+        width: .368421rem;
+        height: .394737rem;
+        margin-top: .065789rem;
+      }
+
+      .operation2 {
+        width: .421053rem;
+        height: .434211rem;
+      }
+
+      .operation3 {
+        width: .421053rem;
+        height: .328947rem;
+        margin-top: .105263rem;
+      }
+
+      .operation4 {
+        width: .355263rem;
+        height: .394737rem;
+        margin-top: .052632rem;
+      }
+    }
+
+    .operationBox {
+      margin-top: .618421rem;
+    }
+
+    .operationBox2 {
+      .title {
+        width: 1.315789rem;
+        height: .473684rem;
+        margin-bottom: .263158rem;
+        background: rgba(63, 178, 232, 1);
+        border-radius: 4px;
+        font-size: .184211rem;
+        font-family: MicrosoftYaHei;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 1);
+        text-align: center;
+        line-height: .473684rem;
+      }
+
+      table {
+        border: none;
+        text-align: center;
+
+        td {
+          height: .526316rem;
+          font-size: .184211rem;
+          font-family: MicrosoftYaHei;
+          font-weight: 400;
+          color: rgba(153, 153, 153, 1);
+        }
+
+        .shuxian {
+          float: right;
+          text-align: right;
+          margin-top: 4px;
+          margin-top: .039474rem;
+        }
+
+        thead {
+          .timeBtn {
+            width: 2.289474rem;
+          }
+
+          .typeBtn {
+            width: 2.710526rem;
+          }
+
+          .textBtn {
+            width: 4.802632rem;
+          }
+
+          .evaluateBtn {
+            width: 2.907895rem;
+          }
+        }
+
+        tbody {}
+      }
+    }
+  }
+}

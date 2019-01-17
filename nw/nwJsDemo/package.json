@@ -1,0 +1,16 @@
+{
+  "name": "nwjsdemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nw src/",
+    "prod": "nwbuild --platforms win32,win64,osx64,linux32,linux64 --buildDir dist/ src/"
+  },
+  "author": "MWeiLiu",
+  "license": "ISC",
+  "dependencies": {
+    "nw": "^0.35.5",
+    "nw-builder": "^3.5.7"
+  }
+}

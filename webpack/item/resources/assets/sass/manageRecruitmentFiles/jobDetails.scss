@@ -1,0 +1,209 @@
+/*
+ * @Author: MWeiLiu 管理招聘档案页->职位详情
+ * @Date: 2018-12-24 17:22:57 
+ * @Last Modified by: MWeiLiu
+ * @Last Modified time: 2019-01-04 16:11:59
+ */
+
+@import '../base/rest';
+
+.jobDetails {
+  width: 9.815789rem;
+  padding-top: .789474rem;
+  padding-bottom: 1.565789rem;
+  margin: 0 auto;
+
+  .claim {
+    .jobName {
+      height: .328947rem;
+      margin-bottom: .25rem;
+      font-size: .315789rem;
+      line-height: .315789rem;
+      font-family: MicrosoftYaHei;
+      font-weight: 400;
+      color: rgba(102, 102, 102, 1);
+    }
+
+    .salary {
+      display: inline-block;
+      height: .210526rem;
+      line-height: .210526rem;
+      font-size: .236842rem;
+      font-family: MicrosoftYaHei;
+      font-weight: 400;
+      color: rgba(63, 178, 232, 1);
+    }
+
+    .tags {
+      height: .223684rem;
+      margin-top: 2px;
+      line-height: .223684rem;
+      font-size: .210526rem;
+      font-family: MicrosoftYaHei;
+      font-weight: 400;
+      color: rgba(102, 102, 102, 1);
+    }
+
+    .shuxian {
+      margin: 2px .131579rem 0;
+      background: rgba(102, 102, 102, 1);
+    }
+  }
+
+  .jobBtn {
+    width: 1.631579rem;
+    height: .473684rem;
+    background: rgba(63, 178, 232, 1);
+    border-radius: 4px;
+    font-size: .184211rem;
+    font-family: MicrosoftYaHei;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    line-height: .473684rem;
+  }
+
+  .jobInfo {
+    margin-top: .368421rem;
+
+    h2 {
+      height: .25rem;
+      margin-bottom: .25rem;
+      line-height: .25rem;
+      font-size: 16px;
+      font-family: MicrosoftYaHei;
+      font-weight: 400;
+      color: rgba(102, 102, 102, 1);
+    }
+
+    .content {
+      padding-left: 75px;
+
+      &>div {
+        margin-top: .118421rem;
+
+        p {
+          font-size: .184211rem;
+          font-family: MicrosoftYaHeiLight;
+          font-weight: 300;
+          color: rgba(153, 153, 153, 1);
+        }
+      }
+    }
+  }
+
+  .skill {
+    .tags {
+      margin-top: .078947rem;
+
+      &>div {
+        height: 20px;
+        padding: 0 11px;
+        margin: 0 10px;
+        background: rgba(248, 248, 248, 1);
+        border: 1px solid rgba(238, 238, 238, 1);
+        border-radius: 4px;
+        font-size: 14px;
+        font-family: MicrosoftYaHeiLight;
+        font-weight: 300;
+        color: rgba(102, 102, 102, 1);
+        line-height: 20px;
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .enterprise {
+    h2 {
+      margin-bottom: .210526rem;
+    }
+
+    .enterpriseimg {
+      width: 1.144737rem;
+      height: 1.144737rem;
+      margin-right: .197368rem;
+      border: 1px solid rgba(238, 238, 238, 1);
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .qiyeName {
+      height: .223684rem;
+      margin-bottom: .157895rem;
+      line-height: .223684rem;
+      font-size: .236842rem;
+      font-family: PingFangSC-Medium;
+      font-weight: 500;
+      color: rgba(102, 102, 102, 1);
+    }
+
+    .tags1 {
+      height: .263158rem;
+      line-height: .263158rem;
+      font-size: .197368rem;
+      font-family: PingFangSC-Light;
+      font-weight: 300;
+      color: rgba(102, 102, 102, 1);
+    }
+
+    .tags2 {
+      &>div {
+        padding: 0 .131579rem;
+        margin: .25rem .131579rem 0;
+        background: rgba(248, 248, 248, 1);
+        border: 1px solid rgba(238, 238, 238, 1);
+        border-radius: 2px;
+        font-size: 14px;
+        font-family: MicrosoftYaHeiLight;
+        font-weight: 300;
+        color: rgba(102, 102, 102, 1);
+        line-height: .263158rem;
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .address {
+    margin: .434211rem 0 0 0;
+
+    p {
+      height: .184211rem;
+      font-size: .184211rem;
+      font-family: MicrosoftYaHeiLight;
+      font-weight: 300;
+      color: rgba(102, 102, 102, 1);
+      line-height: .184211rem;
+    }
+  }
+}
+
+// .content h3 {
+//   height: .223684rem;
+//   font-size: .210526rem;
+//   font-family: MicrosoftYaHei;
+//   font-weight: 400;
+//   color: rgba(102, 102, 102, 1);
+//   line-height: .223684rem;
+// }
+
+
+// .ResponsibilitiesText {
+//   margin-bottom: .447368rem;
+// }

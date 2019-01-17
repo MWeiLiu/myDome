@@ -1,0 +1,664 @@
+@charset "UTF-8";
+
+/*
+ * @Author: MWeiLiu 员工奖惩列表页->员工嘉奖详情
+ * @Date: 2018-12-24 17:23:26 
+ * @Last Modified by: MWeiLiu
+ * @Last Modified time: 2019-01-04 17:27:33
+ */
+
+/*
+ * @Author: MWeiLiu 
+ * @Date: 2018-12-24 17:20:44 
+ * @Last Modified by: MWeiLiu
+ * @Last Modified time: 2019-01-03 17:23:15
+ */
+
+/*
+ * @Author: MWeiLiu 
+ * @Date: 2018-12-24 17:20:27 
+ * @Last Modified by: MWeiLiu
+ * @Last Modified time: 2019-01-03 14:44:00
+ */
+
+.hide {
+  display: none !important;
+}
+
+.qFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: -webkit-flex;
+}
+
+/*竖向*/
+
+.qFlexDirectionColumn {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/* 横向 */
+
+.qFlexJustifyStart {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-justify-content: flex-start;
+}
+
+/*横向剧中*/
+
+.qFlexJustifyCenter {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-justify-content: center;
+}
+
+/*横向平均*/
+
+.qFlexJustifyAround {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-justify-content: space-around;
+}
+
+/*横向左右*/
+
+.qFlexJustifyBetween {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-justify-content: space-between;
+}
+
+/*横向居右*/
+
+.qFlexJustifyEnd {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-justify-content: flex-end;
+}
+
+/*上下居中*/
+
+.qFlexAlignCenter {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-align-items: center;
+}
+
+/*从下排列*/
+
+.qFlexAlignEnd {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-align-items: flex-end;
+}
+
+.showByStep {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.showByStep2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.backgroundStyle,
+.backgroundStyle[data-v-0d169be5] {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+html ::-webkit-scrollbar,
+body ::-webkit-scrollbar {
+  width: 5px;
+  background-color: #f2f2f2;
+}
+
+html ::-moz-scrollbar,
+body ::-moz-scrollbar {
+  width: 5px;
+  background-color: #f2f2f2;
+}
+
+html ::-o-scrollbar,
+body ::-o-scrollbar {
+  width: 5px;
+  background-color: #f2f2f2;
+}
+
+html ::-webkit-scrollbar-track,
+body ::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 0 rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0 0 0 rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+html ::-webkit-scrollbar-thumb,
+body ::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  -webkit-box-shadow: inset 10px 0 0 rgba(0, 0, 0, 0.1);
+          box-shadow: inset 10px 0 0 rgba(0, 0, 0, 0.1);
+  background-color: #999;
+}
+
+.shuxian {
+  display: block;
+  width: 1px;
+  height: 10px;
+  background: #d0d0d0;
+  padding: .092105rem 0;
+}
+
+html {
+  height: 100%;
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+figcaption,
+figure,
+main {
+  display: block;
+}
+
+figure {
+  margin: 1em 40px;
+}
+
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+a {
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+b,
+strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+sup {
+  top: -.5em;
+}
+
+audio,
+video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+img {
+  border-style: none;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 0;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+legend {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+progress {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type=checkbox],
+[type=radio] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type=search]::-webkit-search-cancel-button,
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+  outline: none;
+}
+
+details,
+menu {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+canvas {
+  display: inline-block;
+}
+
+[hidden],
+template {
+  display: none;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+*,
+:after,
+:before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  overflow-x: hidden;
+  font-family: PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, Helvetica Neue, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #657180;
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+article,
+aside,
+blockquote,
+body,
+button,
+dd,
+details,
+div,
+dl,
+dt,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+hr,
+input,
+legend,
+li,
+menu,
+nav,
+ol,
+p,
+section,
+td,
+textarea,
+th,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  outline: none;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+input::-ms-clear,
+input::-ms-reveal {
+  display: none;
+}
+
+a {
+  color: #222;
+  background: 0 0;
+  text-decoration: none;
+  outline: 0;
+  cursor: pointer;
+  -webkit-transition: color .2s ease;
+  transition: color .2s ease;
+}
+
+a:active,
+a:hover {
+  color: #406599;
+}
+
+a:visited {
+  color: #999;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+  text-decoration: none;
+}
+
+a[disabled] {
+  color: #ccc;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: Consolas, Menlo, Courier, monospace;
+}
+
+b,
+em,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  font-weight: 400;
+}
+
+.staffCommendationInfo h1 {
+  margin: 0 0 0 .25rem;
+  padding-top: .171053rem;
+  font-size: .210526rem;
+  font-family: MicrosoftYaHei;
+  font-weight: 400;
+  color: #666666;
+}
+
+.staffCommendationInfo .infoBox {
+  width: 969px;
+  margin: 1.092105rem auto 0;
+}
+
+.staffCommendationInfo .infoBox .info .staffImage {
+  width: 1.315789rem;
+  height: 1.315789rem;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin-right: .276316rem;
+}
+
+.staffCommendationInfo .infoBox .info .staffname {
+  margin-bottom: .289474rem;
+  height: .315789rem;
+  line-height: .289474rem;
+  font-size: 24px;
+  font-family: MicrosoftYaHei;
+  font-weight: 400;
+  color: #666666;
+}
+
+.staffCommendationInfo .infoBox .info .staffInfo {
+  font-size: .236842rem;
+  font-family: MicrosoftYaHeiLight;
+  font-weight: 300;
+  color: #999999;
+}
+
+.staffCommendationInfo .infoBox .info .staffInfo .bianju {
+  margin: 0 .486842rem .184211rem 0;
+  height: .263158rem;
+  line-height: .263158rem;
+}
+
+.staffCommendationInfo .infoBox .operation {
+  margin-top: .5rem;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.staffCommendationInfo .infoBox .operation > div {
+  width: 1.315789rem;
+  margin: 0 .828947rem;
+  padding-bottom: .157895rem;
+  text-align: center;
+  font-size: .184211rem;
+  font-family: MicrosoftYaHei;
+  font-weight: 400;
+  color: #999999;
+  cursor: pointer;
+}
+
+.staffCommendationInfo .infoBox .operation > div.active {
+  border-bottom: 2px solid #3fb2e8;
+}
+
+.staffCommendationInfo .infoBox .operation > div img {
+  display: block;
+  margin: 0 auto .157895rem;
+}
+
+.staffCommendationInfo .infoBox .operation .operation0 {
+  width: .394737rem;
+  height: .368421rem;
+  margin-top: .065789rem;
+}
+
+.staffCommendationInfo .infoBox .operation .operation1 {
+  width: .368421rem;
+  height: .394737rem;
+  margin-top: .065789rem;
+}
+
+.staffCommendationInfo .infoBox .operation .operation2 {
+  width: .421053rem;
+  height: .434211rem;
+}
+
+.staffCommendationInfo .infoBox .operation .operation3 {
+  width: .421053rem;
+  height: .328947rem;
+  margin-top: .105263rem;
+}
+
+.staffCommendationInfo .infoBox .operation .operation4 {
+  width: .355263rem;
+  height: .394737rem;
+  margin-top: .052632rem;
+}
+
+.staffCommendationInfo .infoBox .operationBox {
+  margin-top: .618421rem;
+}
+
+.staffCommendationInfo .infoBox .operationBox2 .title {
+  width: 1.315789rem;
+  height: .473684rem;
+  margin-bottom: .263158rem;
+  background: #3fb2e8;
+  border-radius: 4px;
+  font-size: .184211rem;
+  font-family: MicrosoftYaHei;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  line-height: .473684rem;
+}
+
+.staffCommendationInfo .infoBox .operationBox2 table {
+  border: none;
+  text-align: center;
+}
+
+.staffCommendationInfo .infoBox .operationBox2 table td {
+  height: .526316rem;
+  font-size: .184211rem;
+  font-family: MicrosoftYaHei;
+  font-weight: 400;
+  color: #999999;
+}
+
+.staffCommendationInfo .infoBox .operationBox2 table .shuxian {
+  float: right;
+  text-align: right;
+  margin-top: 4px;
+  margin-top: .039474rem;
+}
+
+.staffCommendationInfo .infoBox .operationBox2 table thead .timeBtn {
+  width: 2.289474rem;
+}
+
+.staffCommendationInfo .infoBox .operationBox2 table thead .typeBtn {
+  width: 2.710526rem;
+}
+
+.staffCommendationInfo .infoBox .operationBox2 table thead .textBtn {
+  width: 4.802632rem;
+}
+
+.staffCommendationInfo .infoBox .operationBox2 table thead .evaluateBtn {
+  width: 2.907895rem;
+}
+

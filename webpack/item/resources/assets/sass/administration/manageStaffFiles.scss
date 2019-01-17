@@ -1,0 +1,262 @@
+/*
+ * @Author: MWeiLiu 管理员工档案页
+ * @Date: 2018-12-24 17:21:46 
+ * @Last Modified by: MWeiLiu
+ * @Last Modified time: 2019-01-04 10:48:19
+ */
+
+@import '../base/rest';
+@import '../base/pagination';
+@import '../base/topBtn';
+
+.manageStaffFiles {
+	height: 100%;
+
+	.topBtn {
+		height: .513158rem;
+
+		.topLeftBtn {
+			.LeftBtnItem {
+				border-left: none;
+				font-size: .210526rem;
+				color: rgba(102, 102, 102, 1);
+				font-weight: 400;
+
+				&.active {
+					font-weight: bolder;
+				}
+
+				&:last-child {
+					border-left: 1px solid rgba(208, 208, 208, 1);
+					color: rgba(102, 102, 102, 1);
+					font-size: .210526rem;
+					font-weight: 400;
+				}
+			}
+		}
+
+		.topRightBtn {
+			margin-right: .263158rem;
+
+
+			.search {
+				position: relative;
+
+				input {
+					width: 3.710526rem;
+					height: .368421rem;
+					margin: .078947rem .263158rem 0 0;
+					border: 1px solid rgba(228, 228, 228, 1);
+					border-radius: 4px;
+					font-size: .184211rem;
+					font-family: MicrosoftYaHei;
+					font-weight: 400;
+					text-indent: 11px;
+
+					&::placeholder {
+						font-size: .184211rem;
+						font-family: MicrosoftYaHei;
+						font-weight: 400;
+						color: rgba(233, 233, 233, 1);
+					}
+				}
+
+				i {
+					position: absolute;
+					top: .131579rem;
+					right: .355263rem;
+					color: rgba(212, 212, 212, 1);
+					font-size: .263158rem;
+				}
+			}
+
+			.shuxian {
+				margin-top: .171053rem;
+			}
+
+			.addstaff {
+				img {
+					width: .263158rem;
+					height: .263158rem;
+					margin-top: .131579rem;
+					margin-left: .263158rem;
+					margin-right: .131579rem;
+				}
+
+				span {
+					font-size: .210526rem;
+					font-family: MicrosoftYaHei;
+					font-weight: 400;
+					color: rgba(153, 153, 153, 1);
+					vertical-align: super;
+				}
+			}
+		}
+	}
+
+	table {
+		width: 100%;
+		margin: .381579rem 0 0 0;
+		cursor: default;
+
+
+		&.tables {
+			border: none;
+			text-align: center;
+
+			.shuxian {
+				float: right;
+				text-align: right;
+				margin-top: 4px;
+				margin-top: .039474rem;
+			}
+
+			.thead {
+				width: 100%;
+				padding: .131579rem 0;
+				font-size: .184211rem;
+				font-family: MicrosoftYaHei;
+				font-weight: 400;
+				color: rgba(51, 51, 51, 1);
+
+				.check {
+					width: .263158rem;
+					height: .263158rem;
+					cursor: pointer;
+
+					img {
+						display: block;
+						padding-top: .052632rem;
+						margin-left: .25rem;
+					}
+				}
+
+				.nameBtn {
+					width: 1.157895rem;
+					padding-left: .263158rem;
+					text-align: center;
+				}
+
+				.statusBtn {
+					width: 1.394737rem;
+					padding-left: .157895rem;
+					text-align: center;
+				}
+
+				.departmentBtn {
+					width: 3.065789rem;
+					text-align: center;
+				}
+
+				.positionBtn {
+					width: 3.526316rem;
+					text-align: center;
+				}
+
+				.entryTimeBtn {
+					width: 3.289474rem;
+					padding-left: .157895rem;
+					text-align: center;
+
+					i {
+						color: rgba(213, 213, 213, 1);
+					}
+				}
+
+				.operationBtn {
+					width: 2.776316rem;
+					text-align: center;
+				}
+
+			}
+
+			.tbody {
+				width: 100%;
+				font-size: .184211rem;
+				font-family: MicrosoftYaHei;
+				font-weight: 400;
+				color: rgba(153, 153, 153, 1);
+
+				.tr {
+					padding: .131579rem 0;
+
+					&.active {
+						background: rgba(177, 177, 177, .1);
+						color: rgba(102, 102, 102, 1);
+
+						.operation {
+							color: rgba(63, 178, 232, 1);
+						}
+					}
+
+					.check {
+						width: .263158rem;
+						height: .263158rem;
+						margin-left: .27rem;
+						margin-top: .013158rem;
+						cursor: pointer;
+					}
+
+					.name {
+						width: 1.052632rem;
+						margin-left: .223158rem;
+					}
+
+					.status {
+						width: 1.394737rem;
+					}
+
+					.department {
+						padding-left: .801053rem;
+						width: 3.092105rem;
+						text-align: left;
+					}
+
+					.position {
+						width: 3.526316rem;
+						padding-left: 1.184211rem;
+						text-align: left;
+					}
+
+					.entryTime {
+						width: 3.157895rem;
+						text-align: center;
+					}
+
+					.operation {
+						width: 2.776316rem;
+						text-align: center;
+						color: rgba(238, 238, 238, 1);
+						cursor: pointer;
+					}
+
+				}
+			}
+
+		}
+	}
+}
+
+.pagination {
+	margin-top: .394737rem;
+}
+
+
+
+.deleteBtn {
+	margin: .368421rem 0 0 .263158rem;
+
+	img {
+		width: 18px;
+		height: 24px;
+		margin-right: .276316rem;
+	}
+
+	span {
+		font-size: .210526rem;
+		font-family: MicrosoftYaHei;
+		font-weight: 400;
+		vertical-align: super;
+		color: rgba(238, 238, 238, 1);
+	}
+}
