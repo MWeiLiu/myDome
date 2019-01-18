@@ -4,11 +4,19 @@
     "manifest_version": 2,
     "description": "This extension demonstrates a browser action with kittens.",
     "background": {
-        "scripts": ["index.js"]
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "icons": {
+        "16": "images/16_16.png"
     },
     "permissions": [
-        "webRequest",
-        "webRequestBlocking"
+        "tabs",
+        "alarms",
+        "bookmarks",
+        "browsingData",
+        "contentSettings",
+        "contextMenus"
     ],
     "browser_action": {
         "default_icon": "images/icon.jpg",

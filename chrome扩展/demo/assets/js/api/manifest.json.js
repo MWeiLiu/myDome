@@ -2,13 +2,15 @@
  * @Author: MWeiLiu 
  * @Date: 2019-01-17 17:35:44 
  * @Last Modified by: MWeiLiu
- * @Last Modified time: 2019-01-17 18:29:14
+ * @Last Modified time: 2019-01-18 18:19:13
  * 每一个扩展程序、可安装的网络应用以及主题背景都有一个 JSON 格式的清单文件，名为 manifest.json，提供重要信息。
  */
+chrome.API('https://crxdoc-zh.appspot.com/extensions/api_index');
 const json = {
     /**
      * 必选
      */
+    //manifest文件自身格式的版本号
     "manifest_version": 2,
     "name": "我的扩展程序",
     "version": "版本字符串",
@@ -60,8 +62,18 @@ const json = {
     "author": "",
     "automation": "",
     "background": {
-        "scripts": ["index.js"],
-        // 推荐
+        /**
+         * 定义持续运行的后台页面
+         */
+        //规定后台运行的脚本
+        "scripts": ["background.js"],
+        // 规定后台页面
+        "page": "background.html",
+
+        /**
+         * 定义事件页面
+         */
+        "scripts": ["eventPage.js"],
         "persistent": false
     },
     "background_page": "",
@@ -73,7 +85,33 @@ const json = {
         }
     },
     "chrome_url_overrides": {},
-    "commands": "",
+    // 添加快捷键
+    "commands": {
+        "toggle-feature-foo": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+Y",
+                "mac": "Command+Shift+Y"
+            },
+            "description": "切换 foo 特性",
+            // 是否全局使用
+            "global": true
+        },
+        "_execute_browser_action": {
+            "suggested_key": {
+                "windows": "Ctrl+Shift+Y",
+                "mac": "Command+Shift+Y",
+                "chromeos": "Ctrl+Shift+U",
+                "linux": "Ctrl+Shift+J"
+            }
+        },
+        "_execute_page_action": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+E",
+                "windows": "Alt+Shift+P",
+                "mac": "Alt+Shift+P"
+            }
+        }
+    },
     "content_pack": "",
     "content_scripts": [{}],
     "content_security_policy": "策略字符串",
@@ -95,6 +133,7 @@ const json = {
     "minimum_chrome_version": "版本字符串",
     "nacl_modules": [],
     "oauth2": "",
+    // 是否支持脱机运行
     "offline_enabled": true,
     "omnibox": {
         "keyword": "aString"
@@ -106,11 +145,20 @@ const json = {
         "webRequest",
         "webRequestBlocking",
         // 允许通知
-        "notifications"
+        "notifications",
+        // 使用 chrome.tabs API 与浏览器标签页交互。您可以使用该 API 创建、修改或重新排列浏览器中的标签页。
+        "tabs"
     ],
     "platforms": "",
     "plugins": [],
-    "requirements": {},
+    // 所需的特殊技术功能
+    "requirements": {
+        // 只支持3D功能
+        "3D": {
+            // 指定所需的3D相关功能
+            "features": ["css3d", "webgl"]
+        }
+    },
     "sandbox": [],
     "script_badge": "",
     "short_name": "短名称",
@@ -122,5 +170,6 @@ const json = {
     "system_indicator": "",
     "tts_engine": "",
     "update_url": "http://path/to/updateInfo.xml",
+    //一组字符串，指定本扩展在注入的目标页面上所需使用的资源的路径（相对于扩展的安装根目录）
     "web_accessible_resources": []
 }
