@@ -1,8 +1,8 @@
 {
-    "name": "my chrome",
+    "name": "我的始终",
     "version": "1.0",
     "manifest_version": 2,
-    "description": "This extension demonstrates a browser action with kittens.",
+    "description": "我的第一个Chrome扩展",
     "background": {
         "scripts": ["background.js"],
         "persistent": false
@@ -18,7 +18,7 @@
         "contentSettings",
         "contextMenus",
         "cookies",
-        "*://*.17k.com/*",
+        "http://*/*",
         "desktopCapture",
         "webRequest"
     ],

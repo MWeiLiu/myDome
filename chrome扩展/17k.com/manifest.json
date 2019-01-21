@@ -1,0 +1,31 @@
+{
+    "name": "17k",
+    "version": "1.0",
+    "manifest_version": 2,
+    "description": "http://www.17k.com/",
+    "background": {
+        "scripts": ["./assets/js/background.js"],
+        "persistent": true
+    },
+    "icons": {
+        "16": "./assets/images/16_16.png"
+    },
+    "permissions": [
+        "storage",
+        "webRequest",
+        "*://*.17k.com/*",
+        "tabs"
+    ],
+    "browser_action": {
+        "default_icon": "./assets/images/icon.jpg",
+        "default_popup": "index.html"
+    },
+    "content_scripts": [{
+        "matches": ["http://www.17k.com/chapter/2656826/36905893.html"],
+        "js": [
+            "./assets/js/sendlink.js"
+        ],
+        "run_at": "document_end"
+    }],
+    "content_security_policy": "script-src 'self'; object-src 'self';"
+}

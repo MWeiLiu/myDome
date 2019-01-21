@@ -2,7 +2,7 @@
  * @Author: MWeiLiu 错误
  * @Date: 2019-01-18 11:27:37 
  * @Last Modified by: MWeiLiu
- * @Last Modified time: 2019-01-18 18:01:00
+ * @Last Modified time: 2019-01-21 10:52:48
  */
 
 const arry = [{
@@ -53,4 +53,11 @@ const arry = [{
     title: "Unchecked runtime.lastError while running contextMenus.create: Invalid url pattern ''",
     text: "运行ContextMenus.Create时未选中Runtime.LastError:URL模式“”无效",
     method: "指定documentUrlPatterns值"
+},{
+    title: "Permission '*://*.google.com' is unknown or URL pattern is malformed.",
+    text: "权限“*：/*.google.com”未知或url模式不正确。",
+    method: "配置文件清单permissions"
+},{
+    title: "Uncaught TypeError: Cannot read property 'inspectedWindow' of undefined",
+    text: '未捕获的类型错误：无法读取未定义的属性“inspectedwindow”'
 }]

@@ -2,7 +2,7 @@
  * @Author: MWeiLiu 
  * @Date: 2019-01-17 17:35:44 
  * @Last Modified by: MWeiLiu
- * @Last Modified time: 2019-01-18 18:19:13
+ * @Last Modified time: 2019-01-21 10:49:50
  * 每一个扩展程序、可安装的网络应用以及主题背景都有一个 JSON 格式的清单文件，名为 manifest.json，提供重要信息。
  */
 chrome.API('https://crxdoc-zh.appspot.com/extensions/api_index');
@@ -117,6 +117,7 @@ const json = {
     "content_security_policy": "策略字符串",
     "converted_from_user_script": "",
     "current_locale": "",
+    // 每次DevTools窗口打开时，都会创建扩展的DevTools页面的实例。devtools.inspectedWindow
     "devtools_page": "",
     "externally_connectable": {
         "matches": ["*://*.example.com/*"]
